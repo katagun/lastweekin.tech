@@ -51,6 +51,12 @@ include = ["src/lastweekintech", "README.md", "pyproject.toml", "docs"]
 [tool.ruff]
 line-length = 100
 target-version = "py312"
+# Planning docs under docs/superpowers/ embed illustrative Python fences that
+# are frozen snapshots, not shipped code — ruff format's preview markdown
+# support reformats them anyway (and can change their meaning, e.g. turning
+# kwargs into a tuple assignment), which these docs should never be checked
+# against.
+extend-exclude = ["docs/superpowers"]
 
 [tool.ruff.format]
 preview = true
