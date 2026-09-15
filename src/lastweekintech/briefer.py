@@ -121,9 +121,10 @@ class Briefer:
 
         A verdict is only returned when a model produced between ``min_count``
         and ``count`` distinct, in-range picks, every field populated, every
-        theme valid, and the per-source cap respected — anything less is not
-        worth publishing, since there is no mechanical fallback that can write
-        the analysis a rejected pick would have carried.
+        theme valid, the per-source cap respected, and every pick backed by
+        actual article text — anything less is not worth publishing, since
+        there is no mechanical fallback that can write the analysis a
+        rejected pick would have carried.
         """
         if not candidates:
             return None
@@ -165,7 +166,11 @@ class Briefer:
             verdict = _parse_verdict(
                 completion.text, pool=len(candidates), min_count=min_count, max_count=max_count
             )
-            if verdict and _within_source_cap(verdict, candidates, max_per_source):
+            if (
+                verdict
+                and _within_source_cap(verdict, candidates, max_per_source)
+                and all(_has_article_text(pick, candidates) for pick in verdict.picks)
+            ):
                 self.last_model = model
                 self.last_completion_tokens = completion.completion_tokens
                 self.last_reasoning_tokens = completion.reasoning_tokens
@@ -293,3 +298,7 @@ def _within_source_cap(verdict: BriefVerdict, candidates: list[Story], max_per_s
         return True
     counts = Counter(_story_source(candidates[pick.n - 1]) for pick in verdict.picks)
     return all(n <= max_per_source for n in counts.values())
+
+
+def _has_article_text(pick: BriefPick, candidates: list[Story]) -> bool:
+    return any(a.content for a in candidates[pick.n - 1].articles)

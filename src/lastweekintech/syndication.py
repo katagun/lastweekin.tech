@@ -55,6 +55,7 @@ def write_feed(
     title: str = SITE_TITLE,
     subtitle: str = SITE_SUBTITLE,
     entry_title: Callable[[str], str] = lambda week: f"Week ending {week}",
+    entry_kind: str = "edition",
 ) -> Path:
     """Write an Atom 1.0 feed with one entry per edition, newest first.
 
@@ -65,7 +66,11 @@ def write_feed(
     ``title``/``subtitle``/``entry_title`` default to the weekly digest's own
     wording, so every existing call site is unaffected; a second feed for a
     different section of the site (see ``ai_daily.generate_ai_site``) passes
-    its own.
+    its own. ``entry_kind`` likewise defaults to the weekly digest's prior,
+    unqualified entry-id shape; a second feed sharing the same domain (AI
+    Daily's is `/ai`-suffixed, but `_entry_id` only ever looked at the netloc)
+    must pass a distinct value or its entry ids collide with the weekly
+    feed's for the same date.
     """
     base = _site_base(site_url)
     ordered = _newest_first(editions)[: max(limit, 0)]
@@ -82,7 +87,7 @@ def write_feed(
     _text(ET.SubElement(root, "author"), "name", SITE_AUTHOR)
 
     for edition in ordered:
-        _append_entry(root, edition, base, entry_title)
+        _append_entry(root, edition, base, entry_title, entry_kind)
 
     return _write_xml(root, output_dir / FEED_FILENAME)
 
@@ -134,14 +139,18 @@ def write_syndication(
 
 
 def _append_entry(
-    root: ET.Element, edition: dict[str, Any], base: str, entry_title: Callable[[str], str]
+    root: ET.Element,
+    edition: dict[str, Any],
+    base: str,
+    entry_title: Callable[[str], str],
+    entry_kind: str,
 ) -> None:
     week = _week(edition)
     page = _page_url(base, edition)
 
     entry = ET.SubElement(root, "entry")
     _text(entry, "title", entry_title(week))
-    _text(entry, "id", _entry_id(base, week))
+    _text(entry, "id", _entry_id(base, week, entry_kind))
     _text(entry, "updated", _updated(edition))
     ET.SubElement(entry, "link", {"rel": "alternate", "type": "text/html", "href": page})
     # type="html" means the value is an escaped HTML fragment, which is what a
@@ -211,14 +220,19 @@ def _page_url(base: str, edition: dict[str, Any]) -> str:
     return f"{base}/archive/{_week(edition)}.html"
 
 
-def _entry_id(base: str, week: str) -> str:
+def _entry_id(base: str, week: str, entry_kind: str = "edition") -> str:
     """Build a tag: URI for the edition.
 
     A tag: URI stays valid if the site ever moves path or protocol, which a page URL
     would not; feed readers key on the id and would show every entry again.
+
+    ``entry_kind`` distinguishes feeds that share a domain: the tag authority is
+    built from the URL's netloc alone (see ``_site_base``), so a path-suffixed
+    site_url like AI Daily's `/ai` does not change it, and without a distinct
+    ``entry_kind`` two feeds would emit identical ids for the same date.
     """
     authority = urlsplit(base).netloc or base
-    return f"tag:{authority},{week}:edition/{week}"
+    return f"tag:{authority},{week}:{entry_kind}/{week}"
 
 
 def _week(edition: dict[str, Any]) -> str:

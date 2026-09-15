@@ -154,6 +154,43 @@ class TestWriteFeed:
         entry_title = root.find(f"{ATOM}entry/{ATOM}title")
         assert entry_title.text == "Week ending 2026-08-10"
 
+    def test_default_entry_kind_reproduces_the_prior_entry_id_format(self, tmp_path):
+        """No ``entry_kind`` argument must keep producing exactly the old id.
+
+        Existing subscribers key on this id; if it changed, 20 archived editions
+        would reappear in every reader as "new".
+        """
+        root = parse(syndication.write_feed([edition()], tmp_path, SITE))
+        entry = root.find(f"{ATOM}entry")
+        assert entry.findtext(f"{ATOM}id") == "tag:lastweekin.tech,2026-08-10:edition/2026-08-10"
+
+    def test_a_custom_entry_kind_produces_a_distinguishable_id(self, tmp_path):
+        root = parse(syndication.write_feed([edition()], tmp_path, SITE, entry_kind="ai-daily"))
+        entry = root.find(f"{ATOM}entry")
+        assert entry.findtext(f"{ATOM}id") == "tag:lastweekin.tech,2026-08-10:ai-daily/2026-08-10"
+
+    def test_weekly_and_ai_daily_style_feeds_do_not_collide_on_the_same_date(self, tmp_path):
+        """Regression test for the entry-id collision bug.
+
+        AI Daily's feed is written with an ``/ai``-suffixed ``site_url``, which
+        shares the same netloc as the weekly feed's ``site_url``. Before
+        ``entry_kind`` existed, ``_entry_id`` only used the netloc, so both
+        feeds emitted byte-identical ``<id>`` values for the same date.
+        """
+        weekly_root = parse(syndication.write_feed([edition()], tmp_path / "weekly", SITE))
+        ai_daily_root = parse(
+            syndication.write_feed(
+                [edition()],
+                tmp_path / "ai",
+                f"{SITE}/ai",
+                entry_title=lambda date: f"AI Daily — {date}",
+                entry_kind="ai-daily",
+            )
+        )
+        weekly_id = weekly_root.find(f"{ATOM}entry").findtext(f"{ATOM}id")
+        ai_daily_id = ai_daily_root.find(f"{ATOM}entry").findtext(f"{ATOM}id")
+        assert weekly_id != ai_daily_id
+
 
 class TestEscaping:
     def test_escapes_markup_in_a_story_title(self, tmp_path):

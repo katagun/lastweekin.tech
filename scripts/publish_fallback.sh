@@ -61,7 +61,7 @@ if [ -z "${OPENROUTER_API_KEY:-}" ]; then
 fi
 
 uv sync --quiet
-uv run lastweekintech "${cli_args[@]}"
+uv run lastweekintech run "${cli_args[@]}"
 
 if [ "$push" != true ]; then
   echo

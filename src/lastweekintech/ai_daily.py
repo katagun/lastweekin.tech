@@ -321,6 +321,7 @@ def generate_ai_site(
             title="LastWeekIn.Tech — AI Daily",
             subtitle="The 4-5 AI developments that mattered today.",
             entry_title=lambda date: f"AI Daily — {date}",
+            entry_kind="ai-daily",
         )
     )
     written.append(syndication.write_sitemap(shared_editions, ai_output_dir, ai_site_url))

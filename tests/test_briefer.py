@@ -150,6 +150,21 @@ class TestBrief:
         )
         assert verdict is not None
 
+    def test_rejects_a_verdict_that_picks_a_candidate_with_no_article_text(self):
+        # Candidate 2 has no article body, so a verdict picking it must be
+        # discarded even though it is otherwise well-formed.
+        candidates = pool(count=2)
+        candidates[1] = make_story(
+            title="story 1",
+            score=99,
+            articles=[make_article(title="story 1", url="https://x/1", content=None)],
+        )
+        briefer = make_briefer(verdict_for(1, 2))
+        verdict = briefer.brief(
+            candidates, count=2, min_count=2, max_per_source=0, recent_titles=[]
+        )
+        assert verdict is None
+
     def test_falls_back_across_models(self):
         answers = iter([RuntimeError("down"), json.dumps(verdict_for(1, 2))])
 
