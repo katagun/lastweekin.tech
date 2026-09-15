@@ -18,7 +18,7 @@ on:
   # publish would sit undeployed. Completion of that workflow is the trigger
   # that does fire.
   workflow_run:
-    workflows: ["Weekly Tech Digest"]
+    workflows: ["Weekly Tech Digest", "AI Daily Briefing"]
     types: [completed]
   workflow_dispatch:
 

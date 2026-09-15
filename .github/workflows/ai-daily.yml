@@ -1,0 +1,156 @@
+name: AI Daily Briefing
+
+on:
+  schedule:
+    - cron: "0 13 * * *" # Every day at 1:00 PM UTC — clear of the Monday 08:00 UTC weekly run.
+  workflow_dispatch:
+
+# Independent of the weekly digest's own concurrency group: the two never need to
+# block each other, and their schedules never coincide.
+permissions: {}
+
+concurrency:
+  group: ai-daily-digest
+  cancel-in-progress: false
+
+jobs:
+  build-brief:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    permissions:
+      contents: write
+
+    outputs:
+      failure_reason: ${{ steps.pipeline.outputs.failure_reason }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d # v10.0.1
+        with:
+          enable-cache: true
+
+      - name: Install dependencies
+        run: uv sync
+
+      - name: Run pipeline
+        id: pipeline
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+        run: |
+          log="$RUNNER_TEMP/ai-daily.log"
+          set +e
+          uv run lastweekintech ai-daily 2>&1 | tee "$log"
+          status=${PIPESTATUS[0]}
+          set -e
+          if [ "$status" -ne 0 ]; then
+            delimiter="LWIT_AI_DAILY_$(openssl rand -hex 16)"
+            {
+              printf 'failure_reason<<%s\n' "$delimiter"
+              tail -n 30 "$log" | sed 's/\x1b\[[0-9;]*m//g'
+              printf '\n%s\n' "$delimiter"
+            } >> "$GITHUB_OUTPUT"
+          fi
+          exit "$status"
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          generated=(data public)
+          present=()
+          for path in "${generated[@]}"; do
+            if [ -e "$path" ]; then present+=("$path"); fi
+          done
+          git add -- "${present[@]}"
+          if git diff --staged --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git commit -m "docs: AI Daily briefing for $(date -u +'%Y-%m-%d')"
+          git push
+
+  notify-failure:
+    needs: build-brief
+    if: failure()
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    permissions:
+      issues: write
+
+    steps:
+      - name: Open or update the AI Daily failure issue
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
+        env:
+          FAILURE_REASON: ${{ needs.build-brief.outputs.failure_reason }}
+          RUN_URL: "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+        with:
+          script: |
+            const LABEL = 'ai-daily-failure';
+            const { owner, repo } = context.repo;
+            const runUrl = process.env.RUN_URL;
+            const reason = (process.env.FAILURE_REASON || '').trim();
+            const today = new Date().toISOString().slice(0, 10);
+
+            const details = reason
+              ? ['```', reason.slice(0, 5000), '```'].join('\n')
+              : '_No pipeline output was captured — the job failed before or after the pipeline step._';
+
+            const body = [
+              `The AI Daily briefing run failed on ${today}, so nothing was published.`,
+              'The site still serves the previous briefing.',
+              '',
+              `**Run:** ${runUrl}`,
+              `**Trigger:** \`${context.eventName}\``,
+              '',
+              '<details><summary>Last lines of the pipeline log</summary>',
+              '',
+              details,
+              '',
+              '</details>',
+            ].join('\n');
+
+            const openIssues = await github.paginate(github.rest.issues.listForRepo, {
+              owner,
+              repo,
+              state: 'open',
+              labels: LABEL,
+              per_page: 100,
+            });
+            const existing = openIssues.find((issue) => !issue.pull_request);
+
+            if (existing) {
+              await github.rest.issues.createComment({
+                owner,
+                repo,
+                issue_number: existing.number,
+                body,
+              });
+              core.notice(`Commented on the open failure issue #${existing.number}.`);
+              return;
+            }
+
+            try {
+              await github.rest.issues.createLabel({
+                owner,
+                repo,
+                name: LABEL,
+                color: 'b60205',
+                description: 'The AI Daily briefing run failed',
+              });
+            } catch (error) {
+              if (error.status !== 422) throw error;
+            }
+
+            const created = await github.rest.issues.create({
+              owner,
+              repo,
+              title: `AI Daily briefing failed (${today})`,
+              labels: [LABEL],
+              body,
+            });
+            core.notice(`Opened failure issue #${created.data.number}.`);
