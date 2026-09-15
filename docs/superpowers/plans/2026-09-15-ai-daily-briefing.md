@@ -1167,7 +1167,7 @@ import json
 from datetime import timedelta
 
 from conftest import NOW, make_article, make_story
-from test_build_digest import FakeEntry, entry, feeds_for
+from test_build_digest import entry, feeds_for
 
 from lastweekintech import ai_daily
 from lastweekintech.briefer import BriefPick, BriefVerdict
@@ -1349,18 +1349,6 @@ class TestAiEditionStorage:
             )
         editions = ai_daily.list_ai_editions(tmp_path)
         assert [e["date"] for e in editions] == ["2026-09-15", "2026-09-14", "2026-09-13"]
-```
-
-Note: `test_build_digest.py` already defines `FakeEntry`, `entry`, `feeds_for`; import them rather than redefining. Check the exact import path — `from test_fetch import FakeEntry` is used inside `test_build_digest.py` itself (per Task 4's context reading), so `FakeEntry` actually lives in `test_fetch.py`. Fix the import at the top of the new test file:
-
-```python
-from test_fetch import FakeEntry
-```
-
-and drop `FakeEntry` from the `test_build_digest` import line, leaving:
-
-```python
-from test_build_digest import entry, feeds_for
 ```
 
 - [ ] **Step 3: Run tests to verify they fail**
