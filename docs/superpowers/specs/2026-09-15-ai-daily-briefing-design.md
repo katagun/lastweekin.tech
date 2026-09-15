@@ -235,44 +235,61 @@ header or footer.
 
 ## Syndication reuse
 
-Rather than duplicating feed/sitemap logic, three small, backward-compatible
-generalizations to `syndication.py` (default arguments reproduce today's weekly output
+Rather than duplicating feed/sitemap logic, one small, backward-compatible
+generalization to `syndication.py` (default arguments reproduce today's weekly output
 unchanged):
 
-1. `write_feed(editions, output_dir, site_url, limit=DEFAULT_FEED_LIMIT, title=SITE_TITLE, subtitle=SITE_SUBTITLE, entry_title=lambda week: f"Week ending {week}")`.
-   AI Daily calls it with its own `title`/`subtitle` and
-   `entry_title=lambda date: f"AI Daily — {date}"`, `output_dir=public/ai`,
-   `site_url=f"{site_url}/ai"`. Because `_page_url`/`_entry_id`/`_feed_url` all derive
-   from the `site_url` argument already, passing an `/ai`-suffixed base is sufficient —
-   no changes needed to those helpers. This alone produces a correct, independent
-   `public/ai/feed.xml`.
-2. AI Daily also calls the existing `write_sitemap(editions, output_dir, site_url)`
-   a second time with `output_dir=public/ai`, `site_url=f"{site_url}/ai"`, producing
-   `public/ai/sitemap.xml`. No changes needed to `write_sitemap` itself.
-3. `write_robots(output_dir, site_url, extra_sitemaps: list[str] | None = None)` — the
-   one site-wide `robots.txt` gains a second `Sitemap:` line pointing at
-   `{site_url}/ai/sitemap.xml` (valid per the robots.txt convention — multiple
-   `Sitemap:` lines are allowed). This must be written **after** both pipelines have
-   run in a given CI job, since it is the one file referencing both; in practice each
-   workflow only knows about its own pipeline, so each calls `write_robots` with only
-   its own sitemap known — see "Workflow" for how this is actually sequenced.
+`write_feed(editions, output_dir, site_url, limit=DEFAULT_FEED_LIMIT, title=SITE_TITLE, subtitle=SITE_SUBTITLE, entry_title=lambda week: f"Week ending {week}")`.
+AI Daily calls it with its own `title`/`subtitle` and
+`entry_title=lambda date: f"AI Daily — {date}"`, `output_dir=public/ai`,
+`site_url=f"{site_url}/ai"`. Because `_page_url`/`_entry_id`/`_feed_url` all derive
+from the `site_url` argument already, passing an `/ai`-suffixed base is sufficient —
+no changes needed to those helpers. This alone produces a correct, independent
+`public/ai/feed.xml`.
 
-Note on robots.txt sequencing: the weekly and AI-daily workflows run independently and
-do not share a job, so neither can unconditionally assume the other's sitemap exists
-yet on a fresh checkout. `write_robots` is called with `extra_sitemaps` set to
-`["ai/sitemap.xml"]` unconditionally by *both* workflows (the weekly `run` command and
-the `ai-daily` command both regenerate the shared `public/robots.txt` on every run,
-each listing both sitemaps by fixed convention rather than by checking whether the
-other's file exists). This keeps the two pipelines independent while still producing a
-correct combined `robots.txt` regardless of which one ran most recently.
+AI Daily also calls the existing `write_sitemap(editions, output_dir, site_url)`
+unmodified, a second time, with `output_dir=public/ai`, `site_url=f"{site_url}/ai"`,
+producing its own `public/ai/sitemap.xml`.
+
+**Amendment from the design's original draft**: `write_robots` gaining an
+`extra_sitemaps` parameter (to cross-reference `ai/sitemap.xml` from the one site-wide
+`robots.txt`) turned out to need `pipeline.generate_site()` to know the AI Daily
+sitemap's path — a small but real coupling from the weekly pipeline to a feature it has
+no other reason to know about, for a purely cosmetic SEO completeness gain. Crawlers
+already reach every `/ai/` page through ordinary link-following from the header/footer
+link (`edition.html.jinja`'s new link, and `ai_daily.html.jinja`'s own archive nav), so
+a sitemap cross-reference is not load-bearing for discoverability. Dropped: `write_robots`
+stays untouched, and `public/robots.txt` continues to reference only `sitemap.xml`.
+`public/ai/sitemap.xml` still exists and is directly submittable to a search console if
+ever wanted — it's just not auto-referenced from the shared `robots.txt`.
+
+**Field-name note**: `write_feed`/`write_sitemap` (and, on the weekly side,
+`drop_recently_published`) all key off an edition dict's `"week"` field internally.
+Rather than generalizing that key name throughout shared code, AI Daily's own edition
+dicts use the clearer `"date"` field, and a small private helper in `ai_daily.py`
+(`_for_shared_helpers`) builds a translated view (`{**edition, "week": edition["date"]}`)
+at the three call sites that need it (`drop_recently_published`, `write_feed`,
+`write_sitemap`). This keeps every shared function's signature and internals completely
+untouched beyond the two changes already listed (`write_feed`'s new params, and
+`drop_recently_published`'s `lookback: timedelta` rename).
 
 ## CLI
 
 A new `ai-daily` Typer subcommand in `main.py`, structurally parallel to the existing
 `run` command: `--data-dir` (default `data`), `--site-dir` (default `public`),
-`--config`, `--dry-run`. No `--skip-gate` equivalent — there is no gate to skip; a
-`Briefer` call that exhausts its fallback chain simply exits non-zero (see "Briefing
-step: Validation and failure handling").
+`--config`, `--dry-run`, `--force` (rebuild an already-published day). No `--skip-gate`
+equivalent — there is no gate to skip; a `Briefer` call that exhausts its fallback chain
+simply exits non-zero (see "Briefing step: Validation and failure handling").
+
+**Consequence for the existing `run` command**: Typer only lets a single registered
+command be invoked without naming it; the moment a second command (`ai-daily`) exists,
+the CLI requires an explicit subcommand name for both. This means `uv run
+lastweekintech --dry-run` becomes `uv run lastweekintech run --dry-run` going forward —
+a real, if mechanical, change to the documented weekly invocation. Three places need
+updating alongside `main.py`: `.github/workflows/main.yml`'s pipeline step (add `run`
+after `lastweekintech`), `CLAUDE.md`'s Commands section, and every existing
+`tests/test_cli.py` invocation (its shared `invoke()` helper is the only place this
+needs to change; individual tests are unaffected).
 
 ## Workflow
 
@@ -288,8 +305,9 @@ New `.github/workflows/ai-daily.yml`, structured like the existing `main.yml`:
   label (`ai-daily-failure`) so it does not collide with the weekly digest's
   `digest-failure` tracking issue
 - The commit step stages `data` and `public` broadly, same pattern as the weekly
-  workflow, which correctly picks up the shared `public/sitemap.xml` /
-  `public/robots.txt` changes alongside `data/ai` and `public/ai`
+  workflow, which correctly picks up `data/ai` and `public/ai` (this run never touches
+  the site-wide `public/sitemap.xml` / `public/robots.txt` — see the "Syndication
+  reuse" amendment above)
 
 Two existing files need small, additive updates:
 
