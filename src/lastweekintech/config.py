@@ -2,6 +2,7 @@
 Configuration loading for the LastWeekIn.Tech pipeline.
 """
 
+import dataclasses
 import os
 import re
 from dataclasses import dataclass, field
@@ -71,6 +72,46 @@ class EditorSettings:
 
 
 @dataclass
+class AiBriefingSettings:
+    """The AI Daily analysis stage: one model call that selects and writes the brief."""
+
+    model_name: str = "anthropic/claude-sonnet-5"
+    fallback_models: list[str] = field(
+        default_factory=lambda: ["anthropic/claude-haiku-4.5", "google/gemini-3.7-flash"]
+    )
+    # Five stories' worth of analysis in one JSON reply needs real headroom,
+    # the same reasoning as editor.max_tokens.
+    max_tokens: int = 6000
+    temperature: float = 0.3
+    # How many characters of each candidate's body the briefer reads.
+    excerpt_chars: int = 600
+
+
+@dataclass
+class AiDailySettings:
+    """The daily AI-only briefing: a second, independent pipeline.
+
+    Reuses the weekly digest's fetch/dedupe/cluster/score/extract stages via
+    a derived Config carrying this section's own window/hn/weights — see
+    ``ai_daily.build_ai_daily``.
+    """
+
+    enabled: bool = True
+    window_days: int = 1
+    candidate_pool: int = 30
+    story_count: int = 5
+    # A floor, not a quota: a thin news day publishes four, not a padded fifth.
+    min_story_count: int = 4
+    repeat_lookback_days: int = 3
+    max_per_source: int = 2
+    hn: HNSettings = field(
+        default_factory=lambda: HNSettings(min_points=20, points_cap=300, limit=200)
+    )
+    weights: Weights = field(default_factory=Weights)
+    briefing: AiBriefingSettings = field(default_factory=AiBriefingSettings)
+
+
+@dataclass
 class PerplexitySettings:
     """The consensus check against the wider press, via the Perplexity API."""
 
@@ -121,6 +162,26 @@ class SummarizerSettings:
     temperature: float = 0.3
 
 
+def _build_ai_daily(data: dict[str, Any]) -> "AiDailySettings":
+    """Construct AiDailySettings, building its nested dataclass fields the
+    same way Config.from_yaml builds its own — a dict for any of ``hn``,
+    ``weights`` or ``briefing`` becomes the matching settings object."""
+    kwargs = dict(data)
+    if "hn" in kwargs:
+        default_hn = HNSettings(min_points=20, points_cap=300, limit=200)
+        hn_data = {**dataclasses.asdict(default_hn), **kwargs["hn"]}
+        kwargs["hn"] = HNSettings(**hn_data)
+    if "weights" in kwargs:
+        default_weights = Weights()
+        weights_data = {**dataclasses.asdict(default_weights), **kwargs["weights"]}
+        kwargs["weights"] = Weights(**weights_data)
+    if "briefing" in kwargs:
+        default_briefing = AiBriefingSettings()
+        briefing_data = {**dataclasses.asdict(default_briefing), **kwargs["briefing"]}
+        kwargs["briefing"] = AiBriefingSettings(**briefing_data)
+    return AiDailySettings(**kwargs)
+
+
 @dataclass
 class Config:
     """Represents the main configuration."""
@@ -133,6 +194,7 @@ class Config:
     digest: DigestSettings = field(default_factory=DigestSettings)
     perplexity: PerplexitySettings = field(default_factory=PerplexitySettings)
     editor: EditorSettings = field(default_factory=EditorSettings)
+    ai_daily: AiDailySettings = field(default_factory=AiDailySettings)
     # Absolute origin of the published site. Feeds, sitemaps and social cards
     # all need absolute URLs, so this cannot be derived from the output path.
     site_url: str = "https://lastweekin.tech"
@@ -160,6 +222,7 @@ class Config:
             "digest",
             "perplexity",
             "editor",
+            "ai_daily",
             "site_url",
         }
         if unknown:
@@ -175,6 +238,7 @@ class Config:
                 digest=DigestSettings(**data.get("digest", {})),
                 perplexity=PerplexitySettings(**data.get("perplexity", {})),
                 editor=EditorSettings(**data.get("editor", {})),
+                ai_daily=_build_ai_daily(data.get("ai_daily", {})),
                 site_url=str(data.get("site_url") or "https://lastweekin.tech").rstrip("/"),
             )
         except (KeyError, TypeError) as exc:
@@ -198,6 +262,14 @@ class Config:
             problems.append("hn.points_cap must be at least 1")
         if not self.summarizer.model_name:
             problems.append("summarizer.model_name is required")
+        if self.ai_daily.story_count < 1:
+            problems.append("ai_daily.story_count must be at least 1")
+        if self.ai_daily.min_story_count > self.ai_daily.story_count:
+            problems.append("ai_daily.min_story_count cannot exceed ai_daily.story_count")
+        if self.ai_daily.candidate_pool < self.ai_daily.story_count:
+            problems.append("ai_daily.candidate_pool must be at least ai_daily.story_count")
+        if not self.ai_daily.briefing.model_name:
+            problems.append("ai_daily.briefing.model_name is required")
         if not self.site_url.startswith(("http://", "https://")):
             problems.append("site_url must be an absolute http(s) URL")
         if problems:
