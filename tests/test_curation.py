@@ -1,5 +1,7 @@
 """Tests for deduplication, categorization, scoring and selection."""
 
+from datetime import timedelta
+
 from conftest import NOW, make_article, make_story
 
 from lastweekintech import pipeline
@@ -196,7 +198,7 @@ class TestDropRecentlyPublished:
             stories,
             editions,
             now=NOW,
-            lookback_weeks=lookback_weeks,
+            lookback=timedelta(weeks=lookback_weeks),
             keep_at_least=keep_at_least,
         )
 

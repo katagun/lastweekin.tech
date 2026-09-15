@@ -453,8 +453,9 @@ def drop_recently_published(
     stories: list[Story],
     editions: list[dict[str, Any]],
     now: datetime,
-    lookback_weeks: int,
+    lookback: timedelta,
     keep_at_least: int,
+    date_field: str = "week",
 ) -> list[Story]:
     """Remove stories the recent archive already published.
 
@@ -471,11 +472,16 @@ def drop_recently_published(
     week of repeats: ``keep_at_least`` restores the highest-ranked repeats until
     the digest can be filled, so the filter can only ever reorder a starved
     week, never shorten it.
+
+    ``date_field`` names the key each edition dict's date lives under —
+    "week" for the weekly digest's archive. A caller with a differently-shaped
+    archive (a daily one, say) passes its own field name rather than this
+    function needing to know anything about that pipeline.
     """
-    if lookback_weeks < 1 or not stories:
+    if lookback <= timedelta(0) or not stories:
         return stories
 
-    urls, titles = _recently_published(editions, now, lookback_weeks)
+    urls, titles = _recently_published(editions, now, lookback, date_field)
     if not urls and not titles:
         return stories
 
@@ -503,18 +509,19 @@ def drop_recently_published(
 def _recently_published(
     editions: list[dict[str, Any]],
     now: datetime,
-    lookback_weeks: int,
+    lookback: timedelta,
+    date_field: str = "week",
 ) -> tuple[set[str], list[str]]:
     """Collect the URLs and titles published within the lookback window."""
-    cutoff = now.date() - timedelta(weeks=lookback_weeks)
+    cutoff = now.date() - lookback
     urls: set[str] = set()
     titles: list[str] = []
 
     for edition in editions:
         if not isinstance(edition, dict):
             continue
-        week = _edition_date(edition.get("week"))
-        if week is None or week < cutoff:
+        published = _edition_date(edition.get(date_field))
+        if published is None or published < cutoff:
             continue
         for entry in edition.get("stories") or []:
             if not isinstance(entry, dict):
@@ -845,7 +852,7 @@ def build_digest(
             stories,
             editions or [],
             now=now,
-            lookback_weeks=config.digest.repeat_lookback_weeks,
+            lookback=timedelta(weeks=config.digest.repeat_lookback_weeks),
             keep_at_least=config.digest.story_count,
         )
     record.repeats_dropped = len(stories) - len(ranked)

@@ -47,3 +47,26 @@ class Digest:
     # The editor's 2-3 sentence read on the week; None when the editor did
     # not run, and the page renders without it.
     intro: str | None = None
+
+
+@dataclass
+class AiBrief:
+    """One AI Daily item: a story plus its analysis."""
+
+    title: str
+    articles: list[Article] = field(default_factory=list)
+    theme: str = ""
+    what_happened: str = ""
+    why_it_matters: str = ""
+    watch_next: str = ""
+    score: float = 0.0
+
+
+@dataclass
+class AiDigest:
+    """One day's AI briefing as the pipeline hands it to the publisher."""
+
+    briefs: list[AiBrief] = field(default_factory=list)
+    # The briefer's 1-2 sentence read on the day; None when every model in
+    # its fallback chain failed, in which case ``briefs`` is also empty.
+    intro: str | None = None

@@ -15,9 +15,11 @@ history are that bot commit.
 
 ```bash
 uv sync                                # installs the project and the dev group
-uv run lastweekintech                  # full run → data/ + site
-uv run lastweekintech --dry-run        # print the edition, write nothing
-uv run pytest                          # 406 tests, no network
+uv run lastweekintech run              # full weekly run → data/ + site
+uv run lastweekintech run --dry-run    # print the edition, write nothing
+uv run lastweekintech ai-daily         # full AI Daily run → data/ai/ + site/ai
+uv run lastweekintech ai-daily --dry-run  # print the briefing, write nothing
+uv run pytest                          # 530 tests, no network
 uv run pytest tests/test_curation.py -k score -q
 uv run python -m evals.run             # score the summary-quality golden set
 uv run python tools/check_models.py    # are the configured models still offered?
@@ -121,6 +123,21 @@ callers.
   archived one, then copies every file in `static/`. Paths resolve from `PACKAGE_DIR`, so the
   pipeline works from any working directory. Autoescape is unconditional: `select_autoescape()`
   keys off the file extension and left `.html.jinja` templates unescaped.
+- **briefer.py** — AI Daily's selection-and-analysis model call. Unlike the weekly pipeline's
+  editor+summarizer split, one call does both jobs: there is no mechanical fallback that can
+  substitute for AI-generated analysis, so a verdict is either fully valid — right pick-count
+  range, every field populated, per-source cap and article-text presence both mechanically
+  enforced — or the whole call is treated as failed and the next model in the chain is tried.
+- **ai_daily.py** — AI Daily's orchestration and storage. Reuses the weekly pipeline's
+  fetch/dedupe/cluster/score/extract stages unmodified via a derived `Config` (a 24-hour window,
+  daily-tuned HN thresholds). No mechanical category filter narrows the candidate pool — the
+  fixed-precedence classifier would tag a chip-export-control or policy story as Hardware or
+  Policy rather than AI — so relevance is judged entirely by the briefing model against a broad
+  pool. It renders its own site section, feed and sitemap at `/ai/`.
+- AI Daily has no publish gate: a `Briefer` failure across its whole fallback chain fails the
+  day's run closed (nothing published, the previous day's page stays live), a deliberate
+  divergence from the weekly pipeline's everything-degrades-gracefully-until-the-gate philosophy
+  — there is no partial verdict for a gate like `validation.py` to arbitrate.
 
 Everything under `public/` is **generated output** — edit `src/lastweekintech/templates/` and
 `src/lastweekintech/static/` instead. The site is generated into its own directory rather than the
@@ -146,7 +163,8 @@ suite.
 
 `data/archive/*.json` holds every published edition (backfilled from git history; categories there
 were recomputed with the fixed classifier). `data/latest.json` is a copy of the newest one.
-`data/runs/*.json` holds per-run metrics.
+`data/runs/*.json` holds per-run metrics. `data/ai/archive/*.json` holds every published AI Daily
+edition the same way, and `data/ai/latest.json` is a copy of the newest one.
 
 ## Operations
 

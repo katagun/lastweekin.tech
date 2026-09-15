@@ -82,6 +82,60 @@ class TestFromYaml:
         with pytest.raises(ConfigError, match="min_ai_stories"):
             Config.from_yaml(write_config(tmp_path, body))
 
+    def test_applies_ai_daily_defaults_when_the_section_is_omitted(self, tmp_path):
+        config = Config.from_yaml(write_config(tmp_path, MINIMAL))
+        assert config.ai_daily.enabled is True
+        assert config.ai_daily.window_days == 1
+        assert config.ai_daily.story_count == 5
+        assert config.ai_daily.min_story_count == 4
+        assert config.ai_daily.briefing.model_name == "anthropic/claude-sonnet-5"
+
+    def test_rejects_an_unknown_ai_daily_key(self, tmp_path):
+        body = MINIMAL + "\nai_daily:\n  nonsense: 1\n"
+        with pytest.raises(ConfigError, match="Invalid configuration"):
+            Config.from_yaml(write_config(tmp_path, body))
+
+
+class TestAiDaily:
+    def test_overrides_nested_hn_weights_and_briefing_settings(self, tmp_path):
+        body = MINIMAL + (
+            "\nai_daily:\n"
+            "  story_count: 6\n"
+            "  min_story_count: 5\n"
+            "  hn:\n"
+            "    min_points: 5\n"
+            "  weights:\n"
+            "    hn: 10\n"
+            "  briefing:\n"
+            "    model_name: vendor/other-model\n"
+            "    max_tokens: 1234\n"
+        )
+        config = Config.from_yaml(write_config(tmp_path, body))
+        assert config.ai_daily.story_count == 6
+        assert config.ai_daily.min_story_count == 5
+        assert config.ai_daily.hn.min_points == 5
+        # Untouched nested defaults still apply.
+        assert config.ai_daily.hn.points_cap == 300
+        assert config.ai_daily.weights.hn == 10
+        assert config.ai_daily.briefing.model_name == "vendor/other-model"
+        assert config.ai_daily.briefing.max_tokens == 1234
+        assert config.ai_daily.briefing.temperature == 0.3
+
+    def test_rejects_a_min_story_count_above_story_count(self, tmp_path):
+        body = MINIMAL + "\nai_daily:\n  story_count: 3\n  min_story_count: 4\n"
+        with pytest.raises(ConfigError, match="min_story_count"):
+            Config.from_yaml(write_config(tmp_path, body))
+
+    def test_rejects_a_candidate_pool_smaller_than_story_count(self, tmp_path):
+        body = MINIMAL + "\nai_daily:\n  story_count: 5\n  candidate_pool: 3\n"
+        with pytest.raises(ConfigError, match="candidate_pool"):
+            Config.from_yaml(write_config(tmp_path, body))
+
+    def test_rejects_an_empty_briefing_model_name(self, tmp_path):
+        body = MINIMAL + '\nai_daily:\n  briefing:\n    model_name: ""\n'
+        with pytest.raises(ConfigError, match=r"briefing\.model_name"):
+            Config.from_yaml(write_config(tmp_path, body))
+
 
 class TestShippedConfig:
     def test_the_packaged_configuration_is_valid(self):

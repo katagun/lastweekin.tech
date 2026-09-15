@@ -43,7 +43,7 @@ def stub_pipeline(monkeypatch, config):
 def invoke(tmp_path, *args):
     return runner.invoke(
         main.app,
-        ["--data-dir", str(tmp_path / "data"), "--site-dir", str(tmp_path), *args],
+        ["run", "--data-dir", str(tmp_path / "data"), "--site-dir", str(tmp_path), *args],
     )
 
 
@@ -161,3 +161,89 @@ class TestAlreadyPublished:
         result = invoke(tmp_path, "--week", "2026-08-10", "--dry-run")
         assert result.exit_code == 0
         assert '"week"' in result.output
+
+
+@pytest.fixture
+def stub_ai_daily(monkeypatch, config):
+    """Run the ai-daily CLI against a canned digest instead of the network."""
+
+    def briefs(count=5):
+        from lastweekintech.domain import AiBrief
+
+        return [
+            AiBrief(
+                title=f"AI story {i}",
+                articles=[make_article(url=f"https://example.com/ai/{i}")],
+                theme="Capabilities",
+                what_happened="It happened.",
+                why_it_matters="It matters.",
+                watch_next="Watch this.",
+                score=100 - i,
+            )
+            for i in range(count)
+        ]
+
+    state = {"briefs": briefs()}
+    monkeypatch.setattr(main, "get_config", lambda path=None: config)
+    monkeypatch.setattr(main, "Briefer", lambda settings: object())
+    monkeypatch.setattr(
+        main.ai_daily,
+        "build_ai_daily",
+        lambda *a, **k: main.ai_daily.AiDigest(briefs=state["briefs"]),
+    )
+    state["make"] = briefs
+    return state
+
+
+def invoke_ai_daily(tmp_path, *args):
+    return runner.invoke(
+        main.app,
+        ["ai-daily", "--data-dir", str(tmp_path / "data"), "--site-dir", str(tmp_path), *args],
+    )
+
+
+class TestAiDailyCommand:
+    def test_publishes_a_good_briefing(self, tmp_path, stub_ai_daily):
+        result = invoke_ai_daily(tmp_path, "--date", "2026-09-15")
+        assert result.exit_code == 0
+        assert (tmp_path / "ai" / "index.html").exists()
+        assert (tmp_path / "data" / "ai" / "archive" / "2026-09-15.json").exists()
+
+    def test_fails_when_no_model_produced_a_verdict(self, tmp_path, stub_ai_daily):
+        stub_ai_daily["briefs"] = []
+        result = invoke_ai_daily(tmp_path, "--date", "2026-09-15")
+        assert result.exit_code != 0
+        assert not (tmp_path / "ai" / "index.html").exists()
+
+    def test_dry_run_writes_nothing(self, tmp_path, stub_ai_daily):
+        result = invoke_ai_daily(tmp_path, "--date", "2026-09-15", "--dry-run")
+        assert result.exit_code == 0
+        assert not (tmp_path / "ai").exists()
+        assert not (tmp_path / "data").exists()
+        assert "AI story 0" in result.stdout
+
+    def test_skips_a_day_that_is_already_published(self, tmp_path, stub_ai_daily):
+        archive = tmp_path / "data" / "ai" / "archive"
+        archive.mkdir(parents=True)
+        (archive / "2026-09-15.json").write_text('{"date": "2026-09-15", "stories": []}')
+
+        result = invoke_ai_daily(tmp_path, "--date", "2026-09-15")
+        assert result.exit_code == 0
+        assert "already published" in result.output
+        assert not (tmp_path / "ai" / "index.html").exists()
+
+    def test_force_rebuilds_a_published_day(self, tmp_path, stub_ai_daily):
+        archive = tmp_path / "data" / "ai" / "archive"
+        archive.mkdir(parents=True)
+        (archive / "2026-09-15.json").write_text('{"date": "2026-09-15", "stories": []}')
+
+        result = invoke_ai_daily(tmp_path, "--date", "2026-09-15", "--force")
+        assert result.exit_code == 0
+        assert (tmp_path / "ai" / "index.html").exists()
+
+    def test_disabled_in_config_does_nothing(self, tmp_path, stub_ai_daily, config):
+        config.ai_daily.enabled = False
+        result = invoke_ai_daily(tmp_path, "--date", "2026-09-15")
+        assert result.exit_code == 0
+        assert "disabled" in result.output
+        assert not (tmp_path / "ai").exists()

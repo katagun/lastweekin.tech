@@ -136,3 +136,37 @@ summarizer:
   max_tokens: 400
   max_input_chars: 12000
   temperature: 0.3
+
+# The daily AI-only briefing: a second, independent pipeline. Same feeds and
+# Hacker News signal as the weekly digest, but a 24-hour window, no
+# mechanical category filter (a chip export-control story would be tagged
+# Hardware or Policy, not AI, so relevance is judged by the briefing model
+# itself against a broad candidate pool), and one model call that both
+# selects the 4-5 stories and writes the analysis for each.
+ai_daily:
+  enabled: true
+  window_days: 1
+  candidate_pool: 30
+  story_count: 5
+  # A floor, not a quota: a thin news day publishes four, not a padded fifth.
+  min_story_count: 4
+  repeat_lookback_days: 3
+  max_per_source: 2
+  hn:
+    # 24 hours of traction runs far lower than a week's worth.
+    min_points: 20
+    points_cap: 300
+    limit: 200
+  weights:
+    hn: 5
+    src: 3
+    rec: 1
+  briefing:
+    model_name: "anthropic/claude-sonnet-5"
+    fallback_models:
+      - "anthropic/claude-haiku-4.5"
+      - "google/gemini-3.7-flash"
+    # Five stories' worth of analysis in one JSON reply needs real headroom.
+    max_tokens: 6000
+    temperature: 0.3
+    excerpt_chars: 600

@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 {#
   Optional template variables:
-    site_url  absolute origin of the published site, e.g. "https://lastweekin.tech".
+    site_url  absolute origin of this section, e.g. "https://lastweekin.tech/ai".
               When absent, absolute-URL metadata (canonical, og:image) is omitted
               rather than emitted as a broken relative URL.
 #}
 {% set site = (site_url | default('', true) | string).rstrip('/') %}
-{% set page_path = '' if is_latest else 'archive/' ~ edition.week ~ '.html' %}
-{% macro pretty_date(week, with_year=true) -%}
+{% set page_path = '' if is_latest else 'archive/' ~ edition.date ~ '.html' %}
+{% set weekly_root = root ~ '../' %}
+{% macro pretty_date(value, with_year=true) -%}
   {%- set months = {
     '01': 'Jan', '02': 'Feb', '03': 'Mar', '04': 'Apr', '05': 'May', '06': 'Jun',
     '07': 'Jul', '08': 'Aug', '09': 'Sep', '10': 'Oct', '11': 'Nov', '12': 'Dec'
   } -%}
-  {%- set week = week | string -%}
-  {%- if week | length == 10 and months.get(week[5:7]) -%}
-    {{- months[week[5:7]] }} {{ week[8:10] | int }}{{ ', ' ~ week[:4] if with_year else '' -}}
+  {%- set value = value | string -%}
+  {%- if value | length == 10 and months.get(value[5:7]) -%}
+    {{- months[value[5:7]] }} {{ value[8:10] | int }}{{ ', ' ~ value[:4] if with_year else '' -}}
   {%- else -%}
-    {{- week -}}
+    {{- value -}}
   {%- endif -%}
 {%- endmacro %}
 <html lang="en">
@@ -26,7 +27,7 @@
     <title>{{ page_title }}</title>
     <meta name="description" content="{{ description }}" />
     <meta name="color-scheme" content="light dark" />
-    <meta property="og:site_name" content="LastWeekIn.Tech" />
+    <meta property="og:site_name" content="LastWeekIn.Tech — AI Daily" />
     <meta property="og:title" content="{{ page_title }}" />
     <meta property="og:description" content="{{ description }}" />
     <meta property="og:type" content="website" />
@@ -39,14 +40,14 @@
     <meta property="og:image:height" content="630" />
     <meta
       property="og:image:alt"
-      content="LastWeekIn.Tech — the 7 tech stories that mattered, every Monday"
+      content="LastWeekIn.Tech AI Daily — the AI stories that mattered today"
     />
     <meta name="twitter:image" content="{{ site }}/og.png" />
     {% endif %}
     <link
       rel="alternate"
       type="application/atom+xml"
-      title="LastWeekIn.Tech weekly digest"
+      title="LastWeekIn.Tech AI Daily"
       href="{{ root }}feed.xml"
     />
     <link rel="stylesheet" href="{{ root }}style.css" />
@@ -59,22 +60,22 @@
     <a class="skip-link" href="#stories">Skip to the stories</a>
 
     <header class="site-header">
-      <p class="masthead-note">Published every Monday &middot; No trackers, no ads</p>
+      <p class="masthead-note">Published daily &middot; AI only &middot; No trackers, no ads</p>
       <h1 class="site-title">
         <a class="wordmark" href="{{ root }}index.html"
-          >LastWeekIn<span class="dot">.</span>Tech</a
+          >LastWeekIn<span class="dot">.</span>Tech <span class="dot">AI Daily</span></a
         >
       </h1>
       <div class="dateline" role="presentation">
-        <span class="dateline-item">The {{ edition.stories | length }} stories that mattered</span>
+        <span class="dateline-item">The {{ edition.stories | length }} AI stories that mattered</span>
         <span class="dateline-item"
-          >Week ending
-          <time datetime="{{ edition.week }}">{{ pretty_date(edition.week) }}</time></span
+          >Briefing for
+          <time datetime="{{ edition.date }}">{{ pretty_date(edition.date) }}</time></span
         >
       </div>
       {% if not is_latest %}
       <p class="archive-note">
-        An archived edition. <a href="{{ root }}index.html">See this week&rsquo;s digest.</a>
+        An archived briefing. <a href="{{ root }}index.html">See today&rsquo;s briefing.</a>
       </p>
       {% endif %}
     </header>
@@ -86,31 +87,15 @@
 
       <ol class="story-list" id="stories">
         {% for story in edition.stories %}
-        {% set category = story.category | default('', true) | string %}
-        {% set outlets = story.source_count | default(0, true) %}
-        {% set signals = [] %}
-        {% if story.hn_points %}
-        {% set _ = signals.append(
-          story.hn_points ~ ' point' ~ ('' if story.hn_points == 1 else 's') ~ ' on Hacker News'
-        ) %}
-        {% endif %}
-        {% if outlets > 1 %}
-        {% set _ = signals.append('Covered by ' ~ outlets ~ ' outlets') %}
-        {% endif %}
-        {% if story.consensus %}
-        {% set _ = signals.append('Led the wider press') %}
-        {% endif %}
-        <li
-          class="story-card{{ ' lead-story' if loop.first else '' }}{{ ' brief' if loop.index > 3 else '' }}"
-        >
+        {% set theme = story.theme | default('', true) | string %}
+        {% set theme_slug = theme | lower | replace(' & ', '-') | replace(' ', '-') %}
+        <li class="story-card{{ ' lead-story' if loop.first else '' }}">
           <p class="story-rank" aria-hidden="true">{{ story.rank }}</p>
           <div class="story-content">
             <p class="story-meta">
               <span class="visually-hidden">Number {{ story.rank }}. </span>
-              {% if category %}
-              <span class="story-category category-{{ category | lower | replace(' ', '-') }}"
-                >{{ category }}</span
-              >
+              {% if theme %}
+              <span class="story-category category-{{ theme_slug }}">{{ theme }}</span>
               {% endif %}
               <span class="story-source">{{ story.source }}</span>
             </p>
@@ -123,17 +108,17 @@
               {{ story.title }}
               {% endif %}
             </h2>
-            {% if story.summary %}
-            <p class="story-summary">{{ story.summary }}</p>
+            {% if story.what_happened %}
+            <p class="story-summary">{{ story.what_happened }}</p>
             {% endif %}
-            {% if story.why %}
+            {% if story.why_it_matters %}
             <p class="story-case">
-              <span class="story-case-label">Why it matters</span> {{ story.why }}
+              <span class="story-case-label">Why it matters</span> {{ story.why_it_matters }}
             </p>
             {% endif %}
-            {% if signals %}
-            <p class="story-why" {% if story.sources %}title="{{ story.sources | join(', ') }}"{% endif %}>
-              <span class="visually-hidden">Why it made the cut: </span>{{ signals | join(' · ') }}
+            {% if story.watch_next %}
+            <p class="story-case">
+              <span class="story-case-label">What to watch</span> {{ story.watch_next }}
             </p>
             {% endif %}
           </div>
@@ -142,26 +127,26 @@
       </ol>
 
       <section class="subscribe" aria-labelledby="subscribe-heading">
-        <h2 id="subscribe-heading">Get it every Monday</h2>
+        <h2 id="subscribe-heading">Get it every day</h2>
         <p>
-          One edition a week, seven stories, nothing else.
+          A short AI briefing, every day.
           <a href="{{ root }}feed.xml">Subscribe with RSS</a> — no email address, no tracking.
         </p>
       </section>
 
       {% if past_editions %}
       <nav class="archive" aria-labelledby="archive-heading">
-        <h2 id="archive-heading">Past editions</h2>
+        <h2 id="archive-heading">Past briefings</h2>
         {% set years = [] %}
         {% for past in past_editions %}
-        {% if (past.week | string)[:4] not in years %}
-        {% set _ = years.append((past.week | string)[:4]) %}
+        {% if (past.date | string)[:4] not in years %}
+        {% set _ = years.append((past.date | string)[:4]) %}
         {% endif %}
         {% endfor %}
         {% for year in years %}
         {% set in_year = [] %}
         {% for past in past_editions %}
-        {% if (past.week | string)[:4] == year %}
+        {% if (past.date | string)[:4] == year %}
         {% set _ = in_year.append(past) %}
         {% endif %}
         {% endfor %}
@@ -169,14 +154,14 @@
           <summary>
             <span class="archive-year-label">{{ year }}</span>
             <span class="archive-count"
-              >{{ in_year | length }} edition{{ '' if in_year | length == 1 else 's' }}</span
+              >{{ in_year | length }} briefing{{ '' if in_year | length == 1 else 's' }}</span
             >
           </summary>
           <ul>
             {% for past in in_year %}
             <li>
-              <a href="{{ root }}archive/{{ past.week }}.html"
-                >{{ pretty_date(past.week, with_year=false) }}</a
+              <a href="{{ root }}archive/{{ past.date }}.html"
+                >{{ pretty_date(past.date, with_year=false) }}</a
               >
             </li>
             {% endfor %}
@@ -193,7 +178,9 @@
         length }} sources. No trackers, no ads.
       </p>
       <p class="generated">Generated {{ edition.generated_at[:10] }}.</p>
-      <p class="ai-daily-link"><a href="{{ root }}ai/">Also: AI Daily, a shorter briefing every day</a></p>
+      <p class="ai-daily-link">
+        <a href="{{ weekly_root }}index.html">Also: the weekly Top-7 digest</a>
+      </p>
     </footer>
   </body>
 </html>

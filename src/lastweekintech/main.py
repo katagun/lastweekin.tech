@@ -10,7 +10,8 @@ from typing import Annotated
 
 import typer
 
-from lastweekintech import metrics, pipeline
+from lastweekintech import ai_daily, metrics, pipeline
+from lastweekintech.briefer import Briefer
 from lastweekintech.config import ConfigError, get_config
 from lastweekintech.editor import Editor
 from lastweekintech.summarizer import Summarizer
@@ -19,7 +20,7 @@ from lastweekintech.validation import DigestValidationError, assert_publishable
 app = typer.Typer(add_completion=False)
 
 
-@app.command()
+@app.command("run")
 def run(
     data_dir: Annotated[
         Path,
@@ -125,6 +126,92 @@ def run(
     )
     save_metrics()
     typer.secho(f"Published the edition for {week}.", fg=typer.colors.GREEN)
+
+
+@app.command("ai-daily")
+def ai_daily_command(
+    data_dir: Annotated[
+        Path,
+        typer.Option("--data-dir", "-d", help="Where the AI Daily data lives."),
+    ] = Path("data"),
+    site_dir: Annotated[
+        Path,
+        typer.Option("--site-dir", "-s", help="Where the static site is written."),
+    ] = Path("public"),
+    config_path: Annotated[
+        Path | None,
+        typer.Option("--config", "-c", help="Path to config.yaml."),
+    ] = None,
+    date: Annotated[
+        str | None,
+        typer.Option("--date", help="Briefing date (YYYY-MM-DD). Defaults to today, UTC."),
+    ] = None,
+    force: Annotated[
+        bool,
+        typer.Option("--force", help="Rebuild and overwrite an already-published day."),
+    ] = False,
+    dry_run: Annotated[
+        bool,
+        typer.Option("--dry-run", help="Print the briefing instead of writing any files."),
+    ] = False,
+):
+    """Run the AI Daily briefing pipeline."""
+    now = datetime.now(UTC)
+    date = date or now.strftime("%Y-%m-%d")
+
+    already_published = data_dir / ai_daily.AI_DAILY_SUBDIR / "archive" / f"{date}.json"
+    if already_published.exists() and not force and not dry_run:
+        typer.secho(
+            f"The {date} AI Daily briefing is already published ({already_published}); "
+            "use --force to rebuild it.",
+            fg=typer.colors.YELLOW,
+        )
+        return
+
+    try:
+        config = get_config(config_path)
+    except ConfigError as e:
+        typer.secho(f"Configuration error: {e}", fg=typer.colors.RED, err=True)
+        raise typer.Exit(code=2) from e
+
+    if not config.ai_daily.enabled:
+        typer.secho("AI Daily is disabled in config.yaml.", fg=typer.colors.YELLOW)
+        return
+
+    try:
+        briefer = Briefer(config.ai_daily.briefing)
+    except ValueError as e:
+        typer.secho(f"Configuration error: {e}", fg=typer.colors.RED, err=True)
+        raise typer.Exit(code=2) from e
+
+    digest = ai_daily.build_ai_daily(
+        config,
+        briefer,
+        now=now,
+        editions=ai_daily.list_ai_editions(data_dir),
+    )
+
+    if not digest.briefs:
+        typer.secho(
+            "No AI Daily briefing model produced a usable verdict; nothing published today.",
+            fg=typer.colors.RED,
+            err=True,
+        )
+        raise typer.Exit(code=1)
+
+    edition = ai_daily.build_ai_edition(digest.briefs, date=date, now=now, intro=digest.intro)
+
+    if dry_run:
+        typer.echo(json.dumps(edition, indent=2, ensure_ascii=False))
+        return
+
+    ai_daily.save_ai_edition(edition, data_dir)
+    ai_daily.generate_ai_site(
+        ai_daily.list_ai_editions(data_dir),
+        output_dir=site_dir,
+        site_url=config.site_url,
+    )
+    typer.secho(f"Published the AI Daily briefing for {date}.", fg=typer.colors.GREEN)
 
 
 if __name__ == "__main__":

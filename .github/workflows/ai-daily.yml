@@ -1,36 +1,27 @@
-name: Weekly Tech Digest
+name: AI Daily Briefing
 
 on:
   schedule:
-    - cron: "0 8 * * 1" # Runs every Monday at 8:00 AM UTC
-  workflow_dispatch: # Allows manual triggering
-    inputs:
-      skip_gate:
-        description: "Publish even if the digest fails validation"
-        type: boolean
-        default: false
+    - cron: "0 13 * * *" # Every day at 1:00 PM UTC — clear of the Monday 08:00 UTC weekly run.
+  workflow_dispatch:
 
-# Permissions are granted per job instead of workflow-wide: the digest job
-# writes commits, the notifier writes issues, and neither can do the other's job.
+# Independent of the weekly digest's own concurrency group: the two never need to
+# block each other, and their schedules never coincide.
 permissions: {}
 
 concurrency:
-  group: weekly-digest
+  group: ai-daily-digest
   cancel-in-progress: false
 
 jobs:
-  build-digest:
+  build-brief:
     runs-on: ubuntu-latest
-    # The run downloads article bodies for the candidate pool and calls a model
-    # per story; anything beyond this is stuck, not slow.
-    timeout-minutes: 45
+    timeout-minutes: 30
 
     permissions:
       contents: write
 
     outputs:
-      # Carries the tail of the pipeline log to notify-failure, which runs in a
-      # separate job and so cannot read the workspace.
       failure_reason: ${{ steps.pipeline.outputs.failure_reason }}
 
     steps:
@@ -49,23 +40,14 @@ jobs:
         id: pipeline
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
-          HF_TOKEN: ${{ secrets.HF_TOKEN }}
-          PERPLEXITY_API_KEY: ${{ secrets.PERPLEXITY_API_KEY }}
-          SKIP_GATE_FLAG: ${{ inputs.skip_gate && '--skip-gate' || '' }}
-        # The publish gate fails the job rather than committing a broken digest,
-        # which leaves last week's edition live on the site. Its message goes to
-        # stderr, so the log tail is captured here and handed to notify-failure.
         run: |
-          # The log lives outside the workspace so it can never be committed.
-          log="$RUNNER_TEMP/pipeline.log"
+          log="$RUNNER_TEMP/ai-daily.log"
           set +e
-          uv run lastweekintech run $SKIP_GATE_FLAG 2>&1 | tee "$log"
+          uv run lastweekintech ai-daily 2>&1 | tee "$log"
           status=${PIPESTATUS[0]}
           set -e
           if [ "$status" -ne 0 ]; then
-            # A random delimiter: log lines come from feeds we do not control and
-            # must not be able to close the heredoc and forge further outputs.
-            delimiter="LWIT_LOG_$(openssl rand -hex 16)"
+            delimiter="LWIT_AI_DAILY_$(openssl rand -hex 16)"
             {
               printf 'failure_reason<<%s\n' "$delimiter"
               tail -n 30 "$log" | sed 's/\x1b\[[0-9;]*m//g'
@@ -78,9 +60,6 @@ jobs:
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          # Stage only generated output. The site lives in public/ because the
-          # Pages deploy uploads that directory verbatim; the repository root
-          # holds source that must not be fetchable from the published site.
           generated=(data public)
           present=()
           for path in "${generated[@]}"; do
@@ -91,12 +70,11 @@ jobs:
             echo "No changes to commit."
             exit 0
           fi
-          git commit -m "docs: Update weekly digest for $(date -u +'%Y-%m-%d')"
+          git commit -m "docs: AI Daily briefing for $(date -u +'%Y-%m-%d')"
           git push
 
   notify-failure:
-    # A failed scheduled run is an email nobody reads. Turn it into an issue.
-    needs: build-digest
+    needs: build-brief
     if: failure()
     runs-on: ubuntu-latest
     timeout-minutes: 5
@@ -105,14 +83,14 @@ jobs:
       issues: write
 
     steps:
-      - name: Open or update the digest failure issue
+      - name: Open or update the AI Daily failure issue
         uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         env:
-          FAILURE_REASON: ${{ needs.build-digest.outputs.failure_reason }}
+          FAILURE_REASON: ${{ needs.build-brief.outputs.failure_reason }}
           RUN_URL: "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
         with:
           script: |
-            const LABEL = 'digest-failure';
+            const LABEL = 'ai-daily-failure';
             const { owner, repo } = context.repo;
             const runUrl = process.env.RUN_URL;
             const reason = (process.env.FAILURE_REASON || '').trim();
@@ -123,8 +101,8 @@ jobs:
               : '_No pipeline output was captured — the job failed before or after the pipeline step._';
 
             const body = [
-              `The weekly digest run failed on ${today}, so nothing was published.`,
-              'The site still serves the previous edition.',
+              `The AI Daily briefing run failed on ${today}, so nothing was published.`,
+              'The site still serves the previous briefing.',
               '',
               `**Run:** ${runUrl}`,
               `**Trigger:** \`${context.eventName}\``,
@@ -136,8 +114,6 @@ jobs:
               '</details>',
             ].join('\n');
 
-            // De-duplicate on the label rather than the title: a recurring
-            // failure gets one issue with a comment per run, not an issue a week.
             const openIssues = await github.paginate(github.rest.issues.listForRepo, {
               owner,
               repo,
@@ -164,17 +140,16 @@ jobs:
                 repo,
                 name: LABEL,
                 color: 'b60205',
-                description: 'The weekly digest run failed',
+                description: 'The AI Daily briefing run failed',
               });
             } catch (error) {
-              // 422 means the label already exists, which is exactly what we want.
               if (error.status !== 422) throw error;
             }
 
             const created = await github.rest.issues.create({
               owner,
               repo,
-              title: `Weekly digest failed (${today})`,
+              title: `AI Daily briefing failed (${today})`,
               labels: [LABEL],
               body,
             });

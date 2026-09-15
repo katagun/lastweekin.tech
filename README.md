@@ -49,7 +49,7 @@ Then edit `.env`:
 ## Usage
 
 ```bash
-uv run lastweekintech
+uv run lastweekintech run
 ```
 
 This writes the edition to `data/` and the whole static site to `public/` —
@@ -71,7 +71,7 @@ installed package, so it can be run from any directory.
 `--dry-run` is the quickest way to see what a run would publish:
 
 ```bash
-uv run lastweekintech --dry-run
+uv run lastweekintech run --dry-run
 ```
 
 ## Development
