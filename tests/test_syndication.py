@@ -126,6 +126,34 @@ class TestWriteFeed:
         assert root.findall(f"{ATOM}entry") == []
         assert root.findtext(f"{ATOM}updated")
 
+    def test_accepts_a_custom_title_and_subtitle(self, tmp_path):
+        root = parse(
+            syndication.write_feed(
+                [edition()], tmp_path, SITE, title="Custom Title", subtitle="Custom subtitle"
+            )
+        )
+        assert root.findtext(f"{ATOM}title") == "Custom Title"
+        assert root.findtext(f"{ATOM}subtitle") == "Custom subtitle"
+
+    def test_defaults_reproduce_the_weekly_title_and_subtitle(self, tmp_path):
+        root = parse(syndication.write_feed([edition()], tmp_path, SITE))
+        assert root.findtext(f"{ATOM}title") == syndication.SITE_TITLE
+        assert root.findtext(f"{ATOM}subtitle") == syndication.SITE_SUBTITLE
+
+    def test_accepts_a_custom_entry_title(self, tmp_path):
+        root = parse(
+            syndication.write_feed(
+                [edition()], tmp_path, SITE, entry_title=lambda week: f"AI Daily — {week}"
+            )
+        )
+        entry_title = root.find(f"{ATOM}entry/{ATOM}title")
+        assert entry_title.text == "AI Daily — 2026-08-10"
+
+    def test_default_entry_title_reproduces_the_weekly_wording(self, tmp_path):
+        root = parse(syndication.write_feed([edition()], tmp_path, SITE))
+        entry_title = root.find(f"{ATOM}entry/{ATOM}title")
+        assert entry_title.text == "Week ending 2026-08-10"
+
 
 class TestEscaping:
     def test_escapes_markup_in_a_story_title(self, tmp_path):

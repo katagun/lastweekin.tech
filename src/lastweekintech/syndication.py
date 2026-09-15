@@ -18,6 +18,7 @@ import re
 # Used only to *build* documents, never to parse anything received from the
 # network, so the XML-attack surface bandit warns about does not exist here.
 import xml.etree.ElementTree as ET  # nosec B405
+from collections.abc import Callable
 from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
@@ -51,19 +52,27 @@ def write_feed(
     output_dir: Path,
     site_url: str,
     limit: int = DEFAULT_FEED_LIMIT,
+    title: str = SITE_TITLE,
+    subtitle: str = SITE_SUBTITLE,
+    entry_title: Callable[[str], str] = lambda week: f"Week ending {week}",
 ) -> Path:
     """Write an Atom 1.0 feed with one entry per edition, newest first.
 
     The entry is the edition rather than the story: this is a weekly digest, and a
     reader subscribes to the week. Seven entries a week would also make every
     edition look like seven unrelated updates in a reader's timeline.
+
+    ``title``/``subtitle``/``entry_title`` default to the weekly digest's own
+    wording, so every existing call site is unaffected; a second feed for a
+    different section of the site (see ``ai_daily.generate_ai_site``) passes
+    its own.
     """
     base = _site_base(site_url)
     ordered = _newest_first(editions)[: max(limit, 0)]
 
     root = ET.Element("feed", {"xmlns": ATOM_NS})
-    _text(root, "title", SITE_TITLE)
-    _text(root, "subtitle", SITE_SUBTITLE)
+    _text(root, "title", title)
+    _text(root, "subtitle", subtitle)
     _text(root, "id", f"{base}/")
     _text(root, "updated", _updated(ordered[0]) if ordered else _EPOCH)
     ET.SubElement(
@@ -73,7 +82,7 @@ def write_feed(
     _text(ET.SubElement(root, "author"), "name", SITE_AUTHOR)
 
     for edition in ordered:
-        _append_entry(root, edition, base)
+        _append_entry(root, edition, base, entry_title)
 
     return _write_xml(root, output_dir / FEED_FILENAME)
 
@@ -124,12 +133,14 @@ def write_syndication(
     return written
 
 
-def _append_entry(root: ET.Element, edition: dict[str, Any], base: str) -> None:
+def _append_entry(
+    root: ET.Element, edition: dict[str, Any], base: str, entry_title: Callable[[str], str]
+) -> None:
     week = _week(edition)
     page = _page_url(base, edition)
 
     entry = ET.SubElement(root, "entry")
-    _text(entry, "title", f"Week ending {week}")
+    _text(entry, "title", entry_title(week))
     _text(entry, "id", _entry_id(base, week))
     _text(entry, "updated", _updated(edition))
     ET.SubElement(entry, "link", {"rel": "alternate", "type": "text/html", "href": page})
