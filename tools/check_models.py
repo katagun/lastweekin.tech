@@ -30,8 +30,14 @@ def main() -> int:
     config = get_config()
     summarizer = config.summarizer
 
+    briefing = config.ai_daily.briefing
     # Hugging Face models are routed elsewhere and are not in this catalogue.
-    hosted = [summarizer.model_name, *summarizer.fallback_models]
+    hosted = [
+        summarizer.model_name,
+        *summarizer.fallback_models,
+        briefing.model_name,
+        *briefing.fallback_models,
+    ]
     checked = [m for m in hosted if m not in set(summarizer.huggingface_models)]
 
     try:
