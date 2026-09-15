@@ -133,7 +133,7 @@ class TestAiDaily:
 
     def test_rejects_an_empty_briefing_model_name(self, tmp_path):
         body = MINIMAL + '\nai_daily:\n  briefing:\n    model_name: ""\n'
-        with pytest.raises(ConfigError, match="briefing.model_name"):
+        with pytest.raises(ConfigError, match=r"briefing\.model_name"):
             Config.from_yaml(write_config(tmp_path, body))
 
 

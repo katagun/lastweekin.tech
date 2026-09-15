@@ -162,7 +162,7 @@ class SummarizerSettings:
     temperature: float = 0.3
 
 
-def _build_ai_daily(data: dict[str, Any]) -> "AiDailySettings":
+def _build_ai_daily(data: dict[str, Any]) -> AiDailySettings:
     """Construct AiDailySettings, building its nested dataclass fields the
     same way Config.from_yaml builds its own — a dict for any of ``hn``,
     ``weights`` or ``briefing`` becomes the matching settings object."""
