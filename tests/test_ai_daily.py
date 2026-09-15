@@ -1,6 +1,7 @@
 """End-to-end tests for the AI Daily pipeline, with the network stubbed out."""
 
 from datetime import timedelta
+from pathlib import Path
 
 from conftest import NOW, make_article
 from test_build_digest import entry, feeds_for
@@ -191,3 +192,61 @@ class TestAiEditionStorage:
             )
         editions = ai_daily.list_ai_editions(tmp_path)
         assert [e["date"] for e in editions] == ["2026-09-15", "2026-09-14", "2026-09-13"]
+
+
+TEMPLATE_DIR = Path(__file__).resolve().parents[1] / "src" / "lastweekintech" / "templates"
+STATIC_DIR = Path(__file__).resolve().parents[1] / "src" / "lastweekintech" / "static"
+
+
+def ai_edition(date="2026-09-15", title="OpenAI ships a new model", theme="Capabilities"):
+    from lastweekintech.domain import AiBrief
+
+    brief = AiBrief(
+        title=title,
+        articles=[make_article(title=title, source="Ars Technica")],
+        theme=theme,
+        what_happened="A factual account of what happened.",
+        why_it_matters="A paragraph on why this matters and what it implies.",
+        watch_next="What to watch for next.",
+    )
+    return ai_daily.build_ai_edition([brief], date=date, now=NOW)
+
+
+def generate(tmp_path, editions):
+    return ai_daily.generate_ai_site(
+        editions, output_dir=tmp_path, template_dir=TEMPLATE_DIR, static_dir=STATIC_DIR
+    )
+
+
+class TestGenerateAiSite:
+    def test_writes_the_latest_edition_under_ai(self, tmp_path):
+        generate(tmp_path, [ai_edition()])
+        page = (tmp_path / "ai" / "index.html").read_text()
+        assert "OpenAI ships a new model" in page
+        assert "A paragraph on why this matters" in page
+        assert "What to watch for next" in page
+
+    def test_writes_a_page_per_archived_edition(self, tmp_path):
+        generate(tmp_path, [ai_edition(date="2026-09-15"), ai_edition(date="2026-09-14")])
+        assert (tmp_path / "ai" / "archive" / "2026-09-14.html").exists()
+        assert (tmp_path / "ai" / "archive" / "2026-09-15.html").exists()
+
+    def test_writes_its_own_feed_and_sitemap(self, tmp_path):
+        generate(tmp_path, [ai_edition()])
+        assert (tmp_path / "ai" / "feed.xml").exists()
+        assert (tmp_path / "ai" / "sitemap.xml").exists()
+        assert "AI Daily" in (tmp_path / "ai" / "feed.xml").read_text()
+
+    def test_copies_static_assets_under_ai_too(self, tmp_path):
+        generate(tmp_path, [ai_edition()])
+        assert (tmp_path / "ai" / "style.css").exists()
+
+    def test_archive_page_links_back_to_the_ai_index_and_weekly_digest(self, tmp_path):
+        generate(tmp_path, [ai_edition(date="2026-09-15"), ai_edition(date="2026-09-14")])
+        page = (tmp_path / "ai" / "archive" / "2026-09-14.html").read_text()
+        assert 'href="../index.html"' in page
+        assert 'href="../../index.html"' in page
+
+    def test_no_editions_writes_nothing(self, tmp_path):
+        assert ai_daily.generate_ai_site([], output_dir=tmp_path) == []
+        assert not (tmp_path / "ai").exists()

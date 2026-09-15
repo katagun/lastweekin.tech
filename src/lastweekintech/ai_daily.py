@@ -15,17 +15,21 @@ writes split.
 import dataclasses
 import json
 import logging
+import shutil
 from collections.abc import Callable
 from datetime import UTC, date, datetime, timedelta
 from pathlib import Path
 from typing import Any
 
-from lastweekintech import hn
+from jinja2 import Environment, FileSystemLoader
+
+from lastweekintech import hn, syndication
 from lastweekintech.briefer import Briefer, BriefPick, BriefVerdict
 from lastweekintech.config import Config
 from lastweekintech.domain import AiBrief, AiDigest, Article, Story
 from lastweekintech.pipeline import (
     ARCHIVE_DIRNAME,
+    PACKAGE_DIR,
     cluster_articles,
     dedupe_articles,
     drop_recently_published,
@@ -245,3 +249,115 @@ def _for_shared_helpers(editions: list[dict[str, Any]]) -> list[dict[str, Any]]:
     identically whichever pipeline produced it.
     """
     return [{**e, "week": e.get("date")} for e in editions if isinstance(e, dict)]
+
+
+def generate_ai_site(
+    editions: list[dict[str, Any]],
+    output_dir: Path,
+    template_dir: Path | None = None,
+    static_dir: Path | None = None,
+    site_url: str = DEFAULT_SITE_URL,
+) -> list[Path]:
+    """Render the AI Daily briefing as a static site under ``output_dir/ai``.
+
+    Mirrors ``pipeline.generate_site``'s structure, with its own template and
+    its own feed/sitemap at the ``/ai`` sub-path — see ``_for_shared_helpers``
+    for how ``syndication.write_feed``/``write_sitemap`` are reused unmodified
+    despite AI Daily's edition dicts using ``date`` instead of ``week``.
+    """
+    if not editions:
+        logging.warning("No AI Daily editions to render; skipping site generation.")
+        return []
+
+    template_dir = template_dir or PACKAGE_DIR / "templates"
+    static_dir = static_dir or PACKAGE_DIR / "static"
+    ai_output_dir = output_dir / AI_DAILY_SUBDIR
+    editions = sorted(editions, key=lambda e: e["date"], reverse=True)
+    ai_site_url = f"{site_url.rstrip('/')}/{AI_DAILY_SUBDIR}"
+
+    env = Environment(
+        loader=FileSystemLoader(template_dir),
+        autoescape=True,
+        trim_blocks=True,
+        lstrip_blocks=True,
+        keep_trailing_newline=True,
+    )
+    template = env.get_template("ai_daily.html.jinja")
+
+    latest, past = editions[0], editions[1:]
+    written = [
+        _render_ai_page(
+            template,
+            ai_output_dir / "index.html",
+            latest,
+            past,
+            root="",
+            is_latest=True,
+            site_url=ai_site_url,
+        )
+    ]
+
+    archive_dir = ai_output_dir / ARCHIVE_DIRNAME
+    archive_dir.mkdir(parents=True, exist_ok=True)
+    for edition in editions:
+        written.append(
+            _render_ai_page(
+                template,
+                archive_dir / f"{edition['date']}.html",
+                edition,
+                [e for e in editions if e["date"] != edition["date"]],
+                root="../",
+                is_latest=False,
+                site_url=ai_site_url,
+            )
+        )
+
+    shared_editions = _for_shared_helpers(editions)
+    written.append(
+        syndication.write_feed(
+            shared_editions,
+            ai_output_dir,
+            ai_site_url,
+            title="LastWeekIn.Tech — AI Daily",
+            subtitle="The 4-5 AI developments that mattered today.",
+            entry_title=lambda date: f"AI Daily — {date}",
+        )
+    )
+    written.append(syndication.write_sitemap(shared_editions, ai_output_dir, ai_site_url))
+
+    for asset in sorted(static_dir.glob("*")):
+        if asset.is_file():
+            shutil.copy(asset, ai_output_dir / asset.name)
+
+    logging.info(f"Generated {len(written)} AI Daily pages in {ai_output_dir}")
+    return written
+
+
+def _render_ai_page(
+    template: Any,
+    path: Path,
+    edition: dict[str, Any],
+    past_editions: list[dict[str, Any]],
+    root: str,
+    is_latest: bool,
+    site_url: str,
+) -> Path:
+    edition_date = edition["date"]
+    page_title = (
+        "LastWeekIn.Tech — AI Daily" if is_latest else f"LastWeekIn.Tech — AI Daily, {edition_date}"
+    )
+    html = template.render(
+        edition=edition,
+        past_editions=past_editions,
+        root=root,
+        is_latest=is_latest,
+        site_url=site_url,
+        page_title=page_title,
+        description=(
+            f"The {len(edition['stories'])} AI developments that mattered on {edition_date}, "
+            "with analysis and what to watch next."
+        ),
+    )
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(html, encoding="utf-8")
+    return path
