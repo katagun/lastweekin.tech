@@ -15,8 +15,10 @@ history are that bot commit.
 
 ```bash
 uv sync                                # installs the project and the dev group
-uv run lastweekintech                  # full run → data/ + site
-uv run lastweekintech --dry-run        # print the edition, write nothing
+uv run lastweekintech run              # full weekly run → data/ + site
+uv run lastweekintech run --dry-run    # print the edition, write nothing
+uv run lastweekintech ai-daily         # full AI Daily run → data/ai/ + site/ai
+uv run lastweekintech ai-daily --dry-run  # print the briefing, write nothing
 uv run pytest                          # 406 tests, no network
 uv run pytest tests/test_curation.py -k score -q
 uv run python -m evals.run             # score the summary-quality golden set

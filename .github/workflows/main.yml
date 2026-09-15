@@ -59,7 +59,7 @@ jobs:
           # The log lives outside the workspace so it can never be committed.
           log="$RUNNER_TEMP/pipeline.log"
           set +e
-          uv run lastweekintech $SKIP_GATE_FLAG 2>&1 | tee "$log"
+          uv run lastweekintech run $SKIP_GATE_FLAG 2>&1 | tee "$log"
           status=${PIPESTATUS[0]}
           set -e
           if [ "$status" -ne 0 ]; then
