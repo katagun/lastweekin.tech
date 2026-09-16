@@ -166,24 +166,32 @@ class Briefer:
             verdict = _parse_verdict(
                 completion.text, pool=len(candidates), min_count=min_count, max_count=max_count
             )
-            if (
-                verdict
-                and _within_source_cap(verdict, candidates, max_per_source)
-                and all(_has_article_text(pick, candidates) for pick in verdict.picks)
-            ):
-                self.last_model = model
-                self.last_completion_tokens = completion.completion_tokens
-                self.last_reasoning_tokens = completion.reasoning_tokens
-                if completion.completion_tokens is not None:
+            if verdict is not None:
+                cap_ok = _within_source_cap(verdict, candidates, max_per_source)
+                text_ok = all(_has_article_text(pick, candidates) for pick in verdict.picks)
+                if cap_ok and text_ok:
+                    self.last_model = model
+                    self.last_completion_tokens = completion.completion_tokens
+                    self.last_reasoning_tokens = completion.reasoning_tokens
+                    if completion.completion_tokens is not None:
+                        logging.info(
+                            f"Briefer {model} spent {completion.completion_tokens} tokens "
+                            f"({completion.reasoning_tokens} reasoning) of "
+                            f"{self.max_tokens} budgeted."
+                        )
+                    return verdict
+                if not cap_ok:
                     logging.info(
-                        f"Briefer {model} spent {completion.completion_tokens} tokens "
-                        f"({completion.reasoning_tokens} reasoning) of "
-                        f"{self.max_tokens} budgeted."
+                        f"Briefer: {model}'s verdict exceeds the per-source cap "
+                        f"(max {max_per_source})."
                     )
-                return verdict
+                if not text_ok:
+                    logging.info(
+                        f"Briefer: {model}'s verdict picked a candidate with no article text."
+                    )
             logging.warning(
                 f"Briefing model {model} returned an unusable verdict "
-                f"(finish_reason={completion.finish_reason!r}): {completion.text[:200]!r}"
+                f"(finish_reason={completion.finish_reason!r}): {completion.text[:3000]!r}"
             )
 
         logging.warning("No briefing model produced a usable verdict.")
@@ -231,21 +239,30 @@ def _render_candidates(candidates: list[Story], settings: AiBriefingSettings) ->
 
 
 def _parse_verdict(answer: str, pool: int, min_count: int, max_count: int) -> BriefVerdict | None:
-    """Read the model's JSON, accepting nothing less than a complete, valid briefing."""
+    """Read the model's JSON, accepting nothing less than a complete, valid briefing.
+
+    Every rejection path logs why: a live run's answer is never available
+    after the fact (only a short preview is logged at the call site), so a
+    silent ``None`` here is undiagnosable from CI output alone.
+    """
     match = re.search(r"\{.*\}", answer or "", re.DOTALL)
     if not match:
+        logging.info("Briefer: no JSON object found in the response.")
         return None
     try:
         raw = json.loads(match.group(0))
-    except json.JSONDecodeError:
+    except json.JSONDecodeError as e:
+        logging.info(f"Briefer: response is not valid JSON: {e}")
         return None
     if not isinstance(raw, dict) or not isinstance(raw.get("picks"), list):
+        logging.info("Briefer: response is not an object with a 'picks' list.")
         return None
 
     picks = []
     seen = set()
     for entry in raw["picks"]:
         if not isinstance(entry, dict):
+            logging.info(f"Briefer: a pick is not an object: {entry!r}")
             return None
         n = entry.get("n")
         theme = entry.get("theme")
@@ -254,10 +271,13 @@ def _parse_verdict(answer: str, pool: int, min_count: int, max_count: int) -> Br
         watch_next = str(entry.get("watch_next") or "").strip()
 
         if not isinstance(n, int) or not 1 <= n <= pool or n in seen:
+            logging.info(f"Briefer: pick has an invalid or duplicate n={n!r} (pool size {pool}).")
             return None
         if theme not in THEMES:
+            logging.info(f"Briefer: pick n={n} has theme {theme!r}, not one of {THEMES}.")
             return None
         if not what_happened or not why_it_matters or not watch_next:
+            logging.info(f"Briefer: pick n={n} is missing what_happened/why_it_matters/watch_next.")
             return None
 
         seen.add(n)
@@ -277,6 +297,7 @@ def _parse_verdict(answer: str, pool: int, min_count: int, max_count: int) -> Br
     # verdict over it means the fallback chain burns every model for no
     # reason on exactly the days with the most AI news to choose from.
     if len(picks) < min_count:
+        logging.info(f"Briefer: only {len(picks)} valid picks, need at least {min_count}.")
         return None
     return BriefVerdict(picks=picks[:max_count], intro=str(raw.get("intro") or "").strip())
 

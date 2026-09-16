@@ -79,9 +79,12 @@ class AiBriefingSettings:
     fallback_models: list[str] = field(
         default_factory=lambda: ["anthropic/claude-haiku-4.5", "google/gemini-3.7-flash"]
     )
-    # Five stories' worth of analysis in one JSON reply needs real headroom,
-    # the same reasoning as editor.max_tokens.
-    max_tokens: int = 6000
+    # Five stories' worth of analysis (three substantial text fields each) in
+    # one JSON reply needs real headroom — editor.max_tokens hit this same
+    # wall at a smaller output size (one-line "why" per pick, not three
+    # fields) and needed 8000; a live run truncated (finish_reason="length")
+    # at 6000 here, so this sits meaningfully above editor's budget.
+    max_tokens: int = 12000
     temperature: float = 0.3
     # How many characters of each candidate's body the briefer reads.
     excerpt_chars: int = 600
