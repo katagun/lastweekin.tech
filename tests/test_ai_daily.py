@@ -24,6 +24,7 @@ class FakeBriefer:
     def brief(self, candidates, count, min_count, max_per_source, recent_titles):
         self.seen_recent_titles = recent_titles
         self.seen_candidates = [s.title for s in candidates]
+        self.seen_candidates_full = candidates
         return self.verdict
 
 
@@ -110,6 +111,56 @@ class TestBuildAiDaily:
         briefer = FakeBriefer(BriefVerdict(picks=[]))
         run(test_config, briefer, parse=parse, search=search)
         assert "A quiet AI policy story" in briefer.seen_candidates
+
+    def test_a_consensus_story_the_pool_never_fetched_becomes_a_real_candidate(self, config):
+        # The corroboration boost above only helps a story already in the
+        # pool. Most of what a live search finds is not there at all — this
+        # is the fix for that: a consensus entry with no match in our own
+        # fetch gets ingested as its own candidate, body extracted like any
+        # other, so the briefer can actually pick it rather than the miss
+        # only being logged.
+        test_config = small_config(config)
+        parse = feeds_for({"ars": unique_entries(3), "wired": []})
+
+        def search(model, prompt):
+            return json.dumps([
+                {
+                    "headline": "A story no feed carried",
+                    "urls": ["https://exclusive.example/story"],
+                }
+            ])
+
+        briefer = FakeBriefer(BriefVerdict(picks=[]))
+        run(test_config, briefer, parse=parse, search=search)
+        assert "A story no feed carried" in briefer.seen_candidates
+
+    def test_a_consensus_story_with_no_extractable_body_is_not_picked(self, config):
+        # A candidate that never gets a real article body still has to fail
+        # Briefer's own no-article-text check — ingesting a headline is not a
+        # way around "no article, no publish."
+        test_config = small_config(config)
+        parse = feeds_for({"ars": unique_entries(3), "wired": []})
+
+        def search(model, prompt):
+            return json.dumps([
+                {"headline": "An unreachable story", "urls": ["https://dead.example/story"]}
+            ])
+
+        briefer = FakeBriefer(BriefVerdict(picks=[]))
+        run(
+            test_config,
+            briefer,
+            parse=parse,
+            search=search,
+            download=lambda url: "" if "dead.example" in url else f"body for {url}",
+        )
+        assert "An unreachable story" in briefer.seen_candidates
+        # It was handed to the briefer as a candidate, but with no body —
+        # confirmed via the same field Briefer._has_article_text checks.
+        ingested = next(
+            c for c in briefer.seen_candidates_full if c.title == "An unreachable story"
+        )
+        assert not any(a.content for a in ingested.articles)
 
     def test_no_perplexity_key_does_not_fail_the_run(self, config):
         # discovery.fetch_consensus already degrades gracefully when

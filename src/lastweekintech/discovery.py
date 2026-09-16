@@ -23,12 +23,13 @@ import re
 from collections.abc import Callable
 from dataclasses import dataclass, field
 from datetime import datetime, timedelta
+from urllib.parse import urlsplit
 
 import requests
 from thefuzz import fuzz
 
 from lastweekintech.config import Config
-from lastweekintech.domain import Story
+from lastweekintech.domain import Article, Story
 from lastweekintech.text import normalize_url
 
 PERPLEXITY_URL = "https://api.perplexity.ai/chat/completions"
@@ -207,6 +208,34 @@ def apply_consensus_boost(
     matched = len(consensus) - len(missed)
     logging.info(f"Consensus corroborated {matched}/{len(consensus)} stories in the pool.")
     return missed
+
+
+def stories_from_missed(missed: list[ConsensusStory], weight: float) -> list[Story]:
+    """Turn consensus stories the feed pool never saw into real candidates.
+
+    A boost can only raise a story that already exists in the pool — most of
+    what a live search corroborates is genuinely absent otherwise, and a
+    boost applied to nothing does not make it publishable. Each missed entry
+    becomes its own single-article Story, scored at the same flat consensus
+    weight a corroborated match receives (it has no HN points or breadth
+    signal of its own yet to score on).
+
+    This is still not a shortcut past "no article, no publish": the caller's
+    normal extract_content step has to fetch a real body from the citation
+    URL before the briefer can pick it, and a missing or unextractable URL
+    yields no candidate at all here, same as any other extraction failure.
+    """
+    stories = []
+    for entry in missed:
+        url = entry.urls[0] if entry.urls else None
+        if not url:
+            continue
+        source = urlsplit(url).netloc.removeprefix("www.") or "the web"
+        article = Article(title=entry.headline, url=url, source=source)
+        stories.append(
+            Story(title=entry.headline, articles=[article], score=weight, consensus=True)
+        )
+    return stories
 
 
 def _best_match(stories: list[Story], entry: ConsensusStory) -> Story | None:
