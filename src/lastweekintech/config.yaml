@@ -166,7 +166,10 @@ ai_daily:
     fallback_models:
       - "anthropic/claude-haiku-4.5"
       - "google/gemini-3.7-flash"
-    # Five stories' worth of analysis in one JSON reply needs real headroom.
-    max_tokens: 6000
+    # Five stories' worth of analysis (three substantial text fields each) in
+    # one JSON reply needs real headroom — a live run truncated at 6000
+    # (finish_reason="length"), so this sits above editor's own 8000 budget
+    # for a comparable but shorter one-shot JSON task.
+    max_tokens: 12000
     temperature: 0.3
     excerpt_chars: 600
