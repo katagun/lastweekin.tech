@@ -1,0 +1,651 @@
+/* LastWeekIn.Tech — generated site stylesheet.
+   Edited at src/lastweekintech/static/style.css; copied to the site root by
+   pipeline.generate_site.
+
+   The design is a weekly front page: a nameplate masthead, a standfirst, a
+   lead story and six more under hanging numerals, hairline rules instead of
+   cards. Fraunces (OFL, self-hosted as fraunces*.woff2 — same-origin, so the
+   "no trackers" promise holds) sets the display type; text is set in the
+   reader's own newspaper serifs, which cost no bytes at all. */
+
+@font-face {
+  font-family: "Fraunces";
+  src: url("fraunces.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Fraunces";
+  src: url("fraunces-italic.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Body text. A text serif designed for news reading, with optical sizing so
+   small sizes gain sturdiness automatically. No italic file on purpose: body
+   italics are rare enough that a synthesized oblique is a fair trade for
+   147KB, and every *designed* italic on the page is Fraunces. */
+@font-face {
+  font-family: "Newsreader";
+  src: url("newsreader.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: light dark;
+
+  --paper: #fbfbfa;
+  --ink: #16181a;
+  --ink-muted: #5f6469;
+  --rule: #e2e4e6;
+  --rule-strong: #16181a;
+  --accent: #1b44b8;
+  --focus: #1b44b8;
+
+  /* Category kickers: ink on the paper, no chips. Seven hues that stay
+     apart at small uppercase sizes, none of them warm. */
+  --cat-ink: #5f6469;
+  --cat-ai-ink: #1b44b8;
+  --cat-security-ink: #b3123c;
+  --cat-policy-ink: #5b3fa8;
+  --cat-hardware-ink: #0d6b5f;
+  --cat-open-source-ink: #2f7a34;
+  --cat-business-ink: #a3168f;
+
+  --display: "Fraunces", "Iowan Old Style", Georgia, serif;
+  --serif: "Newsreader", Charter, "Bitstream Charter", "Sitka Text", Cambria,
+    Georgia, "Times New Roman", serif;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+    sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #12151a;
+    --ink: #e6e8ea;
+    --ink-muted: #9aa1a9;
+    --rule: #2a2f36;
+    --rule-strong: #e6e8ea;
+    /* The light accent is too dark to read here; this is the same hue
+       carried up in lightness rather than a different colour. */
+    --accent: #7aa2f7;
+    --focus: #7aa2f7;
+
+    --cat-ink: #9aa1a9;
+    --cat-ai-ink: #7aa2f7;
+    --cat-security-ink: #f2879b;
+    --cat-policy-ink: #b9a4f5;
+    --cat-hardware-ink: #5fc9bb;
+    --cat-open-source-ink: #86ce8a;
+    --cat-business-ink: #e894d8;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-optical-sizing: auto;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* The printed-page frame: a fixed double rule floating over the scroll on
+   screens wide enough to give it room. Decorative only. */
+@media (min-width: 64rem) {
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0.9rem;
+    border: 3px double var(--rule);
+    pointer-events: none;
+    z-index: 5;
+  }
+}
+
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  left: 0.5rem;
+  top: -3rem;
+  z-index: 10;
+  padding: 0.5rem 0.9rem;
+  background: var(--paper);
+  border: 1px solid var(--rule-strong);
+  color: var(--accent);
+  transition: top 0.15s ease;
+}
+
+.skip-link:focus {
+  top: 0.5rem;
+}
+
+/* ---- Masthead ------------------------------------------------------- */
+
+.site-header {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 2.25rem 1.25rem 0;
+  text-align: center;
+}
+
+.masthead-note {
+  margin: 0 0 1rem;
+  font-family: var(--sans);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+.site-title {
+  margin: 0;
+  font-family: var(--display);
+  font-optical-sizing: auto;
+  font-size: clamp(2.6rem, 9vw, 4.25rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+}
+
+.wordmark {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+/* The one drop of ink the nameplate allows itself. */
+.wordmark .dot {
+  color: var(--accent);
+}
+
+.wordmark:hover {
+  color: var(--accent);
+}
+
+/* The classic double rule under a nameplate. */
+.dateline {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1.1rem;
+  padding: 0.45rem 0.1rem;
+  border-top: 3px double var(--rule-strong);
+  border-bottom: 1px solid var(--rule-strong);
+  font-family: var(--sans);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+.archive-note {
+  margin: 1rem auto 0;
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 0.9375rem;
+  color: var(--ink-muted);
+}
+
+.archive-note a {
+  color: var(--accent);
+}
+
+/* ---- Page body ------------------------------------------------------ */
+
+main {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.standfirst {
+  margin: 1.75rem auto 0.5rem;
+  max-width: 36rem;
+  font-family: var(--display);
+  font-optical-sizing: auto;
+  font-style: italic;
+  font-weight: 420;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  text-align: center;
+  text-wrap: balance;
+  color: var(--ink);
+}
+
+/* ---- Stories ---------------------------------------------------------
+   Three tiers, like a front page: the lead, two secondary stories at full
+   measure, and stories 4-7 as a two-column run of briefs on wide screens.
+   The tiering is what keeps seven stories from reading as one wall. */
+
+.story-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3rem;
+  margin: 1.5rem 0 0;
+  padding: 0;
+}
+
+.story-card {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 4.5rem 1fr;
+  gap: 0 1.1rem;
+  padding: 1.7rem 0;
+  border-top: 1px solid var(--rule);
+}
+
+.story-card:first-child {
+  border-top: none;
+}
+
+.story-rank {
+  margin: 0;
+  font-family: var(--display);
+  font-optical-sizing: auto;
+  font-size: 3.9rem;
+  font-weight: 140;
+  line-height: 0.8;
+  text-align: right;
+  color: var(--accent);
+  font-variant-numeric: lining-nums;
+}
+
+/* On screens with real margins, the numerals hang out into them and the
+   story text comes back flush with the masthead and standfirst. */
+@media (min-width: 78rem) {
+  .story-card:not(.brief) {
+    grid-template-columns: 6.5rem 1fr;
+    margin-left: -7.6rem;
+  }
+}
+
+.story-content {
+  min-width: 0;
+}
+
+.story-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.3rem 0.65rem;
+  margin: 0 0 0.4rem;
+  font-family: var(--sans);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.story-category {
+  color: var(--cat-ink);
+}
+
+.story-category.category-ai {
+  color: var(--cat-ai-ink);
+}
+
+.story-category.category-security {
+  color: var(--cat-security-ink);
+}
+
+.story-category.category-policy {
+  color: var(--cat-policy-ink);
+}
+
+.story-category.category-hardware {
+  color: var(--cat-hardware-ink);
+}
+
+.story-category.category-open-source {
+  color: var(--cat-open-source-ink);
+}
+
+.story-category.category-business {
+  color: var(--cat-business-ink);
+}
+
+.story-category + .story-source::before {
+  content: "·";
+  margin-right: 0.65rem;
+  color: var(--ink-muted);
+}
+
+.story-source {
+  font-weight: 500;
+  color: var(--ink-muted);
+}
+
+.story-title {
+  margin: 0 0 0.55rem;
+  font-family: var(--display);
+  font-optical-sizing: auto;
+  font-size: 1.4rem;
+  font-weight: 640;
+  line-height: 1.22;
+  letter-spacing: -0.005em;
+  text-wrap: balance;
+}
+
+.story-title a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.story-title a:hover,
+.story-title a:focus-visible {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 0.18em;
+}
+
+.story-summary {
+  margin: 0;
+  color: var(--ink);
+  text-wrap: pretty;
+  font-variant-numeric: oldstyle-nums;
+}
+
+/* The editor's case for the story — the one element this site has that no
+   feed reader does, so it carries the page's signature: an oxblood rule and
+   the display face in roman. */
+.story-case {
+  margin: 0.85rem 0 0;
+  padding: 0.15rem 0 0.15rem 0.95rem;
+  border-left: 3px solid var(--accent);
+  font-family: var(--display);
+  font-optical-sizing: auto;
+  font-weight: 470;
+  font-size: 1.04rem;
+  line-height: 1.5;
+  color: var(--ink);
+  text-wrap: pretty;
+}
+
+.story-case-label {
+  display: block;
+  margin: 0 0 0.2rem;
+  font-family: var(--sans);
+  font-size: 0.6563rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+/* The selection evidence: why this story is on the page at all. */
+.story-why {
+  margin: 0.65rem 0 0;
+  font-family: var(--sans);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+/* ---- The lead story -------------------------------------------------
+   Same numbered grid as every other story — the page is a ranked list and
+   the "1" is part of the ranking — with only the type scale marking it as
+   the lead. */
+
+.lead-story {
+  padding-top: 2rem;
+  padding-bottom: 2.1rem;
+  border-bottom: 1px solid var(--rule-strong);
+  margin-bottom: 0.2rem;
+}
+
+.lead-story .story-rank {
+  font-size: 4.6rem;
+}
+
+.lead-story .story-title {
+  font-size: clamp(1.65rem, 4.6vw, 2.25rem);
+  font-weight: 700;
+  line-height: 1.13;
+  margin-bottom: 0.75rem;
+}
+
+.lead-story .story-summary {
+  font-size: 1.1875rem;
+}
+
+/* ---- Briefs: stories 4-7 --------------------------------------------
+   Denser type, and two-up once the page is wide enough — the below-the-fold
+   run of a front page. */
+
+.brief {
+  grid-template-columns: 2.5rem 1fr;
+  gap: 0 0.8rem;
+}
+
+.brief .story-rank {
+  font-size: 2rem;
+  line-height: 0.95;
+  font-weight: 250;
+}
+
+.brief .story-title {
+  font-size: 1.2rem;
+}
+
+.brief .story-summary,
+.brief .story-case {
+  font-size: 0.9875rem;
+}
+
+.brief .story-case {
+  border-left-width: 2px;
+  padding-left: 0.75rem;
+}
+
+@media (min-width: 40rem) {
+  .brief {
+    grid-column: auto;
+  }
+}
+
+/* ---- Subscribe ------------------------------------------------------ */
+
+.subscribe {
+  margin: 2.5rem 0 0;
+  padding: 1.4rem 1.5rem;
+  border: 3px double var(--rule-strong);
+  text-align: center;
+}
+
+.subscribe h2 {
+  margin: 0 0 0.3rem;
+  font-family: var(--display);
+  font-optical-sizing: auto;
+  font-size: 1.25rem;
+  font-weight: 640;
+}
+
+.subscribe p {
+  margin: 0;
+  color: var(--ink-muted);
+  font-size: 0.9375rem;
+}
+
+.subscribe a,
+.archive a,
+footer a {
+  color: var(--accent);
+}
+
+/* ---- Archive -------------------------------------------------------- */
+
+.archive {
+  margin: 3rem 0 0;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--rule-strong);
+}
+
+.archive h2 {
+  margin: 0 0 0.75rem;
+  font-family: var(--sans);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--ink-muted);
+}
+
+.archive-year {
+  border-bottom: 1px solid var(--rule);
+}
+
+.archive-year summary {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  padding: 0.55rem 0.25rem;
+  cursor: pointer;
+  font-family: var(--display);
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-size: 1.0625rem;
+}
+
+.archive-year summary::-webkit-details-marker {
+  display: none;
+}
+
+.archive-year summary::before {
+  content: "";
+  flex: none;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-right: 1.5px solid var(--accent);
+  border-bottom: 1.5px solid var(--accent);
+  transform: rotate(-45deg);
+  transition: transform 0.15s ease;
+}
+
+.archive-year[open] summary::before {
+  transform: rotate(45deg);
+}
+
+.archive-count {
+  font-family: var(--sans);
+  color: var(--ink-muted);
+  font-weight: 400;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.archive ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(6rem, 1fr));
+  gap: 0.35rem 1rem;
+  margin: 0 0 0.85rem;
+  padding: 0 0 0 1rem;
+  font-size: 0.9375rem;
+}
+
+/* ---- Colophon ------------------------------------------------------- */
+
+footer {
+  max-width: 44rem;
+  margin: 3rem auto 0;
+  padding: 1.25rem 1.25rem 2.5rem;
+  border-top: 3px double var(--rule-strong);
+  color: var(--ink-muted);
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-align: center;
+}
+
+footer p {
+  margin: 0.3rem 0;
+}
+
+/* ---- Small screens -------------------------------------------------- */
+
+@media (max-width: 30rem) {
+  .site-header {
+    padding-top: 1.6rem;
+  }
+
+  .site-title {
+    font-size: 2.15rem;
+  }
+
+  .standfirst {
+    font-size: 1.125rem;
+  }
+
+  .dateline {
+    flex-direction: column;
+    gap: 0.15rem;
+    align-items: center;
+  }
+
+  .story-card,
+  .brief {
+    grid-template-columns: 2.4rem 1fr;
+    gap: 0 0.7rem;
+    padding: 1.25rem 0;
+  }
+
+  .story-rank,
+  .lead-story .story-rank,
+  .brief .story-rank {
+    font-size: 2rem;
+    line-height: 0.95;
+    font-weight: 250;
+  }
+
+  .story-title,
+  .brief .story-title {
+    font-size: 1.25rem;
+  }
+
+  .archive ul {
+    grid-template-columns: repeat(auto-fill, minmax(5rem, 1fr));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}
