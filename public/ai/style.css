@@ -193,18 +193,33 @@ body {
   color: var(--accent);
 }
 
-/* A section kicker under the shared nameplate — deliberately small and
-   sans-serif, not folded into .site-title's giant display font, which
-   made "AI Daily" wrap onto its own oversized line when it lived inside
-   the wordmark link. */
-.section-label {
-  margin: 0.35rem 0 0;
-  font-family: var(--sans);
-  font-size: 0.8125rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--accent);
+/* A section line in the same display font as the wordmark, not a
+   separate sans-serif label — an uppercase sans-serif kicker under the
+   nameplate read as two unrelated pieces of type (different family,
+   ~5x size gap) rather than one masthead with a section. Staying in
+   Fraunces at a moderate scale keeps it one cohesive lockup.
+
+   Deliberately its own block-level line rather than packed onto the
+   wordmark's line: at the site's real column width, "LastWeekIn.Tech /
+   AI Daily" never fits on one line even on a full desktop viewport, so
+   relying on the browser to wrap it produces an inconsistent break
+   point across widths. A forced second line is the reliable version of
+   the same idea. */
+.section-suffix {
+  margin: 0.1rem 0 0;
+  font-family: var(--display);
+  font-optical-sizing: auto;
+  font-size: clamp(1.2rem, 4.2vw, 2rem);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.section-divider {
+  font-weight: 300;
+  color: var(--ink-muted);
+  margin-right: 0.15em;
 }
 
 /* The classic double rule under a nameplate. */
