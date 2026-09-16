@@ -193,6 +193,20 @@ body {
   color: var(--accent);
 }
 
+/* A section kicker under the shared nameplate — deliberately small and
+   sans-serif, not folded into .site-title's giant display font, which
+   made "AI Daily" wrap onto its own oversized line when it lived inside
+   the wordmark link. */
+.section-label {
+  margin: 0.35rem 0 0;
+  font-family: var(--sans);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
 /* The classic double rule under a nameplate. */
 .dateline {
   display: flex;
