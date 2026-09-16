@@ -1,5 +1,6 @@
 """End-to-end tests for the AI Daily pipeline, with the network stubbed out."""
 
+import json
 from datetime import timedelta
 from pathlib import Path
 
@@ -85,6 +86,40 @@ class TestBuildAiDaily:
         digest = run(small_config(config), FakeBriefer(None), parse=parse)
         assert digest.briefs == []
         assert digest.intro is None
+
+    def test_a_perplexity_consensus_match_boosts_a_story_into_the_candidate_pool(self, config):
+        # Three "loud" recent stories exactly fill a 3-slot candidate pool on
+        # ranking alone; a fourth, older story only a consensus boost can lift
+        # in — this is the fix for the live failure where a 14-feed, 24-hour
+        # pool recalled only what those feeds happened to publish, missing AI
+        # stories the wider web already carried.
+        test_config = small_config(config)
+        test_config.ai_daily.candidate_pool = 3
+        test_config.ai_daily.weights.consensus = 10
+        test_config.perplexity.api_key = "test-key"
+
+        loud = unique_entries(3)
+        quiet = entry("A quiet AI policy story", "https://ars.example/quiet", age_hours=23)
+        parse = feeds_for({"ars": [*loud, quiet], "wired": []})
+
+        def search(model, prompt):
+            return json.dumps([
+                {"headline": "A quiet AI policy story", "urls": ["https://ars.example/quiet"]}
+            ])
+
+        briefer = FakeBriefer(BriefVerdict(picks=[]))
+        run(test_config, briefer, parse=parse, search=search)
+        assert "A quiet AI policy story" in briefer.seen_candidates
+
+    def test_no_perplexity_key_does_not_fail_the_run(self, config):
+        # discovery.fetch_consensus already degrades gracefully when
+        # unconfigured; this just confirms build_ai_daily doesn't need a
+        # search function or an API key to complete.
+        parse = feeds_for({"ars": unique_entries(3), "wired": []})
+        digest = run(
+            small_config(config), FakeBriefer(BriefVerdict(picks=[brief_pick(1)])), parse=parse
+        )
+        assert len(digest.briefs) == 1
 
     def test_uses_the_ai_daily_window_and_hn_settings_not_the_weekly_ones(self, config):
         # A story published 3 days ago is outside ai_daily's 1-day window but

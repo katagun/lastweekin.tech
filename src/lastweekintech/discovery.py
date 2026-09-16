@@ -49,6 +49,23 @@ PROMPT_TEMPLATE = (
     '"urls": ["link to original reporting", "..."]}}'
 )
 
+# AI Daily's own consensus prompt: same JSON contract (parse_consensus and
+# apply_consensus_boost need nothing else), narrower editorial brief. Reuses
+# the shared PerplexitySettings/story_count rather than a dedicated section —
+# this is a corroboration signal on a smaller pool, not a separate budget.
+AI_DAILY_PROMPT_TEMPLATE = (
+    "You are the AI news editor of a daily AI-only briefing. List the {count} "
+    "most important AI news developments published between {start} and "
+    "{end} (UTC). Prioritize events with significant implications for AI "
+    "capabilities, major companies, open-source models, regulation and "
+    "policy, security and safety, infrastructure and chips, and industry "
+    "economics. Avoid low-impact product announcements and stories that are "
+    "a rehash of something already widely covered.\n\n"
+    "Answer with a JSON array only, no prose before or after. Each element: "
+    '{{"headline": "...", "why": "one sentence on why it matters", '
+    '"urls": ["link to original reporting", "..."]}}'
+)
+
 # A consensus headline is a paraphrase, not a quote, so URL identity is
 # decisive and title matching needs both a fuzzy floor and shared substance.
 MATCH_TOKEN_SET_RATIO = 70
@@ -74,12 +91,18 @@ def fetch_consensus(
     config: Config,
     now: datetime | None = None,
     search: SearchFn | None = None,
+    prompt_template: str = PROMPT_TEMPLATE,
 ) -> list[ConsensusStory]:
-    """Ask the search model for the week's consensus top stories.
+    """Ask the search model for the window's consensus top stories.
 
     Returns an empty list — never raises — when the stage is disabled, the key
     is missing, the request fails or the answer cannot be parsed. This signal
     improves an edition; its absence must not cost one.
+
+    ``prompt_template`` defaults to the weekly digest's own brief; AI Daily
+    passes ``AI_DAILY_PROMPT_TEMPLATE`` instead. Both fill the same
+    ``{count}``/``{start}``/``{end}`` placeholders and both are read by
+    ``parse_consensus`` unmodified — only the editorial framing differs.
     """
     settings = config.perplexity
     if not settings.enabled:
@@ -91,7 +114,7 @@ def fetch_consensus(
         search = _searcher(settings.api_key)
 
     now = now or datetime.now()
-    prompt = PROMPT_TEMPLATE.format(
+    prompt = prompt_template.format(
         count=settings.story_count,
         start=(now - timedelta(days=config.window_days)).date().isoformat(),
         end=now.date().isoformat(),

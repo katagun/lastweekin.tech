@@ -61,6 +61,29 @@ class TestFetchConsensus:
         discovery.fetch_consensus(px_config, now=NOW, search=search)
         assert "2026-08-03" in seen["prompt"] and "2026-08-10" in seen["prompt"]
 
+    def test_defaults_to_the_weekly_prompt(self, px_config):
+        seen = {}
+
+        def search(model, prompt):
+            seen["prompt"] = prompt
+            return "[]"
+
+        discovery.fetch_consensus(px_config, now=NOW, search=search)
+        assert "weekly technology digest" in seen["prompt"]
+
+    def test_accepts_a_custom_prompt_template(self, px_config):
+        seen = {}
+
+        def search(model, prompt):
+            seen["prompt"] = prompt
+            return "[]"
+
+        discovery.fetch_consensus(
+            px_config, now=NOW, search=search, prompt_template=discovery.AI_DAILY_PROMPT_TEMPLATE
+        )
+        assert "AI news editor of a daily AI-only briefing" in seen["prompt"]
+        assert "2026-08-10" in seen["prompt"]
+
 
 class TestParseConsensus:
     def test_tolerates_prose_and_code_fences_around_the_array(self):

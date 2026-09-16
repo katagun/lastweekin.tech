@@ -23,7 +23,7 @@ from typing import Any
 
 from jinja2 import Environment, FileSystemLoader
 
-from lastweekintech import hn, syndication
+from lastweekintech import discovery, hn, syndication
 from lastweekintech.briefer import Briefer, BriefPick, BriefVerdict
 from lastweekintech.config import Config
 from lastweekintech.domain import AiBrief, AiDigest, Article, Story
@@ -49,6 +49,7 @@ def build_ai_daily(
     parse: Callable[[str], Any] | None = None,
     download: Callable[[str], str] | None = None,
     hn_fetch: hn.JsonFetcher | None = None,
+    search: discovery.SearchFn | None = None,
     delay: float = 0.5,
     editions: list[dict[str, Any]] | None = None,
 ) -> AiDigest:
@@ -74,6 +75,24 @@ def build_ai_daily(
 
     stories = cluster_articles(articles)
     stories = score_stories(stories, daily_config, now=now)
+
+    # A 14-feed, 24-hour pool recalls only what those feeds happened to
+    # publish in that window — on a day when the best AI stories are niche
+    # items no mainstream outlet picked up yet, that pool can end up wholly
+    # Hacker-News-sourced. Perplexity's live web search corroborates (never
+    # replaces) the mechanical ranking, exactly like the weekly digest's own
+    # consensus stage, just with an AI-scoped prompt and a 24h window.
+    consensus = discovery.fetch_consensus(
+        daily_config, now=now, search=search, prompt_template=discovery.AI_DAILY_PROMPT_TEMPLATE
+    )
+    missed = discovery.apply_consensus_boost(stories, consensus, daily_config.weights.consensus)
+    if consensus:
+        stories.sort(key=lambda s: s.score, reverse=True)
+    if missed:
+        logging.info(
+            f"AI Daily consensus check found {len(missed)} stories the feed pool never saw: "
+            f"{[m.headline for m in missed]}"
+        )
 
     ranked = drop_recently_published(
         stories,

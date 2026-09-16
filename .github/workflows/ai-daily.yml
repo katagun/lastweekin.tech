@@ -40,6 +40,7 @@ jobs:
         id: pipeline
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          PERPLEXITY_API_KEY: ${{ secrets.PERPLEXITY_API_KEY }}
         run: |
           log="$RUNNER_TEMP/ai-daily.log"
           set +e
