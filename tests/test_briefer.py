@@ -161,6 +161,23 @@ class TestBrief:
         )
         assert verdict is not None
 
+    def test_hacker_news_never_counts_toward_the_source_cap(self):
+        # Live production failure: a heavy-HN day had 3+ topically unrelated
+        # candidates (a security incident, a startup launch, a policy story)
+        # that never got mainstream press pickup, so they all shared "Hacker
+        # News" as their only source — and every configured model tripped
+        # the cap picking the genuinely best stories of the day. HN is a
+        # discovery channel, not an outlet with an editorial share to bound.
+        briefer = make_briefer(verdict_for(1, 2, 3))
+        verdict = briefer.brief(
+            pool(count=3, source="Hacker News"),
+            count=3,
+            min_count=3,
+            max_per_source=1,
+            recent_titles=[],
+        )
+        assert verdict is not None
+
     def test_rejects_a_verdict_that_picks_a_candidate_with_no_article_text(self):
         # Candidate 2 has no article body, so a verdict picking it must be
         # discarded even though it is otherwise well-formed.

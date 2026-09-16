@@ -52,7 +52,8 @@ SYSTEM_PROMPT = (
     "(see below) unless it represents a materially different development.\n"
     "\n"
     "{recent_section}"
-    "At most {max_per_source} picks may share the same outlet.\n"
+    "At most {max_per_source} picks may share the same outlet (Hacker News is "
+    "a discovery channel, not a publisher, and does not count toward this).\n"
     "Never pick a candidate marked as having no article text: it cannot be "
     "analyzed.\n"
     "\n"
@@ -326,10 +327,23 @@ def _story_source(story: Story) -> str:
     return representative.source
 
 
+# Hacker News is a discovery channel, not a publisher: dozens of unrelated
+# niche stories that never got picked up by mainstream tech press in the
+# last 24 hours all share this one "source" for no reason connected to the
+# cap's purpose (bounding one outlet's editorial share of the picks). Live
+# runs on a heavy-HN day had 3+ of the best, topically unrelated candidates
+# collapse onto "Hacker News" and fail the cap together — the outlet-share
+# problem the cap exists for doesn't apply to an aggregator with no editorial
+# voice of its own. Duplicated as a literal string rather than importing
+# hn.HN_SOURCE, to keep this module a dependency-free leaf like editor.py.
+_UNCAPPED_SOURCE = "Hacker News"
+
+
 def _within_source_cap(verdict: BriefVerdict, candidates: list[Story], max_per_source: int) -> bool:
     if max_per_source < 1:
         return True
-    counts = Counter(_story_source(candidates[pick.n - 1]) for pick in verdict.picks)
+    sources = (_story_source(candidates[pick.n - 1]) for pick in verdict.picks)
+    counts = Counter(s for s in sources if s != _UNCAPPED_SOURCE)
     return all(n <= max_per_source for n in counts.values())
 
 
