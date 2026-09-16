@@ -161,6 +161,12 @@ ai_daily:
     hn: 5
     src: 3
     rec: 1
+    # A 14-feed, 24-hour pool only recalls what those feeds happened to
+    # publish in that window; on a day the best AI stories are niche items
+    # no mainstream outlet picked up yet, the pool can end up entirely
+    # Hacker-News-sourced. Reuses the same shared perplexity: settings the
+    # weekly digest's consensus check uses, with its own AI-scoped prompt.
+    consensus: 2
   briefing:
     model_name: "anthropic/claude-sonnet-5"
     fallback_models:
