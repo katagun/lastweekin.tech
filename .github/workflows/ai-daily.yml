@@ -3,7 +3,12 @@ name: AI Daily Briefing
 on:
   schedule:
     - cron: "0 13 * * *" # Every day at 1:00 PM UTC — clear of the Monday 08:00 UTC weekly run.
-  workflow_dispatch:
+  workflow_dispatch: # Allows manual triggering
+    inputs:
+      force:
+        description: "Rebuild and overwrite an already-published day"
+        type: boolean
+        default: false
 
 # Independent of the weekly digest's own concurrency group: the two never need to
 # block each other, and their schedules never coincide.
@@ -41,10 +46,11 @@ jobs:
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           PERPLEXITY_API_KEY: ${{ secrets.PERPLEXITY_API_KEY }}
+          FORCE_FLAG: ${{ inputs.force && '--force' || '' }}
         run: |
           log="$RUNNER_TEMP/ai-daily.log"
           set +e
-          uv run lastweekintech ai-daily 2>&1 | tee "$log"
+          uv run lastweekintech ai-daily $FORCE_FLAG 2>&1 | tee "$log"
           status=${PIPESTATUS[0]}
           set -e
           if [ "$status" -ne 0 ]; then
