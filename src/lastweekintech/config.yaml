@@ -166,7 +166,13 @@ ai_daily:
     # no mainstream outlet picked up yet, the pool can end up entirely
     # Hacker-News-sourced. Reuses the same shared perplexity: settings the
     # weekly digest's consensus check uses, with its own AI-scoped prompt.
-    consensus: 2
+    # Set above a moderately-trending fresh HN story (~2.7 at these weights)
+    # but below a capped-out one (~6): a consensus-only pick — flat-scored,
+    # with no HN points or breadth of its own — needs enough weight to
+    # survive the candidate_pool cut and actually be picked, without letting
+    # it auto-outrank every organically-sourced story. 2 never won a slot on
+    # its first live run even after surviving extraction.
+    consensus: 4
   briefing:
     model_name: "anthropic/claude-sonnet-5"
     fallback_models:
