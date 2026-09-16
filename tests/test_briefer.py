@@ -70,6 +70,17 @@ class TestBrief:
         verdict = briefer.brief(pool(), count=5, min_count=4, max_per_source=0, recent_titles=[])
         assert verdict is None
 
+    def test_truncates_an_overlong_list_to_print_order(self):
+        # A model asked for "4-5" that answers with 6 is being generous, not
+        # wrong — mirrors editor.py's identical tolerance. Observed live: every
+        # configured model returned more than max_count on a heavy AI-news day,
+        # and the stricter reject-instead-of-truncate behavior burned the whole
+        # fallback chain for it.
+        briefer = make_briefer(verdict_for(1, 2, 3, 4, 5, 6))
+        verdict = briefer.brief(pool(), count=5, min_count=4, max_per_source=0, recent_titles=[])
+        assert verdict is not None
+        assert [p.n for p in verdict.picks] == [1, 2, 3, 4, 5]
+
     def test_records_which_model_answered(self):
         briefer = make_briefer(verdict_for(1, 2), model_name="test/briefer")
         briefer.brief(pool(), count=2, min_count=2, max_per_source=0, recent_titles=[])

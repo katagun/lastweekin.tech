@@ -271,7 +271,12 @@ def _parse_verdict(answer: str, pool: int, min_count: int, max_count: int) -> Br
             )
         )
 
-    if not min_count <= len(picks) <= max_count:
+    # Trust an over-long list down to the print order, never an under-long
+    # one — mirrors editor.py's _parse_verdict. A model asked for "4-5" that
+    # answers with 6 is being generous, not wrong; rejecting the whole
+    # verdict over it means the fallback chain burns every model for no
+    # reason on exactly the days with the most AI news to choose from.
+    if len(picks) < min_count:
         return None
     return BriefVerdict(picks=picks[:max_count], intro=str(raw.get("intro") or "").strip())
 
