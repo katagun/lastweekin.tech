@@ -2,7 +2,10 @@ name: AI Daily Briefing
 
 on:
   schedule:
-    - cron: "0 13 * * *" # Every day at 1:00 PM UTC — clear of the Monday 08:00 UTC weekly run.
+    # 13:07, not 13:00 — GitHub's scheduler is most congested (and most prone
+    # to delaying or dropping a run) at the top of the hour; the 2026-09-16
+    # 13:00 run never fired at all.
+    - cron: "7 13 * * *" # Every day, just past 1:00 PM UTC — clear of the Monday 08:00 UTC weekly run.
   workflow_dispatch: # Allows manual triggering
     inputs:
       force:
