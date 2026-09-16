@@ -222,6 +222,19 @@ body {
   margin-right: 0.15em;
 }
 
+/* The weekly digest's reciprocal of the above: a link to the other section,
+   in the same slot under the wordmark. Colored so it reads as a link where
+   .section-suffix's plain text (used on the AI Daily page itself) does not
+   need to. */
+.section-link {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.section-link:hover {
+  text-decoration: underline;
+}
+
 /* The classic double rule under a nameplate. */
 .dateline {
   display: flex;
