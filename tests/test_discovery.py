@@ -138,3 +138,37 @@ class TestApplyConsensusBoost:
         entries = [ConsensusStory(headline="SpaceX Starship reaches orbit")]
         missed = discovery.apply_consensus_boost([story], entries, weight=2.0)
         assert [m.headline for m in missed] == ["SpaceX Starship reaches orbit"]
+
+
+class TestStoriesFromMissed:
+    def test_builds_a_single_article_story_per_entry(self):
+        missed = [
+            ConsensusStory(
+                headline="A story the feeds never saw",
+                urls=["https://www.example.com/a-story"],
+            )
+        ]
+        stories = discovery.stories_from_missed(missed, weight=2.0)
+        assert len(stories) == 1
+        story = stories[0]
+        assert story.title == "A story the feeds never saw"
+        assert story.score == 2.0
+        assert story.consensus is True
+        assert len(story.articles) == 1
+        assert story.articles[0].url == "https://www.example.com/a-story"
+        assert story.articles[0].title == "A story the feeds never saw"
+
+    def test_derives_the_source_from_the_url_domain(self):
+        missed = [ConsensusStory(headline="x", urls=["https://www.theverge.com/a/b"])]
+        stories = discovery.stories_from_missed(missed, weight=2.0)
+        assert stories[0].articles[0].source == "theverge.com"
+
+    def test_an_entry_with_no_urls_yields_no_candidate(self):
+        missed = [ConsensusStory(headline="Nothing to fetch", urls=[])]
+        assert discovery.stories_from_missed(missed, weight=2.0) == []
+
+    def test_uses_only_the_first_url_when_several_are_given(self):
+        missed = [ConsensusStory(headline="x", urls=["https://a.example/1", "https://b.example/2"])]
+        stories = discovery.stories_from_missed(missed, weight=2.0)
+        assert len(stories) == 1
+        assert stories[0].articles[0].url == "https://a.example/1"

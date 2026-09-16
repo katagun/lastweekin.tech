@@ -86,13 +86,17 @@ def build_ai_daily(
         daily_config, now=now, search=search, prompt_template=discovery.AI_DAILY_PROMPT_TEMPLATE
     )
     missed = discovery.apply_consensus_boost(stories, consensus, daily_config.weights.consensus)
+    # A boost only helps a story already in the pool — most of what the wider
+    # web corroborates is genuinely absent from a 14-feed, 24-hour fetch, not
+    # just under-ranked in it. Ingest those as real candidates instead of
+    # only recording that they exist: they still have to survive extraction
+    # (a real body from the citation URL) and every validation Briefer
+    # already applies, same as an organically-fetched story.
+    new_from_consensus = discovery.stories_from_missed(missed, daily_config.weights.consensus)
     if consensus:
+        stories = stories + new_from_consensus
         stories.sort(key=lambda s: s.score, reverse=True)
-    if missed:
-        logging.info(
-            f"AI Daily consensus check found {len(missed)} stories the feed pool never saw: "
-            f"{[m.headline for m in missed]}"
-        )
+        logging.info(f"Added {len(new_from_consensus)} consensus-only candidates to the pool.")
 
     ranked = drop_recently_published(
         stories,
