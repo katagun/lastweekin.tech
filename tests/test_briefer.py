@@ -240,3 +240,32 @@ class TestBrief:
         assert "400 HN points" in seen["prompt"]
         assert "press consensus" in seen["prompt"]
         assert "NO ARTICLE TEXT AVAILABLE" in seen["prompt"]
+
+    def test_the_prompt_shows_the_exact_source_the_cap_will_enforce(self):
+        # Live models tripped the per-source cap on their first try despite
+        # visibly spreading picks across outlets, because the prompt used to
+        # list every outlet a multi-source story had ("outlets: A, B, C")
+        # while the cap counts one resolved representative source per story
+        # — a mismatch a model has no way to predict. The prompt must show
+        # exactly the string _within_source_cap will count against.
+        from lastweekintech.briefer import _story_source
+
+        multi_source = make_story(
+            title="Covered by several outlets",
+            articles=[
+                make_article(title="Covered by several outlets", source="Ars Technica"),
+                make_article(
+                    title="Covered by several outlets", source="Hacker News", hn_points=500
+                ),
+            ],
+        )
+        seen = {}
+
+        def complete(model, messages, max_tokens):
+            seen["prompt"] = messages[1]["content"]
+            return Completion(text=json.dumps(verdict_for(1)))
+
+        Briefer(AiBriefingSettings(), complete=complete).brief(
+            [multi_source], count=1, min_count=1, max_per_source=0, recent_titles=[]
+        )
+        assert f"source: {_story_source(multi_source)}" in seen["prompt"]

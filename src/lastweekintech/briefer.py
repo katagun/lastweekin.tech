@@ -220,9 +220,16 @@ class Briefer:
 def _render_candidates(candidates: list[Story], settings: AiBriefingSettings) -> str:
     lines = []
     for n, story in enumerate(candidates, start=1):
-        outlets = sorted({a.source for a in story.articles})
+        # The single source shown here is exactly what _within_source_cap
+        # counts a pick against — showing the full outlet set instead (a
+        # multi-source story can list several) let a model "diversify" by an
+        # outlet name that was never the one actually charged against the
+        # cap, which is why every live model tripped the cap on its first
+        # try despite each visibly spreading its picks across what it could
+        # see.
+        source = _story_source(story)
         points = max((a.hn_points or 0) for a in story.articles)
-        signals = [f"outlets: {', '.join(outlets)}"]
+        signals = [f"source: {source}"]
         if points:
             signals.append(f"{points} HN points")
         if story.consensus:
