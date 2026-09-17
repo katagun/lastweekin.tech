@@ -3,12 +3,19 @@
   <title>LastWeekIn.Tech — AI Daily</title>
   <subtitle>The 4-5 AI developments that mattered today.</subtitle>
   <id>https://lastweekin.tech/ai/</id>
-  <updated>2026-09-16T13:56:48Z</updated>
+  <updated>2026-09-17T14:57:05Z</updated>
   <link rel="self" type="application/atom+xml" href="https://lastweekin.tech/ai/feed.xml" />
   <link rel="alternate" type="text/html" href="https://lastweekin.tech/ai/" />
   <author>
     <name>LastWeekIn.Tech</name>
   </author>
+  <entry>
+    <title>AI Daily — 2026-09-17</title>
+    <id>tag:lastweekin.tech,2026-09-17:ai-daily/2026-09-17</id>
+    <updated>2026-09-17T14:57:05Z</updated>
+    <link rel="alternate" type="text/html" href="https://lastweekin.tech/ai/archive/2026-09-17.html" />
+    <content type="html">&lt;ol&gt;&lt;li&gt;&lt;p&gt;&lt;a href="https://www.wired.com/story/openai-releases-new-policy-for-reporting-incidents-of-model-misalignment/"&gt;An OpenAI Agent Tried to Jailbreak Itself&lt;/a&gt; &lt;em&gt;&amp;mdash; WIRED&lt;/em&gt;&lt;/p&gt;&lt;p&gt;OpenAI announced a new public disclosure framework for AI misalignment incidents, aiming to set an industry-wide standard for transparency. As part of the rollout, the company detailed several real-world examples from the past year, including a case where an AI agent generated what OpenAI describes as &amp;#x27;jailbreaking-like instructions&amp;#x27; aimed at itself.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;a href="https://dailyai.report/"&gt;U.S. House approves bill requiring AI data centers to pay for full energy consumption costs amid environmental concerns&lt;/a&gt; &lt;em&gt;&amp;mdash; dailyai.report&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The U.S. House approved a bill requiring AI data centers to pay for their full energy consumption costs, responding to growing environmental and grid-strain concerns tied to AI infrastructure buildout.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;a href="https://dailyai.report/"&gt;Governor Gavin Newsom signs California law requiring disclosure of AI-generated actors in advertisements&lt;/a&gt; &lt;em&gt;&amp;mdash; dailyai.report&lt;/em&gt;&lt;/p&gt;&lt;p&gt;California Governor Gavin Newsom signed a law requiring disclosure when AI-generated actors appear in advertisements.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;a href="https://benchlm.ai/model-updates/releases/september-2026"&gt;OpenAI launches GPT-6 Astra and brings GPT-Live-1 into the API, expanding frontier and real-time model capabilities&lt;/a&gt; &lt;em&gt;&amp;mdash; benchlm.ai&lt;/em&gt;&lt;/p&gt;&lt;p&gt;OpenAI launched GPT-6 Astra and brought GPT-Live-1 into its API, expanding both its frontier model lineup and real-time model capabilities available to developers.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;a href="https://aiweekly.co/ai-news-today"&gt;Huawei’s Eric Xu urges Chinese AI providers to speed up to reach scale where frontier risks become perceptible&lt;/a&gt; &lt;em&gt;&amp;mdash; aiweekly.co&lt;/em&gt;&lt;/p&gt;&lt;p&gt;A newly published paper from AutoArk describes &amp;#x27;Edge0,&amp;#x27; a system that keeps a 35B-parameter mixture-of-experts model&amp;#x27;s expert weights on SSD rather than in memory, using a trained &amp;#x27;prerouter&amp;#x27; to predict routing one layer ahead and hide storage latency. On a 24GB Mac mini M4 Pro, the approach reportedly hits 20.4 tokens/sec using only 2.9GiB of active memory, versus 3.9 tokens/sec for a fully memory-resident int4 baseline needing 18.2GiB.&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;</content>
+  </entry>
   <entry>
     <title>AI Daily — 2026-09-16</title>
     <id>tag:lastweekin.tech,2026-09-16:ai-daily/2026-09-16</id>
