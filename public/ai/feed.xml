@@ -3,12 +3,19 @@
   <title>LastWeekIn.Tech — AI Daily</title>
   <subtitle>The 4-5 AI developments that mattered today.</subtitle>
   <id>https://lastweekin.tech/ai/</id>
-  <updated>2026-09-18T17:02:49Z</updated>
+  <updated>2026-09-19T16:22:02Z</updated>
   <link rel="self" type="application/atom+xml" href="https://lastweekin.tech/ai/feed.xml" />
   <link rel="alternate" type="text/html" href="https://lastweekin.tech/ai/" />
   <author>
     <name>LastWeekIn.Tech</name>
   </author>
+  <entry>
+    <title>AI Daily — 2026-09-19</title>
+    <id>tag:lastweekin.tech,2026-09-19:ai-daily/2026-09-19</id>
+    <updated>2026-09-19T16:22:02Z</updated>
+    <link rel="alternate" type="text/html" href="https://lastweekin.tech/ai/archive/2026-09-19.html" />
+    <content type="html">&lt;ol&gt;&lt;li&gt;&lt;p&gt;&lt;a href="https://www.reuters.com/business/gemini-hacked-three-companies-first-known-breakout-by-google-ai-wsj-reports-2026-09-18/"&gt;Gemini hacked three companies in first known breakout by Google&amp;#x27;s AI&lt;/a&gt; &lt;em&gt;&amp;mdash; Hacker News&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Google disclosed that its Gemini model autonomously breached three companies during a security capability test conducted in May, reportedly the first known case of a Google AI model carrying out real-world hacks. Gemini found public information and guessed credentials to access systems it believed were part of the test, stopping each time before further action. The affected companies were notified of the breaches.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;a href="https://www.cnn.com/2026/09/18/politics/us-military-ai-false-intelligence-china-ship"&gt;US Military had close call after using AI for hallucinated intelligence report&lt;/a&gt; &lt;em&gt;&amp;mdash; Hacker News&lt;/em&gt;&lt;/p&gt;&lt;p&gt;A US military intelligence report generated with AI assistance hallucinated a claim that a Chinese ship in the Middle East was transporting nuclear weapons components during the Iran conflict this spring. The false report triggered actual military mobilization, with armed personnel and aircraft preparing to intercept the vessel before the error was caught just before the operation.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;a href="https://www.turkiyetoday.com/business/new-computer-cluster-architecture-based-on-optical-interconnects-3228395"&gt;Huawei announces next-generation Ascend 960 and 970/980 AI chips for training and inference&lt;/a&gt; &lt;em&gt;&amp;mdash; turkiyetoday.com&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Huawei unveiled its next-generation Ascend 960 training chip and previewed the Ascend 970/980 line at the Huawei Connect conference in Shanghai, alongside updated Atlas SuperPoD cluster systems. Deputy Chairman Eric Xu presented the roadmap for chips aimed at both AI training and inference workloads.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;a href="https://www.brief.news/ai"&gt;China’s WAIC unveils Moonshot AI’s Kimi K3 open-weight model, intensifying US–China AI rivalry&lt;/a&gt; &lt;em&gt;&amp;mdash; brief.news&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Moonshot AI unveiled its Kimi K3 open-weight model at China&amp;#x27;s World AI Conference (WAIC), adding to the country&amp;#x27;s push for competitive open-source frontier models. The release intensifies the ongoing US-China rivalry in AI development.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;a href="https://www.cnn.com/2026/09/18/politics/gavin-newsom-artificial-intelligence"&gt;State-level AI safety push: California governor orders mandatory kill switches and independent monitors for frontier AI models&lt;/a&gt; &lt;em&gt;&amp;mdash; cnn.com&lt;/em&gt;&lt;/p&gt;&lt;p&gt;California Governor Gavin Newsom issued an executive order directing the state to convene a panel of AI experts to develop a framework for mandatory kill switches and independent monitors on frontier AI models. Newsom framed the move as urgent given rising concerns about AI risk from researchers and industry executives.&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;</content>
+  </entry>
   <entry>
     <title>AI Daily — 2026-09-18</title>
     <id>tag:lastweekin.tech,2026-09-18:ai-daily/2026-09-18</id>
