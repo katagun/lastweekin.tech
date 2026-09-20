@@ -3,12 +3,19 @@
   <title>LastWeekIn.Tech — AI Daily</title>
   <subtitle>The 4-5 AI developments that mattered today.</subtitle>
   <id>https://lastweekin.tech/ai/</id>
-  <updated>2026-09-19T16:22:02Z</updated>
+  <updated>2026-09-20T16:45:03Z</updated>
   <link rel="self" type="application/atom+xml" href="https://lastweekin.tech/ai/feed.xml" />
   <link rel="alternate" type="text/html" href="https://lastweekin.tech/ai/" />
   <author>
     <name>LastWeekIn.Tech</name>
   </author>
+  <entry>
+    <title>AI Daily — 2026-09-20</title>
+    <id>tag:lastweekin.tech,2026-09-20:ai-daily/2026-09-20</id>
+    <updated>2026-09-20T16:45:03Z</updated>
+    <link rel="alternate" type="text/html" href="https://lastweekin.tech/ai/archive/2026-09-20.html" />
+    <content type="html">&lt;ol&gt;&lt;li&gt;&lt;p&gt;&lt;a href="https://saweis.net/posts/rsa-896.html"&gt;RSA-896&lt;/a&gt; &lt;em&gt;&amp;mdash; Hacker News&lt;/em&gt;&lt;/p&gt;&lt;p&gt;A researcher factored the RSA-896 challenge modulus using Claude on September 19, 2026, publishing the full 270-digit number and its two prime factors p and q.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;a href="https://www.tomshardware.com/tech-industry/artificial-intelligence/microsoft-director-called-ai-scraping-the-largest-theft-of-labor-in-human-history-while-openai-head-brands-chatgpt-an-existential-threat-to-publishers-revelations-come-from-legal-briefs-filed-in-nyt-lawsuit"&gt;Microsoft director: AI scraping &amp;#x27;the largest theft of labor in human history&amp;#x27;&lt;/a&gt; &lt;em&gt;&amp;mdash; Hacker News&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Legal briefs filed in the New York Times&amp;#x27; copyright lawsuit against OpenAI and Microsoft quote a Microsoft director describing AI training-data scraping as &amp;#x27;the largest theft of labor in human history,&amp;#x27; while OpenAI leadership is quoted calling ChatGPT an &amp;#x27;existential threat&amp;#x27; to publishers. The Times has asked the court for summary judgment based on these internal statements.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;a href="https://kvnutalk.com/utah-lawmakers-on-both-sides-of-capitol-hill-prepare-to-meet-artificial-intelligence-challenge/"&gt;Republican senator breaks with Trump to demand congressional AI hearings&lt;/a&gt; &lt;em&gt;&amp;mdash; kvnutalk.com&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Senator John Curtis (R-UT) joined a Senate colleague in calling for swift congressional hearings on AI regulation, breaking from the administration&amp;#x27;s hands-off posture, while Rep. Blake Moore was named vice chair of a bipartisan House AI working group led by Reps. Fitzpatrick and Suozzi.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;a href="https://pirateface.co/"&gt;Pirate Face Rescues LLM Models from Deletion&lt;/a&gt; &lt;em&gt;&amp;mdash; Hacker News&lt;/em&gt;&lt;/p&gt;&lt;p&gt;A new project called Pirate Face mirrors open-weight AI models (Apache-2.0 and MIT licensed LLMs, image, audio, and dataset models) from Hugging Face as checksum-verified magnet-link torrents, creating a decentralized peer-to-peer archive designed so models can never be fully taken down.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;a href="https://www.chesterwisniewski.com/post/2026-09-13-ai-is-destroying-the-creative-commons/"&gt;AI and the Destruction of the Creative Commons&lt;/a&gt; &lt;em&gt;&amp;mdash; Hacker News&lt;/em&gt;&lt;/p&gt;&lt;p&gt;An essay argues that AI training on openly licensed code and content is dismantling the decades-old balance between copyright protection and openness that let generations of self-taught programmers learn from freely shared examples.&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;</content>
+  </entry>
   <entry>
     <title>AI Daily — 2026-09-19</title>
     <id>tag:lastweekin.tech,2026-09-19:ai-daily/2026-09-19</id>
