@@ -3,12 +3,19 @@
   <title>LastWeekIn.Tech — AI Daily</title>
   <subtitle>The 4-5 AI developments that mattered today.</subtitle>
   <id>https://lastweekin.tech/ai/</id>
-  <updated>2026-09-22T17:36:28Z</updated>
+  <updated>2026-09-23T17:48:37Z</updated>
   <link rel="self" type="application/atom+xml" href="https://lastweekin.tech/ai/feed.xml" />
   <link rel="alternate" type="text/html" href="https://lastweekin.tech/ai/" />
   <author>
     <name>LastWeekIn.Tech</name>
   </author>
+  <entry>
+    <title>AI Daily — 2026-09-23</title>
+    <id>tag:lastweekin.tech,2026-09-23:ai-daily/2026-09-23</id>
+    <updated>2026-09-23T17:48:37Z</updated>
+    <link rel="alternate" type="text/html" href="https://lastweekin.tech/ai/archive/2026-09-23.html" />
+    <content type="html">&lt;ol&gt;&lt;li&gt;&lt;p&gt;&lt;a href="https://note.com/hirokimiyano/n/na03946e6e47e?hl=en"&gt;The United States and China agree to establish a direct communication line for AI accidents&lt;/a&gt; &lt;em&gt;&amp;mdash; note.com&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The United States and China agreed on September 21 to establish a direct communication line specifically for AI-related accidents, marking a formal government-to-government safety channel between the two AI superpowers. The agreement emerged alongside a broader set of developments, including Meta publicly opposing calls for an industry-wide AI slowdown and controversy over a US government website&amp;#x27;s use of the Chinese model Qwen.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;a href="https://note.com/hirokimiyano/n/na03946e6e47e?hl=en"&gt;SoftBank raises more than $10 billion through corporate bonds to fund OpenAI investment&lt;/a&gt; &lt;em&gt;&amp;mdash; note.com&lt;/em&gt;&lt;/p&gt;&lt;p&gt;SoftBank Group raised more than $10 billion through corporate bonds specifically to fund its investment in OpenAI, according to reporting from September 21-22. The bond sale is part of a broader financial mobilization occurring as debate over AI investment pacing spreads from corporations into financial markets.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;a href="https://blog.buildfastwithai.com/ai-news-today-september-22-2026"&gt;StepFun unveils Step 5 Preview&lt;/a&gt; &lt;em&gt;&amp;mdash; blog.buildfastwithai.com&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Within a 48-hour window, three non-frontier labs released competitive models: xAI shipped Grok 4.7 at sharply cut API prices ($2/$6), Xiaomi released MiMo-V2.6 Pro and Flash on Hugging Face under an MIT license with the Pro scoring 46 on the Intelligence Index, and StepFun unveiled Step 5 Preview scoring 44. None of these releases came from OpenAI, Anthropic, or Google.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;a href="https://blog.buildfastwithai.com/ai-news-today-september-22-2026"&gt;Harvey replaces OpenAI technology with an in-house Kimi K3 model&lt;/a&gt; &lt;em&gt;&amp;mdash; blog.buildfastwithai.com&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Harvey, a $15.6 billion legal AI company, replaced its reliance on OpenAI technology with an in-house model built on Kimi K3, according to Bloomberg reporting. The company had seen its gross margins swing from over 50% positive to negative 50% due to OpenAI and Anthropic usage-based API costs.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;a href="https://www.businessinsider.com/inside-open-ai-influencer-marketing-strategy-chatgpt-ads-sponsorships-instagram-2026-9"&gt;OpenAI is enlisting an influencer army to make it look &amp;#x27;good for the world&amp;#x27;&lt;/a&gt; &lt;em&gt;&amp;mdash; Hacker News&lt;/em&gt;&lt;/p&gt;&lt;p&gt;OpenAI has significantly ramped up influencer marketing as public concern about AI safety intensifies, doubling sponsored Instagram posts promoting ChatGPT from 61 in June to 122 in July, with further increases since. Rather than addressing existential AI safety fears, campaign pitches ask influencers to frame ChatGPT as &amp;#x27;cool&amp;#x27; or as supporting work that&amp;#x27;s &amp;#x27;good for the world.&amp;#x27;&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;</content>
+  </entry>
   <entry>
     <title>AI Daily — 2026-09-22</title>
     <id>tag:lastweekin.tech,2026-09-22:ai-daily/2026-09-22</id>
