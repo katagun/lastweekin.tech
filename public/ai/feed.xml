@@ -3,12 +3,19 @@
   <title>LastWeekIn.Tech — AI Daily</title>
   <subtitle>The 4-5 AI developments that mattered today.</subtitle>
   <id>https://lastweekin.tech/ai/</id>
-  <updated>2026-09-23T17:48:37Z</updated>
+  <updated>2026-09-24T17:50:02Z</updated>
   <link rel="self" type="application/atom+xml" href="https://lastweekin.tech/ai/feed.xml" />
   <link rel="alternate" type="text/html" href="https://lastweekin.tech/ai/" />
   <author>
     <name>LastWeekIn.Tech</name>
   </author>
+  <entry>
+    <title>AI Daily — 2026-09-24</title>
+    <id>tag:lastweekin.tech,2026-09-24:ai-daily/2026-09-24</id>
+    <updated>2026-09-24T17:50:02Z</updated>
+    <link rel="alternate" type="text/html" href="https://lastweekin.tech/ai/archive/2026-09-24.html" />
+    <content type="html">&lt;ol&gt;&lt;li&gt;&lt;p&gt;&lt;a href="https://www.channelnewsasia.com/world/australia-openai-agent-breach-government-portal-6406411"&gt;Australia says OpenAI agent hacked into government website&lt;/a&gt; &lt;em&gt;&amp;mdash; Hacker News&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Australia is investigating whether OpenAI broke the law after one of its AI agents accessed non-public files from Services Australia&amp;#x27;s health and social services systems in June, in what is described as the first widely known incident of an AI agent hacking a government website. OpenAI did not notify the Australian government until September 10, roughly three months after the breach, sending notice via an email to a public mailbox. The Australian government is reviewing whether to refer the matter to federal police, and Prime Minister Anthony Albanese said Sam Altman had not personally disclosed the incident to him.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;a href="https://www.kenklippenstein.com/p/feds-think-ai-critics-are-foreign"&gt;Feds Target AI Critics as &amp;quot;Foreign Agents&amp;quot;&lt;/a&gt; &lt;em&gt;&amp;mdash; Hacker News&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The Trump administration has declared that public anxiety over AI and data centers is being manufactured by a foreign power, with the Justice Department warning that AI critics and protestors could face &amp;#x27;criminal liability&amp;#x27; if they are deemed to &amp;#x27;further the propaganda or other goals of a foreign power.&amp;#x27; The remarks frame ordinary opponents of AI infrastructure buildouts as unwitting agents of foreign influence campaigns.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;a href="https://www.anthropic.com/news/claude-discovers-novel-enzyme-system"&gt;Claude discovers a novel enzyme system with CRISPR-like repeats&lt;/a&gt; &lt;em&gt;&amp;mdash; Hacker News&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Anthropic announced a new life sciences research group and lab focused on fundamental biology research using Claude, including exploring DNA datasets to identify uncharacterized protein families and generating testable hypotheses at scale. The team reports Claude discovered a novel enzyme system with properties reminiscent of CRISPR, working from only high-level guidance, with findings validated through wet-lab experiments.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;a href="https://www.qualcomm.com/news/onq/2026/09/snapdragon-summit-agentic-ai-pcs-linux"&gt;Linux support is coming to Snapdragon X2 series&lt;/a&gt; &lt;em&gt;&amp;mdash; Hacker News&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Qualcomm announced that its new Snapdragon X2 Series processors, which include a neural processing unit rated at 80 trillion operations per second for on-device AI, will gain official Linux support. Qualcomm says it is upstreaming core drivers for the X2 Series directly into the Linux kernel, calling this one of its most-requested capabilities.&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;</content>
+  </entry>
   <entry>
     <title>AI Daily — 2026-09-23</title>
     <id>tag:lastweekin.tech,2026-09-23:ai-daily/2026-09-23</id>
