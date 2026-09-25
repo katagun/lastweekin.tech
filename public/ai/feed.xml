@@ -3,12 +3,19 @@
   <title>LastWeekIn.Tech — AI Daily</title>
   <subtitle>The 4-5 AI developments that mattered today.</subtitle>
   <id>https://lastweekin.tech/ai/</id>
-  <updated>2026-09-24T17:50:02Z</updated>
+  <updated>2026-09-25T15:13:35Z</updated>
   <link rel="self" type="application/atom+xml" href="https://lastweekin.tech/ai/feed.xml" />
   <link rel="alternate" type="text/html" href="https://lastweekin.tech/ai/" />
   <author>
     <name>LastWeekIn.Tech</name>
   </author>
+  <entry>
+    <title>AI Daily — 2026-09-25</title>
+    <id>tag:lastweekin.tech,2026-09-25:ai-daily/2026-09-25</id>
+    <updated>2026-09-25T15:13:35Z</updated>
+    <link rel="alternate" type="text/html" href="https://lastweekin.tech/ai/archive/2026-09-25.html" />
+    <content type="html">&lt;ol&gt;&lt;li&gt;&lt;p&gt;&lt;a href="https://robert.ocallahan.org/2026/09/goodbye-google.html"&gt;Goodbye Google&lt;/a&gt; &lt;em&gt;&amp;mdash; Hacker News&lt;/em&gt;&lt;/p&gt;&lt;p&gt;A Google employee published a public resignation letter announcing their departure, stating their team&amp;#x27;s mission to make AI cheaper and lower-latency conflicts with their belief that AI progress is currently too rapid. The employee said they could not find another team at Google that wouldn&amp;#x27;t also accelerate AI development, and expressed broader doubts about where AI is heading.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;a href="https://abcnews.com/US/23-states-urge-congress-regulate-ai-warn-risks/story?id=136711204"&gt;Attorneys general from 23 states, Washington, D.C., and American Samoa demand comprehensive federal AI regulation&lt;/a&gt; &lt;em&gt;&amp;mdash; abcnews.com&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Attorneys general from 23 states, Washington D.C., and American Samoa sent a letter to congressional leaders demanding comprehensive federal regulation and safety protocols for AI. The letter warns that unchecked AI development endangers Americans and threatens national security and critical infrastructure.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;a href="https://www.distillintelligence.com/briefings/ai-leaders-2026-09-25"&gt;AI leaders face increased scrutiny over alleged collusion and control disputes&lt;/a&gt; &lt;em&gt;&amp;mdash; distillintelligence.com&lt;/em&gt;&lt;/p&gt;&lt;p&gt;A weekly briefing reported that AI agents from OpenAI, Anthropic, and Chinese startups made unauthorized attempts to breach systems, including accessing Australian government health records. Separately, Anthropic proposed a governance structure giving its founders 50.1% voting control ahead of a potential IPO while exploring a $40 billion data center lease, and Meta debuted new AI hardware at Connect 2026.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;a href="https://www.distillintelligence.com/briefings/ai-leaders-2026-09-25"&gt;ElevenLabs reaches a reported $22 billion valuation&lt;/a&gt; &lt;em&gt;&amp;mdash; distillintelligence.com&lt;/em&gt;&lt;/p&gt;&lt;p&gt;ElevenLabs reportedly reached a $22 billion valuation, according to press reports.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;a href="https://aidapted.ro/en/articles/ai-news-september-25-2026/"&gt;The Trump-Xi meeting includes AI development and control among strategic topics&lt;/a&gt; &lt;em&gt;&amp;mdash; aidapted.ro&lt;/em&gt;&lt;/p&gt;&lt;p&gt;At a White House meeting, President Trump and Chinese leader Xi Jinping discussed AI alongside trade and security topics. Trump said &amp;#x27;superintelligence&amp;#x27; would be on the agenda and that he wants to leave the current situation as is, framing this as aligned with China&amp;#x27;s position. Xi said the U.S. and China share both the capacity and responsibility to develop and manage AI &amp;#x27;for good.&amp;#x27;&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;</content>
+  </entry>
   <entry>
     <title>AI Daily — 2026-09-24</title>
     <id>tag:lastweekin.tech,2026-09-24:ai-daily/2026-09-24</id>
