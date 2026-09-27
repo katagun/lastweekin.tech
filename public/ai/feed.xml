@@ -3,12 +3,19 @@
   <title>LastWeekIn.Tech — AI Daily</title>
   <subtitle>The 4-5 AI developments that mattered today.</subtitle>
   <id>https://lastweekin.tech/ai/</id>
-  <updated>2026-09-26T17:03:10Z</updated>
+  <updated>2026-09-27T15:12:47Z</updated>
   <link rel="self" type="application/atom+xml" href="https://lastweekin.tech/ai/feed.xml" />
   <link rel="alternate" type="text/html" href="https://lastweekin.tech/ai/" />
   <author>
     <name>LastWeekIn.Tech</name>
   </author>
+  <entry>
+    <title>AI Daily — 2026-09-27</title>
+    <id>tag:lastweekin.tech,2026-09-27:ai-daily/2026-09-27</id>
+    <updated>2026-09-27T15:12:47Z</updated>
+    <link rel="alternate" type="text/html" href="https://lastweekin.tech/ai/archive/2026-09-27.html" />
+    <content type="html">&lt;ol&gt;&lt;li&gt;&lt;p&gt;&lt;a href="https://authorsguild.org/news/ag-v-openai-top-execs-knew-mass-book-piracy-was-illegal/"&gt;Unsealed Briefs in Authors’ Case v. Microsoft/OpenAI&lt;/a&gt; &lt;em&gt;&amp;mdash; Hacker News&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Newly unsealed briefs in Authors Guild v. OpenAI/Microsoft reveal internal communications showing executives and employees allegedly knew they were training on copyrighted books sourced from a &amp;#x27;sketchy Russian website&amp;#x27; and understood their products would cause job losses. The filings add to a growing evidentiary record in the ongoing authors&amp;#x27; copyright suit against both companies.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;a href="https://enterpriseai.economictimes.indiatimes.com/newsletter/daily_newsletter?for_date=2026-09-26&amp;amp;activity_id=304"&gt;Google tests putting AI chips in space through the Suncatcher satellite mission&lt;/a&gt; &lt;em&gt;&amp;mdash; enterpriseai.economictimes.indiatimes.com&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Google will send prototype satellites carrying its TPU hardware aboard SpaceX&amp;#x27;s Transporter-18 mission as part of its &amp;#x27;Suncatcher&amp;#x27; program, testing radiation tolerance, thermal performance, and high-bandwidth laser links for potential orbital AI compute infrastructure.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;a href="https://www.tbsnews.net/world/ai-leaders-warn-un-security-risks-systems-grow-more-powerful-1552216"&gt;AI leaders warn the United Nations about security risks from increasingly powerful systems&lt;/a&gt; &lt;em&gt;&amp;mdash; tbsnews.net&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Executives from OpenAI, Anthropic and Hugging Face briefed the UN Security Council on AI risks, with Anthropic CEO Dario Amodei warning that poorly managed AI could dangerously &amp;#x27;aggregate power.&amp;#x27; The session, prompted by UN Secretary-General Guterres&amp;#x27;s warnings about AI slipping beyond human control, comes as the US and China maintain sharply different oversight approaches.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;a href="https://www.tbsnews.net/tech/anthropic-considers-releasing-new-ai-model-ahead-ipo-sources-say-1547746"&gt;Anthropic considers releasing a new model ahead of a potential IPO&lt;/a&gt; &lt;em&gt;&amp;mdash; tbsnews.net&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Anthropic is reportedly considering releasing a new AI model to counter momentum from OpenAI&amp;#x27;s GPT-6 Astra ahead of an expected IPO, according to three sources. Enterprise expense platform Ramp data shows Astra now capturing about 13% of tracked enterprise AI spending versus roughly 8% for Anthropic&amp;#x27;s Claude Fable.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;a href="https://aidailypost.com/archives/2026/09"&gt;OpenAI reportedly directs 80–90 percent of research toward GPT-7 and future models&lt;/a&gt; &lt;em&gt;&amp;mdash; aidailypost.com&lt;/em&gt;&lt;/p&gt;&lt;p&gt;OpenAI is reportedly directing 80-90% of its research resources toward GPT-7 and future model development rather than incremental updates to current systems.&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;</content>
+  </entry>
   <entry>
     <title>AI Daily — 2026-09-26</title>
     <id>tag:lastweekin.tech,2026-09-26:ai-daily/2026-09-26</id>
