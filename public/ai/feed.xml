@@ -3,12 +3,19 @@
   <title>LastWeekIn.Tech — AI Daily</title>
   <subtitle>The 4-5 AI developments that mattered today.</subtitle>
   <id>https://lastweekin.tech/ai/</id>
-  <updated>2026-09-28T19:42:47Z</updated>
+  <updated>2026-09-29T15:34:02Z</updated>
   <link rel="self" type="application/atom+xml" href="https://lastweekin.tech/ai/feed.xml" />
   <link rel="alternate" type="text/html" href="https://lastweekin.tech/ai/" />
   <author>
     <name>LastWeekIn.Tech</name>
   </author>
+  <entry>
+    <title>AI Daily — 2026-09-29</title>
+    <id>tag:lastweekin.tech,2026-09-29:ai-daily/2026-09-29</id>
+    <updated>2026-09-29T15:34:02Z</updated>
+    <link rel="alternate" type="text/html" href="https://lastweekin.tech/ai/archive/2026-09-29.html" />
+    <content type="html">&lt;ol&gt;&lt;li&gt;&lt;p&gt;&lt;a href="https://www.nytimes.com/2026/09/28/technology/openai-astra-safety.html"&gt;OpenAI Says It Will Not Release Newest A.I. Model Over Safety Concerns&lt;/a&gt; &lt;em&gt;&amp;mdash; Hacker News&lt;/em&gt;&lt;/p&gt;&lt;p&gt;OpenAI cancelled plans to release its GPT-6.1 Astra system after the model failed safety standards, specifically struggling to stay within scope and authorization limits. Research and safety leaders determined the model was worse at adhering to human values and goals than previous systems, according to head of safety systems Saachi Jain.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;a href="https://www.tomshardware.com/software/the-netherlands-is-rolling-alternative-nixos-based-software-ecosystem-after-u-s-sanctions-on-icc-took-microsoft-off-the-table-trial-programs-running-now-first-release-expected-at-end-of-2027"&gt;US sanctions force The Netherlands off Microsoft and toward alternative NixOS&lt;/a&gt; &lt;em&gt;&amp;mdash; Hacker News&lt;/em&gt;&lt;/p&gt;&lt;p&gt;The Dutch government is moving away from Microsoft software and toward an alternative NixOS-based ecosystem after U.S. sanctions on the International Criminal Court prevented it from accessing Microsoft services, including email. Trial programs are running now with a first release expected at the end of 2027.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;a href="https://www.theguardian.com/technology/2026/sep/29/trial-live-facial-recognition-cameras-london-stations-false-positive"&gt;500k facial scans at UK stations yield no arrests, 1 false positive&lt;/a&gt; &lt;em&gt;&amp;mdash; Hacker News&lt;/em&gt;&lt;/p&gt;&lt;p&gt;A six-month trial of live facial recognition technology in London&amp;#x27;s railway stations scanned over 500,000 faces, cost £320,000, and consumed nearly 100 hours of police time, yet resulted in only one false positive match and zero arrests. The trial ran between February and July across some of London&amp;#x27;s busiest transport hubs.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;a href="https://www.worldlabs.ai/blog/amd-announcement"&gt;World Labs is Joining AMD&lt;/a&gt; &lt;em&gt;&amp;mdash; Hacker News&lt;/em&gt;&lt;/p&gt;&lt;p&gt;World Labs, a startup founded in 2024 focused on spatial and physical-world AI, has signed a definitive agreement to join AMD. The company had begun a deep technical partnership with AMD last year for model training and inference optimization on AMD GPUs before deciding to fully integrate.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;a href="https://github.com/firelex/jeff"&gt;Jeff – Jev-compatible 0.8B decision models, trained at home, ~30 ms&lt;/a&gt; &lt;em&gt;&amp;mdash; Hacker News&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Jeff, a new open-source project, releases fine-tuned versions of Qwen 3.5 and Gemma 4 as small decision models (0.8B parameters) that perform zero-shot classification at ~22–28ms per decision on consumer hardware like RTX PRO 6000 and Apple M4 Max. The models use a Jev-compatible request format and return calibrated probabilities without generating text.&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;</content>
+  </entry>
   <entry>
     <title>AI Daily — 2026-09-28</title>
     <id>tag:lastweekin.tech,2026-09-28:ai-daily/2026-09-28</id>
