@@ -3,12 +3,19 @@
   <title>LastWeekIn.Tech — AI Daily</title>
   <subtitle>The 4-5 AI developments that mattered today.</subtitle>
   <id>https://lastweekin.tech/ai/</id>
-  <updated>2026-10-02T18:20:19Z</updated>
+  <updated>2026-10-03T17:10:52Z</updated>
   <link rel="self" type="application/atom+xml" href="https://lastweekin.tech/ai/feed.xml" />
   <link rel="alternate" type="text/html" href="https://lastweekin.tech/ai/" />
   <author>
     <name>LastWeekIn.Tech</name>
   </author>
+  <entry>
+    <title>AI Daily — 2026-10-03</title>
+    <id>tag:lastweekin.tech,2026-10-03:ai-daily/2026-10-03</id>
+    <updated>2026-10-03T17:10:52Z</updated>
+    <link rel="alternate" type="text/html" href="https://lastweekin.tech/ai/archive/2026-10-03.html" />
+    <content type="html">&lt;ol&gt;&lt;li&gt;&lt;p&gt;&lt;a href="https://developer.apple.com/news/?id=p6zjojqw"&gt;Updates to Full Disk Access in macOS&lt;/a&gt; &lt;em&gt;&amp;mdash; Hacker News&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Apple announced it will tighten macOS &amp;#x27;Full Disk Access&amp;#x27; controls in response to increasingly capable AI agents that could gain broad access to users&amp;#x27; files, messages, mail, and browsing history. The move follows a journalist&amp;#x27;s claim that Meta&amp;#x27;s Muse app read private messages on Mac, which Meta disputed. Apple is introducing additional controls around the Full Disk Access setting that was originally designed for backup functionality.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;a href="https://aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model/"&gt;Kolibri Has Landed: A Sovereign Open-Weight Model&lt;/a&gt; &lt;em&gt;&amp;mdash; Hacker News&lt;/em&gt;&lt;/p&gt;&lt;p&gt;Aleph Alpha released Kolibri, an open-weight English-German Mixture-of-Experts model with 78 billion total parameters and 3 billion active parameters per token. The model supports up to 1 million token context length, was trained from scratch on infrastructure in Germany and Finland, and is available under Apache 2.0 license on Hugging Face.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;a href="https://www.justice.gov/"&gt;U.S. prosecutors indict businessman accused of illegally exporting more than $300 million of Nvidia AI servers to China&lt;/a&gt; &lt;em&gt;&amp;mdash; justice.gov&lt;/em&gt;&lt;/p&gt;&lt;p&gt;U.S. prosecutors indicted a businessman accused of illegally exporting more than $300 million of Nvidia AI servers to China in violation of export controls. This represents one of the largest enforcement actions against AI chip smuggling.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;&lt;a href="https://www.404media.co/federal-judge-rules-a-flock-search-was-indiscriminate-mass-surveillance-and-unconstitutional/"&gt;Federal Judge Rules a Flock Search Was Unconstitutional&lt;/a&gt; &lt;em&gt;&amp;mdash; Hacker News&lt;/em&gt;&lt;/p&gt;&lt;p&gt;A federal judge in Oklahoma ruled that a police officer violated Fourth Amendment rights when searching a woman&amp;#x27;s license plate in Flock&amp;#x27;s automated license plate reader system based solely on her out-of-state plate, then using her travel history as justification for a vehicle search. The judge characterized Flock&amp;#x27;s network as &amp;#x27;a type of indiscriminate mass surveillance,&amp;#x27; marking one of the first federal court decisions finding Flock searches unconstitutional.&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;</content>
+  </entry>
   <entry>
     <title>AI Daily — 2026-10-02</title>
     <id>tag:lastweekin.tech,2026-10-02:ai-daily/2026-10-02</id>
