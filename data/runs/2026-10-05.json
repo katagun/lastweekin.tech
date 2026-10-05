@@ -1,0 +1,62 @@
+{
+  "week": "2026-10-05",
+  "started_at": "2026-10-05T12:10:18.677419+00:00",
+  "articles_from_feeds": 315,
+  "articles_from_hn": 200,
+  "articles_before_dedupe": 515,
+  "articles_after_dedupe": 510,
+  "stories": 500,
+  "multi_source_stories": 9,
+  "max_sources": 2,
+  "repeats_dropped": 0,
+  "repeats_restored": 0,
+  "consensus_stories": 1,
+  "consensus_matched": 0,
+  "consensus_missed": [
+    "NVIDIA launches an open platform to secure autonomous AI agents"
+  ],
+  "candidate_stories": 40,
+  "candidate_articles": 50,
+  "extraction_succeeded": 39,
+  "extraction_failed": 11,
+  "categories": {
+    "AI": 14,
+    "General Tech": 13,
+    "Security": 6,
+    "Policy": 3,
+    "Hardware": 3,
+    "Open Source": 1
+  },
+  "ai_before_promotion": 4,
+  "ai_promoted": 0,
+  "ai_published": 4,
+  "editor_used": true,
+  "editor_model": "anthropic/claude-sonnet-5",
+  "editor_overridden": 1,
+  "editor_completion_tokens": 1901,
+  "editor_reasoning_tokens": 1228,
+  "editor_max_tokens": 8000,
+  "summaries": 7,
+  "summaries_failed": 0,
+  "summary_models": {
+    "Updates to Full Disk Access in macOS": "anthropic/claude-haiku-4.5",
+    "OpenAI will show visual ads in ChatGPT while you generate images": "anthropic/claude-haiku-4.5",
+    "Kolibri: A Sovereign Open-Weight Model": "anthropic/claude-haiku-4.5",
+    "Californian accused of shipping $300M worth of Nvidia chips to China without Uncle Sam’s approval": "anthropic/claude-haiku-4.5",
+    "Citrix patches NetScaler SAML zero-day exploited in attacks": "anthropic/claude-haiku-4.5",
+    "Police Arrest 16-Year-Old Suspected of Running KillSec, Seize Ransomware Leak Site and Servers": "anthropic/claude-haiku-4.5",
+    "I quit OpenAI because its culture is broken": "anthropic/claude-haiku-4.5"
+  },
+  "stage_seconds": {
+    "fetch": 4.176,
+    "dedupe": 0.006,
+    "cluster": 1.629,
+    "score": 0.001,
+    "consensus": 5.341,
+    "exclude_repeats": 0.075,
+    "extract": 3.152,
+    "categorize": 0.028,
+    "select": 19.725,
+    "summarize": 22.271
+  }
+}
