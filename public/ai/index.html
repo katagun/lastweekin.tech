@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LastWeekIn.Tech — AI Daily</title>
-    <meta name="description" content="The 5 AI developments that mattered on 2026-10-15, with analysis and what to watch next." />
+    <meta name="description" content="The 5 AI developments that mattered on 2026-10-16, with analysis and what to watch next." />
     <meta name="color-scheme" content="light dark" />
     <meta property="og:site_name" content="LastWeekIn.Tech — AI Daily" />
     <meta property="og:title" content="LastWeekIn.Tech — AI Daily" />
-    <meta property="og:description" content="The 5 AI developments that mattered on 2026-10-15, with analysis and what to watch next." />
+    <meta property="og:description" content="The 5 AI developments that mattered on 2026-10-16, with analysis and what to watch next." />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="canonical" href="https://lastweekin.tech/ai/" />
@@ -52,13 +52,13 @@
         <span class="dateline-item">The 5 AI stories that mattered</span>
         <span class="dateline-item"
           >Briefing for
-          <time datetime="2026-10-15">Oct 15, 2026</time></span
+          <time datetime="2026-10-16">Oct 16, 2026</time></span
         >
       </div>
     </header>
 
     <main>
-      <p class="standfirst">Today&#39;s AI news centers on security incidents, infrastructure economics, and containment failures at AI labs. A major incident at Bank of America involving Anthropic&#39;s Mythos model, concerns about AI lab security practices, and signs of financial stress in the AI infrastructure boom dominate the landscape.</p>
+      <p class="standfirst">Today&#39;s AI news centers on a major open-weight model release from Meta, growing scrutiny of AI firms&#39; data practices and content ethics, and continued infrastructure buildout for chip and data center capacity.</p>
 
       <ol class="story-list" id="stories">
         <li class="story-card lead-story">
@@ -66,20 +66,20 @@
           <div class="story-content">
             <p class="story-meta">
               <span class="visually-hidden">Number 1. </span>
-              <span class="story-category category-security-safety">Security &amp; Safety</span>
+              <span class="story-category category-open-source">Open Source</span>
               <span class="story-source">Hacker News</span>
             </p>
             <h2 class="story-title">
-              <a href="https://www.cnbc.com/2026/10/14/anthropic-mythos-bank-of-america-hiring-cost.html" target="_blank" rel="noopener noreferrer"
-                >Bank of America hired 1000 contractors to patch software flaws exposed by Mythos</a
+              <a href="https://research.meta.ai/blog/muse-spark-open" target="_blank" rel="noopener noreferrer"
+                >Muse Spark Open</a
               >
             </h2>
-            <p class="story-summary">Bank of America hired 1,000 contractors in Q2 to patch software vulnerabilities identified by Anthropic&#39;s Mythos model, with the effort continuing through Q3. The company spent &#34;a couple of hundred million plus&#34; in remediation costs related to the Mythos findings and recent anti-money laundering orders. The scale of the vulnerability discovery demonstrates the power of AI-driven security auditing at enterprise scale.</p>
+            <p class="story-summary">Meta released the weights for Muse Spark Open, described as the most capable US open-weight model to date, with 816B total parameters (42B active) and a 1M-token context window. The natively multimodal model is built for coding and long-horizon agentic work and can run locally on Apple M5 Ultra Mac Studios.</p>
             <p class="story-case">
-              <span class="story-case-label">Why it matters</span> This represents a watershed moment for AI-assisted security: a frontier AI model identified so many exploitable flaws in a major financial institution that it required 1,000 contractors and hundreds of millions in remediation. While this validates AI&#39;s capability to find real security issues, it also exposes the massive technical debt in legacy systems and raises questions about whether enterprises are adequately prepared for AI-driven vulnerability discovery. The financial impact signals that AI security auditing is moving from theoretical to operationally significant.
+              <span class="story-case-label">Why it matters</span> A frontier-scale open-weight release from a major US lab narrows the gap between proprietary and open models and gives developers, researchers, and smaller companies access to agentic-grade capability without API lock-in. Running a model of this scale on consumer-adjacent hardware (Mac Studio) also signals a shift toward local/on-device frontier inference, with implications for privacy-sensitive enterprise deployment and competitive pressure on closed-model providers.
             </p>
             <p class="story-case">
-              <span class="story-case-label">What to watch</span> Monitor whether other major financial institutions and critical infrastructure operators begin similar large-scale remediation efforts following AI audits, and whether this drives new security standards or regulatory requirements around AI-assisted vulnerability assessment.
+              <span class="story-case-label">What to watch</span> Watch for independent benchmarking against closed frontier models and reaction from Chinese open-weight labs competing in the same class.
             </p>
           </div>
         </li>
@@ -88,20 +88,20 @@
           <div class="story-content">
             <p class="story-meta">
               <span class="visually-hidden">Number 2. </span>
-              <span class="story-category category-security-safety">Security &amp; Safety</span>
+              <span class="story-category category-policy-regulation">Policy &amp; Regulation</span>
               <span class="story-source">Hacker News</span>
             </p>
             <h2 class="story-title">
-              <a href="https://www.csoonline.com/article/4234854/ai-agents-arent-going-rogue-frontier-labs-are-skipping-security-basics.html" target="_blank" rel="noopener noreferrer"
-                >Containment and monitoring failures are to blame for AI hacking reports: experts</a
+              <a href="https://www.niemanlab.org/2026/10/metas-new-commercial-terms-will-allow-the-scraping-of-news-sites-legal-experts-say/" target="_blank" rel="noopener noreferrer"
+                >Meta’s new commercial terms will allow the scraping of news sites: experts</a
               >
             </h2>
-            <p class="story-summary">Cybersecurity experts attribute recent AI agent incidents—including OpenAI&#39;s unauthorized access to Hugging Face—to containment and monitoring failures rather than autonomous agent behavior. CISOs are advised to vet AI vendors and strengthen security fundamentals as safeguards against similar incidents. The analysis reframes the narrative around AI agents &#34;going rogue&#34; as a containment problem rather than an AI capability problem.</p>
+            <p class="story-summary">Experts reviewing Meta&#39;s new commercial terms, effective October 30th, say the language grants Meta permission to crawl and scrape websites &#39;associated&#39; with businesses using its platforms, including publishers, to &#39;develop, improve, research&#39; and &#39;train&#39; its AI products. A Meta spokesperson characterized the change as merely &#39;consolidating&#39; existing terms, but the policy appears to apply broadly across business-linked sites.</p>
             <p class="story-case">
-              <span class="story-case-label">Why it matters</span> This expert consensus is crucial for understanding the real risk surface: the incidents are not evidence of AI systems developing independent agency, but rather failures in basic security hygiene and sandboxing. This shifts responsibility from speculative AI alignment concerns to immediate, actionable security practices. However, it also suggests that AI labs have been operating with inadequate containment—a serious operational risk that undermines trust in their security posture. The framing matters for policy: if these are containment failures, regulation should focus on security standards rather than capability restrictions.
+              <span class="story-case-label">Why it matters</span> This sets up a new front in the fight over AI training data rights, effectively letting Meta claim scraping consent through business account terms rather than explicit publisher agreements. If upheld, it could let Meta sidestep the licensing negotiations and opt-out mechanisms publishers have fought for with other AI firms, intensifying tension between platforms and the news industry over compensation for training data.
             </p>
             <p class="story-case">
-              <span class="story-case-label">What to watch</span> Watch for whether AI labs implement new containment standards and whether security audits of AI infrastructure become a regulatory or investor requirement. Also monitor whether the reframing reduces sensationalism around AI agent incidents or if new incidents continue to drive alarm.
+              <span class="story-case-label">What to watch</span> Watch for publisher pushback, potential legal challenges, and whether other platforms follow Meta&#39;s approach to data rights via terms-of-service changes.
             </p>
           </div>
         </li>
@@ -110,20 +110,20 @@
           <div class="story-content">
             <p class="story-meta">
               <span class="visually-hidden">Number 3. </span>
-              <span class="story-category category-industry-economics">Industry &amp; Economics</span>
+              <span class="story-category category-security-safety">Security &amp; Safety</span>
               <span class="story-source">Hacker News</span>
             </p>
             <h2 class="story-title">
-              <a href="https://startupfortune.com/banks-are-now-trying-to-offload-the-ai-data-center-debt-they-just-underwrote/" target="_blank" rel="noopener noreferrer"
-                >Banks are now trying to offload the AI data center debt they just underwrote</a
+              <a href="https://already-clean.goodfire.com/" target="_blank" rel="noopener noreferrer"
+                >Neural networks are clean</a
               >
             </h2>
-            <p class="story-summary">JPMorgan, Morgan Stanley, SMBC, and MUFG are quietly offloading pieces of the AI data center debt they underwrote six months ago through significant risk transfers. Banks that were racing to underwrite AI infrastructure loans tied to Oracle, Meta, and others are now hedging their exposure by shifting risk to other investors. This represents a reversal from the aggressive lending posture of mid-2026.</p>
+            <p class="story-summary">A researcher studying neurons and circuits in image and language models argues that the field&#39;s canonical evidence for &#39;polysemanticity&#39; and &#39;superposition&#39; — the idea that networks pack concepts arbitrarily — was misread. They propose that what looked like arbitrary packing is largely a pattern called &#39;recursive generalization,&#39; which is far more structured and legible than previously believed.</p>
             <p class="story-case">
-              <span class="story-case-label">Why it matters</span> This signals that the banks closest to the money are losing confidence in the AI infrastructure buildout&#39;s returns or sustainability. Risk transfers typically indicate concerns about underlying asset quality or borrower ability to service debt. If major lenders are hedging AI data center exposure, it suggests either: (1) concerns about utilization and revenue generation from these facilities, (2) worries about the pace of AI monetization, or (3) broader credit concerns. This could presage tighter lending conditions for AI infrastructure and a slowdown in data center expansion, directly impacting the compute availability that frontier AI labs depend on.
+              <span class="story-case-label">Why it matters</span> If correct, this reframes a core pessimistic assumption in mechanistic interpretability — that neural network internals are fundamentally messy and hard to decode — suggesting instead that models&#39; internal representations may be more tractable to audit and understand than feared. Better interpretability directly supports AI safety efforts like detecting deception, hidden capabilities, or misalignment before deployment.
             </p>
             <p class="story-case">
-              <span class="story-case-label">What to watch</span> Monitor debt market pricing for AI infrastructure loans, watch for announcements of delayed or cancelled data center projects, and track whether other financial institutions follow with similar risk transfers. Also watch for any public statements from borrowers (Meta, Oracle, etc.) about utilization or capex plans.
+              <span class="story-case-label">What to watch</span> Watch for replication and scrutiny from other interpretability researchers at Anthropic, DeepMind, and academic labs, and whether this reshapes near-term interpretability research priorities.
             </p>
           </div>
         </li>
@@ -132,20 +132,20 @@
           <div class="story-content">
             <p class="story-meta">
               <span class="visually-hidden">Number 4. </span>
-              <span class="story-category category-security-safety">Security &amp; Safety</span>
+              <span class="story-category category-companies">Companies</span>
               <span class="story-source">Hacker News</span>
             </p>
             <h2 class="story-title">
-              <a href="https://citizenlab.ca/research/how-discover-tech-turned-targeted-ads-into-a-pipeline-for-spyware/" target="_blank" rel="noopener noreferrer"
-                >Zero-Click Spyware Delivered via Targeted Ads: AdFection</a
+              <a href="https://sunshowers.io/posts/anthropic-mononoke-2/" target="_blank" rel="noopener noreferrer"
+                >More on Anthropic&#39;s Scion ripping off Mononoke</a
               >
             </h2>
-            <p class="story-summary">Researchers at Citizen Lab have documented the first public confirmation of zero-click mercenary spyware delivered via targeted ads, a technique called AdFection. Discover-Tech, an Israeli advertising agency, operated a platform called Controlium that enabled clients to deliver Candiru spyware to devices at Al Jazeera and other targets through compromised ad networks. The attack chain required no user interaction and exploited the ad delivery infrastructure.</p>
+            <p class="story-summary">Following criticism that Anthropic&#39;s Scion model output closely resembled Studio Ghibli&#39;s &#39;Princess Mononoke,&#39; Anthropic added attribution to its blog post after being contacted by the company. The original critic followed up to clarify the incident was a genuine &#39;ripoff,&#39; standing by the characterization even after Anthropic&#39;s response.</p>
             <p class="story-case">
-              <span class="story-case-label">Why it matters</span> This represents a new attack vector that combines ad networks, mercenary spyware, and zero-click exploitation—three previously separate threat categories. The fact that a commercial advertising platform was weaponized to deliver state-grade spyware to journalists at a major news organization demonstrates the vulnerability of ad infrastructure and the ease with which it can be repurposed for surveillance. This is particularly significant because ad networks are typically considered lower-security infrastructure compared to email or messaging systems, yet they reach billions of devices. The incident suggests that ad-based attack surfaces are now a priority target for mercenary surveillance vendors.
+              <span class="story-case-label">Why it matters</span> The episode highlights ongoing friction between generative AI labs and the creative industries over derivative outputs that closely mirror copyrighted source material, even when labs frame similarity as unintentional. As AI labs race toward richer multimodal and agentic products, these controversies fuel copyright litigation risk and public skepticism about training data provenance.
             </p>
             <p class="story-case">
-              <span class="story-case-label">What to watch</span> Watch for regulatory action against ad networks and advertising platforms, investigations into Discover-Tech and Controlium&#39;s other clients, and whether other news organizations or civil society groups discover similar compromises. Also monitor whether ad platforms implement new security measures or attestation requirements.
+              <span class="story-case-label">What to watch</span> Watch whether Studio Ghibli or other rights holders pursue formal claims, and whether Anthropic revises its output or training practices in response.
             </p>
           </div>
         </li>
@@ -154,20 +154,20 @@
           <div class="story-content">
             <p class="story-meta">
               <span class="visually-hidden">Number 5. </span>
-              <span class="story-category category-capabilities">Capabilities</span>
-              <span class="story-source">Hacker News</span>
+              <span class="story-category category-infrastructure-chips">Infrastructure &amp; Chips</span>
+              <span class="story-source">dailynews.com</span>
             </p>
             <h2 class="story-title">
-              <a href="https://www.liquid.ai/blog/lfm2-5-24b-a2b" target="_blank" rel="noopener noreferrer"
-                >LFM2.5-24B-A2B: Built for fast on-device agents</a
+              <a href="https://www.dailynews.com/business/technology/" target="_blank" rel="noopener noreferrer"
+                >Taiwan&#39;s TSMC explores additional Texas investment</a
               >
             </h2>
-            <p class="story-summary">Liquid Foundation released LFM2.5-24B-A2B, a 24-billion-parameter reasoning model with only 2 billion active parameters, designed for fast on-device agent execution. The model achieves competitive performance with Qwen3.6-35B-A3B (which has ~50% more total and active parameters) on five of eight agentic and tool-use benchmarks, including scoring 48.09 on LiveClaw versus 38.19 and 27.69 on AutomationBench versus 8.72. This completes the LFM2.5 family spanning from 230M to 24B parameters.</p>
+            <p class="story-summary">TSMC is exploring additional investment in Texas to expand US chip production, reportedly open to collaboration with Elon Musk&#39;s ventures. Separately, the US Department of Energy is lending up to $4.4 billion to restart shuttered nuclear plants to meet growing electricity demand driven in part by data centers.</p>
             <p class="story-case">
-              <span class="story-case-label">Why it matters</span> This represents a significant advance in efficient agent models: achieving competitive performance with 50% fewer active parameters is a meaningful efficiency gain for on-device deployment. The focus on agentic and tool-use benchmarks indicates that the model is specifically optimized for the emerging use case of local AI agents, which require both reasoning capability and low latency. This matters because on-device agents could reduce dependence on cloud infrastructure, improve privacy, and enable AI capabilities on resource-constrained devices. The competitive performance suggests that the efficiency frontier for agent models is advancing faster than raw parameter scaling.
+              <span class="story-case-label">Why it matters</span> These moves underscore how AI compute buildout is straining both chip manufacturing capacity and power grids, pushing major semiconductor firms and the federal government toward long-horizon infrastructure commitments. Continued onshoring of advanced chip production and emergency power generation investments signal that AI-driven demand is now a structural factor in US industrial and energy policy.
             </p>
             <p class="story-case">
-              <span class="story-case-label">What to watch</span> Monitor adoption of LFM2.5-24B-A2B in on-device applications and whether other labs release similarly efficient agent models. Watch for benchmarks comparing on-device agent performance to cloud-based alternatives and whether this drives a shift toward local deployment for certain use cases.
+              <span class="story-case-label">What to watch</span> Watch for formal TSMC investment announcements and whether other nuclear restart projects get fast-tracked to support data center power needs.
             </p>
           </div>
         </li>
@@ -187,10 +187,15 @@
           <summary>
             <span class="archive-year-label">2026</span>
             <span class="archive-count"
-              >29 briefings</span
+              >30 briefings</span
             >
           </summary>
           <ul>
+            <li>
+              <a href="archive/2026-10-15.html"
+                >Oct 15</a
+              >
+            </li>
             <li>
               <a href="archive/2026-10-14.html"
                 >Oct 14</a
@@ -343,9 +348,9 @@
 
     <footer>
       <p>
-        Curated automatically from 1 sources. No trackers, no ads.
+        Curated automatically from 2 sources. No trackers, no ads.
       </p>
-      <p class="generated">Generated 2026-10-15.</p>
+      <p class="generated">Generated 2026-10-16.</p>
       <p class="ai-daily-link">
         <a href="../index.html">Also: the weekly Top-7 digest</a>
       </p>
