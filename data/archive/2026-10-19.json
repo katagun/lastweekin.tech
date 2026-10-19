@@ -1,0 +1,124 @@
+{
+  "week": "2026-10-19",
+  "generated_at": "2026-10-19T12:10:47.005137+00:00",
+  "intro": "A week dominated by the open-weight AI arms race and a quiet uprising of the open web against bot traffic, bookended by a landmark clean-energy milestone and a major credential-stuffing breach. Gaming and games policy also had a moment, with ownership rights finally getting legislative teeth.",
+  "stories": [
+    {
+      "rank": 1,
+      "title": "Muse Spark Open",
+      "source": "Hacker News",
+      "sources": [
+        "Hacker News"
+      ],
+      "source_count": 1,
+      "url": "https://research.meta.ai/blog/muse-spark-open",
+      "category": "AI",
+      "hn_points": 918,
+      "score": 7.052,
+      "summary": "Meta has released Muse Spark Open, an open-weight AI model with 816 billion total parameters optimized for coding and complex reasoning tasks, now available for developers through multiple platforms including Hugging Face, Amazon SageMaker, and Google Cloud. The model can run on consumer hardware for the first time, specifically on two Apple M5 Ultra Mac Studios connected via MLX framework, allowing users to operate advanced AI capabilities on their own desktops. Muse Spark Open is accessible through API platforms like Together AI, Fireworks AI, and Groq, as well as through various inference engines including vLLM and TensorRT-LLM with optimizations for AMD, Apple, Intel, and NVIDIA processors. The model includes additional safety post-training measures and is released under Meta's Muse Model License with limited commercial terms that allow many developers to use it for free.",
+      "why": "The release of the most capable US open-weight model to date resets the competitive landscape for who controls frontier AI.",
+      "consensus": true
+    },
+    {
+      "rank": 2,
+      "title": "DeepSeek-v4.1-Flash-1017",
+      "source": "Hacker News",
+      "sources": [
+        "Hacker News"
+      ],
+      "source_count": 1,
+      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+      "category": "AI",
+      "hn_points": 947,
+      "score": 5.69,
+      "summary": "DeepSeek released V4.1 Flash 1017 (Max) on October 17, 2026, an open-weight model that scores 45 on the Artificial Analysis Intelligence Index, well above the median of 19 for comparable models. The model processes text and image inputs, generates text output, operates at 227 tokens per second, and costs $0.30 per million input tokens and $1.20 per million output tokens, making it competitively priced compared to similar open-weight models. With 552 billion total parameters (16 billion active), a 1 million token context window, and an MIT license, the model is available through five API providers, though it tends to produce verbose outputs compared to comparable models.",
+      "why": "DeepSeek's new flagship shows open models keeping pace with closed frontier labs on both intelligence and price.",
+      "consensus": false
+    },
+    {
+      "rank": 3,
+      "title": "Google Gemini 4 agents just beat Minecraft with no human intervention",
+      "source": "Engadget",
+      "sources": [
+        "Engadget",
+        "Techmeme"
+      ],
+      "source_count": 2,
+      "url": "https://www.engadget.com/2289944/google-gemini-4-agents-just-beat-minecraft-with-no-human-intervention/",
+      "category": "AI",
+      "hn_points": null,
+      "score": 3.99,
+      "summary": "Google's Deepmind researchers demonstrated that four Gemini 4 Argon AI agents successfully defeated Minecraft's final boss, the Ender Dragon, without human intervention by autonomously coordinating tasks through in-game chat and shared memory. The agents completed the feat in 27.23 hours by dividing responsibilities—such as tool-making, food gathering, and portal activation—while communicating warnings, tips, and coordinates to teammates, dying 605 times in the process. According to Google, this marks the first end-to-end autonomous completion of Minecraft using only standard tools without game-specific customization, demonstrating that general-purpose AI models can now tackle complex multi-step challenges that previously required custom software. The experiment consumed 1.35 billion input tokens and cost $810 at Gemini's list price.",
+      "why": "Multi-agent Gemini systems autonomously beating Minecraft is a concrete, multi-outlet-verified leap in agentic coordination, not just a benchmark score.",
+      "consensus": false
+    },
+    {
+      "rank": 4,
+      "title": "Hackers Use Compromised ConnectWise Credential to Sign In to 173 Microsoft 365 Tenants",
+      "source": "The Hacker News",
+      "sources": [
+        "BleepingComputer",
+        "The Hacker News"
+      ],
+      "source_count": 2,
+      "url": "https://thehackernews.com/2026/10/hackers-use-compromised-connectwise.html",
+      "category": "Security",
+      "hn_points": null,
+      "score": 3.733,
+      "summary": "Unknown threat actors compromised a Microsoft 365 credential belonging to ConnectWise Cloud Backup (formerly SkyKick), a backup service used by managed service providers, to gain unauthorized access to at least 173 customer tenants between October 13-15, 2026. The compromised credential granted attackers broad permissions to read and modify mailboxes, OneDrive, SharePoint, Teams data, and directory information across all organizations where the app was installed, with some attackers also adding themselves to Global Administrator roles to access other privileged applications. ConnectWise has disabled Cloud Backup application access while investigating, and security researchers recommend customers disable the application, audit for unauthorized credential additions since October 13, and review service principal sign-ins from the suspicious IP address 144.172.64[.]128.",
+      "why": "A single stolen credential compromising 173 Microsoft 365 tenants shows how supply-chain trust failures cascade across the cloud economy.",
+      "consensus": false
+    },
+    {
+      "rank": 5,
+      "title": "US Rep proposes bill to give video game buyers \"ownership,\" not \"a license\"",
+      "source": "Ars Technica",
+      "sources": [
+        "Ars Technica",
+        "The Verge"
+      ],
+      "source_count": 2,
+      "url": "https://arstechnica.com/gaming/2026/10/us-rep-proposes-bill-to-give-video-game-buyers-ownership-not-a-license/",
+      "category": "Policy",
+      "hn_points": null,
+      "score": 3.883,
+      "summary": "Rep. Ritchie Torres (D-NY) has introduced the Power to Players Act, a bill that would require the FTC to establish regulations ensuring consumers own video games outright rather than licensing them, with guaranteed long-term access even after servers shut down. The bill specifically addresses cases like NBA 2K25, which becomes unplayable on December 31, 2025, just four months after its September 6 launch due to server shutdowns. Torres argues the legislation restores historical norms from the 1990s when players could permanently own their games, and comes amid broader consumer concerns about game preservation as Sony moves away from physical media releases, with digital downloads now accounting for 82 percent of PlayStation game sales.",
+      "why": "A federal bill to guarantee game ownership over licensing could reshape consumer rights across the entire digital goods industry.",
+      "consensus": false
+    },
+    {
+      "rank": 6,
+      "title": "Hackers Backdoor Nextcloud Servers Through Critical Flaw in Collabora’s Built-in CODE App",
+      "source": "The Hacker News",
+      "sources": [
+        "BleepingComputer",
+        "The Hacker News"
+      ],
+      "source_count": 2,
+      "url": "https://thehackernews.com/2026/10/hackers-backdoor-nextcloud-servers.html",
+      "category": "Security",
+      "hn_points": null,
+      "score": 3.618,
+      "summary": "Attackers exploited a command-injection flaw in Collabora Online - Built-in CODE Server, an optional Nextcloud app, to plant web shells on servers by sending unauthenticated requests to the proxy.php script when the local document server was not running. Collabora patched the vulnerability in version 26.4.303 on September 11, with the first documented attacks occurring on September 10, and published CVE-2026-110447 on October 14, warning that disabling the app is insufficient—it must be updated or removed entirely. Attackers used the web shells to search for credential stores and cryptocurrency wallets on affected servers, though no root access was achieved in reported cases. Nextcloud users running version 29 or older cannot install the patched version and must either upgrade Nextcloud or remove the app, while all users should check access logs for suspicious proxy.php requests and delete any leftover shell files matching the pattern shx*.php.",
+      "why": "",
+      "consensus": false
+    },
+    {
+      "rank": 7,
+      "title": "The Surface Laptop Ultra delivers on most of Microsoft's promises",
+      "source": "Ars Technica",
+      "sources": [
+        "Ars Technica",
+        "WIRED"
+      ],
+      "source_count": 2,
+      "url": "https://arstechnica.com/reviews/2026/10/the-surface-laptop-ultra-delivers-on-most-of-microsofts-promises/",
+      "category": "AI",
+      "hn_points": null,
+      "score": 3.576,
+      "summary": "Microsoft has released the Surface Laptop Ultra, a $2,599 to $5,899 laptop powered by Nvidia's RTX Spark processor that aims to serve as an all-in-one machine for gaming, creative work, and AI tasks. The device features a 15-inch mini-LED display, excellent keyboard and trackpad, and magnetic USB-C charging, and can run AAA games and large AI models on ARM architecture. However, the reviewer found that software support remains incomplete, with AI benchmarking tools unable to properly access the Blackwell GPU's capabilities and the AI Dev Gallery app experiencing crashes and offering only CPU-based model paths despite the powerful hardware available. Dell and Asus are also launching RTX Spark-based laptops, arriving at a time when PC shipments have dropped 20 percent year-over-year, though the reviewer questions whether the hardware's capabilities are matched by finished software and drivers.",
+      "why": "",
+      "consensus": false
+    }
+  ]
+}
