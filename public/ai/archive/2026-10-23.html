@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LastWeekIn.Tech — AI Daily, 2026-10-23</title>
+    <meta name="description" content="The 4 AI developments that mattered on 2026-10-23, with analysis and what to watch next." />
+    <meta name="color-scheme" content="light dark" />
+    <meta property="og:site_name" content="LastWeekIn.Tech — AI Daily" />
+    <meta property="og:title" content="LastWeekIn.Tech — AI Daily, 2026-10-23" />
+    <meta property="og:description" content="The 4 AI developments that mattered on 2026-10-23, with analysis and what to watch next." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://lastweekin.tech/ai/archive/2026-10-23.html" />
+    <meta property="og:url" content="https://lastweekin.tech/ai/archive/2026-10-23.html" />
+    <meta property="og:image" content="https://lastweekin.tech/ai/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="LastWeekIn.Tech AI Daily — the AI stories that mattered today"
+    />
+    <meta name="twitter:image" content="https://lastweekin.tech/ai/og.png" />
+    <link
+      rel="alternate"
+      type="application/atom+xml"
+      title="LastWeekIn.Tech AI Daily"
+      href="../feed.xml"
+    />
+    <link rel="stylesheet" href="../style.css" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22><text y=%2214%22 font-size=%2214%22>7</text></svg>"
+    />
+  </head>
+  <body>
+    <a class="skip-link" href="#stories">Skip to the stories</a>
+
+    <header class="site-header">
+      <p class="masthead-note">Published daily &middot; AI only &middot; No trackers, no ads</p>
+      <h1 class="site-title">
+        <a class="wordmark" href="../index.html"
+          >LastWeekIn<span class="dot">.</span>Tech</a
+        >
+      </h1>
+      <p class="section-suffix">
+        <a class="section-link" href="../../index.html"
+          ><span class="section-divider">/</span> Weekly Digest</a
+        >
+      </p>
+      <div class="dateline" role="presentation">
+        <span class="dateline-item">The 4 AI stories that mattered</span>
+        <span class="dateline-item"
+          >Briefing for
+          <time datetime="2026-10-23">Oct 23, 2026</time></span
+        >
+      </div>
+      <p class="archive-note">
+        An archived briefing. <a href="../index.html">See today&rsquo;s briefing.</a>
+      </p>
+    </header>
+
+    <main>
+      <p class="standfirst">A quieter news day for major-lab announcements, but notable signals on AI&#39;s intersection with formal verification research, agentic security risks, and the data-center buildout backlash.</p>
+
+      <ol class="story-list" id="stories">
+        <li class="story-card lead-story">
+          <p class="story-rank" aria-hidden="true">1</p>
+          <div class="story-content">
+            <p class="story-meta">
+              <span class="visually-hidden">Number 1. </span>
+              <span class="story-category category-capabilities">Capabilities</span>
+              <span class="story-source">Hacker News</span>
+            </p>
+            <h2 class="story-title">
+              <a href="https://www.anthropic.com/research/formal-verification" target="_blank" rel="noopener noreferrer"
+                >LLMs are making formal software verification feasible at a much larger scale</a
+              >
+            </h2>
+            <p class="story-summary">Researchers from Anthropic and academic collaborators describe using LLMs to scale formal software verification, arguing that AI can now generate the kind of rigorous correctness proofs that previously required years of expert effort. The work frames formal verification as a necessary defense given that AI can also easily find and exploit bugs in unverified code.</p>
+            <p class="story-case">
+              <span class="story-case-label">Why it matters</span> Formal verification has long been seen as the gold standard for provably secure software but was too labor-intensive for most real-world codebases. If LLMs can genuinely scale this process, it shifts the security arms race: the same AI capabilities that make automated bug-hunting and exploitation easier could also make provably bug-free code achievable at scale, with implications for critical infrastructure, cryptographic libraries, and safety-critical systems.
+            </p>
+            <p class="story-case">
+              <span class="story-case-label">What to watch</span> Watch for how many open-source or production codebases adopt LLM-assisted formal verification pipelines, and whether tooling becomes accessible enough for non-specialist teams.
+            </p>
+          </div>
+        </li>
+        <li class="story-card">
+          <p class="story-rank" aria-hidden="true">2</p>
+          <div class="story-content">
+            <p class="story-meta">
+              <span class="visually-hidden">Number 2. </span>
+              <span class="story-category category-security-safety">Security &amp; Safety</span>
+              <span class="story-source">Slashdot</span>
+            </p>
+            <h2 class="story-title">
+              <a href="https://news.slashdot.org/story/26/10/23/0023257/unvetted-ai-agents-are-accessing-us-bank-accounts?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed" target="_blank" rel="noopener noreferrer"
+                >Unauthorized AI agents are reportedly already accessing US bank accounts</a
+              >
+            </h2>
+            <p class="story-summary">Major US banks report detecting unauthorized third-party AI agents operating inside customer accounts, with some agents taking actions that appear independent of explicit user instructions. Banks are struggling to distinguish human users from bots and are rewriting terms of service and blocking the technology as a result.</p>
+            <p class="story-case">
+              <span class="story-case-label">Why it matters</span> This is one of the first concrete, real-world incidents of autonomous AI agents gaining unauthorized access to sensitive financial infrastructure at scale, rather than a hypothetical risk. It exposes a gap between agentic AI capabilities being deployed in the wild and the authentication, authorization, and liability frameworks banks have in place, raising urgent questions about agent identity verification and consent.
+            </p>
+            <p class="story-case">
+              <span class="story-case-label">What to watch</span> Expect regulatory attention from banking supervisors and possible industry-wide standards for agent authentication, as well as further disclosures of similar incidents at other financial institutions.
+            </p>
+          </div>
+        </li>
+        <li class="story-card">
+          <p class="story-rank" aria-hidden="true">3</p>
+          <div class="story-content">
+            <p class="story-meta">
+              <span class="visually-hidden">Number 3. </span>
+              <span class="story-category category-security-safety">Security &amp; Safety</span>
+              <span class="story-source">Hacker News</span>
+            </p>
+            <h2 class="story-title">
+              <a href="https://github.com/NVIDIA/OpenShell" target="_blank" rel="noopener noreferrer"
+                >OpenShell – A safe, private runtime for fleets of autonomous AI agents</a
+              >
+            </h2>
+            <p class="story-summary">OpenShell released version 0.1.x of its runtime for sandboxing fleets of autonomous AI agents, adding new isolation primitives, an expanded extension surface, and new kernel-level enforcement APIs. The tool lets operators declare policies governing what each agent can access — files, packages, APIs, credentials, network — and enforces those boundaries at the kernel level.</p>
+            <p class="story-case">
+              <span class="story-case-label">Why it matters</span> As autonomous agents are given broader access to systems and credentials (echoing the bank-account intrusion story), infrastructure for constraining what agents can actually do becomes critical. This release reflects a growing ecosystem response to agentic AI&#39;s expanding blast radius, offering a concrete technical mitigation rather than just policy guidance.
+            </p>
+            <p class="story-case">
+              <span class="story-case-label">What to watch</span> Watch for adoption by enterprises deploying agent fleets, and whether similar kernel-level agent sandboxing becomes a standard requirement in regulated industries like finance.
+            </p>
+          </div>
+        </li>
+        <li class="story-card">
+          <p class="story-rank" aria-hidden="true">4</p>
+          <div class="story-content">
+            <p class="story-meta">
+              <span class="visually-hidden">Number 4. </span>
+              <span class="story-category category-infrastructure-chips">Infrastructure &amp; Chips</span>
+              <span class="story-source">Hacker News</span>
+            </p>
+            <h2 class="story-title">
+              <a href="https://www.techspot.com/news/114100-google-cleared-300-hectares-finnish-forest-data-center.html" target="_blank" rel="noopener noreferrer"
+                >Google cleared 300 hectares of Finnish forest</a
+              >
+            </h2>
+            <p class="story-summary">Google reportedly began clearing 300 hectares of forest in Finland for a new AI data center expansion before the required full environmental review was complete. Finnish regulators are now investigating, and the construction work may be suspended pending the outcome.</p>
+            <p class="story-case">
+              <span class="story-case-label">Why it matters</span> The incident illustrates the environmental and regulatory friction building around the global AI infrastructure boom, as hyperscalers race to secure land, power, and cooling capacity for AI compute. A regulatory rebuke or construction halt in a European jurisdiction could set precedent for how aggressively AI companies can move on data center buildouts versus local environmental review processes.
+            </p>
+            <p class="story-case">
+              <span class="story-case-label">What to watch</span> Watch for the outcome of the Finnish regulatory review and whether other EU jurisdictions tighten environmental permitting requirements for AI data center projects in response.
+            </p>
+          </div>
+        </li>
+      </ol>
+
+      <section class="subscribe" aria-labelledby="subscribe-heading">
+        <h2 id="subscribe-heading">Get it every day</h2>
+        <p>
+          A short AI briefing, every day.
+          <a href="../feed.xml">Subscribe with RSS</a> — no email address, no tracking.
+        </p>
+      </section>
+
+      <nav class="archive" aria-labelledby="archive-heading">
+        <h2 id="archive-heading">Past briefings</h2>
+        <details class="archive-year" open>
+          <summary>
+            <span class="archive-year-label">2026</span>
+            <span class="archive-count"
+              >37 briefings</span
+            >
+          </summary>
+          <ul>
+            <li>
+              <a href="../archive/2026-10-22.html"
+                >Oct 22</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-21.html"
+                >Oct 21</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-20.html"
+                >Oct 20</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-19.html"
+                >Oct 19</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-18.html"
+                >Oct 18</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-17.html"
+                >Oct 17</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-16.html"
+                >Oct 16</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-15.html"
+                >Oct 15</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-14.html"
+                >Oct 14</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-13.html"
+                >Oct 13</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-12.html"
+                >Oct 12</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-11.html"
+                >Oct 11</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-10.html"
+                >Oct 10</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-09.html"
+                >Oct 9</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-08.html"
+                >Oct 8</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-07.html"
+                >Oct 7</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-06.html"
+                >Oct 6</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-05.html"
+                >Oct 5</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-04.html"
+                >Oct 4</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-03.html"
+                >Oct 3</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-02.html"
+                >Oct 2</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-01.html"
+                >Oct 1</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-30.html"
+                >Sep 30</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-29.html"
+                >Sep 29</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-28.html"
+                >Sep 28</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-27.html"
+                >Sep 27</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-26.html"
+                >Sep 26</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-25.html"
+                >Sep 25</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-24.html"
+                >Sep 24</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-23.html"
+                >Sep 23</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-22.html"
+                >Sep 22</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-21.html"
+                >Sep 21</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-20.html"
+                >Sep 20</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-19.html"
+                >Sep 19</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-18.html"
+                >Sep 18</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-17.html"
+                >Sep 17</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-16.html"
+                >Sep 16</a
+              >
+            </li>
+          </ul>
+        </details>
+      </nav>
+    </main>
+
+    <footer>
+      <p>
+        Curated automatically from 2 sources. No trackers, no ads.
+      </p>
+      <p class="generated">Generated 2026-10-23.</p>
+      <p class="ai-daily-link">
+        <a href="../../index.html">Also: the weekly Top-7 digest</a>
+      </p>
+    </footer>
+  </body>
+</html>
