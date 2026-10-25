@@ -1,0 +1,92 @@
+{
+  "date": "2026-10-25",
+  "generated_at": "2026-10-25T15:10:55.182380+00:00",
+  "intro": "Today's AI news centers on the growing gap between AI hype and real economic impact, alongside mounting security concerns as autonomous agents multiply and vulnerability discovery accelerates.",
+  "stories": [
+    {
+      "rank": 1,
+      "title": "No signs of AI payoff outside the tech sector",
+      "source": "Hacker News",
+      "sources": [
+        "Hacker News"
+      ],
+      "source_count": 1,
+      "url": "https://www.apollo.com/wealth/insights-news/insights/daily-spark/no-signs-of-ai-payoff-outside-the-tech-sector",
+      "theme": "Industry & Economics",
+      "hn_points": 585,
+      "score": 5.192,
+      "what_happened": "A report from Apollo's Marc Rowan highlights that despite massive AI investment, revenue per worker and profit margins are rising only for the 'Magnificent 7' tech giants while remaining flat for the rest of the S&P 493. The analysis finds no evidence of AI boosting productivity growth outside the tech sector itself.",
+      "why_it_matters": "This data point cuts against the narrative that AI is already transforming the broader economy, suggesting the productivity payoff many companies expected from enterprise AI adoption hasn't materialized yet. It raises questions about whether current AI capex levels are justified by near-term returns, and could fuel skepticism among investors and corporate boards weighing further AI spending commitments.",
+      "watch_next": "Watch for Q4 earnings calls where non-tech companies disclose AI ROI metrics, and whether this data influences enterprise AI budget decisions for 2027.",
+      "summary": "A report from Apollo's Marc Rowan highlights that despite massive AI investment, revenue per worker and profit margins are rising only for the 'Magnificent 7' tech giants while remaining flat for the rest of the S&P 493. The analysis finds no evidence of AI boosting productivity growth outside the tech sector itself."
+    },
+    {
+      "rank": 2,
+      "title": "America has lost 200k of jobs in media, film and the arts. How much is AI?",
+      "source": "Hacker News",
+      "sources": [
+        "Hacker News"
+      ],
+      "source_count": 1,
+      "url": "https://www.apricitas.io/p/ai-and-the-fall-of-the-creative-class",
+      "theme": "Industry & Economics",
+      "hn_points": 425,
+      "score": 5.334,
+      "what_happened": "US creative industries including media, film, and the arts have lost more than 200,000 jobs over the past four years, with roughly 50,000 lost in the last year alone. The report notes this is one of the worst stretches for media employment in modern US history, comparable only to the 2001 and 2008 recessions, despite no broader economic recession currently underway.",
+      "why_it_matters": "The timing coincides with widespread AI tool adoption in content creation, writing, and media production, making this a key data point in debates over AI's labor market impact. Unlike speculative warnings about future job displacement, this represents a real, measurable contraction happening now in a sector directly exposed to generative AI capabilities.",
+      "watch_next": "Watch for sector-specific breakdowns distinguishing AI-driven displacement from other factors like streaming economics, and whether similar job-loss patterns emerge in adjacent white-collar creative fields.",
+      "summary": "US creative industries including media, film, and the arts have lost more than 200,000 jobs over the past four years, with roughly 50,000 lost in the last year alone. The report notes this is one of the worst stretches for media employment in modern US history, comparable only to the 2001 and 2008 recessions, despite no broader economic recession currently underway."
+    },
+    {
+      "rank": 3,
+      "title": "Cerebras Deploys Trillion-Parameter AI Models",
+      "source": "Hacker News",
+      "sources": [
+        "Hacker News"
+      ],
+      "source_count": 1,
+      "url": "https://www.cerebras.ai/blog/how-we-deploy-trillion-parameter-frontier-models-on-cerebras",
+      "theme": "Infrastructure & Chips",
+      "hn_points": 258,
+      "score": 4.733,
+      "what_happened": "Cerebras detailed how it deploys trillion-parameter models across multiple WSE-3T wafer-scale chips, each with 44GB of on-chip memory, to run models needing terabytes of weight storage. Using the open-source ~3 trillion parameter Kimi K3 as an example, the company demonstrated serving at 1000-2000+ tokens per second by splitting models across multiple wafers.",
+      "why_it_matters": "This showcases an alternative hardware architecture to GPU-based inference for frontier-scale models, with wafer-scale integration offering a different tradeoff on memory bandwidth and latency. As open-weight models grow to multi-trillion parameter scale, specialized inference hardware like this becomes increasingly relevant for companies seeking to serve these models cost-effectively at high throughput.",
+      "watch_next": "Watch for benchmarks comparing Cerebras wafer-scale inference costs and throughput against Nvidia GPU clusters for the largest open models, and whether more open-weight labs optimize specifically for this hardware.",
+      "summary": "Cerebras detailed how it deploys trillion-parameter models across multiple WSE-3T wafer-scale chips, each with 44GB of on-chip memory, to run models needing terabytes of weight storage. Using the open-source ~3 trillion parameter Kimi K3 as an example, the company demonstrated serving at 1000-2000+ tokens per second by splitting models across multiple wafers."
+    },
+    {
+      "rank": 4,
+      "title": "UN-backed AI panel calls for stronger safeguards as agents advance",
+      "source": "ground.news",
+      "sources": [
+        "ground.news"
+      ],
+      "source_count": 1,
+      "url": "https://ground.news/article/un-panel-calls-for-stronger-safeguards-as-ai-agents-advance_06c5b6",
+      "theme": "Security & Safety",
+      "hn_points": null,
+      "score": 4,
+      "what_happened": "A UN-backed Independent International Scientific Panel on AI warned Monday that traditional safeguards for AI agents are 'unraveling' as the software becomes harder to monitor. The warning follows a security breach involving OpenAI and Hugging Face in which roughly 1,200 agents exchanged more than 70,000 messages and files. Separately, White House OSTP Director Michael Kratsios told AI companies to simply stop deploying models they believe are unsafe rather than calling for government intervention.",
+      "why_it_matters": "This represents an escalating international consensus that agent-to-agent AI systems are outpacing existing oversight mechanisms, with a concrete incident (the OpenAI/Hugging Face breach) as evidence rather than speculation. The contrast between UN-level calls for stronger safeguards and the US administration's hands-off stance highlights a widening policy gap on agentic AI governance just as these systems scale into production.",
+      "watch_next": "Watch for details on what data or capabilities were exposed in the OpenAI/Hugging Face agent breach, and whether any government body moves beyond rhetoric toward binding agent-oversight requirements.",
+      "summary": "A UN-backed Independent International Scientific Panel on AI warned Monday that traditional safeguards for AI agents are 'unraveling' as the software becomes harder to monitor. The warning follows a security breach involving OpenAI and Hugging Face in which roughly 1,200 agents exchanged more than 70,000 messages and files. Separately, White House OSTP Director Michael Kratsios told AI companies to simply stop deploying models they believe are unsafe rather than calling for government intervention."
+    },
+    {
+      "rank": 5,
+      "title": "AI-driven vulnerability discovery reportedly doubles the number of identified flaws",
+      "source": "staradvertiser.com",
+      "sources": [
+        "staradvertiser.com"
+      ],
+      "source_count": 1,
+      "url": "https://www.staradvertiser.com/2026/10/24/breaking-news/ai-discovered-bugs-may-soon-trigger-fresh-disruptions-experts-say/",
+      "theme": "Security & Safety",
+      "hn_points": null,
+      "score": 4,
+      "what_happened": "Research from threat intelligence firm VulnCheck, set to publish in coming days, found that AI has helped drive a doubling in the number of software vulnerabilities discovered year-on-year. Seven cybersecurity professionals told Reuters this trend is almost certain to trigger more disruptions similar to recent outages affecting global government websites.",
+      "why_it_matters": "AI-assisted vulnerability discovery is a double-edged sword: it helps defenders find and patch flaws faster, but the same capability lowers the barrier for attackers to find exploitable bugs at scale, potentially outpacing patching cycles. A doubling of discovered flaws implies security teams face a much larger remediation backlog, raising the stakes for critical infrastructure and government systems already showing signs of strain.",
+      "watch_next": "Watch for the full VulnCheck report details on which vulnerability classes are growing fastest, and whether major software vendors adjust patch-release cadence in response.",
+      "summary": "Research from threat intelligence firm VulnCheck, set to publish in coming days, found that AI has helped drive a doubling in the number of software vulnerabilities discovered year-on-year. Seven cybersecurity professionals told Reuters this trend is almost certain to trigger more disruptions similar to recent outages affecting global government websites."
+    }
+  ]
+}
