@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LastWeekIn.Tech — week ending 2026-10-26</title>
+    <meta name="description" content="The 7 most important tech and AI stories of the week ending 2026-10-26, summarized with links to the original reporting." />
+    <meta name="color-scheme" content="light dark" />
+    <meta property="og:site_name" content="LastWeekIn.Tech" />
+    <meta property="og:title" content="LastWeekIn.Tech — week ending 2026-10-26" />
+    <meta property="og:description" content="The 7 most important tech and AI stories of the week ending 2026-10-26, summarized with links to the original reporting." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://lastweekin.tech/archive/2026-10-26.html" />
+    <meta property="og:url" content="https://lastweekin.tech/archive/2026-10-26.html" />
+    <meta property="og:image" content="https://lastweekin.tech/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="LastWeekIn.Tech — the 7 tech stories that mattered, every Monday"
+    />
+    <meta name="twitter:image" content="https://lastweekin.tech/og.png" />
+    <link
+      rel="alternate"
+      type="application/atom+xml"
+      title="LastWeekIn.Tech weekly digest"
+      href="../feed.xml"
+    />
+    <link rel="stylesheet" href="../style.css" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22><text y=%2214%22 font-size=%2214%22>7</text></svg>"
+    />
+  </head>
+  <body>
+    <a class="skip-link" href="#stories">Skip to the stories</a>
+
+    <header class="site-header">
+      <p class="masthead-note">Published every Monday &middot; No trackers, no ads</p>
+      <h1 class="site-title">
+        <a class="wordmark" href="../index.html"
+          >LastWeekIn<span class="dot">.</span>Tech</a
+        >
+      </h1>
+      <p class="section-suffix">
+        <a class="section-link" href="../ai/"
+          ><span class="section-divider">/</span> AI Daily</a
+        >
+      </p>
+      <div class="dateline" role="presentation">
+        <span class="dateline-item">The 7 stories that mattered</span>
+        <span class="dateline-item"
+          >Week ending
+          <time datetime="2026-10-26">Oct 26, 2026</time></span
+        >
+      </div>
+      <p class="archive-note">
+        An archived edition. <a href="../index.html">See this week&rsquo;s digest.</a>
+      </p>
+    </header>
+
+    <main>
+      <p class="standfirst">A heavy security week dominated by a sprawling Brotli decompression flaw hitting Node.js, .NET, Python and more, plus a jaw-dropping live demo of iPhone exploit chains. AI coverage split between genuine capability gains (Kimi&#39;s open-weight model) and growing skepticism about real-world payoff and new attack surfaces like AGENTS.md hijacking. Google&#39;s quiet policy shift on using Gmail/Photos data for ads and Comcast&#39;s subscriber bleed round out a week that was more about consolidation and risk than breakthrough.</p>
+
+      <ol class="story-list" id="stories">
+        <li
+          class="story-card lead-story"
+        >
+          <p class="story-rank" aria-hidden="true">1</p>
+          <div class="story-content">
+            <p class="story-meta">
+              <span class="visually-hidden">Number 1. </span>
+              <span class="story-category category-open-source"
+                >Open Source</span
+              >
+              <span class="story-source">Hacker News</span>
+            </p>
+            <h2 class="story-title">
+              <a href="https://broccoli2shell.com/" target="_blank" rel="noopener noreferrer"
+                >Broccoli2Shell: Brotli decoder RCE in Node.js, Python and more</a
+              >
+            </h2>
+            <p class="story-summary">A memory-corruption vulnerability in Google&#39;s Brotli decoder (CVE-2026-111497) affects numerous widely-used programs including Node.js, Bun, Microsoft .NET, Python packages, Envoy proxies, FFmpeg, ClickHouse, and Apache Arrow, allowing attackers to crash applications or potentially execute arbitrary code through specially crafted compressed data. The flaw was disclosed on October 21 after fixes were released for Node.js and Google&#39;s Brotli library, with subsequent patches rolling out across affected products; however, no real-world attacks have been reported. Users should update to patched versions immediately and restart services, as the vulnerability only affects systems that decode untrusted Brotli-compressed data. For systems unable to update immediately, temporary mitigations include rejecting requests with Content-Encoding: br headers and disabling automatic Brotli decompression in HTTP clients.</p>
+            <p class="story-case">
+              <span class="story-case-label">Why it matters</span> A single memory-corruption bug in Google&#39;s Brotli decoder cascades into remote-code-execution risk across Node.js, .NET, Python, Bun and Envoy, making it one of the broadest supply-chain vulnerabilities in years.
+            </p>
+            <p class="story-why" title="Hacker News, The Hacker News">
+              <span class="visually-hidden">Why it made the cut: </span>397 points on Hacker News · Covered by 2 outlets
+            </p>
+          </div>
+        </li>
+        <li
+          class="story-card"
+        >
+          <p class="story-rank" aria-hidden="true">2</p>
+          <div class="story-content">
+            <p class="story-meta">
+              <span class="visually-hidden">Number 2. </span>
+              <span class="story-category category-security"
+                >Security</span
+              >
+              <span class="story-source">Hacker News</span>
+            </p>
+            <h2 class="story-title">
+              <a href="https://blog.calif.io/p/iphone" target="_blank" rel="noopener noreferrer"
+                >Today, we hacked what we&#39;d set out to hack: the iPhone</a
+              >
+            </h2>
+            <p class="story-case">
+              <span class="story-case-label">Why it matters</span> A live, name-and-shame demonstration of iPhone exploit chains against Signal and iMessage shows state-grade attacks are still very much alive against Apple&#39;s flagship security promises.
+            </p>
+            <p class="story-why" title="Hacker News">
+              <span class="visually-hidden">Why it made the cut: </span>1111 points on Hacker News
+            </p>
+          </div>
+        </li>
+        <li
+          class="story-card"
+        >
+          <p class="story-rank" aria-hidden="true">3</p>
+          <div class="story-content">
+            <p class="story-meta">
+              <span class="visually-hidden">Number 3. </span>
+              <span class="story-category category-ai"
+                >AI</span
+              >
+              <span class="story-source">BleepingComputer</span>
+            </p>
+            <h2 class="story-title">
+              <a href="https://www.bleepingcomputer.com/news/security/ai-coding-agents-hijacked-using-agentsmd-file-in-downloads-folder/" target="_blank" rel="noopener noreferrer"
+                >AI coding agents hijacked using AGENTS.md file in Downloads folder</a
+              >
+            </h2>
+            <p class="story-summary">Researchers at Forever Security discovered a vulnerability where malicious instructions in markdown files can trick AI coding agents like OpenAI Codex and Claude Code into installing rogue packages or stealing credentials. The attack exploits the fact that web browsers automatically download files to the ~/Downloads folder without user interaction, and AI agents commonly run from that directory, automatically loading and following any instruction files they find there. The researchers demonstrated a 90% success rate manipulating Codex and a 50% success rate stealing OAuth tokens from Claude Code using this technique. OpenAI and Anthropic recommend users run AI coding agents only from their specific project directories rather than broad folders like Downloads to prevent agents from processing untrusted instruction files.</p>
+            <p class="story-case">
+              <span class="story-case-label">Why it matters</span> Attackers tricking AI coding agents via a poisoned AGENTS.md file is the first clear sign that agentic AI tooling itself is now a viable malware vector, reproduced against both OpenAI and Anthropic&#39;s agents.
+            </p>
+            <p class="story-why" title="BleepingComputer, The Hacker News">
+              <span class="visually-hidden">Why it made the cut: </span>Covered by 2 outlets
+            </p>
+          </div>
+        </li>
+        <li
+          class="story-card brief"
+        >
+          <p class="story-rank" aria-hidden="true">4</p>
+          <div class="story-content">
+            <p class="story-meta">
+              <span class="visually-hidden">Number 4. </span>
+              <span class="story-category category-business"
+                >Business</span
+              >
+              <span class="story-source">Slashdot</span>
+            </p>
+            <h2 class="story-title">
+              <a href="https://tech.slashdot.org/story/26/10/23/0143254/comcast-loses-more-customers-claims-other-isps-cheap-prices-are-irrational?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed" target="_blank" rel="noopener noreferrer"
+                >Comcast loses more customers, claims other ISPs&#39; cheap prices are &#34;irrational&#34;</a
+              >
+            </h2>
+            <p class="story-summary">Comcast reported losing 144,000 residential broadband customers in Q3 2026 and plans significant job cuts in its cable division as it faces intensifying competition from fixed wireless and fiber providers. Co-CEO Mike Cavanagh and CFO Jason Armstrong characterized competitors&#39; pricing as &#34;irrational,&#34; specifically citing $30 to $40 monthly fiber broadband offers from providers like Verizon&#39;s FiOS, which Armstrong argued is unsustainable given fiber deployment costs of $1,500 or more per home. Armstrong also noted that more customers are leaving Comcast when facing price increases after promotional periods end, prompting the company to refine its retention strategies. The losses represent a significant increase from the 91,000 broadband customers Comcast lost in Q3 2025.</p>
+            <p class="story-case">
+              <span class="story-case-label">Why it matters</span> Comcast&#39;s accelerating subscriber losses and admission that rivals&#39; prices are &#39;irrational&#39; signal a real structural shift in how Americans get broadband and TV.
+            </p>
+            <p class="story-why" title="Ars Technica, Slashdot">
+              <span class="visually-hidden">Why it made the cut: </span>Covered by 2 outlets
+            </p>
+          </div>
+        </li>
+        <li
+          class="story-card brief"
+        >
+          <p class="story-rank" aria-hidden="true">5</p>
+          <div class="story-content">
+            <p class="story-meta">
+              <span class="visually-hidden">Number 5. </span>
+              <span class="story-category category-ai"
+                >AI</span
+              >
+              <span class="story-source">WIRED</span>
+            </p>
+            <h2 class="story-title">
+              <a href="https://www.wired.com/review/ray-ban-meta-audio/" target="_blank" rel="noopener noreferrer"
+                >Ray-Ban Meta Audio Review: The Best Smart Glasses</a
+              >
+            </h2>
+            <p class="story-summary">Meta announced Ray-Ban Meta Audio glasses in September, which remove the camera from its previous smart glasses models while retaining features like AI-powered navigation and music playback. The camera-free design addresses years of privacy concerns about Meta&#39;s original glasses, which users criticized as &#34;pervert glasses&#34; due to incidents of non-consensual recording and attempts to disable recording indicator lights. Meta also faced backlash over facial recognition technology it initially denied including in the glasses before later admitting to and removing the feature, and the company was sued over its facial recognition systems in September. The company maintains that privacy controversies did not influence its decision to release the audio-only version.</p>
+            <p class="story-why" title="Techmeme, WIRED">
+              <span class="visually-hidden">Why it made the cut: </span>Covered by 2 outlets
+            </p>
+          </div>
+        </li>
+        <li
+          class="story-card brief"
+        >
+          <p class="story-rank" aria-hidden="true">6</p>
+          <div class="story-content">
+            <p class="story-meta">
+              <span class="visually-hidden">Number 6. </span>
+              <span class="story-category category-ai"
+                >AI</span
+              >
+              <span class="story-source">Hacker News</span>
+            </p>
+            <h2 class="story-title">
+              <a href="https://www.theverge.com/tech/1017600/google-personal-intelligence-privacy-policy-ads-update" target="_blank" rel="noopener noreferrer"
+                >Now Google says it might use your Gmail and Google Photos data to target ads</a
+              >
+            </h2>
+            <p class="story-summary">Google updated its privacy policy effective October 16, 2026, to clarify that users who enable personalized AI features in Search or Gemini may have their activity across connected Google services like Gmail, Photos, and Drive used to serve targeted ads. The policy change applies to Google&#39;s Personal Intelligence feature, which launched in January 2026 and allows users to connect other Google services to receive more tailored responses, though users can opt out through Search Services Personalization settings. Google emphasized that it does not use content from Gmail, Drive, or Photos to personalize ads by default, but this changes if users choose to share that data with AI tools through Personal Intelligence. The feature is currently rolling out as a beta to eligible users over 18 globally, except in the European Economic Area, Switzerland, the U.K., and Nigeria.</p>
+            <p class="story-case">
+              <span class="story-case-label">Why it matters</span> Google quietly rewriting its privacy policy to allow ad-targeting from Gemini and Search activity affects the default assumptions of billions of Gmail and Photos users.
+            </p>
+            <p class="story-why" title="Hacker News, TechSpot, The Hacker News">
+              <span class="visually-hidden">Why it made the cut: </span>391 points on Hacker News · Covered by 3 outlets
+            </p>
+          </div>
+        </li>
+        <li
+          class="story-card brief"
+        >
+          <p class="story-rank" aria-hidden="true">7</p>
+          <div class="story-content">
+            <p class="story-meta">
+              <span class="visually-hidden">Number 7. </span>
+              <span class="story-category category-ai"
+                >AI</span
+              >
+              <span class="story-source">Hacker News</span>
+            </p>
+            <h2 class="story-title">
+              <a href="https://www.apollo.com/wealth/insights-news/insights/daily-spark/no-signs-of-ai-payoff-outside-the-tech-sector" target="_blank" rel="noopener noreferrer"
+                >No signs of AI payoff outside the tech sector</a
+              >
+            </h2>
+            <p class="story-summary">Despite massive corporate investments in artificial intelligence, the technology has generated no measurable financial returns for non-tech companies in the S&amp;P 493, with revenue per worker and profit margins remaining flat compared to rising gains for the Mag 7 tech giants. Mainstream corporate America is increasingly viewing AI spending as a cost center rather than a growth driver and is pulling back on token spending, unwilling to pay for the latest models when cheaper alternatives exist. The article argues that even as AI models become commoditized and cheaper, translating artificial intelligence into business value may prove difficult because business success depends on human judgment, context, accountability, trust, and ethical considerations that AI cannot replicate. Without evidence of improved revenue growth or margins in the broader economy, the long-term impact of AI investments outside the technology sector remains uncertain.</p>
+            <p class="story-case">
+              <span class="story-case-label">Why it matters</span> A sober cross-industry finding that AI has yet to produce measurable financial payoff outside tech itself cuts against the hype cycle with real data, not vibes.
+            </p>
+            <p class="story-why" title="Hacker News">
+              <span class="visually-hidden">Why it made the cut: </span>629 points on Hacker News
+            </p>
+          </div>
+        </li>
+      </ol>
+
+      <section class="subscribe" aria-labelledby="subscribe-heading">
+        <h2 id="subscribe-heading">Get it every Monday</h2>
+        <p>
+          One edition a week, seven stories, nothing else.
+          <a href="../feed.xml">Subscribe with RSS</a> — no email address, no tracking.
+        </p>
+      </section>
+
+      <nav class="archive" aria-labelledby="archive-heading">
+        <h2 id="archive-heading">Past editions</h2>
+        <details class="archive-year" open>
+          <summary>
+            <span class="archive-year-label">2026</span>
+            <span class="archive-count"
+              >41 editions</span
+            >
+          </summary>
+          <ul>
+            <li>
+              <a href="../archive/2026-10-19.html"
+                >Oct 19</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-12.html"
+                >Oct 12</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-05.html"
+                >Oct 5</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-28.html"
+                >Sep 28</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-21.html"
+                >Sep 21</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-14.html"
+                >Sep 14</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-07.html"
+                >Sep 7</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-08-31.html"
+                >Aug 31</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-08-17.html"
+                >Aug 17</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-08-10.html"
+                >Aug 10</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-08-03.html"
+                >Aug 3</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-07-27.html"
+                >Jul 27</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-07-20.html"
+                >Jul 20</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-07-13.html"
+                >Jul 13</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-07-06.html"
+                >Jul 6</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-06-29.html"
+                >Jun 29</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-06-22.html"
+                >Jun 22</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-06-15.html"
+                >Jun 15</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-06-08.html"
+                >Jun 8</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-06-01.html"
+                >Jun 1</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-05-25.html"
+                >May 25</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-05-18.html"
+                >May 18</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-05-11.html"
+                >May 11</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-05-04.html"
+                >May 4</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-04-27.html"
+                >Apr 27</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-04-20.html"
+                >Apr 20</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-04-13.html"
+                >Apr 13</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-04-06.html"
+                >Apr 6</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-03-30.html"
+                >Mar 30</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-03-23.html"
+                >Mar 23</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-03-16.html"
+                >Mar 16</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-03-09.html"
+                >Mar 9</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-03-02.html"
+                >Mar 2</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-02-23.html"
+                >Feb 23</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-02-16.html"
+                >Feb 16</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-02-09.html"
+                >Feb 9</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-02-02.html"
+                >Feb 2</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-01-26.html"
+                >Jan 26</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-01-19.html"
+                >Jan 19</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-01-12.html"
+                >Jan 12</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-01-05.html"
+                >Jan 5</a
+              >
+            </li>
+          </ul>
+        </details>
+        <details class="archive-year">
+          <summary>
+            <span class="archive-year-label">2025</span>
+            <span class="archive-count"
+              >12 editions</span
+            >
+          </summary>
+          <ul>
+            <li>
+              <a href="../archive/2025-12-29.html"
+                >Dec 29</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2025-12-22.html"
+                >Dec 22</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2025-12-15.html"
+                >Dec 15</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2025-12-08.html"
+                >Dec 8</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2025-12-01.html"
+                >Dec 1</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2025-11-24.html"
+                >Nov 24</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2025-11-17.html"
+                >Nov 17</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2025-11-10.html"
+                >Nov 10</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2025-11-03.html"
+                >Nov 3</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2025-10-27.html"
+                >Oct 27</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2025-10-26.html"
+                >Oct 26</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2025-10-25.html"
+                >Oct 25</a
+              >
+            </li>
+          </ul>
+        </details>
+      </nav>
+    </main>
+
+    <footer>
+      <p>
+        Curated automatically from 4 sources. No trackers, no ads.
+      </p>
+      <p class="generated">Generated 2026-10-26.</p>
+      <p class="ai-daily-link"><a href="../ai/">Also: AI Daily, a shorter briefing every day</a></p>
+    </footer>
+  </body>
+</html>

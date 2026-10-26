@@ -1,0 +1,125 @@
+{
+  "week": "2026-10-26",
+  "generated_at": "2026-10-26T12:14:59.961469+00:00",
+  "intro": "A heavy security week dominated by a sprawling Brotli decompression flaw hitting Node.js, .NET, Python and more, plus a jaw-dropping live demo of iPhone exploit chains. AI coverage split between genuine capability gains (Kimi's open-weight model) and growing skepticism about real-world payoff and new attack surfaces like AGENTS.md hijacking. Google's quiet policy shift on using Gmail/Photos data for ads and Comcast's subscriber bleed round out a week that was more about consolidation and risk than breakthrough.",
+  "stories": [
+    {
+      "rank": 1,
+      "title": "Broccoli2Shell: Brotli decoder RCE in Node.js, Python and more",
+      "source": "Hacker News",
+      "sources": [
+        "Hacker News",
+        "The Hacker News"
+      ],
+      "source_count": 2,
+      "url": "https://broccoli2shell.com/",
+      "category": "Open Source",
+      "hn_points": 397,
+      "score": 5.693,
+      "summary": "A memory-corruption vulnerability in Google's Brotli decoder (CVE-2026-111497) affects numerous widely-used programs including Node.js, Bun, Microsoft .NET, Python packages, Envoy proxies, FFmpeg, ClickHouse, and Apache Arrow, allowing attackers to crash applications or potentially execute arbitrary code through specially crafted compressed data. The flaw was disclosed on October 21 after fixes were released for Node.js and Google's Brotli library, with subsequent patches rolling out across affected products; however, no real-world attacks have been reported. Users should update to patched versions immediately and restart services, as the vulnerability only affects systems that decode untrusted Brotli-compressed data. For systems unable to update immediately, temporary mitigations include rejecting requests with Content-Encoding: br headers and disabling automatic Brotli decompression in HTTP clients.",
+      "why": "A single memory-corruption bug in Google's Brotli decoder cascades into remote-code-execution risk across Node.js, .NET, Python, Bun and Envoy, making it one of the broadest supply-chain vulnerabilities in years.",
+      "consensus": false
+    },
+    {
+      "rank": 2,
+      "title": "Today, we hacked what we'd set out to hack: the iPhone",
+      "source": "Hacker News",
+      "sources": [
+        "Hacker News"
+      ],
+      "source_count": 1,
+      "url": "https://blog.calif.io/p/iphone",
+      "category": "Security",
+      "hn_points": 1111,
+      "score": 5.596,
+      "summary": "",
+      "why": "A live, name-and-shame demonstration of iPhone exploit chains against Signal and iMessage shows state-grade attacks are still very much alive against Apple's flagship security promises.",
+      "consensus": false
+    },
+    {
+      "rank": 3,
+      "title": "AI coding agents hijacked using AGENTS.md file in Downloads folder",
+      "source": "BleepingComputer",
+      "sources": [
+        "BleepingComputer",
+        "The Hacker News"
+      ],
+      "source_count": 2,
+      "url": "https://www.bleepingcomputer.com/news/security/ai-coding-agents-hijacked-using-agentsmd-file-in-downloads-folder/",
+      "category": "AI",
+      "hn_points": null,
+      "score": 3.963,
+      "summary": "Researchers at Forever Security discovered a vulnerability where malicious instructions in markdown files can trick AI coding agents like OpenAI Codex and Claude Code into installing rogue packages or stealing credentials. The attack exploits the fact that web browsers automatically download files to the ~/Downloads folder without user interaction, and AI agents commonly run from that directory, automatically loading and following any instruction files they find there. The researchers demonstrated a 90% success rate manipulating Codex and a 50% success rate stealing OAuth tokens from Claude Code using this technique. OpenAI and Anthropic recommend users run AI coding agents only from their specific project directories rather than broad folders like Downloads to prevent agents from processing untrusted instruction files.",
+      "why": "Attackers tricking AI coding agents via a poisoned AGENTS.md file is the first clear sign that agentic AI tooling itself is now a viable malware vector, reproduced against both OpenAI and Anthropic's agents.",
+      "consensus": false
+    },
+    {
+      "rank": 4,
+      "title": "Comcast loses more customers, claims other ISPs' cheap prices are \"irrational\"",
+      "source": "Slashdot",
+      "sources": [
+        "Ars Technica",
+        "Slashdot"
+      ],
+      "source_count": 2,
+      "url": "https://tech.slashdot.org/story/26/10/23/0143254/comcast-loses-more-customers-claims-other-isps-cheap-prices-are-irrational?utm_source=rss1.0mainlinkanon&utm_medium=feed",
+      "category": "Business",
+      "hn_points": null,
+      "score": 3.588,
+      "summary": "Comcast reported losing 144,000 residential broadband customers in Q3 2026 and plans significant job cuts in its cable division as it faces intensifying competition from fixed wireless and fiber providers. Co-CEO Mike Cavanagh and CFO Jason Armstrong characterized competitors' pricing as \"irrational,\" specifically citing $30 to $40 monthly fiber broadband offers from providers like Verizon's FiOS, which Armstrong argued is unsustainable given fiber deployment costs of $1,500 or more per home. Armstrong also noted that more customers are leaving Comcast when facing price increases after promotional periods end, prompting the company to refine its retention strategies. The losses represent a significant increase from the 91,000 broadband customers Comcast lost in Q3 2025.",
+      "why": "Comcast's accelerating subscriber losses and admission that rivals' prices are 'irrational' signal a real structural shift in how Americans get broadband and TV.",
+      "consensus": false
+    },
+    {
+      "rank": 5,
+      "title": "Ray-Ban Meta Audio Review: The Best Smart Glasses",
+      "source": "WIRED",
+      "sources": [
+        "Techmeme",
+        "WIRED"
+      ],
+      "source_count": 2,
+      "url": "https://www.wired.com/review/ray-ban-meta-audio/",
+      "category": "AI",
+      "hn_points": null,
+      "score": 3.994,
+      "summary": "Meta announced Ray-Ban Meta Audio glasses in September, which remove the camera from its previous smart glasses models while retaining features like AI-powered navigation and music playback. The camera-free design addresses years of privacy concerns about Meta's original glasses, which users criticized as \"pervert glasses\" due to incidents of non-consensual recording and attempts to disable recording indicator lights. Meta also faced backlash over facial recognition technology it initially denied including in the glasses before later admitting to and removing the feature, and the company was sued over its facial recognition systems in September. The company maintains that privacy controversies did not influence its decision to release the audio-only version.",
+      "why": "",
+      "consensus": false
+    },
+    {
+      "rank": 6,
+      "title": "Now Google says it might use your Gmail and Google Photos data to target ads",
+      "source": "Hacker News",
+      "sources": [
+        "Hacker News",
+        "TechSpot",
+        "The Hacker News"
+      ],
+      "source_count": 3,
+      "url": "https://www.theverge.com/tech/1017600/google-personal-intelligence-privacy-policy-ads-update",
+      "category": "AI",
+      "hn_points": 391,
+      "score": 8.844,
+      "summary": "Google updated its privacy policy effective October 16, 2026, to clarify that users who enable personalized AI features in Search or Gemini may have their activity across connected Google services like Gmail, Photos, and Drive used to serve targeted ads. The policy change applies to Google's Personal Intelligence feature, which launched in January 2026 and allows users to connect other Google services to receive more tailored responses, though users can opt out through Search Services Personalization settings. Google emphasized that it does not use content from Gmail, Drive, or Photos to personalize ads by default, but this changes if users choose to share that data with AI tools through Personal Intelligence. The feature is currently rolling out as a beta to eligible users over 18 globally, except in the European Economic Area, Switzerland, the U.K., and Nigeria.",
+      "why": "Google quietly rewriting its privacy policy to allow ad-targeting from Gemini and Search activity affects the default assumptions of billions of Gmail and Photos users.",
+      "consensus": false
+    },
+    {
+      "rank": 7,
+      "title": "No signs of AI payoff outside the tech sector",
+      "source": "Hacker News",
+      "sources": [
+        "Hacker News"
+      ],
+      "source_count": 1,
+      "url": "https://www.apollo.com/wealth/insights-news/insights/daily-spark/no-signs-of-ai-payoff-outside-the-tech-sector",
+      "category": "AI",
+      "hn_points": 629,
+      "score": 3.904,
+      "summary": "Despite massive corporate investments in artificial intelligence, the technology has generated no measurable financial returns for non-tech companies in the S&P 493, with revenue per worker and profit margins remaining flat compared to rising gains for the Mag 7 tech giants. Mainstream corporate America is increasingly viewing AI spending as a cost center rather than a growth driver and is pulling back on token spending, unwilling to pay for the latest models when cheaper alternatives exist. The article argues that even as AI models become commoditized and cheaper, translating artificial intelligence into business value may prove difficult because business success depends on human judgment, context, accountability, trust, and ethical considerations that AI cannot replicate. Without evidence of improved revenue growth or margins in the broader economy, the long-term impact of AI investments outside the technology sector remains uncertain.",
+      "why": "A sober cross-industry finding that AI has yet to produce measurable financial payoff outside tech itself cuts against the hype cycle with real data, not vibes.",
+      "consensus": false
+    }
+  ]
+}
