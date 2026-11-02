@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LastWeekIn.Tech — week ending 2026-11-02</title>
+    <meta name="description" content="The 7 most important tech and AI stories of the week ending 2026-11-02, summarized with links to the original reporting." />
+    <meta name="color-scheme" content="light dark" />
+    <meta property="og:site_name" content="LastWeekIn.Tech" />
+    <meta property="og:title" content="LastWeekIn.Tech — week ending 2026-11-02" />
+    <meta property="og:description" content="The 7 most important tech and AI stories of the week ending 2026-11-02, summarized with links to the original reporting." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://lastweekin.tech/archive/2026-11-02.html" />
+    <meta property="og:url" content="https://lastweekin.tech/archive/2026-11-02.html" />
+    <meta property="og:image" content="https://lastweekin.tech/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="LastWeekIn.Tech — the 7 tech stories that mattered, every Monday"
+    />
+    <meta name="twitter:image" content="https://lastweekin.tech/og.png" />
+    <link
+      rel="alternate"
+      type="application/atom+xml"
+      title="LastWeekIn.Tech weekly digest"
+      href="../feed.xml"
+    />
+    <link rel="stylesheet" href="../style.css" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22><text y=%2214%22 font-size=%2214%22>7</text></svg>"
+    />
+  </head>
+  <body>
+    <a class="skip-link" href="#stories">Skip to the stories</a>
+
+    <header class="site-header">
+      <p class="masthead-note">Published every Monday &middot; No trackers, no ads</p>
+      <h1 class="site-title">
+        <a class="wordmark" href="../index.html"
+          >LastWeekIn<span class="dot">.</span>Tech</a
+        >
+      </h1>
+      <p class="section-suffix">
+        <a class="section-link" href="../ai/"
+          ><span class="section-divider">/</span> AI Daily</a
+        >
+      </p>
+      <div class="dateline" role="presentation">
+        <span class="dateline-item">The 7 stories that mattered</span>
+        <span class="dateline-item"
+          >Week ending
+          <time datetime="2026-11-02">Nov 2, 2026</time></span
+        >
+      </div>
+      <p class="archive-note">
+        An archived edition. <a href="../index.html">See this week&rsquo;s digest.</a>
+      </p>
+    </header>
+
+    <main>
+      <p class="standfirst">This was a week dominated by cybercrime and AI&#39;s growing pains: the largest crypto heist ever recorded, a supply-chain backdoor hiding in a trusted developer tool, and a critical kernel flaw all landed within days of each other. Meanwhile, AI&#39;s economic and legal fallout kept surfacing — from a Congressional bubble warning to a courtroom prompt-injection scandal and a quiet hardware boom feeding the AI storage crunch.</p>
+
+      <ol class="story-list" id="stories">
+        <li
+          class="story-card lead-story"
+        >
+          <p class="story-rank" aria-hidden="true">1</p>
+          <div class="story-content">
+            <p class="story-meta">
+              <span class="visually-hidden">Number 1. </span>
+              <span class="story-category category-security"
+                >Security</span
+              >
+              <span class="story-source">The Hacker News</span>
+            </p>
+            <h2 class="story-title">
+              <a href="https://thehackernews.com/2026/11/fbi-links-north-koreas-tradertraitor-to.html" target="_blank" rel="noopener noreferrer"
+                >Hackers steal $6.3 billion from Binance in record crypto heist</a
+              >
+            </h2>
+            <p class="story-summary">The FBI has officially attributed a $6 billion theft of virtual assets from Binance to TraderTraitor, a North Korea-aligned hacking group also known as Jade Sleet, which converted the stolen assets primarily into Ethereum and is expected to launder them through DeFi services. The theft, which occurred across 11 blockchains with 82% on Ethereum and Bitcoin, represents the largest cryptocurrency heist in history and nearly doubles the total amount stolen by North Korean actors in recent years, though $2.85 billion has already been frozen by Tether, Circle, Ripple, Arbitrum, and Optimism. TraderTraitor has a history since at least 2020 of targeting cryptocurrency platforms including DMM Bitcoin, Bybit, KelpDAO, and Bitget through malware-laced applications distributed via trojanized Terraform providers and recruitment-themed social engineering lures. Binance has resumed withdrawals across all 15 networks after security assessments, processing $4.649 billion in withdrawals within the first nine hours following the incident.</p>
+            <p class="story-case">
+              <span class="story-case-label">Why it matters</span> A record $6.3B crypto theft attributed to North Korean state hackers is the largest heist in history and underscores systemic exchange security failures.
+            </p>
+            <p class="story-why" title="Ars Technica, TechSpot, The Hacker News">
+              <span class="visually-hidden">Why it made the cut: </span>Covered by 3 outlets
+            </p>
+          </div>
+        </li>
+        <li
+          class="story-card"
+        >
+          <p class="story-rank" aria-hidden="true">2</p>
+          <div class="story-content">
+            <p class="story-meta">
+              <span class="visually-hidden">Number 2. </span>
+              <span class="story-category category-ai"
+                >AI</span
+              >
+              <span class="story-source">Hacker News</span>
+            </p>
+            <h2 class="story-title">
+              <a href="https://phorion.io/blog/offical-claude-code-vsx-compromise/" target="_blank" rel="noopener noreferrer"
+                >Backdoor in Claude Code for VS Code extension on the Cursor Marketplace</a
+              >
+            </h2>
+            <p class="story-summary">Security firm Phorion discovered a backdoor in the official Claude Code for VS Code extension on the Cursor Marketplace in versions 2.1.312 and 2.1.313, which installs a persistent SSH backdoor on macOS, Linux, and Windows systems. The compromised extension executes malicious code immediately upon loading, adding an attacker-controlled SSH key to the user&#39;s authorized_keys file and establishing an outbound reverse SSH tunnel to the attacker&#39;s server at 134.209.82.225. Cursor has removed the affected versions from its marketplace, and organizations are advised to immediately review their environments for these versions and engage incident response if the extension is discovered. The backdoor includes platform-specific persistence mechanisms using LaunchAgents on macOS, crontab entries on Linux, and scheduled tasks on Windows, though a bug in the macOS SSH enablement logic may limit impact on systems where Remote Login is not already enabled.</p>
+            <p class="story-case">
+              <span class="story-case-label">Why it matters</span> A backdoored Claude Code extension slipping into a trusted marketplace shows how AI-coding tools have become a prime supply-chain attack vector.
+            </p>
+            <p class="story-why" title="BleepingComputer, Hacker News, The Hacker News">
+              <span class="visually-hidden">Why it made the cut: </span>1002 points on Hacker News · Covered by 3 outlets
+            </p>
+          </div>
+        </li>
+        <li
+          class="story-card"
+        >
+          <p class="story-rank" aria-hidden="true">3</p>
+          <div class="story-content">
+            <p class="story-meta">
+              <span class="visually-hidden">Number 3. </span>
+              <span class="story-category category-security"
+                >Security</span
+              >
+              <span class="story-source">Hacker News</span>
+            </p>
+            <h2 class="story-title">
+              <a href="https://atlasum.net/blog/cve-2026-98432-linux-ipv4-tcp-uaf" target="_blank" rel="noopener noreferrer"
+                >TCP Use-After-Free: CVE-2026-98432 / CVSS 9.8</a
+              >
+            </h2>
+            <p class="story-summary">Linux released critical security patches on October 11 and 15, 2026 for CVE-2026-98432, a use-after-free vulnerability in IPv4 TCP handshake processing that allows remote, unauthenticated attackers to execute code as root on affected systems. The Linux kernel CNA rates the vulnerability CVSS 3.1 9.8 (Critical), and Anthropic reports that its Claude AI model created a working proof-of-concept exploit targeting servers with multipath TCP listeners, which Go programs enable by default as of version 1.24. Fixed kernels are available for most major distributions including Red Hat Enterprise Linux 8, 9, and 10 (released November 1), Debian, SUSE, Oracle Linux, and Amazon Linux, but Ubuntu has not yet released patches as of November 1. The vulnerability affects any Linux system running kernel 4.4 or later that accepts IPv4 TCP connections, and Red Hat recommends an interim nftables mitigation that drops TCP packets carrying IPv4 options until systems can be patched and rebooted.</p>
+            <p class="story-case">
+              <span class="story-case-label">Why it matters</span> A critical, remotely exploitable use-after-free in the Linux TCP stack threatens the backbone of the internet&#39;s server infrastructure.
+            </p>
+            <p class="story-why" title="Hacker News">
+              <span class="visually-hidden">Why it made the cut: </span>722 points on Hacker News
+            </p>
+          </div>
+        </li>
+        <li
+          class="story-card brief"
+        >
+          <p class="story-rank" aria-hidden="true">4</p>
+          <div class="story-content">
+            <p class="story-meta">
+              <span class="visually-hidden">Number 4. </span>
+              <span class="story-category category-ai"
+                >AI</span
+              >
+              <span class="story-source">Ars Technica</span>
+            </p>
+            <h2 class="story-title">
+              <a href="https://arstechnica.com/gadgets/2026/10/fujifilm-to-boost-tape-production-5x-as-ai-fuels-archiving-demand/" target="_blank" rel="noopener noreferrer"
+                >Fujifilm pours $64 million into magnetic tape production as AI storage demand surges</a
+              >
+            </h2>
+            <p class="story-summary">Fujifilm announced Thursday that it will invest approximately 10 billion yen ($63 million) to increase its magnetic tape production capacity fivefold by fiscal year 2028, driven by surging demand from generative AI&#39;s exponential growth in data storage needs. The investment will expand Fujifilm&#39;s Kanagawa Factory in Odawara, Japan, primarily to manufacture the latest FUJIFILM LTO Ultrium10 tape, marking the company&#39;s largest dedicated investment in LTO tape facilities to date. Major cloud service and data center operators are increasingly adopting magnetic tape for data backup because it offers large storage capacity at low cost and can be physically disconnected to protect against ransomware and cyberattacks. Fujifilm has been producing magnetic tape storage media since the 1950s and released its first LTO Ultrium storage tape in 2000, with the LTO Ultrium10 debuting in 2025 as the first generation to use the company&#39;s &#34;fine hybrid magnetic particles&#34; technology.</p>
+            <p class="story-case">
+              <span class="story-case-label">Why it matters</span> Fujifilm&#39;s $64M bet on magnetic tape reveals how generative AI&#39;s data deluge is reshaping even decades-old storage industries.
+            </p>
+            <p class="story-why" title="Ars Technica, TechSpot">
+              <span class="visually-hidden">Why it made the cut: </span>Covered by 2 outlets
+            </p>
+          </div>
+        </li>
+        <li
+          class="story-card brief"
+        >
+          <p class="story-rank" aria-hidden="true">5</p>
+          <div class="story-content">
+            <p class="story-meta">
+              <span class="visually-hidden">Number 5. </span>
+              <span class="story-category category-policy"
+                >Policy</span
+              >
+              <span class="story-source">Ars Technica</span>
+            </p>
+            <h2 class="story-title">
+              <a href="https://arstechnica.com/space/2026/10/rocket-report-winter-is-coming-for-themis-cowboy-space-adds-iron-to-the-fire/" target="_blank" rel="noopener noreferrer"
+                >Rocket Report: Winter is coming for Themis; Cowboy Space adds iron to the fire</a
+              >
+            </h2>
+            <p class="story-summary">Cowboy Space, founded by Robinhood co-founder Baiju Bhatt, unveiled specifications for its Big Iron medium-lift rocket, which will stand 282 feet tall and carry up to 18 metric tons to low-Earth orbit, with a planned launch before the end of 2028. The rocket will be powered by nine methane-fueled Clydesdale engines on its first stage, and Bhatt plans to use the upper stage as the core of a data center spacecraft equipped with GPU racks and inter-satellite laser links to compete in the space-based AI market.</p>
+            <p class="story-why" title="Ars Technica, ExtremeTech">
+              <span class="visually-hidden">Why it made the cut: </span>Covered by 2 outlets
+            </p>
+          </div>
+        </li>
+        <li
+          class="story-card brief"
+        >
+          <p class="story-rank" aria-hidden="true">6</p>
+          <div class="story-content">
+            <p class="story-meta">
+              <span class="visually-hidden">Number 6. </span>
+              <span class="story-category category-ai"
+                >AI</span
+              >
+              <span class="story-source">Hacker News</span>
+            </p>
+            <h2 class="story-title">
+              <a href="https://www.parameter.ai/labs/we-found-a-gap-at-openai" target="_blank" rel="noopener noreferrer"
+                >Do the math: How we took over ChatGPT accounts</a
+              >
+            </h2>
+            <p class="story-summary">A research team discovered a critical vulnerability in ChatGPT that allowed attackers to take over user accounts by sending a malicious shared conversation link. By exploiting a combination of features—including ChatGPT&#39;s HTML Preview sandbox, the MathLive math library&#39;s message handling, and YouTube&#39;s JSONP endpoint—the researchers were able to execute arbitrary JavaScript with the victim&#39;s authenticated session permissions, enabling them to enumerate private conversations, retrieve their contents, and exfiltrate data to external servers. The victim required no additional action beyond opening the shared link, and OpenAI patched the vulnerability on October 26, 2026, classifying it as P1 severity.</p>
+            <p class="story-case">
+              <span class="story-case-label">Why it matters</span> Researchers demonstrated a full ChatGPT account takeover via a single link, exposing how fragile AI platform security still is at massive scale.
+            </p>
+            <p class="story-why" title="Hacker News">
+              <span class="visually-hidden">Why it made the cut: </span>359 points on Hacker News
+            </p>
+          </div>
+        </li>
+        <li
+          class="story-card brief"
+        >
+          <p class="story-rank" aria-hidden="true">7</p>
+          <div class="story-content">
+            <p class="story-meta">
+              <span class="visually-hidden">Number 7. </span>
+              <span class="story-category category-ai"
+                >AI</span
+              >
+              <span class="story-source">Hacker News</span>
+            </p>
+            <h2 class="story-title">
+              <a href="https://progressives.house.gov/2026/10/reps-casar-waters-lead-democratic-resolution-opposing-a-i-bubble-bailout-for-big-tech-commit-to-protecting-american-people-instead" target="_blank" rel="noopener noreferrer"
+                >US Reps Lead Democratic Resolution Opposing A.I. Bubble Bailout for Big Tech</a
+              >
+            </h2>
+            <p class="story-summary">Congressional Progressive Caucus Chair Rep. Greg Casar and House Financial Services Committee Ranking Member Rep. Maxine Waters, along with ten other Democratic representatives, introduced a resolution opposing any federal bailout of artificial intelligence companies or their executives if an AI-related asset bubble collapses. The resolution warns that AI firms hold trillions of dollars in debt raised through opaque private credit markets and that current stock market valuations mirror levels seen during the 1990s tech bubble, while federal regulators have failed to provide adequate oversight. The lawmakers call for the federal government to reject rescue measures for insolvent AI companies and instead direct resources toward protecting workers, retirees, and low-income communities through job creation, unemployment insurance, and housing assistance. The resolution was endorsed by organizations including the American Federation of Teachers, American Economic Liberties Project, and Americans for Financial Reform.</p>
+            <p class="story-case">
+              <span class="story-case-label">Why it matters</span> A bipartisan-adjacent Congressional resolution against bailing out an AI bubble signals Washington is now treating AI financial risk as a policy priority.
+            </p>
+            <p class="story-why" title="Hacker News">
+              <span class="visually-hidden">Why it made the cut: </span>668 points on Hacker News
+            </p>
+          </div>
+        </li>
+      </ol>
+
+      <section class="subscribe" aria-labelledby="subscribe-heading">
+        <h2 id="subscribe-heading">Get it every Monday</h2>
+        <p>
+          One edition a week, seven stories, nothing else.
+          <a href="../feed.xml">Subscribe with RSS</a> — no email address, no tracking.
+        </p>
+      </section>
+
+      <nav class="archive" aria-labelledby="archive-heading">
+        <h2 id="archive-heading">Past editions</h2>
+        <details class="archive-year" open>
+          <summary>
+            <span class="archive-year-label">2026</span>
+            <span class="archive-count"
+              >42 editions</span
+            >
+          </summary>
+          <ul>
+            <li>
+              <a href="../archive/2026-10-26.html"
+                >Oct 26</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-19.html"
+                >Oct 19</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-12.html"
+                >Oct 12</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-05.html"
+                >Oct 5</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-28.html"
+                >Sep 28</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-21.html"
+                >Sep 21</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-14.html"
+                >Sep 14</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-07.html"
+                >Sep 7</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-08-31.html"
+                >Aug 31</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-08-17.html"
+                >Aug 17</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-08-10.html"
+                >Aug 10</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-08-03.html"
+                >Aug 3</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-07-27.html"
+                >Jul 27</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-07-20.html"
+                >Jul 20</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-07-13.html"
+                >Jul 13</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-07-06.html"
+                >Jul 6</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-06-29.html"
+                >Jun 29</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-06-22.html"
+                >Jun 22</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-06-15.html"
+                >Jun 15</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-06-08.html"
+                >Jun 8</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-06-01.html"
+                >Jun 1</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-05-25.html"
+                >May 25</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-05-18.html"
+                >May 18</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-05-11.html"
+                >May 11</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-05-04.html"
+                >May 4</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-04-27.html"
+                >Apr 27</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-04-20.html"
+                >Apr 20</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-04-13.html"
+                >Apr 13</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-04-06.html"
+                >Apr 6</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-03-30.html"
+                >Mar 30</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-03-23.html"
+                >Mar 23</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-03-16.html"
+                >Mar 16</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-03-09.html"
+                >Mar 9</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-03-02.html"
+                >Mar 2</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-02-23.html"
+                >Feb 23</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-02-16.html"
+                >Feb 16</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-02-09.html"
+                >Feb 9</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-02-02.html"
+                >Feb 2</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-01-26.html"
+                >Jan 26</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-01-19.html"
+                >Jan 19</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-01-12.html"
+                >Jan 12</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-01-05.html"
+                >Jan 5</a
+              >
+            </li>
+          </ul>
+        </details>
+        <details class="archive-year">
+          <summary>
+            <span class="archive-year-label">2025</span>
+            <span class="archive-count"
+              >12 editions</span
+            >
+          </summary>
+          <ul>
+            <li>
+              <a href="../archive/2025-12-29.html"
+                >Dec 29</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2025-12-22.html"
+                >Dec 22</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2025-12-15.html"
+                >Dec 15</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2025-12-08.html"
+                >Dec 8</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2025-12-01.html"
+                >Dec 1</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2025-11-24.html"
+                >Nov 24</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2025-11-17.html"
+                >Nov 17</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2025-11-10.html"
+                >Nov 10</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2025-11-03.html"
+                >Nov 3</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2025-10-27.html"
+                >Oct 27</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2025-10-26.html"
+                >Oct 26</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2025-10-25.html"
+                >Oct 25</a
+              >
+            </li>
+          </ul>
+        </details>
+      </nav>
+    </main>
+
+    <footer>
+      <p>
+        Curated automatically from 3 sources. No trackers, no ads.
+      </p>
+      <p class="generated">Generated 2026-11-02.</p>
+      <p class="ai-daily-link"><a href="../ai/">Also: AI Daily, a shorter briefing every day</a></p>
+    </footer>
+  </body>
+</html>

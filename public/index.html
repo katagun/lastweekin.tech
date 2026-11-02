@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LastWeekIn.Tech</title>
-    <meta name="description" content="The 7 most important tech and AI stories of the week ending 2026-10-26, summarized with links to the original reporting." />
+    <meta name="description" content="The 7 most important tech and AI stories of the week ending 2026-11-02, summarized with links to the original reporting." />
     <meta name="color-scheme" content="light dark" />
     <meta property="og:site_name" content="LastWeekIn.Tech" />
     <meta property="og:title" content="LastWeekIn.Tech" />
-    <meta property="og:description" content="The 7 most important tech and AI stories of the week ending 2026-10-26, summarized with links to the original reporting." />
+    <meta property="og:description" content="The 7 most important tech and AI stories of the week ending 2026-11-02, summarized with links to the original reporting." />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="canonical" href="https://lastweekin.tech/" />
@@ -52,13 +52,13 @@
         <span class="dateline-item">The 7 stories that mattered</span>
         <span class="dateline-item"
           >Week ending
-          <time datetime="2026-10-26">Oct 26, 2026</time></span
+          <time datetime="2026-11-02">Nov 2, 2026</time></span
         >
       </div>
     </header>
 
     <main>
-      <p class="standfirst">A heavy security week dominated by a sprawling Brotli decompression flaw hitting Node.js, .NET, Python and more, plus a jaw-dropping live demo of iPhone exploit chains. AI coverage split between genuine capability gains (Kimi&#39;s open-weight model) and growing skepticism about real-world payoff and new attack surfaces like AGENTS.md hijacking. Google&#39;s quiet policy shift on using Gmail/Photos data for ads and Comcast&#39;s subscriber bleed round out a week that was more about consolidation and risk than breakthrough.</p>
+      <p class="standfirst">This was a week dominated by cybercrime and AI&#39;s growing pains: the largest crypto heist ever recorded, a supply-chain backdoor hiding in a trusted developer tool, and a critical kernel flaw all landed within days of each other. Meanwhile, AI&#39;s economic and legal fallout kept surfacing — from a Congressional bubble warning to a courtroom prompt-injection scandal and a quiet hardware boom feeding the AI storage crunch.</p>
 
       <ol class="story-list" id="stories">
         <li
@@ -68,22 +68,22 @@
           <div class="story-content">
             <p class="story-meta">
               <span class="visually-hidden">Number 1. </span>
-              <span class="story-category category-open-source"
-                >Open Source</span
+              <span class="story-category category-security"
+                >Security</span
               >
-              <span class="story-source">Hacker News</span>
+              <span class="story-source">The Hacker News</span>
             </p>
             <h2 class="story-title">
-              <a href="https://broccoli2shell.com/" target="_blank" rel="noopener noreferrer"
-                >Broccoli2Shell: Brotli decoder RCE in Node.js, Python and more</a
+              <a href="https://thehackernews.com/2026/11/fbi-links-north-koreas-tradertraitor-to.html" target="_blank" rel="noopener noreferrer"
+                >Hackers steal $6.3 billion from Binance in record crypto heist</a
               >
             </h2>
-            <p class="story-summary">A memory-corruption vulnerability in Google&#39;s Brotli decoder (CVE-2026-111497) affects numerous widely-used programs including Node.js, Bun, Microsoft .NET, Python packages, Envoy proxies, FFmpeg, ClickHouse, and Apache Arrow, allowing attackers to crash applications or potentially execute arbitrary code through specially crafted compressed data. The flaw was disclosed on October 21 after fixes were released for Node.js and Google&#39;s Brotli library, with subsequent patches rolling out across affected products; however, no real-world attacks have been reported. Users should update to patched versions immediately and restart services, as the vulnerability only affects systems that decode untrusted Brotli-compressed data. For systems unable to update immediately, temporary mitigations include rejecting requests with Content-Encoding: br headers and disabling automatic Brotli decompression in HTTP clients.</p>
+            <p class="story-summary">The FBI has officially attributed a $6 billion theft of virtual assets from Binance to TraderTraitor, a North Korea-aligned hacking group also known as Jade Sleet, which converted the stolen assets primarily into Ethereum and is expected to launder them through DeFi services. The theft, which occurred across 11 blockchains with 82% on Ethereum and Bitcoin, represents the largest cryptocurrency heist in history and nearly doubles the total amount stolen by North Korean actors in recent years, though $2.85 billion has already been frozen by Tether, Circle, Ripple, Arbitrum, and Optimism. TraderTraitor has a history since at least 2020 of targeting cryptocurrency platforms including DMM Bitcoin, Bybit, KelpDAO, and Bitget through malware-laced applications distributed via trojanized Terraform providers and recruitment-themed social engineering lures. Binance has resumed withdrawals across all 15 networks after security assessments, processing $4.649 billion in withdrawals within the first nine hours following the incident.</p>
             <p class="story-case">
-              <span class="story-case-label">Why it matters</span> A single memory-corruption bug in Google&#39;s Brotli decoder cascades into remote-code-execution risk across Node.js, .NET, Python, Bun and Envoy, making it one of the broadest supply-chain vulnerabilities in years.
+              <span class="story-case-label">Why it matters</span> A record $6.3B crypto theft attributed to North Korean state hackers is the largest heist in history and underscores systemic exchange security failures.
             </p>
-            <p class="story-why" title="Hacker News, The Hacker News">
-              <span class="visually-hidden">Why it made the cut: </span>397 points on Hacker News · Covered by 2 outlets
+            <p class="story-why" title="Ars Technica, TechSpot, The Hacker News">
+              <span class="visually-hidden">Why it made the cut: </span>Covered by 3 outlets
             </p>
           </div>
         </li>
@@ -94,21 +94,22 @@
           <div class="story-content">
             <p class="story-meta">
               <span class="visually-hidden">Number 2. </span>
-              <span class="story-category category-security"
-                >Security</span
+              <span class="story-category category-ai"
+                >AI</span
               >
               <span class="story-source">Hacker News</span>
             </p>
             <h2 class="story-title">
-              <a href="https://blog.calif.io/p/iphone" target="_blank" rel="noopener noreferrer"
-                >Today, we hacked what we&#39;d set out to hack: the iPhone</a
+              <a href="https://phorion.io/blog/offical-claude-code-vsx-compromise/" target="_blank" rel="noopener noreferrer"
+                >Backdoor in Claude Code for VS Code extension on the Cursor Marketplace</a
               >
             </h2>
+            <p class="story-summary">Security firm Phorion discovered a backdoor in the official Claude Code for VS Code extension on the Cursor Marketplace in versions 2.1.312 and 2.1.313, which installs a persistent SSH backdoor on macOS, Linux, and Windows systems. The compromised extension executes malicious code immediately upon loading, adding an attacker-controlled SSH key to the user&#39;s authorized_keys file and establishing an outbound reverse SSH tunnel to the attacker&#39;s server at 134.209.82.225. Cursor has removed the affected versions from its marketplace, and organizations are advised to immediately review their environments for these versions and engage incident response if the extension is discovered. The backdoor includes platform-specific persistence mechanisms using LaunchAgents on macOS, crontab entries on Linux, and scheduled tasks on Windows, though a bug in the macOS SSH enablement logic may limit impact on systems where Remote Login is not already enabled.</p>
             <p class="story-case">
-              <span class="story-case-label">Why it matters</span> A live, name-and-shame demonstration of iPhone exploit chains against Signal and iMessage shows state-grade attacks are still very much alive against Apple&#39;s flagship security promises.
+              <span class="story-case-label">Why it matters</span> A backdoored Claude Code extension slipping into a trusted marketplace shows how AI-coding tools have become a prime supply-chain attack vector.
             </p>
-            <p class="story-why" title="Hacker News">
-              <span class="visually-hidden">Why it made the cut: </span>1111 points on Hacker News
+            <p class="story-why" title="BleepingComputer, Hacker News, The Hacker News">
+              <span class="visually-hidden">Why it made the cut: </span>1002 points on Hacker News · Covered by 3 outlets
             </p>
           </div>
         </li>
@@ -119,22 +120,22 @@
           <div class="story-content">
             <p class="story-meta">
               <span class="visually-hidden">Number 3. </span>
-              <span class="story-category category-ai"
-                >AI</span
+              <span class="story-category category-security"
+                >Security</span
               >
-              <span class="story-source">BleepingComputer</span>
+              <span class="story-source">Hacker News</span>
             </p>
             <h2 class="story-title">
-              <a href="https://www.bleepingcomputer.com/news/security/ai-coding-agents-hijacked-using-agentsmd-file-in-downloads-folder/" target="_blank" rel="noopener noreferrer"
-                >AI coding agents hijacked using AGENTS.md file in Downloads folder</a
+              <a href="https://atlasum.net/blog/cve-2026-98432-linux-ipv4-tcp-uaf" target="_blank" rel="noopener noreferrer"
+                >TCP Use-After-Free: CVE-2026-98432 / CVSS 9.8</a
               >
             </h2>
-            <p class="story-summary">Researchers at Forever Security discovered a vulnerability where malicious instructions in markdown files can trick AI coding agents like OpenAI Codex and Claude Code into installing rogue packages or stealing credentials. The attack exploits the fact that web browsers automatically download files to the ~/Downloads folder without user interaction, and AI agents commonly run from that directory, automatically loading and following any instruction files they find there. The researchers demonstrated a 90% success rate manipulating Codex and a 50% success rate stealing OAuth tokens from Claude Code using this technique. OpenAI and Anthropic recommend users run AI coding agents only from their specific project directories rather than broad folders like Downloads to prevent agents from processing untrusted instruction files.</p>
+            <p class="story-summary">Linux released critical security patches on October 11 and 15, 2026 for CVE-2026-98432, a use-after-free vulnerability in IPv4 TCP handshake processing that allows remote, unauthenticated attackers to execute code as root on affected systems. The Linux kernel CNA rates the vulnerability CVSS 3.1 9.8 (Critical), and Anthropic reports that its Claude AI model created a working proof-of-concept exploit targeting servers with multipath TCP listeners, which Go programs enable by default as of version 1.24. Fixed kernels are available for most major distributions including Red Hat Enterprise Linux 8, 9, and 10 (released November 1), Debian, SUSE, Oracle Linux, and Amazon Linux, but Ubuntu has not yet released patches as of November 1. The vulnerability affects any Linux system running kernel 4.4 or later that accepts IPv4 TCP connections, and Red Hat recommends an interim nftables mitigation that drops TCP packets carrying IPv4 options until systems can be patched and rebooted.</p>
             <p class="story-case">
-              <span class="story-case-label">Why it matters</span> Attackers tricking AI coding agents via a poisoned AGENTS.md file is the first clear sign that agentic AI tooling itself is now a viable malware vector, reproduced against both OpenAI and Anthropic&#39;s agents.
+              <span class="story-case-label">Why it matters</span> A critical, remotely exploitable use-after-free in the Linux TCP stack threatens the backbone of the internet&#39;s server infrastructure.
             </p>
-            <p class="story-why" title="BleepingComputer, The Hacker News">
-              <span class="visually-hidden">Why it made the cut: </span>Covered by 2 outlets
+            <p class="story-why" title="Hacker News">
+              <span class="visually-hidden">Why it made the cut: </span>722 points on Hacker News
             </p>
           </div>
         </li>
@@ -145,21 +146,21 @@
           <div class="story-content">
             <p class="story-meta">
               <span class="visually-hidden">Number 4. </span>
-              <span class="story-category category-business"
-                >Business</span
+              <span class="story-category category-ai"
+                >AI</span
               >
-              <span class="story-source">Slashdot</span>
+              <span class="story-source">Ars Technica</span>
             </p>
             <h2 class="story-title">
-              <a href="https://tech.slashdot.org/story/26/10/23/0143254/comcast-loses-more-customers-claims-other-isps-cheap-prices-are-irrational?utm_source=rss1.0mainlinkanon&amp;utm_medium=feed" target="_blank" rel="noopener noreferrer"
-                >Comcast loses more customers, claims other ISPs&#39; cheap prices are &#34;irrational&#34;</a
+              <a href="https://arstechnica.com/gadgets/2026/10/fujifilm-to-boost-tape-production-5x-as-ai-fuels-archiving-demand/" target="_blank" rel="noopener noreferrer"
+                >Fujifilm pours $64 million into magnetic tape production as AI storage demand surges</a
               >
             </h2>
-            <p class="story-summary">Comcast reported losing 144,000 residential broadband customers in Q3 2026 and plans significant job cuts in its cable division as it faces intensifying competition from fixed wireless and fiber providers. Co-CEO Mike Cavanagh and CFO Jason Armstrong characterized competitors&#39; pricing as &#34;irrational,&#34; specifically citing $30 to $40 monthly fiber broadband offers from providers like Verizon&#39;s FiOS, which Armstrong argued is unsustainable given fiber deployment costs of $1,500 or more per home. Armstrong also noted that more customers are leaving Comcast when facing price increases after promotional periods end, prompting the company to refine its retention strategies. The losses represent a significant increase from the 91,000 broadband customers Comcast lost in Q3 2025.</p>
+            <p class="story-summary">Fujifilm announced Thursday that it will invest approximately 10 billion yen ($63 million) to increase its magnetic tape production capacity fivefold by fiscal year 2028, driven by surging demand from generative AI&#39;s exponential growth in data storage needs. The investment will expand Fujifilm&#39;s Kanagawa Factory in Odawara, Japan, primarily to manufacture the latest FUJIFILM LTO Ultrium10 tape, marking the company&#39;s largest dedicated investment in LTO tape facilities to date. Major cloud service and data center operators are increasingly adopting magnetic tape for data backup because it offers large storage capacity at low cost and can be physically disconnected to protect against ransomware and cyberattacks. Fujifilm has been producing magnetic tape storage media since the 1950s and released its first LTO Ultrium storage tape in 2000, with the LTO Ultrium10 debuting in 2025 as the first generation to use the company&#39;s &#34;fine hybrid magnetic particles&#34; technology.</p>
             <p class="story-case">
-              <span class="story-case-label">Why it matters</span> Comcast&#39;s accelerating subscriber losses and admission that rivals&#39; prices are &#39;irrational&#39; signal a real structural shift in how Americans get broadband and TV.
+              <span class="story-case-label">Why it matters</span> Fujifilm&#39;s $64M bet on magnetic tape reveals how generative AI&#39;s data deluge is reshaping even decades-old storage industries.
             </p>
-            <p class="story-why" title="Ars Technica, Slashdot">
+            <p class="story-why" title="Ars Technica, TechSpot">
               <span class="visually-hidden">Why it made the cut: </span>Covered by 2 outlets
             </p>
           </div>
@@ -171,18 +172,18 @@
           <div class="story-content">
             <p class="story-meta">
               <span class="visually-hidden">Number 5. </span>
-              <span class="story-category category-ai"
-                >AI</span
+              <span class="story-category category-policy"
+                >Policy</span
               >
-              <span class="story-source">WIRED</span>
+              <span class="story-source">Ars Technica</span>
             </p>
             <h2 class="story-title">
-              <a href="https://www.wired.com/review/ray-ban-meta-audio/" target="_blank" rel="noopener noreferrer"
-                >Ray-Ban Meta Audio Review: The Best Smart Glasses</a
+              <a href="https://arstechnica.com/space/2026/10/rocket-report-winter-is-coming-for-themis-cowboy-space-adds-iron-to-the-fire/" target="_blank" rel="noopener noreferrer"
+                >Rocket Report: Winter is coming for Themis; Cowboy Space adds iron to the fire</a
               >
             </h2>
-            <p class="story-summary">Meta announced Ray-Ban Meta Audio glasses in September, which remove the camera from its previous smart glasses models while retaining features like AI-powered navigation and music playback. The camera-free design addresses years of privacy concerns about Meta&#39;s original glasses, which users criticized as &#34;pervert glasses&#34; due to incidents of non-consensual recording and attempts to disable recording indicator lights. Meta also faced backlash over facial recognition technology it initially denied including in the glasses before later admitting to and removing the feature, and the company was sued over its facial recognition systems in September. The company maintains that privacy controversies did not influence its decision to release the audio-only version.</p>
-            <p class="story-why" title="Techmeme, WIRED">
+            <p class="story-summary">Cowboy Space, founded by Robinhood co-founder Baiju Bhatt, unveiled specifications for its Big Iron medium-lift rocket, which will stand 282 feet tall and carry up to 18 metric tons to low-Earth orbit, with a planned launch before the end of 2028. The rocket will be powered by nine methane-fueled Clydesdale engines on its first stage, and Bhatt plans to use the upper stage as the core of a data center spacecraft equipped with GPU racks and inter-satellite laser links to compete in the space-based AI market.</p>
+            <p class="story-why" title="Ars Technica, ExtremeTech">
               <span class="visually-hidden">Why it made the cut: </span>Covered by 2 outlets
             </p>
           </div>
@@ -200,16 +201,16 @@
               <span class="story-source">Hacker News</span>
             </p>
             <h2 class="story-title">
-              <a href="https://www.theverge.com/tech/1017600/google-personal-intelligence-privacy-policy-ads-update" target="_blank" rel="noopener noreferrer"
-                >Now Google says it might use your Gmail and Google Photos data to target ads</a
+              <a href="https://www.parameter.ai/labs/we-found-a-gap-at-openai" target="_blank" rel="noopener noreferrer"
+                >Do the math: How we took over ChatGPT accounts</a
               >
             </h2>
-            <p class="story-summary">Google updated its privacy policy effective October 16, 2026, to clarify that users who enable personalized AI features in Search or Gemini may have their activity across connected Google services like Gmail, Photos, and Drive used to serve targeted ads. The policy change applies to Google&#39;s Personal Intelligence feature, which launched in January 2026 and allows users to connect other Google services to receive more tailored responses, though users can opt out through Search Services Personalization settings. Google emphasized that it does not use content from Gmail, Drive, or Photos to personalize ads by default, but this changes if users choose to share that data with AI tools through Personal Intelligence. The feature is currently rolling out as a beta to eligible users over 18 globally, except in the European Economic Area, Switzerland, the U.K., and Nigeria.</p>
+            <p class="story-summary">A research team discovered a critical vulnerability in ChatGPT that allowed attackers to take over user accounts by sending a malicious shared conversation link. By exploiting a combination of features—including ChatGPT&#39;s HTML Preview sandbox, the MathLive math library&#39;s message handling, and YouTube&#39;s JSONP endpoint—the researchers were able to execute arbitrary JavaScript with the victim&#39;s authenticated session permissions, enabling them to enumerate private conversations, retrieve their contents, and exfiltrate data to external servers. The victim required no additional action beyond opening the shared link, and OpenAI patched the vulnerability on October 26, 2026, classifying it as P1 severity.</p>
             <p class="story-case">
-              <span class="story-case-label">Why it matters</span> Google quietly rewriting its privacy policy to allow ad-targeting from Gemini and Search activity affects the default assumptions of billions of Gmail and Photos users.
+              <span class="story-case-label">Why it matters</span> Researchers demonstrated a full ChatGPT account takeover via a single link, exposing how fragile AI platform security still is at massive scale.
             </p>
-            <p class="story-why" title="Hacker News, TechSpot, The Hacker News">
-              <span class="visually-hidden">Why it made the cut: </span>391 points on Hacker News · Covered by 3 outlets
+            <p class="story-why" title="Hacker News">
+              <span class="visually-hidden">Why it made the cut: </span>359 points on Hacker News
             </p>
           </div>
         </li>
@@ -226,16 +227,16 @@
               <span class="story-source">Hacker News</span>
             </p>
             <h2 class="story-title">
-              <a href="https://www.apollo.com/wealth/insights-news/insights/daily-spark/no-signs-of-ai-payoff-outside-the-tech-sector" target="_blank" rel="noopener noreferrer"
-                >No signs of AI payoff outside the tech sector</a
+              <a href="https://progressives.house.gov/2026/10/reps-casar-waters-lead-democratic-resolution-opposing-a-i-bubble-bailout-for-big-tech-commit-to-protecting-american-people-instead" target="_blank" rel="noopener noreferrer"
+                >US Reps Lead Democratic Resolution Opposing A.I. Bubble Bailout for Big Tech</a
               >
             </h2>
-            <p class="story-summary">Despite massive corporate investments in artificial intelligence, the technology has generated no measurable financial returns for non-tech companies in the S&amp;P 493, with revenue per worker and profit margins remaining flat compared to rising gains for the Mag 7 tech giants. Mainstream corporate America is increasingly viewing AI spending as a cost center rather than a growth driver and is pulling back on token spending, unwilling to pay for the latest models when cheaper alternatives exist. The article argues that even as AI models become commoditized and cheaper, translating artificial intelligence into business value may prove difficult because business success depends on human judgment, context, accountability, trust, and ethical considerations that AI cannot replicate. Without evidence of improved revenue growth or margins in the broader economy, the long-term impact of AI investments outside the technology sector remains uncertain.</p>
+            <p class="story-summary">Congressional Progressive Caucus Chair Rep. Greg Casar and House Financial Services Committee Ranking Member Rep. Maxine Waters, along with ten other Democratic representatives, introduced a resolution opposing any federal bailout of artificial intelligence companies or their executives if an AI-related asset bubble collapses. The resolution warns that AI firms hold trillions of dollars in debt raised through opaque private credit markets and that current stock market valuations mirror levels seen during the 1990s tech bubble, while federal regulators have failed to provide adequate oversight. The lawmakers call for the federal government to reject rescue measures for insolvent AI companies and instead direct resources toward protecting workers, retirees, and low-income communities through job creation, unemployment insurance, and housing assistance. The resolution was endorsed by organizations including the American Federation of Teachers, American Economic Liberties Project, and Americans for Financial Reform.</p>
             <p class="story-case">
-              <span class="story-case-label">Why it matters</span> A sober cross-industry finding that AI has yet to produce measurable financial payoff outside tech itself cuts against the hype cycle with real data, not vibes.
+              <span class="story-case-label">Why it matters</span> A bipartisan-adjacent Congressional resolution against bailing out an AI bubble signals Washington is now treating AI financial risk as a policy priority.
             </p>
             <p class="story-why" title="Hacker News">
-              <span class="visually-hidden">Why it made the cut: </span>629 points on Hacker News
+              <span class="visually-hidden">Why it made the cut: </span>668 points on Hacker News
             </p>
           </div>
         </li>
@@ -255,10 +256,15 @@
           <summary>
             <span class="archive-year-label">2026</span>
             <span class="archive-count"
-              >41 editions</span
+              >42 editions</span
             >
           </summary>
           <ul>
+            <li>
+              <a href="archive/2026-10-26.html"
+                >Oct 26</a
+              >
+            </li>
             <li>
               <a href="archive/2026-10-19.html"
                 >Oct 19</a
@@ -541,9 +547,9 @@
 
     <footer>
       <p>
-        Curated automatically from 4 sources. No trackers, no ads.
+        Curated automatically from 3 sources. No trackers, no ads.
       </p>
-      <p class="generated">Generated 2026-10-26.</p>
+      <p class="generated">Generated 2026-11-02.</p>
       <p class="ai-daily-link"><a href="ai/">Also: AI Daily, a shorter briefing every day</a></p>
     </footer>
   </body>

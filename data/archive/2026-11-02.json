@@ -1,0 +1,125 @@
+{
+  "week": "2026-11-02",
+  "generated_at": "2026-11-02T12:05:37.334365+00:00",
+  "intro": "This was a week dominated by cybercrime and AI's growing pains: the largest crypto heist ever recorded, a supply-chain backdoor hiding in a trusted developer tool, and a critical kernel flaw all landed within days of each other. Meanwhile, AI's economic and legal fallout kept surfacing — from a Congressional bubble warning to a courtroom prompt-injection scandal and a quiet hardware boom feeding the AI storage crunch.",
+  "stories": [
+    {
+      "rank": 1,
+      "title": "Hackers steal $6.3 billion from Binance in record crypto heist",
+      "source": "The Hacker News",
+      "sources": [
+        "Ars Technica",
+        "TechSpot",
+        "The Hacker News"
+      ],
+      "source_count": 3,
+      "url": "https://thehackernews.com/2026/11/fbi-links-north-koreas-tradertraitor-to.html",
+      "category": "Security",
+      "hn_points": null,
+      "score": 6.827,
+      "summary": "The FBI has officially attributed a $6 billion theft of virtual assets from Binance to TraderTraitor, a North Korea-aligned hacking group also known as Jade Sleet, which converted the stolen assets primarily into Ethereum and is expected to launder them through DeFi services. The theft, which occurred across 11 blockchains with 82% on Ethereum and Bitcoin, represents the largest cryptocurrency heist in history and nearly doubles the total amount stolen by North Korean actors in recent years, though $2.85 billion has already been frozen by Tether, Circle, Ripple, Arbitrum, and Optimism. TraderTraitor has a history since at least 2020 of targeting cryptocurrency platforms including DMM Bitcoin, Bybit, KelpDAO, and Bitget through malware-laced applications distributed via trojanized Terraform providers and recruitment-themed social engineering lures. Binance has resumed withdrawals across all 15 networks after security assessments, processing $4.649 billion in withdrawals within the first nine hours following the incident.",
+      "why": "A record $6.3B crypto theft attributed to North Korean state hackers is the largest heist in history and underscores systemic exchange security failures.",
+      "consensus": false
+    },
+    {
+      "rank": 2,
+      "title": "Backdoor in Claude Code for VS Code extension on the Cursor Marketplace",
+      "source": "Hacker News",
+      "sources": [
+        "BleepingComputer",
+        "Hacker News",
+        "The Hacker News"
+      ],
+      "source_count": 3,
+      "url": "https://phorion.io/blog/offical-claude-code-vsx-compromise/",
+      "category": "AI",
+      "hn_points": 1002,
+      "score": 11.586,
+      "summary": "Security firm Phorion discovered a backdoor in the official Claude Code for VS Code extension on the Cursor Marketplace in versions 2.1.312 and 2.1.313, which installs a persistent SSH backdoor on macOS, Linux, and Windows systems. The compromised extension executes malicious code immediately upon loading, adding an attacker-controlled SSH key to the user's authorized_keys file and establishing an outbound reverse SSH tunnel to the attacker's server at 134.209.82.225. Cursor has removed the affected versions from its marketplace, and organizations are advised to immediately review their environments for these versions and engage incident response if the extension is discovered. The backdoor includes platform-specific persistence mechanisms using LaunchAgents on macOS, crontab entries on Linux, and scheduled tasks on Windows, though a bug in the macOS SSH enablement logic may limit impact on systems where Remote Login is not already enabled.",
+      "why": "A backdoored Claude Code extension slipping into a trusted marketplace shows how AI-coding tools have become a prime supply-chain attack vector.",
+      "consensus": false
+    },
+    {
+      "rank": 3,
+      "title": "TCP Use-After-Free: CVE-2026-98432 / CVSS 9.8",
+      "source": "Hacker News",
+      "sources": [
+        "Hacker News"
+      ],
+      "source_count": 1,
+      "url": "https://atlasum.net/blog/cve-2026-98432-linux-ipv4-tcp-uaf",
+      "category": "Security",
+      "hn_points": 722,
+      "score": 4.367,
+      "summary": "Linux released critical security patches on October 11 and 15, 2026 for CVE-2026-98432, a use-after-free vulnerability in IPv4 TCP handshake processing that allows remote, unauthenticated attackers to execute code as root on affected systems. The Linux kernel CNA rates the vulnerability CVSS 3.1 9.8 (Critical), and Anthropic reports that its Claude AI model created a working proof-of-concept exploit targeting servers with multipath TCP listeners, which Go programs enable by default as of version 1.24. Fixed kernels are available for most major distributions including Red Hat Enterprise Linux 8, 9, and 10 (released November 1), Debian, SUSE, Oracle Linux, and Amazon Linux, but Ubuntu has not yet released patches as of November 1. The vulnerability affects any Linux system running kernel 4.4 or later that accepts IPv4 TCP connections, and Red Hat recommends an interim nftables mitigation that drops TCP packets carrying IPv4 options until systems can be patched and rebooted.",
+      "why": "A critical, remotely exploitable use-after-free in the Linux TCP stack threatens the backbone of the internet's server infrastructure.",
+      "consensus": false
+    },
+    {
+      "rank": 4,
+      "title": "Fujifilm pours $64 million into magnetic tape production as AI storage demand surges",
+      "source": "Ars Technica",
+      "sources": [
+        "Ars Technica",
+        "TechSpot"
+      ],
+      "source_count": 2,
+      "url": "https://arstechnica.com/gadgets/2026/10/fujifilm-to-boost-tape-production-5x-as-ai-fuels-archiving-demand/",
+      "category": "AI",
+      "hn_points": null,
+      "score": 3.604,
+      "summary": "Fujifilm announced Thursday that it will invest approximately 10 billion yen ($63 million) to increase its magnetic tape production capacity fivefold by fiscal year 2028, driven by surging demand from generative AI's exponential growth in data storage needs. The investment will expand Fujifilm's Kanagawa Factory in Odawara, Japan, primarily to manufacture the latest FUJIFILM LTO Ultrium10 tape, marking the company's largest dedicated investment in LTO tape facilities to date. Major cloud service and data center operators are increasingly adopting magnetic tape for data backup because it offers large storage capacity at low cost and can be physically disconnected to protect against ransomware and cyberattacks. Fujifilm has been producing magnetic tape storage media since the 1950s and released its first LTO Ultrium storage tape in 2000, with the LTO Ultrium10 debuting in 2025 as the first generation to use the company's \"fine hybrid magnetic particles\" technology.",
+      "why": "Fujifilm's $64M bet on magnetic tape reveals how generative AI's data deluge is reshaping even decades-old storage industries.",
+      "consensus": false
+    },
+    {
+      "rank": 5,
+      "title": "Rocket Report: Winter is coming for Themis; Cowboy Space adds iron to the fire",
+      "source": "Ars Technica",
+      "sources": [
+        "Ars Technica",
+        "ExtremeTech"
+      ],
+      "source_count": 2,
+      "url": "https://arstechnica.com/space/2026/10/rocket-report-winter-is-coming-for-themis-cowboy-space-adds-iron-to-the-fire/",
+      "category": "Policy",
+      "hn_points": null,
+      "score": 3.708,
+      "summary": "Cowboy Space, founded by Robinhood co-founder Baiju Bhatt, unveiled specifications for its Big Iron medium-lift rocket, which will stand 282 feet tall and carry up to 18 metric tons to low-Earth orbit, with a planned launch before the end of 2028. The rocket will be powered by nine methane-fueled Clydesdale engines on its first stage, and Bhatt plans to use the upper stage as the core of a data center spacecraft equipped with GPU racks and inter-satellite laser links to compete in the space-based AI market.",
+      "why": "",
+      "consensus": false
+    },
+    {
+      "rank": 6,
+      "title": "Do the math: How we took over ChatGPT accounts",
+      "source": "Hacker News",
+      "sources": [
+        "Hacker News"
+      ],
+      "source_count": 1,
+      "url": "https://www.parameter.ai/labs/we-found-a-gap-at-openai",
+      "category": "AI",
+      "hn_points": 359,
+      "score": 2.5,
+      "summary": "A research team discovered a critical vulnerability in ChatGPT that allowed attackers to take over user accounts by sending a malicious shared conversation link. By exploiting a combination of features—including ChatGPT's HTML Preview sandbox, the MathLive math library's message handling, and YouTube's JSONP endpoint—the researchers were able to execute arbitrary JavaScript with the victim's authenticated session permissions, enabling them to enumerate private conversations, retrieve their contents, and exfiltrate data to external servers. The victim required no additional action beyond opening the shared link, and OpenAI patched the vulnerability on October 26, 2026, classifying it as P1 severity.",
+      "why": "Researchers demonstrated a full ChatGPT account takeover via a single link, exposing how fragile AI platform security still is at massive scale.",
+      "consensus": false
+    },
+    {
+      "rank": 7,
+      "title": "US Reps Lead Democratic Resolution Opposing A.I. Bubble Bailout for Big Tech",
+      "source": "Hacker News",
+      "sources": [
+        "Hacker News"
+      ],
+      "source_count": 1,
+      "url": "https://progressives.house.gov/2026/10/reps-casar-waters-lead-democratic-resolution-opposing-a-i-bubble-bailout-for-big-tech-commit-to-protecting-american-people-instead",
+      "category": "AI",
+      "hn_points": 668,
+      "score": 3.912,
+      "summary": "Congressional Progressive Caucus Chair Rep. Greg Casar and House Financial Services Committee Ranking Member Rep. Maxine Waters, along with ten other Democratic representatives, introduced a resolution opposing any federal bailout of artificial intelligence companies or their executives if an AI-related asset bubble collapses. The resolution warns that AI firms hold trillions of dollars in debt raised through opaque private credit markets and that current stock market valuations mirror levels seen during the 1990s tech bubble, while federal regulators have failed to provide adequate oversight. The lawmakers call for the federal government to reject rescue measures for insolvent AI companies and instead direct resources toward protecting workers, retirees, and low-income communities through job creation, unemployment insurance, and housing assistance. The resolution was endorsed by organizations including the American Federation of Teachers, American Economic Liberties Project, and Americans for Financial Reform.",
+      "why": "A bipartisan-adjacent Congressional resolution against bailing out an AI bubble signals Washington is now treating AI financial risk as a policy priority.",
+      "consensus": false
+    }
+  ]
+}
