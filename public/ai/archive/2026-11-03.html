@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LastWeekIn.Tech — AI Daily, 2026-11-03</title>
+    <meta name="description" content="The 4 AI developments that mattered on 2026-11-03, with analysis and what to watch next." />
+    <meta name="color-scheme" content="light dark" />
+    <meta property="og:site_name" content="LastWeekIn.Tech — AI Daily" />
+    <meta property="og:title" content="LastWeekIn.Tech — AI Daily, 2026-11-03" />
+    <meta property="og:description" content="The 4 AI developments that mattered on 2026-11-03, with analysis and what to watch next." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://lastweekin.tech/ai/archive/2026-11-03.html" />
+    <meta property="og:url" content="https://lastweekin.tech/ai/archive/2026-11-03.html" />
+    <meta property="og:image" content="https://lastweekin.tech/ai/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="LastWeekIn.Tech AI Daily — the AI stories that mattered today"
+    />
+    <meta name="twitter:image" content="https://lastweekin.tech/ai/og.png" />
+    <link
+      rel="alternate"
+      type="application/atom+xml"
+      title="LastWeekIn.Tech AI Daily"
+      href="../feed.xml"
+    />
+    <link rel="stylesheet" href="../style.css" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22><text y=%2214%22 font-size=%2214%22>7</text></svg>"
+    />
+  </head>
+  <body>
+    <a class="skip-link" href="#stories">Skip to the stories</a>
+
+    <header class="site-header">
+      <p class="masthead-note">Published daily &middot; AI only &middot; No trackers, no ads</p>
+      <h1 class="site-title">
+        <a class="wordmark" href="../index.html"
+          >LastWeekIn<span class="dot">.</span>Tech</a
+        >
+      </h1>
+      <p class="section-suffix">
+        <a class="section-link" href="../../index.html"
+          ><span class="section-divider">/</span> Weekly Digest</a
+        >
+      </p>
+      <div class="dateline" role="presentation">
+        <span class="dateline-item">The 4 AI stories that mattered</span>
+        <span class="dateline-item"
+          >Briefing for
+          <time datetime="2026-11-03">Nov 3, 2026</time></span
+        >
+      </div>
+      <p class="archive-note">
+        An archived briefing. <a href="../index.html">See today&rsquo;s briefing.</a>
+      </p>
+    </header>
+
+    <main>
+      <p class="standfirst">A mostly chip/market and AI-safety focused news cycle: a wild claim about frontier models directly editing neural network weights grabbed attention, while Intel&#39;s stock rout deepened amid broader chip-sector jitters, AI lab insiders voiced safety concerns, and OpenAI tried a PR rebrand to soften data center backlash.</p>
+
+      <ol class="story-list" id="stories">
+        <li class="story-card lead-story">
+          <p class="story-rank" aria-hidden="true">1</p>
+          <div class="story-content">
+            <p class="story-meta">
+              <span class="visually-hidden">Number 1. </span>
+              <span class="story-category category-capabilities">Capabilities</span>
+              <span class="story-source">Hacker News</span>
+            </p>
+            <h2 class="story-title">
+              <a href="https://rikiyat.github.io/blog/weight-space-programming/" target="_blank" rel="noopener noreferrer"
+                >Astra can read and write weights to improve Qwen</a
+              >
+            </h2>
+            <p class="story-summary">Reports describe a frontier model (&#39;Astra&#39;) directly reading and writing another neural network&#39;s weights, identifying a network&#39;s training objective purely from its weights, and writing small game-playing networks from scratch that reportedly outplay networks trained with PPO for 100 million steps. In a related test, the system edited Qwen3.5-0.8B&#39;s weights without gradient-based training or environment feedback, pushing its MATH-500 score from 7.9% to 48.1%.</p>
+            <p class="story-case">
+              <span class="story-case-label">Why it matters</span> If these results hold up under scrutiny, they suggest a new paradigm where models can optimize and interpret other models&#39; internals directly, potentially bypassing costly reinforcement learning loops and offering new interpretability tools. This blurs the line between &#39;model&#39; and &#39;optimizer,&#39; with implications for both faster model improvement cycles and new attack surfaces if weight-editing capabilities are misused.
+            </p>
+            <p class="story-case">
+              <span class="story-case-label">What to watch</span> Watch for independent replication of these results, detailed methodology disclosure, and whether the approach scales beyond small networks like Qwen3.5-0.8B.
+            </p>
+          </div>
+        </li>
+        <li class="story-card">
+          <p class="story-rank" aria-hidden="true">2</p>
+          <div class="story-content">
+            <p class="story-meta">
+              <span class="visually-hidden">Number 2. </span>
+              <span class="story-category category-infrastructure-chips">Infrastructure &amp; Chips</span>
+              <span class="story-source">Hacker News</span>
+            </p>
+            <h2 class="story-title">
+              <a href="https://finance.yahoo.com/markets/article/the-intel-stock-collapse-is-getting-worse--and-the-37-trillion-chip-rout-is-spreading-212154947.html" target="_blank" rel="noopener noreferrer"
+                >Intel stock collapse worsens as $3.5T chip rout spreads</a
+              >
+            </h2>
+            <p class="story-summary">Intel&#39;s stock fell roughly 9% Monday, compounding a nearly 29% drop from the prior week that was its worst single day since 1974, leaving the company worth less than half its end-September value. Chip stocks broadly shed more than $400 billion in market value in a single session even as most of the S&amp;P 500 rose, part of a wider rout that has wiped out $3.5 trillion in chip-sector value.</p>
+            <p class="story-case">
+              <span class="story-case-label">Why it matters</span> The selloff signals deepening investor anxiety about whether chip demand and AI infrastructure spending can be sustained at current levels, particularly after disappointing forecasts from a bellwether like Intel. Given how central chip supply is to the AI buildout narrative, continued volatility here could tighten financing conditions for data center and compute expansion across the industry.
+            </p>
+            <p class="story-case">
+              <span class="story-case-label">What to watch</span> Watch upcoming earnings and guidance from other major chipmakers, and whether the rout stabilizes or spreads further into AI-adjacent equities.
+            </p>
+          </div>
+        </li>
+        <li class="story-card">
+          <p class="story-rank" aria-hidden="true">3</p>
+          <div class="story-content">
+            <p class="story-meta">
+              <span class="visually-hidden">Number 3. </span>
+              <span class="story-category category-security-safety">Security &amp; Safety</span>
+              <span class="story-source">thedailystar.net</span>
+            </p>
+            <h2 class="story-title">
+              <a href="https://www.thedailystar.net/news/technology/news/researchers-say-ai-labs-should-pause-rather-race-4286801" target="_blank" rel="noopener noreferrer"
+                >Former and current OpenAI and Google DeepMind staff call for slower AI development</a
+              >
+            </h2>
+            <p class="story-summary">Current and former staff at OpenAI and Google DeepMind have recorded video testimonials through a project called frominside.ai, organized by AI safety nonprofit Palisade Research, warning that their employers are doing too little to guard against risks from self-improving AI systems that could slip beyond human control. Some participants said their concerns reflect genuine worry rather than a marketing stance.</p>
+            <p class="story-case">
+              <span class="story-case-label">Why it matters</span> Insider dissent from employees at two of the most prominent frontier labs lends credibility to external safety critiques and suggests growing internal friction between research staff and leadership over the pace of AI development. This kind of public testimony could increase pressure on labs and regulators to slow deployment timelines or strengthen safety testing requirements.
+            </p>
+            <p class="story-case">
+              <span class="story-case-label">What to watch</span> Watch for official responses from OpenAI and DeepMind, and whether additional insiders join the campaign, which could escalate into a broader governance or policy flashpoint.
+            </p>
+          </div>
+        </li>
+        <li class="story-card">
+          <p class="story-rank" aria-hidden="true">4</p>
+          <div class="story-content">
+            <p class="story-meta">
+              <span class="visually-hidden">Number 4. </span>
+              <span class="story-category category-companies">Companies</span>
+              <span class="story-source">The Verge</span>
+            </p>
+            <h2 class="story-title">
+              <a href="https://www.theverge.com/ai-artificial-intelligence/1025242/openai-quietly-renames-data-centers-as-compute-campuses" target="_blank" rel="noopener noreferrer"
+                >OpenAI Might Rebrand Its Data Centers As &#39;AI Compute Campuses&#39;</a
+              >
+            </h2>
+            <p class="story-summary">OpenAI is reportedly rebranding its data centers as &#39;AI compute campuses&#39; as political opposition to data center construction grows on both sides of the aisle. Critics argue the renaming does nothing to address underlying community concerns about noise, resource consumption, and environmental impact.</p>
+            <p class="story-case">
+              <span class="story-case-label">Why it matters</span> As AI infrastructure buildout accelerates into more communities, political and local backlash is becoming a material risk to frontier labs&#39; expansion plans and timelines. The rebranding effort shows that infrastructure politics are now a strategic concern for companies like OpenAI, intersecting with broader industry anxiety over AI capex sustainability.
+            </p>
+            <p class="story-case">
+              <span class="story-case-label">What to watch</span> Watch for whether OpenAI pairs the rebrand with substantive community engagement or policy concessions, and whether other hyperscalers adopt similar messaging strategies for their own data center projects.
+            </p>
+          </div>
+        </li>
+      </ol>
+
+      <section class="subscribe" aria-labelledby="subscribe-heading">
+        <h2 id="subscribe-heading">Get it every day</h2>
+        <p>
+          A short AI briefing, every day.
+          <a href="../feed.xml">Subscribe with RSS</a> — no email address, no tracking.
+        </p>
+      </section>
+
+      <nav class="archive" aria-labelledby="archive-heading">
+        <h2 id="archive-heading">Past briefings</h2>
+        <details class="archive-year" open>
+          <summary>
+            <span class="archive-year-label">2026</span>
+            <span class="archive-count"
+              >48 briefings</span
+            >
+          </summary>
+          <ul>
+            <li>
+              <a href="../archive/2026-11-02.html"
+                >Nov 2</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-11-01.html"
+                >Nov 1</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-31.html"
+                >Oct 31</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-30.html"
+                >Oct 30</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-29.html"
+                >Oct 29</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-28.html"
+                >Oct 28</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-27.html"
+                >Oct 27</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-26.html"
+                >Oct 26</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-25.html"
+                >Oct 25</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-24.html"
+                >Oct 24</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-23.html"
+                >Oct 23</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-22.html"
+                >Oct 22</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-21.html"
+                >Oct 21</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-20.html"
+                >Oct 20</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-19.html"
+                >Oct 19</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-18.html"
+                >Oct 18</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-17.html"
+                >Oct 17</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-16.html"
+                >Oct 16</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-15.html"
+                >Oct 15</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-14.html"
+                >Oct 14</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-13.html"
+                >Oct 13</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-12.html"
+                >Oct 12</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-11.html"
+                >Oct 11</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-10.html"
+                >Oct 10</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-09.html"
+                >Oct 9</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-08.html"
+                >Oct 8</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-07.html"
+                >Oct 7</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-06.html"
+                >Oct 6</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-05.html"
+                >Oct 5</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-04.html"
+                >Oct 4</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-03.html"
+                >Oct 3</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-02.html"
+                >Oct 2</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-01.html"
+                >Oct 1</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-30.html"
+                >Sep 30</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-29.html"
+                >Sep 29</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-28.html"
+                >Sep 28</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-27.html"
+                >Sep 27</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-26.html"
+                >Sep 26</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-25.html"
+                >Sep 25</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-24.html"
+                >Sep 24</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-23.html"
+                >Sep 23</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-22.html"
+                >Sep 22</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-21.html"
+                >Sep 21</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-20.html"
+                >Sep 20</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-19.html"
+                >Sep 19</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-18.html"
+                >Sep 18</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-17.html"
+                >Sep 17</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-16.html"
+                >Sep 16</a
+              >
+            </li>
+          </ul>
+        </details>
+      </nav>
+    </main>
+
+    <footer>
+      <p>
+        Curated automatically from 3 sources. No trackers, no ads.
+      </p>
+      <p class="generated">Generated 2026-11-03.</p>
+      <p class="ai-daily-link">
+        <a href="../../index.html">Also: the weekly Top-7 digest</a>
+      </p>
+    </footer>
+  </body>
+</html>

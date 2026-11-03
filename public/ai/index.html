@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LastWeekIn.Tech — AI Daily</title>
-    <meta name="description" content="The 5 AI developments that mattered on 2026-11-02, with analysis and what to watch next." />
+    <meta name="description" content="The 4 AI developments that mattered on 2026-11-03, with analysis and what to watch next." />
     <meta name="color-scheme" content="light dark" />
     <meta property="og:site_name" content="LastWeekIn.Tech — AI Daily" />
     <meta property="og:title" content="LastWeekIn.Tech — AI Daily" />
-    <meta property="og:description" content="The 5 AI developments that mattered on 2026-11-02, with analysis and what to watch next." />
+    <meta property="og:description" content="The 4 AI developments that mattered on 2026-11-03, with analysis and what to watch next." />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="canonical" href="https://lastweekin.tech/ai/" />
@@ -49,16 +49,16 @@
         >
       </p>
       <div class="dateline" role="presentation">
-        <span class="dateline-item">The 5 AI stories that mattered</span>
+        <span class="dateline-item">The 4 AI stories that mattered</span>
         <span class="dateline-item"
           >Briefing for
-          <time datetime="2026-11-02">Nov 2, 2026</time></span
+          <time datetime="2026-11-03">Nov 3, 2026</time></span
         >
       </div>
     </header>
 
     <main>
-      <p class="standfirst">Today&#39;s AI news centers on mounting economic strain in the AI boom—from stalled corporate ROI and inference-cost rationing to a provocative claim about AI accelerating its own R&amp;D—alongside notable enterprise deployment news and a severe unpatched Linux vulnerability tied to AI-assisted exploit development.</p>
+      <p class="standfirst">A mostly chip/market and AI-safety focused news cycle: a wild claim about frontier models directly editing neural network weights grabbed attention, while Intel&#39;s stock rout deepened amid broader chip-sector jitters, AI lab insiders voiced safety concerns, and OpenAI tried a PR rebrand to soften data center backlash.</p>
 
       <ol class="story-list" id="stories">
         <li class="story-card lead-story">
@@ -66,20 +66,20 @@
           <div class="story-content">
             <p class="story-meta">
               <span class="visually-hidden">Number 1. </span>
-              <span class="story-category category-industry-economics">Industry &amp; Economics</span>
+              <span class="story-category category-capabilities">Capabilities</span>
               <span class="story-source">Hacker News</span>
             </p>
             <h2 class="story-title">
-              <a href="https://techcrunch.com/2026/10/25/ai-delivers-zero-financial-payoff-to-most-companies-according-to-apollo-economist/" target="_blank" rel="noopener noreferrer"
-                >AI delivers &#39;zero financial payoff&#39; to most companies, Apollo economist says</a
+              <a href="https://rikiyat.github.io/blog/weight-space-programming/" target="_blank" rel="noopener noreferrer"
+                >Astra can read and write weights to improve Qwen</a
               >
             </h2>
-            <p class="story-summary">Apollo Global Management&#39;s chief economist Torsten Slok published a note finding that AI has delivered no measurable financial benefit to the &#39;S&amp;P 493&#39; (S&amp;P 500 minus the seven largest tech giants). The analysis found profit margins and revenue per worker flat across most industries despite massive AI investment and hype.</p>
+            <p class="story-summary">Reports describe a frontier model (&#39;Astra&#39;) directly reading and writing another neural network&#39;s weights, identifying a network&#39;s training objective purely from its weights, and writing small game-playing networks from scratch that reportedly outplay networks trained with PPO for 100 million steps. In a related test, the system edited Qwen3.5-0.8B&#39;s weights without gradient-based training or environment feedback, pushing its MATH-500 score from 7.9% to 48.1%.</p>
             <p class="story-case">
-              <span class="story-case-label">Why it matters</span> This is one of the starkest data-driven challenges yet to the narrative that AI is already transforming corporate productivity broadly. If capex and hype aren&#39;t translating into bottom-line gains outside Big Tech, it strengthens the case that current AI valuations and spending are running ahead of realized returns, fueling the ongoing market anxiety over an AI bubble.
+              <span class="story-case-label">Why it matters</span> If these results hold up under scrutiny, they suggest a new paradigm where models can optimize and interpret other models&#39; internals directly, potentially bypassing costly reinforcement learning loops and offering new interpretability tools. This blurs the line between &#39;model&#39; and &#39;optimizer,&#39; with implications for both faster model improvement cycles and new attack surfaces if weight-editing capabilities are misused.
             </p>
             <p class="story-case">
-              <span class="story-case-label">What to watch</span> Watch for Q4 earnings calls where non-tech companies quantify (or fail to quantify) AI ROI, and for further economist notes stress-testing the AI capex cycle.
+              <span class="story-case-label">What to watch</span> Watch for independent replication of these results, detailed methodology disclosure, and whether the approach scales beyond small networks like Qwen3.5-0.8B.
             </p>
           </div>
         </li>
@@ -89,19 +89,19 @@
             <p class="story-meta">
               <span class="visually-hidden">Number 2. </span>
               <span class="story-category category-infrastructure-chips">Infrastructure &amp; Chips</span>
-              <span class="story-source">finance.yahoo.com</span>
+              <span class="story-source">Hacker News</span>
             </p>
             <h2 class="story-title">
-              <a href="https://finance.yahoo.com/news/ai-firms-ration-usage-losses-132113377.html" target="_blank" rel="noopener noreferrer"
-                >AI firms ration usage as inference costs and debt pressures mount</a
+              <a href="https://finance.yahoo.com/markets/article/the-intel-stock-collapse-is-getting-worse--and-the-37-trillion-chip-rout-is-spreading-212154947.html" target="_blank" rel="noopener noreferrer"
+                >Intel stock collapse worsens as $3.5T chip rout spreads</a
               >
             </h2>
-            <p class="story-summary">SpaceX and OpenAI are both rationing usage of their AI systems due to soaring inference costs. Elon Musk said Grok&#39;s revenues don&#39;t cover its &#39;unsustainably high&#39; operating costs, while OpenAI introduced usage restrictions amid broader stock market panic over AI infrastructure debt.</p>
+            <p class="story-summary">Intel&#39;s stock fell roughly 9% Monday, compounding a nearly 29% drop from the prior week that was its worst single day since 1974, leaving the company worth less than half its end-September value. Chip stocks broadly shed more than $400 billion in market value in a single session even as most of the S&amp;P 500 rose, part of a wider rout that has wiped out $3.5 trillion in chip-sector value.</p>
             <p class="story-case">
-              <span class="story-case-label">Why it matters</span> Direct admissions from major AI labs that they cannot sustainably serve current demand at current cost structures is a significant signal that the economics of frontier AI inference remain broken even for well-funded players. This reinforces investor concerns about debt-fueled AI infrastructure buildout and could accelerate price increases, feature throttling, or consolidation across the industry.
+              <span class="story-case-label">Why it matters</span> The selloff signals deepening investor anxiety about whether chip demand and AI infrastructure spending can be sustained at current levels, particularly after disappointing forecasts from a bellwether like Intel. Given how central chip supply is to the AI buildout narrative, continued volatility here could tighten financing conditions for data center and compute expansion across the industry.
             </p>
             <p class="story-case">
-              <span class="story-case-label">What to watch</span> Watch for official pricing changes, tiered access rollouts, or capacity-driven outages at OpenAI and xAI, and for how competitors respond on pricing.
+              <span class="story-case-label">What to watch</span> Watch upcoming earnings and guidance from other major chipmakers, and whether the rout stabilizes or spreads further into AI-adjacent equities.
             </p>
           </div>
         </li>
@@ -110,20 +110,20 @@
           <div class="story-content">
             <p class="story-meta">
               <span class="visually-hidden">Number 3. </span>
-              <span class="story-category category-capabilities">Capabilities</span>
-              <span class="story-source">news.sbs.co.kr</span>
+              <span class="story-category category-security-safety">Security &amp; Safety</span>
+              <span class="story-source">thedailystar.net</span>
             </p>
             <h2 class="story-title">
-              <a href="http://news.sbs.co.kr/english/article.do?news_id=N1008826216" target="_blank" rel="noopener noreferrer"
-                >AI-driven R&amp;D reportedly reaches 26% of Anthropic’s next-generation model work</a
+              <a href="https://www.thedailystar.net/news/technology/news/researchers-say-ai-labs-should-pause-rather-race-4286801" target="_blank" rel="noopener noreferrer"
+                >Former and current OpenAI and Google DeepMind staff call for slower AI development</a
               >
             </h2>
-            <p class="story-summary">A Wall Street Journal columnist reported that AI-driven R&amp;D now accounts for roughly 26% of Anthropic&#39;s work on next-generation models, citing this as evidence of recursive self-improvement (RSI) progressing faster than expected. Industry leaders reportedly view this as a pivotal shift for the AI industry and broader economy.</p>
+            <p class="story-summary">Current and former staff at OpenAI and Google DeepMind have recorded video testimonials through a project called frominside.ai, organized by AI safety nonprofit Palisade Research, warning that their employers are doing too little to guard against risks from self-improving AI systems that could slip beyond human control. Some participants said their concerns reflect genuine worry rather than a marketing stance.</p>
             <p class="story-case">
-              <span class="story-case-label">Why it matters</span> If accurate, a quarter of frontier model development work being AI-assisted or AI-driven marks a meaningful inflection point toward self-accelerating AI research cycles, a scenario safety researchers have long flagged as both a capability milestone and a risk amplifier. This could compress development timelines for increasingly capable models while raising new oversight and alignment challenges.
+              <span class="story-case-label">Why it matters</span> Insider dissent from employees at two of the most prominent frontier labs lends credibility to external safety critiques and suggests growing internal friction between research staff and leadership over the pace of AI development. This kind of public testimony could increase pressure on labs and regulators to slow deployment timelines or strengthen safety testing requirements.
             </p>
             <p class="story-case">
-              <span class="story-case-label">What to watch</span> Watch for Anthropic or other labs to disclose more specifics on their internal AI-assisted research pipelines, and for safety researchers&#39; responses to RSI acceleration claims.
+              <span class="story-case-label">What to watch</span> Watch for official responses from OpenAI and DeepMind, and whether additional insiders join the campaign, which could escalate into a broader governance or policy flashpoint.
             </p>
           </div>
         </li>
@@ -133,41 +133,19 @@
             <p class="story-meta">
               <span class="visually-hidden">Number 4. </span>
               <span class="story-category category-companies">Companies</span>
-              <span class="story-source">aiweekly.co</span>
+              <span class="story-source">The Verge</span>
             </p>
             <h2 class="story-title">
-              <a href="https://aiweekly.co/issues/ai-week-ahead-data-center-pause-backers-could-win-15" target="_blank" rel="noopener noreferrer"
-                >OpenAI signs four Abu Dhabi agreements, including government and energy deployments</a
+              <a href="https://www.theverge.com/ai-artificial-intelligence/1025242/openai-quietly-renames-data-centers-as-compute-campuses" target="_blank" rel="noopener noreferrer"
+                >OpenAI Might Rebrand Its Data Centers As &#39;AI Compute Campuses&#39;</a
               >
             </h2>
-            <p class="story-summary">OpenAI signed four agreements in Abu Dhabi, including deployments with government entities and energy company ADNOC, which is reported to be the first energy company to deploy OpenAI&#39;s Frontier agent platform. The deals come as part of a broader week of OpenAI&#39;s push into Gulf infrastructure and government partnerships.</p>
+            <p class="story-summary">OpenAI is reportedly rebranding its data centers as &#39;AI compute campuses&#39; as political opposition to data center construction grows on both sides of the aisle. Critics argue the renaming does nothing to address underlying community concerns about noise, resource consumption, and environmental impact.</p>
             <p class="story-case">
-              <span class="story-case-label">Why it matters</span> This signals OpenAI&#39;s deepening strategy of embedding its agent platforms directly into sovereign and industrial infrastructure in energy-rich Gulf states, following the UAE&#39;s broader AI ambitions. It also reflects a shift toward AI vendors courting capital-rich government and energy partners as a hedge against commercial market volatility and compute-cost pressures at home.
+              <span class="story-case-label">Why it matters</span> As AI infrastructure buildout accelerates into more communities, political and local backlash is becoming a material risk to frontier labs&#39; expansion plans and timelines. The rebranding effort shows that infrastructure politics are now a strategic concern for companies like OpenAI, intersecting with broader industry anxiety over AI capex sustainability.
             </p>
             <p class="story-case">
-              <span class="story-case-label">What to watch</span> Watch for details on ADNOC&#39;s specific use cases for the Frontier platform and whether other energy majors follow with similar enterprise AI agent deployments.
-            </p>
-          </div>
-        </li>
-        <li class="story-card">
-          <p class="story-rank" aria-hidden="true">5</p>
-          <div class="story-content">
-            <p class="story-meta">
-              <span class="visually-hidden">Number 5. </span>
-              <span class="story-category category-security-safety">Security &amp; Safety</span>
-              <span class="story-source">Hacker News</span>
-            </p>
-            <h2 class="story-title">
-              <a href="https://chalmovsky.com/posts/wtf-ubuntu" target="_blank" rel="noopener noreferrer"
-                >WTF Ubuntu?</a
-              >
-            </h2>
-            <p class="story-summary">A critical Linux kernel TCP vulnerability (CVE-2026-98432, CVSS 9.8) present since 2016 remains unpatched in all supported Ubuntu releases, including LTS versions, more than two weeks after Debian patched it. Anthropic reportedly built a working exploit demonstrating full remote root takeover.</p>
-            <p class="story-case">
-              <span class="story-case-label">Why it matters</span> A remotely exploitable, decade-old critical flaw left unpatched across every supported Ubuntu release—while an AI lab has already weaponized it into a working exploit—illustrates both the severity of long-tail kernel vulnerabilities and the dual-use risk of AI-accelerated exploit development outpacing patch distribution. It raises urgent questions about vendor patch SLAs for critical infrastructure software.
-            </p>
-            <p class="story-case">
-              <span class="story-case-label">What to watch</span> Watch for Canonical&#39;s official patch timeline and whether details of Anthropic&#39;s exploit methodology become public, intensifying pressure for faster disclosure-to-patch cycles.
+              <span class="story-case-label">What to watch</span> Watch for whether OpenAI pairs the rebrand with substantive community engagement or policy concessions, and whether other hyperscalers adopt similar messaging strategies for their own data center projects.
             </p>
           </div>
         </li>
@@ -187,10 +165,15 @@
           <summary>
             <span class="archive-year-label">2026</span>
             <span class="archive-count"
-              >47 briefings</span
+              >48 briefings</span
             >
           </summary>
           <ul>
+            <li>
+              <a href="archive/2026-11-02.html"
+                >Nov 2</a
+              >
+            </li>
             <li>
               <a href="archive/2026-11-01.html"
                 >Nov 1</a
@@ -433,9 +416,9 @@
 
     <footer>
       <p>
-        Curated automatically from 4 sources. No trackers, no ads.
+        Curated automatically from 3 sources. No trackers, no ads.
       </p>
-      <p class="generated">Generated 2026-11-02.</p>
+      <p class="generated">Generated 2026-11-03.</p>
       <p class="ai-daily-link">
         <a href="../index.html">Also: the weekly Top-7 digest</a>
       </p>
