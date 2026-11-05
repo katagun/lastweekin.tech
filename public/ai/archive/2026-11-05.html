@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LastWeekIn.Tech — AI Daily, 2026-11-05</title>
+    <meta name="description" content="The 5 AI developments that mattered on 2026-11-05, with analysis and what to watch next." />
+    <meta name="color-scheme" content="light dark" />
+    <meta property="og:site_name" content="LastWeekIn.Tech — AI Daily" />
+    <meta property="og:title" content="LastWeekIn.Tech — AI Daily, 2026-11-05" />
+    <meta property="og:description" content="The 5 AI developments that mattered on 2026-11-05, with analysis and what to watch next." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://lastweekin.tech/ai/archive/2026-11-05.html" />
+    <meta property="og:url" content="https://lastweekin.tech/ai/archive/2026-11-05.html" />
+    <meta property="og:image" content="https://lastweekin.tech/ai/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="LastWeekIn.Tech AI Daily — the AI stories that mattered today"
+    />
+    <meta name="twitter:image" content="https://lastweekin.tech/ai/og.png" />
+    <link
+      rel="alternate"
+      type="application/atom+xml"
+      title="LastWeekIn.Tech AI Daily"
+      href="../feed.xml"
+    />
+    <link rel="stylesheet" href="../style.css" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22><text y=%2214%22 font-size=%2214%22>7</text></svg>"
+    />
+  </head>
+  <body>
+    <a class="skip-link" href="#stories">Skip to the stories</a>
+
+    <header class="site-header">
+      <p class="masthead-note">Published daily &middot; AI only &middot; No trackers, no ads</p>
+      <h1 class="site-title">
+        <a class="wordmark" href="../index.html"
+          >LastWeekIn<span class="dot">.</span>Tech</a
+        >
+      </h1>
+      <p class="section-suffix">
+        <a class="section-link" href="../../index.html"
+          ><span class="section-divider">/</span> Weekly Digest</a
+        >
+      </p>
+      <div class="dateline" role="presentation">
+        <span class="dateline-item">The 5 AI stories that mattered</span>
+        <span class="dateline-item"
+          >Briefing for
+          <time datetime="2026-11-05">Nov 5, 2026</time></span
+        >
+      </div>
+      <p class="archive-note">
+        An archived briefing. <a href="../index.html">See today&rsquo;s briefing.</a>
+      </p>
+    </header>
+
+    <main>
+      <p class="standfirst">A quiet capabilities day is dominated by fallout from the US midterms&#39; anti-data-center backlash, fresh open-weight model drops, and geopolitical friction over chip access, alongside new safety research into verifying AI model identity.</p>
+
+      <ol class="story-list" id="stories">
+        <li class="story-card lead-story">
+          <p class="story-rank" aria-hidden="true">1</p>
+          <div class="story-content">
+            <p class="story-meta">
+              <span class="visually-hidden">Number 1. </span>
+              <span class="story-category category-policy-regulation">Policy &amp; Regulation</span>
+              <span class="story-source">Hacker News</span>
+            </p>
+            <h2 class="story-title">
+              <a href="https://www.404media.co/american-voters-overwhelmingly-reject-ai-data-centers/" target="_blank" rel="noopener noreferrer"
+                >American Voters Overwhelmingly Reject AI Data Centers</a
+              >
+            </h2>
+            <p class="story-summary">In Tuesday&#39;s US midterm elections, data centers appeared as the subject of 45 local ballot measures across 10 states, with at least 33 measures to restrict their construction passing and six more projected to pass. Only one municipality, the City of Hamilton, Ohio, rejected restrictions, making the vote an overwhelming rebuke of the AI infrastructure buildout even in traditionally pro-growth areas.</p>
+            <p class="story-case">
+              <span class="story-case-label">Why it matters</span> This is the first broad electoral signal that local communities are willing to organize and vote against the physical infrastructure underpinning the AI boom, despite heavy spending by pro-AI super PACs. With hyperscalers racing to secure power and land for gigawatt-scale campuses, sustained local political resistance could slow timelines, raise siting costs, and push developers toward less contested jurisdictions or overseas sites.
+            </p>
+            <p class="story-case">
+              <span class="story-case-label">What to watch</span> Watch whether similar ballot measures spread to more states in 2026 and how OpenAI, Google, Meta and Amazon adjust site-selection and community engagement strategies in response.
+            </p>
+          </div>
+        </li>
+        <li class="story-card">
+          <p class="story-rank" aria-hidden="true">2</p>
+          <div class="story-content">
+            <p class="story-meta">
+              <span class="visually-hidden">Number 2. </span>
+              <span class="story-category category-open-source">Open Source</span>
+              <span class="story-source">Hacker News</span>
+            </p>
+            <h2 class="story-title">
+              <a href="https://huggingface.co/moonshotai/Kimi-K3.1-Pro" target="_blank" rel="noopener noreferrer"
+                >Kimi K3.1 Pro model weights are out</a
+              >
+            </h2>
+            <p class="story-summary">Moonshot AI released model weights for Kimi K3.1 Pro, publishing instructions for using it via Hugging Face Transformers and other inference libraries. The model card includes multimodal (image-text-to-text) pipeline support and is available for immediate local and API deployment.</p>
+            <p class="story-case">
+              <span class="story-case-label">Why it matters</span> Open-weight releases from well-funded Chinese labs continue to narrow the gap with closed frontier models, giving developers and enterprises another high-capability alternative to run on their own infrastructure without vendor lock-in. It also intensifies competitive pressure on OpenAI, Anthropic and Google to justify premium pricing for closed models.
+            </p>
+            <p class="story-case">
+              <span class="story-case-label">What to watch</span> Watch independent benchmarks comparing K3.1 Pro against other open-weight contenders like Ripple-65B and DeepSeek, and whether Moonshot follows with more capable successors.
+            </p>
+          </div>
+        </li>
+        <li class="story-card">
+          <p class="story-rank" aria-hidden="true">3</p>
+          <div class="story-content">
+            <p class="story-meta">
+              <span class="visually-hidden">Number 3. </span>
+              <span class="story-category category-infrastructure-chips">Infrastructure &amp; Chips</span>
+              <span class="story-source">luongnv.com</span>
+            </p>
+            <h2 class="story-title">
+              <a href="https://luongnv.com/news/reports/2026-11-04-afternoon.html" target="_blank" rel="noopener noreferrer"
+                >Oracle cancels a chip lease with Tencent after US objections</a
+              >
+            </h2>
+            <p class="story-summary">Oracle canceled a chip lease agreement with Tencent after objections from the US government, according to the Financial Times. The cancellation came the same day Tencent released its Hy4 open-weight model.</p>
+            <p class="story-case">
+              <span class="story-case-label">Why it matters</span> This shows Washington actively using leverage over US cloud and chip suppliers to block Chinese AI firms&#39; access to compute, extending export-control-style pressure beyond direct chip sales into cloud leasing arrangements. It signals that even indirect compute access routes for Chinese AI labs are now under scrutiny, raising the stakes for global AI supply chain decoupling.
+            </p>
+            <p class="story-case">
+              <span class="story-case-label">What to watch</span> Watch for retaliatory Chinese measures or further US restrictions targeting cloud providers that lease AI compute to Chinese customers.
+            </p>
+          </div>
+        </li>
+        <li class="story-card">
+          <p class="story-rank" aria-hidden="true">4</p>
+          <div class="story-content">
+            <p class="story-meta">
+              <span class="visually-hidden">Number 4. </span>
+              <span class="story-category category-security-safety">Security &amp; Safety</span>
+              <span class="story-source">Hacker News</span>
+            </p>
+            <h2 class="story-title">
+              <a href="https://www.anthropic.com/research/provable-inference" target="_blank" rel="noopener noreferrer"
+                >Progress on provable inference for large language models</a
+              >
+            </h2>
+            <p class="story-summary">Researchers from Anthropic, EPFL, MIT, StarkWare and other institutions published work on provable inference, a cryptographic approach letting users verify that an AI response genuinely came from the specific model a developer claims served it. The paper frames this as addressing a core trust gap: unlike in-person conversation, users currently have no way to confirm a model&#39;s identity when querying AI systems.</p>
+            <p class="story-case">
+              <span class="story-case-label">Why it matters</span> As AI-generated content and model outputs proliferate, cryptographic verification of model provenance could become essential infrastructure for accountability, auditing, and combating fraud or impersonation of AI systems. This is foundational safety research that could eventually underpin regulatory compliance and enterprise trust frameworks for AI deployments.
+            </p>
+            <p class="story-case">
+              <span class="story-case-label">What to watch</span> Watch whether this research translates into deployable verification protocols adopted by major labs or standards bodies.
+            </p>
+          </div>
+        </li>
+        <li class="story-card">
+          <p class="story-rank" aria-hidden="true">5</p>
+          <div class="story-content">
+            <p class="story-meta">
+              <span class="visually-hidden">Number 5. </span>
+              <span class="story-category category-companies">Companies</span>
+              <span class="story-source">Hacker News</span>
+            </p>
+            <h2 class="story-title">
+              <a href="https://openai.com/index/openai-to-acquire-pierre/" target="_blank" rel="noopener noreferrer"
+                >OpenAI to acquire Pierre Computer Company</a
+              >
+            </h2>
+            <p class="story-summary">OpenAI announced its acquisition of developer tools startup Pierre Computer Company to strengthen Codex, its coding assistant. Pierre had been building specialized code analysis and review tools that complement Codex&#39;s existing code-generation capabilities; financial terms were not disclosed.</p>
+            <p class="story-case">
+              <span class="story-case-label">Why it matters</span> The acquisition signals OpenAI&#39;s aggressive expansion into developer tooling beyond raw code generation, aiming to own more of the software development lifecycle from writing to review. This intensifies competition with GitHub Copilot, Cursor, and other coding-assistant players as AI companies race to lock in developer workflows.
+            </p>
+            <p class="story-case">
+              <span class="story-case-label">What to watch</span> Watch for how quickly Pierre&#39;s code review capabilities get integrated into Codex and whether OpenAI pursues further tooling acquisitions to build out a fuller developer platform.
+            </p>
+          </div>
+        </li>
+      </ol>
+
+      <section class="subscribe" aria-labelledby="subscribe-heading">
+        <h2 id="subscribe-heading">Get it every day</h2>
+        <p>
+          A short AI briefing, every day.
+          <a href="../feed.xml">Subscribe with RSS</a> — no email address, no tracking.
+        </p>
+      </section>
+
+      <nav class="archive" aria-labelledby="archive-heading">
+        <h2 id="archive-heading">Past briefings</h2>
+        <details class="archive-year" open>
+          <summary>
+            <span class="archive-year-label">2026</span>
+            <span class="archive-count"
+              >50 briefings</span
+            >
+          </summary>
+          <ul>
+            <li>
+              <a href="../archive/2026-11-04.html"
+                >Nov 4</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-11-03.html"
+                >Nov 3</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-11-02.html"
+                >Nov 2</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-11-01.html"
+                >Nov 1</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-31.html"
+                >Oct 31</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-30.html"
+                >Oct 30</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-29.html"
+                >Oct 29</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-28.html"
+                >Oct 28</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-27.html"
+                >Oct 27</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-26.html"
+                >Oct 26</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-25.html"
+                >Oct 25</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-24.html"
+                >Oct 24</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-23.html"
+                >Oct 23</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-22.html"
+                >Oct 22</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-21.html"
+                >Oct 21</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-20.html"
+                >Oct 20</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-19.html"
+                >Oct 19</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-18.html"
+                >Oct 18</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-17.html"
+                >Oct 17</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-16.html"
+                >Oct 16</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-15.html"
+                >Oct 15</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-14.html"
+                >Oct 14</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-13.html"
+                >Oct 13</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-12.html"
+                >Oct 12</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-11.html"
+                >Oct 11</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-10.html"
+                >Oct 10</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-09.html"
+                >Oct 9</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-08.html"
+                >Oct 8</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-07.html"
+                >Oct 7</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-06.html"
+                >Oct 6</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-05.html"
+                >Oct 5</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-04.html"
+                >Oct 4</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-03.html"
+                >Oct 3</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-02.html"
+                >Oct 2</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-01.html"
+                >Oct 1</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-30.html"
+                >Sep 30</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-29.html"
+                >Sep 29</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-28.html"
+                >Sep 28</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-27.html"
+                >Sep 27</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-26.html"
+                >Sep 26</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-25.html"
+                >Sep 25</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-24.html"
+                >Sep 24</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-23.html"
+                >Sep 23</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-22.html"
+                >Sep 22</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-21.html"
+                >Sep 21</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-20.html"
+                >Sep 20</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-19.html"
+                >Sep 19</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-18.html"
+                >Sep 18</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-17.html"
+                >Sep 17</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-16.html"
+                >Sep 16</a
+              >
+            </li>
+          </ul>
+        </details>
+      </nav>
+    </main>
+
+    <footer>
+      <p>
+        Curated automatically from 2 sources. No trackers, no ads.
+      </p>
+      <p class="generated">Generated 2026-11-05.</p>
+      <p class="ai-daily-link">
+        <a href="../../index.html">Also: the weekly Top-7 digest</a>
+      </p>
+    </footer>
+  </body>
+</html>
