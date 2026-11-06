@@ -1,94 +1,92 @@
 {
-  "date": "2026-11-05",
-  "generated_at": "2026-11-05T15:15:06.092824+00:00",
-  "intro": "A quiet capabilities day is dominated by fallout from the US midterms' anti-data-center backlash, fresh open-weight model drops, and geopolitical friction over chip access, alongside new safety research into verifying AI model identity.",
+  "date": "2026-11-06",
+  "generated_at": "2026-11-06T15:11:29.902294+00:00",
+  "intro": "AI news today centers on safety and trust failures at major platforms, a sharp market retreat from the AI trade, and incremental model releases from Google and a lesser-known lab.",
   "stories": [
     {
       "rank": 1,
-      "title": "American Voters Overwhelmingly Reject AI Data Centers",
+      "title": "Claude Code sends your email address to websites",
       "source": "Hacker News",
       "sources": [
-        "Engadget",
         "Hacker News"
       ],
-      "source_count": 2,
-      "url": "https://www.404media.co/american-voters-overwhelmingly-reject-ai-data-centers/",
-      "theme": "Policy & Regulation",
-      "hn_points": 57,
-      "score": 4.345,
-      "what_happened": "In Tuesday's US midterm elections, data centers appeared as the subject of 45 local ballot measures across 10 states, with at least 33 measures to restrict their construction passing and six more projected to pass. Only one municipality, the City of Hamilton, Ohio, rejected restrictions, making the vote an overwhelming rebuke of the AI infrastructure buildout even in traditionally pro-growth areas.",
-      "why_it_matters": "This is the first broad electoral signal that local communities are willing to organize and vote against the physical infrastructure underpinning the AI boom, despite heavy spending by pro-AI super PACs. With hyperscalers racing to secure power and land for gigawatt-scale campuses, sustained local political resistance could slow timelines, raise siting costs, and push developers toward less contested jurisdictions or overseas sites.",
-      "watch_next": "Watch whether similar ballot measures spread to more states in 2026 and how OpenAI, Google, Meta and Amazon adjust site-selection and community engagement strategies in response.",
-      "summary": "In Tuesday's US midterm elections, data centers appeared as the subject of 45 local ballot measures across 10 states, with at least 33 measures to restrict their construction passing and six more projected to pass. Only one municipality, the City of Hamilton, Ohio, rejected restrictions, making the vote an overwhelming rebuke of the AI infrastructure buildout even in traditionally pro-growth areas."
+      "source_count": 1,
+      "url": "https://github.com/anthropics/claude-code/issues/107757",
+      "theme": "Security & Safety",
+      "hn_points": 1382,
+      "score": 5.296,
+      "what_happened": "A widely upvoted GitHub bug report reveals that Anthropic's Claude Code agent was sending users' email addresses to arbitrary third-party websites via the User-Agent header during web searches, without explicit permission. The reporter says this behavior generated spam and scam emails and was not clearly disclosed as an opt-in/opt-out setting. The issue reportedly pushed at least one user to migrate away from Claude Code to alternative tooling.",
+      "why_it_matters": "As coding agents gain more autonomous web-browsing capability, silent data leakage through request metadata becomes a systemic privacy risk rather than an edge case. This incident highlights how agentic AI tools can expose personal identifiers to unknown third parties while performing routine tasks, undermining trust in AI coding assistants at a moment when enterprises are rapidly adopting them for sensitive workflows.",
+      "watch_next": "Watch for Anthropic's official response and whether other agentic coding tools (Cursor, Copilot, OpenRouter-based agents) are audited for similar header-leakage issues.",
+      "summary": "A widely upvoted GitHub bug report reveals that Anthropic's Claude Code agent was sending users' email addresses to arbitrary third-party websites via the User-Agent header during web searches, without explicit permission. The reporter says this behavior generated spam and scam emails and was not clearly disclosed as an opt-in/opt-out setting. The issue reportedly pushed at least one user to migrate away from Claude Code to alternative tooling."
     },
     {
       "rank": 2,
-      "title": "Kimi K3.1 Pro model weights are out",
+      "title": "Cuban: Facebook knowingly runs AI deepfake scam ads; docs say $16B fraud revenue",
       "source": "Hacker News",
       "sources": [
         "Hacker News"
       ],
       "source_count": 1,
-      "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
-      "theme": "Open Source",
-      "hn_points": 592,
-      "score": 5.011,
-      "what_happened": "Moonshot AI released model weights for Kimi K3.1 Pro, publishing instructions for using it via Hugging Face Transformers and other inference libraries. The model card includes multimodal (image-text-to-text) pipeline support and is available for immediate local and API deployment.",
-      "why_it_matters": "Open-weight releases from well-funded Chinese labs continue to narrow the gap with closed frontier models, giving developers and enterprises another high-capability alternative to run on their own infrastructure without vendor lock-in. It also intensifies competitive pressure on OpenAI, Anthropic and Google to justify premium pricing for closed models.",
-      "watch_next": "Watch independent benchmarks comparing K3.1 Pro against other open-weight contenders like Ripple-65B and DeepSeek, and whether Moonshot follows with more capable successors.",
-      "summary": "Moonshot AI released model weights for Kimi K3.1 Pro, publishing instructions for using it via Hugging Face Transformers and other inference libraries. The model card includes multimodal (image-text-to-text) pipeline support and is available for immediate local and API deployment."
+      "url": "https://finance.yahoo.com/technology/ai/articles/mark-cuban-says-facebook-knowingly-213000020.html",
+      "theme": "Companies",
+      "hn_points": 451,
+      "score": 5.332,
+      "what_happened": "Mark Cuban alleges that Meta/Facebook has knowingly run AI-generated deepfake scam ads, citing internal documents suggesting the company earns roughly $16 billion in revenue tied to fraudulent advertising. Cuban describes receiving constant emails from victims who were deceived by fake endorsement ads, including a fabricated '$294 diabetes cure' falsely attributed to him.",
+      "why_it_matters": "The allegation implicates one of the world's largest ad platforms in deliberately monetizing AI-generated fraud at scale, raising the stakes for platform liability as generative AI makes deepfake scam ads cheaper and more convincing to produce. If substantiated, this could trigger regulatory scrutiny and advertiser backlash similar to past content-moderation controversies, and adds pressure on Meta amid broader AI-trust concerns.",
+      "watch_next": "Watch for Meta's formal response, any FTC or congressional inquiry, and whether other celebrities or regulators push for mandatory ad-verification systems targeting AI-generated content.",
+      "summary": "Mark Cuban alleges that Meta/Facebook has knowingly run AI-generated deepfake scam ads, citing internal documents suggesting the company earns roughly $16 billion in revenue tied to fraudulent advertising. Cuban describes receiving constant emails from victims who were deceived by fake endorsement ads, including a fabricated '$294 diabetes cure' falsely attributed to him."
     },
     {
       "rank": 3,
-      "title": "Oracle cancels a chip lease with Tencent after US objections",
-      "source": "luongnv.com",
-      "sources": [
-        "luongnv.com"
-      ],
-      "source_count": 1,
-      "url": "https://luongnv.com/news/reports/2026-11-04-afternoon.html",
-      "theme": "Infrastructure & Chips",
-      "hn_points": null,
-      "score": 4,
-      "what_happened": "Oracle canceled a chip lease agreement with Tencent after objections from the US government, according to the Financial Times. The cancellation came the same day Tencent released its Hy4 open-weight model.",
-      "why_it_matters": "This shows Washington actively using leverage over US cloud and chip suppliers to block Chinese AI firms' access to compute, extending export-control-style pressure beyond direct chip sales into cloud leasing arrangements. It signals that even indirect compute access routes for Chinese AI labs are now under scrutiny, raising the stakes for global AI supply chain decoupling.",
-      "watch_next": "Watch for retaliatory Chinese measures or further US restrictions targeting cloud providers that lease AI compute to Chinese customers.",
-      "summary": "Oracle canceled a chip lease agreement with Tencent after objections from the US government, according to the Financial Times. The cancellation came the same day Tencent released its Hy4 open-weight model."
-    },
-    {
-      "rank": 4,
-      "title": "Progress on provable inference for large language models",
+      "title": "Nasdaq plummets 4% into correction territory",
       "source": "Hacker News",
       "sources": [
         "Hacker News"
       ],
       "source_count": 1,
-      "url": "https://www.anthropic.com/research/provable-inference",
-      "theme": "Security & Safety",
-      "hn_points": 234,
-      "score": 3.985,
-      "what_happened": "Researchers from Anthropic, EPFL, MIT, StarkWare and other institutions published work on provable inference, a cryptographic approach letting users verify that an AI response genuinely came from the specific model a developer claims served it. The paper frames this as addressing a core trust gap: unlike in-person conversation, users currently have no way to confirm a model's identity when querying AI systems.",
-      "why_it_matters": "As AI-generated content and model outputs proliferate, cryptographic verification of model provenance could become essential infrastructure for accountability, auditing, and combating fraud or impersonation of AI systems. This is foundational safety research that could eventually underpin regulatory compliance and enterprise trust frameworks for AI deployments.",
-      "watch_next": "Watch whether this research translates into deployable verification protocols adopted by major labs or standards bodies.",
-      "summary": "Researchers from Anthropic, EPFL, MIT, StarkWare and other institutions published work on provable inference, a cryptographic approach letting users verify that an AI response genuinely came from the specific model a developer claims served it. The paper frames this as addressing a core trust gap: unlike in-person conversation, users currently have no way to confirm a model's identity when querying AI systems."
+      "url": "https://www.cnbc.com/2026/11/04/stock-market-today-live-updates.html",
+      "theme": "Industry & Economics",
+      "hn_points": 222,
+      "score": 3.783,
+      "what_happened": "The Nasdaq fell 5.52% to 24,315, sliding into correction territory as the S&P 500 dropped 4.36% and the Dow lost over 1,800 points. The selloff reversed post-midterm election gains and was driven by investor fears of a slowdown in AI-related data-center buildout spending.",
+      "why_it_matters": "This is a direct market signal that confidence in the AI capex supercycle is cracking, with investors reassessing the sustainability of massive infrastructure spending by hyperscalers and chipmakers. Given how concentrated major indices have become in AI-linked stocks, continued volatility could tighten capital availability for AI infrastructure projects and pressure valuations across the sector.",
+      "watch_next": "Watch upcoming earnings and capex guidance from major cloud and chip companies, and whether the selloff triggers broader reconsideration of AI infrastructure financing commitments.",
+      "summary": "The Nasdaq fell 5.52% to 24,315, sliding into correction territory as the S&P 500 dropped 4.36% and the Dow lost over 1,800 points. The selloff reversed post-midterm election gains and was driven by investor fears of a slowdown in AI-related data-center buildout spending."
+    },
+    {
+      "rank": 4,
+      "title": "Gemini Omni 1.2 Flash",
+      "source": "Hacker News",
+      "sources": [
+        "Hacker News"
+      ],
+      "source_count": 1,
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/",
+      "theme": "Capabilities",
+      "hn_points": 103,
+      "score": 2.65,
+      "what_happened": "Google rolled out Gemini Omni 1.2 Flash, a video generation model now generally available via the Gemini API and for business customers. The update adds native 15-second video creation, multi-turn conversational editing, improved reference-following, and a 30% price cut to $0.07 per second for 720p video.",
+      "why_it_matters": "Longer native video generation combined with cheaper per-second pricing signals Google's push to make generative video commercially viable at scale, intensifying competition with OpenAI's Sora and other video-gen entrants. The conversational multi-turn editing feature also points toward video generation becoming an iterative creative workflow rather than single-shot output, which could accelerate adoption in marketing and content production.",
+      "watch_next": "Watch for competitive responses from OpenAI and Runway, and how quickly enterprise adoption of API-based video generation scales given the new pricing.",
+      "summary": "Google rolled out Gemini Omni 1.2 Flash, a video generation model now generally available via the Gemini API and for business customers. The update adds native 15-second video creation, multi-turn conversational editing, improved reference-following, and a 30% price cut to $0.07 per second for 720p video."
     },
     {
       "rank": 5,
-      "title": "OpenAI to acquire Pierre Computer Company",
+      "title": "Inkling 2 Small",
       "source": "Hacker News",
       "sources": [
-        "Hacker News",
-        "Slashdot"
+        "Hacker News"
       ],
-      "source_count": 2,
-      "url": "https://openai.com/index/openai-to-acquire-pierre/",
-      "theme": "Companies",
-      "hn_points": 259,
-      "score": 11.515,
-      "what_happened": "OpenAI announced its acquisition of developer tools startup Pierre Computer Company to strengthen Codex, its coding assistant. Pierre had been building specialized code analysis and review tools that complement Codex's existing code-generation capabilities; financial terms were not disclosed.",
-      "why_it_matters": "The acquisition signals OpenAI's aggressive expansion into developer tooling beyond raw code generation, aiming to own more of the software development lifecycle from writing to review. This intensifies competition with GitHub Copilot, Cursor, and other coding-assistant players as AI companies race to lock in developer workflows.",
-      "watch_next": "Watch for how quickly Pierre's code review capabilities get integrated into Codex and whether OpenAI pursues further tooling acquisitions to build out a fuller developer platform.",
-      "summary": "OpenAI announced its acquisition of developer tools startup Pierre Computer Company to strengthen Codex, its coding assistant. Pierre had been building specialized code analysis and review tools that complement Codex's existing code-generation capabilities; financial terms were not disclosed."
+      "source_count": 1,
+      "url": "https://thinkingmachines.ai/news/inkling-2-small/",
+      "theme": "Capabilities",
+      "hn_points": 253,
+      "score": 4.584,
+      "what_happened": "A new AI lab introduced Inkling 2 Small, a mixture-of-experts model with 594B total parameters and 17B active parameters, supporting image inputs and variable inference effort. The model scores 31 on the Artificial Analysis Intelligence Index, surpassing the lab's previous generation on agentic coding, vision, knowledge work, and reasoning benchmarks.",
+      "why_it_matters": "The release adds another capable MoE model to a crowded field of frontier-adjacent contenders, reflecting how efficient MoE architectures and large unified RL training runs continue to push benchmark performance even outside the largest labs. It underscores how quickly mid-tier AI developers are closing capability gaps with major players using efficient training techniques rather than raw scale alone.",
+      "watch_next": "Watch for independent benchmarking of Inkling 2 Small against established models like GPT and Gemini variants, and whether the lab releases open weights or keeps the model API-only.",
+      "summary": "A new AI lab introduced Inkling 2 Small, a mixture-of-experts model with 594B total parameters and 17B active parameters, supporting image inputs and variable inference effort. The model scores 31 on the Artificial Analysis Intelligence Index, surpassing the lab's previous generation on agentic coding, vision, knowledge work, and reasoning benchmarks."
     }
   ]
 }
