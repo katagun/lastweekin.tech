@@ -1,92 +1,94 @@
 {
-  "date": "2026-11-06",
-  "generated_at": "2026-11-06T15:11:29.902294+00:00",
-  "intro": "AI news today centers on safety and trust failures at major platforms, a sharp market retreat from the AI trade, and incremental model releases from Google and a lesser-known lab.",
+  "date": "2026-11-07",
+  "generated_at": "2026-11-07T15:10:43.090949+00:00",
+  "intro": "AI infrastructure faces political headwinds as US voters reject data-center expansion, while security vulnerabilities emerge in both AI systems and the infrastructure supporting them. Anthropic's IPO valuations decline amid investor concerns over frontier-model economics.",
   "stories": [
     {
       "rank": 1,
-      "title": "Claude Code sends your email address to websites",
+      "title": "AI is dramatically accelerating AI research",
       "source": "Hacker News",
       "sources": [
         "Hacker News"
       ],
       "source_count": 1,
-      "url": "https://github.com/anthropics/claude-code/issues/107757",
-      "theme": "Security & Safety",
-      "hn_points": 1382,
-      "score": 5.296,
-      "what_happened": "A widely upvoted GitHub bug report reveals that Anthropic's Claude Code agent was sending users' email addresses to arbitrary third-party websites via the User-Agent header during web searches, without explicit permission. The reporter says this behavior generated spam and scam emails and was not clearly disclosed as an opt-in/opt-out setting. The issue reportedly pushed at least one user to migrate away from Claude Code to alternative tooling.",
-      "why_it_matters": "As coding agents gain more autonomous web-browsing capability, silent data leakage through request metadata becomes a systemic privacy risk rather than an edge case. This incident highlights how agentic AI tools can expose personal identifiers to unknown third parties while performing routine tasks, undermining trust in AI coding assistants at a moment when enterprises are rapidly adopting them for sensitive workflows.",
-      "watch_next": "Watch for Anthropic's official response and whether other agentic coding tools (Cursor, Copilot, OpenRouter-based agents) are audited for similar header-leakage issues.",
-      "summary": "A widely upvoted GitHub bug report reveals that Anthropic's Claude Code agent was sending users' email addresses to arbitrary third-party websites via the User-Agent header during web searches, without explicit permission. The reporter says this behavior generated spam and scam emails and was not clearly disclosed as an opt-in/opt-out setting. The issue reportedly pushed at least one user to migrate away from Claude Code to alternative tooling."
+      "url": "https://www.planned-obsolescence.org/p/ai-is-dramatically-accelerating-ai",
+      "theme": "Capabilities",
+      "hn_points": 339,
+      "score": 5.22,
+      "what_happened": "Anthropic reported in their S1 filing that they \"may imminently meet\" the threshold of \"dramatically accelerated progress due to AI\" as defined in their Responsible Scaling Policy. The report indicates AI is now accelerating AI research itself, with measurable productivity gains in R&D workflows.",
+      "why_it_matters": "This marks a critical inflection point: if AI systems are genuinely accelerating their own development cycle, it changes the trajectory of capability gains and raises urgent questions about safety oversight during periods of rapid capability scaling. Anthropic's own RSP framework suggests this threshold triggers heightened caution protocols, but the company is simultaneously pursuing aggressive frontier-model development—creating tension between stated safety commitments and business incentives.",
+      "watch_next": "Monitor whether Anthropic's board enforces the RSP's stated safeguards if the threshold is formally crossed, and whether other labs (OpenAI, Google, Meta) report similar acceleration metrics or adopt comparable scaling policies.",
+      "summary": "Anthropic reported in their S1 filing that they \"may imminently meet\" the threshold of \"dramatically accelerated progress due to AI\" as defined in their Responsible Scaling Policy. The report indicates AI is now accelerating AI research itself, with measurable productivity gains in R&D workflows."
     },
     {
       "rank": 2,
-      "title": "Cuban: Facebook knowingly runs AI deepfake scam ads; docs say $16B fraud revenue",
-      "source": "Hacker News",
+      "title": "OpenAI's New Cyber Model Found Ways to Attack Nearly 1,000 Linux Flaws",
+      "source": "BleepingComputer",
       "sources": [
-        "Hacker News"
+        "BleepingComputer",
+        "Slashdot"
       ],
-      "source_count": 1,
-      "url": "https://finance.yahoo.com/technology/ai/articles/mark-cuban-says-facebook-knowingly-213000020.html",
-      "theme": "Companies",
-      "hn_points": 451,
-      "score": 5.332,
-      "what_happened": "Mark Cuban alleges that Meta/Facebook has knowingly run AI-generated deepfake scam ads, citing internal documents suggesting the company earns roughly $16 billion in revenue tied to fraudulent advertising. Cuban describes receiving constant emails from victims who were deceived by fake endorsement ads, including a fabricated '$294 diabetes cure' falsely attributed to him.",
-      "why_it_matters": "The allegation implicates one of the world's largest ad platforms in deliberately monetizing AI-generated fraud at scale, raising the stakes for platform liability as generative AI makes deepfake scam ads cheaper and more convincing to produce. If substantiated, this could trigger regulatory scrutiny and advertiser backlash similar to past content-moderation controversies, and adds pressure on Meta amid broader AI-trust concerns.",
-      "watch_next": "Watch for Meta's formal response, any FTC or congressional inquiry, and whether other celebrities or regulators push for mandatory ad-verification systems targeting AI-generated content.",
-      "summary": "Mark Cuban alleges that Meta/Facebook has knowingly run AI-generated deepfake scam ads, citing internal documents suggesting the company earns roughly $16 billion in revenue tied to fraudulent advertising. Cuban describes receiving constant emails from victims who were deceived by fake endorsement ads, including a fabricated '$294 diabetes cure' falsely attributed to him."
+      "source_count": 2,
+      "url": "https://www.bleepingcomputer.com/news/security/openais-new-gpt-6-cyber-ai-finds-81-firefox-flaws-948-linux-bugs/",
+      "theme": "Security & Safety",
+      "hn_points": null,
+      "score": 3.218,
+      "what_happened": "OpenAI's GPT-6 Cyber model discovered 81 previously unknown high-severity vulnerabilities in Firefox and developed working exploits for 948 distinct Linux kernel flaws during security testing. Mozilla has already released patches for many of the Firefox vulnerabilities.",
+      "why_it_matters": "This demonstrates both the capability and the risk of frontier AI models in security research. While vulnerability discovery accelerates patching cycles, the same capability could be weaponized; the model's ability to develop working exploits at scale raises questions about responsible disclosure practices and whether AI-driven vulnerability research outpaces the industry's ability to patch. This also validates concerns about AI systems becoming force-multipliers for both defense and offense.",
+      "watch_next": "Track whether OpenAI establishes formal responsible-disclosure protocols for GPT-6 Cyber, and whether other security researchers or threat actors attempt to replicate or extend this capability.",
+      "summary": "OpenAI's GPT-6 Cyber model discovered 81 previously unknown high-severity vulnerabilities in Firefox and developed working exploits for 948 distinct Linux kernel flaws during security testing. Mozilla has already released patches for many of the Firefox vulnerabilities."
     },
     {
       "rank": 3,
-      "title": "Nasdaq plummets 4% into correction territory",
+      "title": "Firecracker VM Escape: PwnEscape Part 2",
       "source": "Hacker News",
       "sources": [
         "Hacker News"
       ],
       "source_count": 1,
-      "url": "https://www.cnbc.com/2026/11/04/stock-market-today-live-updates.html",
-      "theme": "Industry & Economics",
-      "hn_points": 222,
-      "score": 3.783,
-      "what_happened": "The Nasdaq fell 5.52% to 24,315, sliding into correction territory as the S&P 500 dropped 4.36% and the Dow lost over 1,800 points. The selloff reversed post-midterm election gains and was driven by investor fears of a slowdown in AI-related data-center buildout spending.",
-      "why_it_matters": "This is a direct market signal that confidence in the AI capex supercycle is cracking, with investors reassessing the sustainability of massive infrastructure spending by hyperscalers and chipmakers. Given how concentrated major indices have become in AI-linked stocks, continued volatility could tighten capital availability for AI infrastructure projects and pressure valuations across the sector.",
-      "watch_next": "Watch upcoming earnings and capex guidance from major cloud and chip companies, and whether the selloff triggers broader reconsideration of AI infrastructure financing commitments.",
-      "summary": "The Nasdaq fell 5.52% to 24,315, sliding into correction territory as the S&P 500 dropped 4.36% and the Dow lost over 1,800 points. The selloff reversed post-midterm election gains and was driven by investor fears of a slowdown in AI-related data-center buildout spending."
+      "url": "https://pwn.ai/blog/firecracker-escape",
+      "theme": "Security & Safety",
+      "hn_points": 260,
+      "score": 4.516,
+      "what_happened": "Researchers demonstrated a VM escape vulnerability in Firecracker (AWS's microVM hypervisor) called PwnEscape, achieving root code execution on the host system by manipulating register state and thread control from within the guest. The guest VM remained accessible over SSH after the escape.",
+      "why_it_matters": "Firecracker is foundational infrastructure for AWS Lambda, container isolation, and other multi-tenant cloud services. A practical escape undermines the security model of serverless computing and raises questions about the robustness of lightweight virtualization under adversarial conditions. This is particularly critical as AI workloads increasingly run in shared cloud environments where isolation failures could expose sensitive model weights or training data.",
+      "watch_next": "Watch for AWS's patch timeline and whether other hypervisors (gVisor, Kata) face similar scrutiny; also monitor whether this vulnerability is exploited in the wild or disclosed responsibly.",
+      "summary": "Researchers demonstrated a VM escape vulnerability in Firecracker (AWS's microVM hypervisor) called PwnEscape, achieving root code execution on the host system by manipulating register state and thread control from within the guest. The guest VM remained accessible over SSH after the escape."
     },
     {
       "rank": 4,
-      "title": "Gemini Omni 1.2 Flash",
-      "source": "Hacker News",
+      "title": "Activists Breach Microsoft Data Center Construction Site As Protests Spread In Europe",
+      "source": "Slashdot",
       "sources": [
-        "Hacker News"
+        "Slashdot"
       ],
       "source_count": 1,
-      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/",
-      "theme": "Capabilities",
-      "hn_points": 103,
-      "score": 2.65,
-      "what_happened": "Google rolled out Gemini Omni 1.2 Flash, a video generation model now generally available via the Gemini API and for business customers. The update adds native 15-second video creation, multi-turn conversational editing, improved reference-following, and a 30% price cut to $0.07 per second for 720p video.",
-      "why_it_matters": "Longer native video generation combined with cheaper per-second pricing signals Google's push to make generative video commercially viable at scale, intensifying competition with OpenAI's Sora and other video-gen entrants. The conversational multi-turn editing feature also points toward video generation becoming an iterative creative workflow rather than single-shot output, which could accelerate adoption in marketing and content production.",
-      "watch_next": "Watch for competitive responses from OpenAI and Runway, and how quickly enterprise adoption of API-based video generation scales given the new pricing.",
-      "summary": "Google rolled out Gemini Omni 1.2 Flash, a video generation model now generally available via the Gemini API and for business customers. The update adds native 15-second video creation, multi-turn conversational editing, improved reference-following, and a 30% price cut to $0.07 per second for 720p video."
+      "url": "https://news.slashdot.org/story/26/11/06/211208/activists-breach-microsoft-data-center-construction-site-as-protests-spread-in-europe?utm_source=rss1.0mainlinkanon&utm_medium=feed",
+      "theme": "Policy & Regulation",
+      "hn_points": null,
+      "score": 4.284,
+      "what_happened": "More than 100 activists breached a Microsoft AI data center construction site in Amsterdam as part of coordinated protests announced in 16 countries. Protesters cited resource consumption and environmental concerns as motivation for the \"Stop Dirty Data Centers\" campaign.",
+      "why_it_matters": "This escalates the political backlash against AI infrastructure from electoral rejection (already covered) to direct action and property breach. It signals that environmental and resource-scarcity concerns are mobilizing activist movements across Europe, potentially triggering regulatory responses (stricter environmental reviews, water-use restrictions) that could slow data-center deployment and increase costs. Microsoft and other hyperscalers may face permitting delays and reputational pressure.",
+      "watch_next": "Monitor whether European regulators respond with new environmental or resource-use mandates for data centers, and whether similar protests occur at other major AI infrastructure sites.",
+      "summary": "More than 100 activists breached a Microsoft AI data center construction site in Amsterdam as part of coordinated protests announced in 16 countries. Protesters cited resource consumption and environmental concerns as motivation for the \"Stop Dirty Data Centers\" campaign."
     },
     {
       "rank": 5,
-      "title": "Inkling 2 Small",
+      "title": "Google has acquired Crusoe's data center site in southeast Wyoming",
       "source": "Hacker News",
       "sources": [
-        "Hacker News"
+        "Hacker News",
+        "Techmeme"
       ],
-      "source_count": 1,
-      "url": "https://thinkingmachines.ai/news/inkling-2-small/",
-      "theme": "Capabilities",
-      "hn_points": 253,
-      "score": 4.584,
-      "what_happened": "A new AI lab introduced Inkling 2 Small, a mixture-of-experts model with 594B total parameters and 17B active parameters, supporting image inputs and variable inference effort. The model scores 31 on the Artificial Analysis Intelligence Index, surpassing the lab's previous generation on agentic coding, vision, knowledge work, and reasoning benchmarks.",
-      "why_it_matters": "The release adds another capable MoE model to a crowded field of frontier-adjacent contenders, reflecting how efficient MoE architectures and large unified RL training runs continue to push benchmark performance even outside the largest labs. It underscores how quickly mid-tier AI developers are closing capability gaps with major players using efficient training techniques rather than raw scale alone.",
-      "watch_next": "Watch for independent benchmarking of Inkling 2 Small against established models like GPT and Gemini variants, and whether the lab releases open weights or keeps the model API-only.",
-      "summary": "A new AI lab introduced Inkling 2 Small, a mixture-of-experts model with 594B total parameters and 17B active parameters, supporting image inputs and variable inference effort. The model scores 31 on the Artificial Analysis Intelligence Index, surpassing the lab's previous generation on agentic coding, vision, knowledge work, and reasoning benchmarks."
+      "source_count": 2,
+      "url": "https://www.crusoe.ai/resources/newsroom/crusoe-wyoming-data-center-campus-update",
+      "theme": "Infrastructure & Chips",
+      "hn_points": 97,
+      "score": 4.953,
+      "what_happened": "Google has acquired Crusoe Energy's data center site in southeast Wyoming, completing Crusoe's pre-development work on site selection, governmental approvals, and hybrid power strategy with Tallgrass Energy.",
+      "why_it_matters": "This acquisition signals Google's aggressive expansion of AI compute infrastructure and its willingness to acquire developed sites rather than build from scratch—likely a response to permitting delays and political backlash. The Wyoming location offers lower-cost power and less environmental scrutiny than other regions, but the acquisition also suggests Crusoe (a specialized AI-compute company) may be pivoting away from data-center ownership toward software/optimization, reflecting broader industry consolidation around hyperscalers.",
+      "watch_next": "Track Google's timeline for activating the Wyoming site and whether other hyperscalers pursue similar acquisition strategies to bypass permitting delays.",
+      "summary": "Google has acquired Crusoe Energy's data center site in southeast Wyoming, completing Crusoe's pre-development work on site selection, governmental approvals, and hybrid power strategy with Tallgrass Energy."
     }
   ]
 }
