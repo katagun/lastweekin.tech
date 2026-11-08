@@ -1,94 +1,92 @@
 {
-  "date": "2026-11-07",
-  "generated_at": "2026-11-07T15:10:43.090949+00:00",
-  "intro": "AI infrastructure faces political headwinds as US voters reject data-center expansion, while security vulnerabilities emerge in both AI systems and the infrastructure supporting them. Anthropic's IPO valuations decline amid investor concerns over frontier-model economics.",
+  "date": "2026-11-08",
+  "generated_at": "2026-11-08T15:10:43.635496+00:00",
+  "intro": "A quiet corporate-news day is dominated by a brewing Washington scandal around Nvidia's CEO, fresh cracks in the government's AI safety oversight, and market jitters over the AI infrastructure buildout — alongside a notable open-source inference breakthrough and a fresh Claude Code security lapse.",
   "stories": [
     {
       "rank": 1,
-      "title": "AI is dramatically accelerating AI research",
-      "source": "Hacker News",
+      "title": "Meta’s former CFO Dave Wehner joins open-model platform Fireworks AI",
+      "source": "luongnv.com",
       "sources": [
-        "Hacker News"
+        "luongnv.com"
       ],
       "source_count": 1,
-      "url": "https://www.planned-obsolescence.org/p/ai-is-dramatically-accelerating-ai",
-      "theme": "Capabilities",
-      "hn_points": 339,
-      "score": 5.22,
-      "what_happened": "Anthropic reported in their S1 filing that they \"may imminently meet\" the threshold of \"dramatically accelerated progress due to AI\" as defined in their Responsible Scaling Policy. The report indicates AI is now accelerating AI research itself, with measurable productivity gains in R&D workflows.",
-      "why_it_matters": "This marks a critical inflection point: if AI systems are genuinely accelerating their own development cycle, it changes the trajectory of capability gains and raises urgent questions about safety oversight during periods of rapid capability scaling. Anthropic's own RSP framework suggests this threshold triggers heightened caution protocols, but the company is simultaneously pursuing aggressive frontier-model development—creating tension between stated safety commitments and business incentives.",
-      "watch_next": "Monitor whether Anthropic's board enforces the RSP's stated safeguards if the threshold is formally crossed, and whether other labs (OpenAI, Google, Meta) report similar acceleration metrics or adopt comparable scaling policies.",
-      "summary": "Anthropic reported in their S1 filing that they \"may imminently meet\" the threshold of \"dramatically accelerated progress due to AI\" as defined in their Responsible Scaling Policy. The report indicates AI is now accelerating AI research itself, with measurable productivity gains in R&D workflows."
+      "url": "https://luongnv.com/news/reports/2026-11-08-morning.html",
+      "theme": "Security & Safety",
+      "hn_points": null,
+      "score": 4,
+      "what_happened": "The Financial Times reports that a U.S. intelligence memo compiled earlier this year alleges Nvidia CEO Jensen Huang had a romantic relationship with Alice Huang, an executive at Singapore-based data-center company Megaspeed, who is described as a suspected Chinese intelligence recruit. The report follows earlier New York Times coverage on the matter, and former President Trump has reportedly commented on it.",
+      "why_it_matters": "Nvidia sits at the center of the global AI compute supply chain and is deeply entangled in U.S.-China export control policy. Allegations tying its CEO to a suspected foreign intelligence asset — even unproven — could trigger congressional scrutiny, affect Nvidia's standing in ongoing chip export negotiations, and fuel broader anxiety about Chinese influence operations targeting AI hardware supply chains.",
+      "watch_next": "Watch for Nvidia's official response, any congressional inquiry or hearing requests, and whether this affects pending U.S. export-control decisions on AI chips to China.",
+      "summary": "The Financial Times reports that a U.S. intelligence memo compiled earlier this year alleges Nvidia CEO Jensen Huang had a romantic relationship with Alice Huang, an executive at Singapore-based data-center company Megaspeed, who is described as a suspected Chinese intelligence recruit. The report follows earlier New York Times coverage on the matter, and former President Trump has reportedly commented on it."
     },
     {
       "rank": 2,
-      "title": "OpenAI's New Cyber Model Found Ways to Attack Nearly 1,000 Linux Flaws",
-      "source": "BleepingComputer",
+      "title": "U.S. AI safety standards office loses permanent leadership and stops publishing research",
+      "source": "wvnews.com",
       "sources": [
-        "BleepingComputer",
-        "Slashdot"
+        "wvnews.com"
       ],
-      "source_count": 2,
-      "url": "https://www.bleepingcomputer.com/news/security/openais-new-gpt-6-cyber-ai-finds-81-firefox-flaws-948-linux-bugs/",
-      "theme": "Security & Safety",
+      "source_count": 1,
+      "url": "https://www.wvnews.com/business/ap-technology-summarybrief-at-3-06-a-m-est/article_e8554731-1838-50d2-ab6a-279d9501958d.html",
+      "theme": "Policy & Regulation",
       "hn_points": null,
-      "score": 3.218,
-      "what_happened": "OpenAI's GPT-6 Cyber model discovered 81 previously unknown high-severity vulnerabilities in Firefox and developed working exploits for 948 distinct Linux kernel flaws during security testing. Mozilla has already released patches for many of the Firefox vulnerabilities.",
-      "why_it_matters": "This demonstrates both the capability and the risk of frontier AI models in security research. While vulnerability discovery accelerates patching cycles, the same capability could be weaponized; the model's ability to develop working exploits at scale raises questions about responsible disclosure practices and whether AI-driven vulnerability research outpaces the industry's ability to patch. This also validates concerns about AI systems becoming force-multipliers for both defense and offense.",
-      "watch_next": "Track whether OpenAI establishes formal responsible-disclosure protocols for GPT-6 Cyber, and whether other security researchers or threat actors attempt to replicate or extend this capability.",
-      "summary": "OpenAI's GPT-6 Cyber model discovered 81 previously unknown high-severity vulnerabilities in Firefox and developed working exploits for 948 distinct Linux kernel flaws during security testing. Mozilla has already released patches for many of the Firefox vulnerabilities."
+      "score": 4,
+      "what_happened": "The U.S. Center for Advancing Innovation and Standards for Super Intelligence, the Commerce Department division responsible for assessing AI safety, currently lacks a permanent leader and has stopped publishing its research. Staff have reportedly been asked to informally report to a White House office instead, raising concerns about the center's independence.",
+      "why_it_matters": "This is one of the few formal U.S. government bodies tasked with independently evaluating frontier AI systems' safety. A leadership vacuum, halted publications, and closer White House control suggest a weakening of institutional oversight at precisely the moment concerns about agentic AI risks are growing. It signals that federal AI safety governance may be becoming more politically centralized and less transparent.",
+      "watch_next": "Watch for who is appointed to lead the center, whether research publication resumes, and any congressional or watchdog response to the reporting-line change.",
+      "summary": "The U.S. Center for Advancing Innovation and Standards for Super Intelligence, the Commerce Department division responsible for assessing AI safety, currently lacks a permanent leader and has stopped publishing its research. Staff have reportedly been asked to informally report to a White House office instead, raising concerns about the center's independence."
     },
     {
       "rank": 3,
-      "title": "Firecracker VM Escape: PwnEscape Part 2",
+      "title": "AI-linked technology sell-off and investor rotation intensify scrutiny of the sector",
+      "source": "uk.finance.yahoo.com",
+      "sources": [
+        "uk.finance.yahoo.com"
+      ],
+      "source_count": 1,
+      "url": "https://uk.finance.yahoo.com/news/ai-trade-splits-investors-favour-155300098.html",
+      "theme": "Industry & Economics",
+      "hn_points": null,
+      "score": 4,
+      "what_happened": "A rotation across U.S. tech stocks saw investors favor established cloud giants over chipmakers and data-center developers, with Amazon up 6.1%, Microsoft up 6.7%, Alphabet up 3.2%, and Meta up 1.4% on the day. The move followed Democratic election victories that raised concerns about potential new regulation of AI infrastructure.",
+      "why_it_matters": "The rotation suggests investors are growing more selective about AI-adjacent exposure, preferring diversified cloud revenue over pure infrastructure/chip plays as political risk around data-center buildouts rises. Combined with recent data-center moratoriums and public backlash, this points to a maturing — and more volatile — phase of AI infrastructure investment where capital flows get reassessed in real time.",
+      "watch_next": "Track whether semiconductor and data-center stocks stabilize or continue underperforming hyperscalers, and whether new state-level regulation materializes following the midterm results.",
+      "summary": "A rotation across U.S. tech stocks saw investors favor established cloud giants over chipmakers and data-center developers, with Amazon up 6.1%, Microsoft up 6.7%, Alphabet up 3.2%, and Meta up 1.4% on the day. The move followed Democratic election victories that raised concerns about potential new regulation of AI infrastructure."
+    },
+    {
+      "rank": 4,
+      "title": "Claude Code's \"Don't Ask Again\" exposes passwords in 1,122 public GitHub files",
       "source": "Hacker News",
       "sources": [
         "Hacker News"
       ],
       "source_count": 1,
-      "url": "https://pwn.ai/blog/firecracker-escape",
+      "url": "https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again",
       "theme": "Security & Safety",
-      "hn_points": 260,
-      "score": 4.516,
-      "what_happened": "Researchers demonstrated a VM escape vulnerability in Firecracker (AWS's microVM hypervisor) called PwnEscape, achieving root code execution on the host system by manipulating register state and thread control from within the guest. The guest VM remained accessible over SSH after the escape.",
-      "why_it_matters": "Firecracker is foundational infrastructure for AWS Lambda, container isolation, and other multi-tenant cloud services. A practical escape undermines the security model of serverless computing and raises questions about the robustness of lightweight virtualization under adversarial conditions. This is particularly critical as AI workloads increasingly run in shared cloud environments where isolation failures could expose sensitive model weights or training data.",
-      "watch_next": "Watch for AWS's patch timeline and whether other hypervisors (gVisor, Kata) face similar scrutiny; also monitor whether this vulnerability is exploited in the wild or disclosed responsibly.",
-      "summary": "Researchers demonstrated a VM escape vulnerability in Firecracker (AWS's microVM hypervisor) called PwnEscape, achieving root code execution on the host system by manipulating register state and thread control from within the guest. The guest VM remained accessible over SSH after the escape."
-    },
-    {
-      "rank": 4,
-      "title": "Activists Breach Microsoft Data Center Construction Site As Protests Spread In Europe",
-      "source": "Slashdot",
-      "sources": [
-        "Slashdot"
-      ],
-      "source_count": 1,
-      "url": "https://news.slashdot.org/story/26/11/06/211208/activists-breach-microsoft-data-center-construction-site-as-protests-spread-in-europe?utm_source=rss1.0mainlinkanon&utm_medium=feed",
-      "theme": "Policy & Regulation",
-      "hn_points": null,
-      "score": 4.284,
-      "what_happened": "More than 100 activists breached a Microsoft AI data center construction site in Amsterdam as part of coordinated protests announced in 16 countries. Protesters cited resource consumption and environmental concerns as motivation for the \"Stop Dirty Data Centers\" campaign.",
-      "why_it_matters": "This escalates the political backlash against AI infrastructure from electoral rejection (already covered) to direct action and property breach. It signals that environmental and resource-scarcity concerns are mobilizing activist movements across Europe, potentially triggering regulatory responses (stricter environmental reviews, water-use restrictions) that could slow data-center deployment and increase costs. Microsoft and other hyperscalers may face permitting delays and reputational pressure.",
-      "watch_next": "Monitor whether European regulators respond with new environmental or resource-use mandates for data centers, and whether similar protests occur at other major AI infrastructure sites.",
-      "summary": "More than 100 activists breached a Microsoft AI data center construction site in Amsterdam as part of coordinated protests announced in 16 countries. Protesters cited resource consumption and environmental concerns as motivation for the \"Stop Dirty Data Centers\" campaign."
+      "hn_points": 474,
+      "score": 5.233,
+      "what_happened": "Researchers found that Claude Code's 'Don't Ask Again' permission setting led to passwords being exposed in 1,122 public GitHub repositories. The feature, meant to streamline repeated approval prompts, apparently caused sensitive credentials to be written to files without further confirmation.",
+      "why_it_matters": "This is a distinct lapse from previously reported Claude Code data-leak issues, highlighting a recurring pattern: convenience-oriented agent permissions in coding assistants can silently create serious security exposures at scale. With AI coding agents now embedded in everyday developer workflows, these incidents raise questions about default safety settings in agentic tools and the adequacy of pre-release security review.",
+      "watch_next": "Watch for Anthropic's response and any patch to the permission system, and for whether other AI coding agents with similar 'don't ask again' patterns face comparable audits.",
+      "summary": "Researchers found that Claude Code's 'Don't Ask Again' permission setting led to passwords being exposed in 1,122 public GitHub repositories. The feature, meant to streamline repeated approval prompts, apparently caused sensitive credentials to be written to files without further confirmation."
     },
     {
       "rank": 5,
-      "title": "Google has acquired Crusoe's data center site in southeast Wyoming",
+      "title": "Llama-modchip: 284B DeepSeek on 64GB RAM, no GPU",
       "source": "Hacker News",
       "sources": [
-        "Hacker News",
-        "Techmeme"
+        "Hacker News"
       ],
-      "source_count": 2,
-      "url": "https://www.crusoe.ai/resources/newsroom/crusoe-wyoming-data-center-campus-update",
-      "theme": "Infrastructure & Chips",
-      "hn_points": 97,
-      "score": 4.953,
-      "what_happened": "Google has acquired Crusoe Energy's data center site in southeast Wyoming, completing Crusoe's pre-development work on site selection, governmental approvals, and hybrid power strategy with Tallgrass Energy.",
-      "why_it_matters": "This acquisition signals Google's aggressive expansion of AI compute infrastructure and its willingness to acquire developed sites rather than build from scratch—likely a response to permitting delays and political backlash. The Wyoming location offers lower-cost power and less environmental scrutiny than other regions, but the acquisition also suggests Crusoe (a specialized AI-compute company) may be pivoting away from data-center ownership toward software/optimization, reflecting broader industry consolidation around hyperscalers.",
-      "watch_next": "Track Google's timeline for activating the Wyoming site and whether other hyperscalers pursue similar acquisition strategies to bypass permitting delays.",
-      "summary": "Google has acquired Crusoe Energy's data center site in southeast Wyoming, completing Crusoe's pre-development work on site selection, governmental approvals, and hybrid power strategy with Tallgrass Energy."
+      "source_count": 1,
+      "url": "https://github.com/synchopate/llama-modchip",
+      "theme": "Open Source",
+      "hn_points": 107,
+      "score": 2.583,
+      "what_happened": "A project called Llama-modchip demonstrated running the 284B-parameter DeepSeek-V4-Flash mixture-of-experts model entirely on CPU with under 59 GiB of RAM and no GPU, achieving up to 111 tokens/second on 30B MoE variants and 256K context support. The release includes a preprint, supported chip/platform list, and leaderboard.",
+      "why_it_matters": "This pushes the boundary of consumer-hardware inference for frontier-scale open models, potentially democratizing access to large MoE models without expensive GPU clusters. If reproducible, it could meaningfully lower the cost floor for running near-frontier open-weight models, intensifying competition with closed, cloud-hosted APIs and accelerating local/edge deployment of large models.",
+      "watch_next": "Watch for independent benchmarking of the claimed throughput and memory figures, and whether other open MoE models adopt similar CPU-optimization techniques.",
+      "summary": "A project called Llama-modchip demonstrated running the 284B-parameter DeepSeek-V4-Flash mixture-of-experts model entirely on CPU with under 59 GiB of RAM and no GPU, achieving up to 111 tokens/second on 30B MoE variants and 256K context support. The release includes a preprint, supported chip/platform list, and leaderboard."
     }
   ]
 }

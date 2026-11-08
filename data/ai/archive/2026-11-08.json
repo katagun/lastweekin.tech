@@ -1,0 +1,92 @@
+{
+  "date": "2026-11-08",
+  "generated_at": "2026-11-08T15:10:43.635496+00:00",
+  "intro": "A quiet corporate-news day is dominated by a brewing Washington scandal around Nvidia's CEO, fresh cracks in the government's AI safety oversight, and market jitters over the AI infrastructure buildout — alongside a notable open-source inference breakthrough and a fresh Claude Code security lapse.",
+  "stories": [
+    {
+      "rank": 1,
+      "title": "Meta’s former CFO Dave Wehner joins open-model platform Fireworks AI",
+      "source": "luongnv.com",
+      "sources": [
+        "luongnv.com"
+      ],
+      "source_count": 1,
+      "url": "https://luongnv.com/news/reports/2026-11-08-morning.html",
+      "theme": "Security & Safety",
+      "hn_points": null,
+      "score": 4,
+      "what_happened": "The Financial Times reports that a U.S. intelligence memo compiled earlier this year alleges Nvidia CEO Jensen Huang had a romantic relationship with Alice Huang, an executive at Singapore-based data-center company Megaspeed, who is described as a suspected Chinese intelligence recruit. The report follows earlier New York Times coverage on the matter, and former President Trump has reportedly commented on it.",
+      "why_it_matters": "Nvidia sits at the center of the global AI compute supply chain and is deeply entangled in U.S.-China export control policy. Allegations tying its CEO to a suspected foreign intelligence asset — even unproven — could trigger congressional scrutiny, affect Nvidia's standing in ongoing chip export negotiations, and fuel broader anxiety about Chinese influence operations targeting AI hardware supply chains.",
+      "watch_next": "Watch for Nvidia's official response, any congressional inquiry or hearing requests, and whether this affects pending U.S. export-control decisions on AI chips to China.",
+      "summary": "The Financial Times reports that a U.S. intelligence memo compiled earlier this year alleges Nvidia CEO Jensen Huang had a romantic relationship with Alice Huang, an executive at Singapore-based data-center company Megaspeed, who is described as a suspected Chinese intelligence recruit. The report follows earlier New York Times coverage on the matter, and former President Trump has reportedly commented on it."
+    },
+    {
+      "rank": 2,
+      "title": "U.S. AI safety standards office loses permanent leadership and stops publishing research",
+      "source": "wvnews.com",
+      "sources": [
+        "wvnews.com"
+      ],
+      "source_count": 1,
+      "url": "https://www.wvnews.com/business/ap-technology-summarybrief-at-3-06-a-m-est/article_e8554731-1838-50d2-ab6a-279d9501958d.html",
+      "theme": "Policy & Regulation",
+      "hn_points": null,
+      "score": 4,
+      "what_happened": "The U.S. Center for Advancing Innovation and Standards for Super Intelligence, the Commerce Department division responsible for assessing AI safety, currently lacks a permanent leader and has stopped publishing its research. Staff have reportedly been asked to informally report to a White House office instead, raising concerns about the center's independence.",
+      "why_it_matters": "This is one of the few formal U.S. government bodies tasked with independently evaluating frontier AI systems' safety. A leadership vacuum, halted publications, and closer White House control suggest a weakening of institutional oversight at precisely the moment concerns about agentic AI risks are growing. It signals that federal AI safety governance may be becoming more politically centralized and less transparent.",
+      "watch_next": "Watch for who is appointed to lead the center, whether research publication resumes, and any congressional or watchdog response to the reporting-line change.",
+      "summary": "The U.S. Center for Advancing Innovation and Standards for Super Intelligence, the Commerce Department division responsible for assessing AI safety, currently lacks a permanent leader and has stopped publishing its research. Staff have reportedly been asked to informally report to a White House office instead, raising concerns about the center's independence."
+    },
+    {
+      "rank": 3,
+      "title": "AI-linked technology sell-off and investor rotation intensify scrutiny of the sector",
+      "source": "uk.finance.yahoo.com",
+      "sources": [
+        "uk.finance.yahoo.com"
+      ],
+      "source_count": 1,
+      "url": "https://uk.finance.yahoo.com/news/ai-trade-splits-investors-favour-155300098.html",
+      "theme": "Industry & Economics",
+      "hn_points": null,
+      "score": 4,
+      "what_happened": "A rotation across U.S. tech stocks saw investors favor established cloud giants over chipmakers and data-center developers, with Amazon up 6.1%, Microsoft up 6.7%, Alphabet up 3.2%, and Meta up 1.4% on the day. The move followed Democratic election victories that raised concerns about potential new regulation of AI infrastructure.",
+      "why_it_matters": "The rotation suggests investors are growing more selective about AI-adjacent exposure, preferring diversified cloud revenue over pure infrastructure/chip plays as political risk around data-center buildouts rises. Combined with recent data-center moratoriums and public backlash, this points to a maturing — and more volatile — phase of AI infrastructure investment where capital flows get reassessed in real time.",
+      "watch_next": "Track whether semiconductor and data-center stocks stabilize or continue underperforming hyperscalers, and whether new state-level regulation materializes following the midterm results.",
+      "summary": "A rotation across U.S. tech stocks saw investors favor established cloud giants over chipmakers and data-center developers, with Amazon up 6.1%, Microsoft up 6.7%, Alphabet up 3.2%, and Meta up 1.4% on the day. The move followed Democratic election victories that raised concerns about potential new regulation of AI infrastructure."
+    },
+    {
+      "rank": 4,
+      "title": "Claude Code's \"Don't Ask Again\" exposes passwords in 1,122 public GitHub files",
+      "source": "Hacker News",
+      "sources": [
+        "Hacker News"
+      ],
+      "source_count": 1,
+      "url": "https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again",
+      "theme": "Security & Safety",
+      "hn_points": 474,
+      "score": 5.233,
+      "what_happened": "Researchers found that Claude Code's 'Don't Ask Again' permission setting led to passwords being exposed in 1,122 public GitHub repositories. The feature, meant to streamline repeated approval prompts, apparently caused sensitive credentials to be written to files without further confirmation.",
+      "why_it_matters": "This is a distinct lapse from previously reported Claude Code data-leak issues, highlighting a recurring pattern: convenience-oriented agent permissions in coding assistants can silently create serious security exposures at scale. With AI coding agents now embedded in everyday developer workflows, these incidents raise questions about default safety settings in agentic tools and the adequacy of pre-release security review.",
+      "watch_next": "Watch for Anthropic's response and any patch to the permission system, and for whether other AI coding agents with similar 'don't ask again' patterns face comparable audits.",
+      "summary": "Researchers found that Claude Code's 'Don't Ask Again' permission setting led to passwords being exposed in 1,122 public GitHub repositories. The feature, meant to streamline repeated approval prompts, apparently caused sensitive credentials to be written to files without further confirmation."
+    },
+    {
+      "rank": 5,
+      "title": "Llama-modchip: 284B DeepSeek on 64GB RAM, no GPU",
+      "source": "Hacker News",
+      "sources": [
+        "Hacker News"
+      ],
+      "source_count": 1,
+      "url": "https://github.com/synchopate/llama-modchip",
+      "theme": "Open Source",
+      "hn_points": 107,
+      "score": 2.583,
+      "what_happened": "A project called Llama-modchip demonstrated running the 284B-parameter DeepSeek-V4-Flash mixture-of-experts model entirely on CPU with under 59 GiB of RAM and no GPU, achieving up to 111 tokens/second on 30B MoE variants and 256K context support. The release includes a preprint, supported chip/platform list, and leaderboard.",
+      "why_it_matters": "This pushes the boundary of consumer-hardware inference for frontier-scale open models, potentially democratizing access to large MoE models without expensive GPU clusters. If reproducible, it could meaningfully lower the cost floor for running near-frontier open-weight models, intensifying competition with closed, cloud-hosted APIs and accelerating local/edge deployment of large models.",
+      "watch_next": "Watch for independent benchmarking of the claimed throughput and memory figures, and whether other open MoE models adopt similar CPU-optimization techniques.",
+      "summary": "A project called Llama-modchip demonstrated running the 284B-parameter DeepSeek-V4-Flash mixture-of-experts model entirely on CPU with under 59 GiB of RAM and no GPU, achieving up to 111 tokens/second on 30B MoE variants and 256K context support. The release includes a preprint, supported chip/platform list, and leaderboard."
+    }
+  ]
+}
