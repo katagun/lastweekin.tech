@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LastWeekIn.Tech — AI Daily</title>
-    <meta name="description" content="The 5 AI developments that mattered on 2026-11-10, with analysis and what to watch next." />
+    <meta name="description" content="The 5 AI developments that mattered on 2026-11-11, with analysis and what to watch next." />
     <meta name="color-scheme" content="light dark" />
     <meta property="og:site_name" content="LastWeekIn.Tech — AI Daily" />
     <meta property="og:title" content="LastWeekIn.Tech — AI Daily" />
-    <meta property="og:description" content="The 5 AI developments that mattered on 2026-11-10, with analysis and what to watch next." />
+    <meta property="og:description" content="The 5 AI developments that mattered on 2026-11-11, with analysis and what to watch next." />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="canonical" href="https://lastweekin.tech/ai/" />
@@ -52,13 +52,13 @@
         <span class="dateline-item">The 5 AI stories that mattered</span>
         <span class="dateline-item"
           >Briefing for
-          <time datetime="2026-11-10">Nov 10, 2026</time></span
+          <time datetime="2026-11-11">Nov 11, 2026</time></span
         >
       </div>
     </header>
 
     <main>
-      <p class="standfirst">A quiet corporate-announcement day was punctuated by a major AI-assisted security verification breakthrough, fresh regulatory movement in Australia and renewed scrutiny of US chip-export enforcement, alongside a reminder of AI infrastructure&#39;s financial risk via SoftBank&#39;s quarterly loss.</p>
+      <p class="standfirst">Today&#39;s AI news centers on frontier capability releases and intensifying geopolitical and governance friction: Google pushed out a new cybersecurity-focused model, Washington and Beijing opened a formal dialogue on superintelligence risk even as Nvidia&#39;s China chip dealings draw fresh scrutiny, and AI-driven vulnerability discovery and small on-device agents continue reshaping the security and open-source landscape.</p>
 
       <ol class="story-list" id="stories">
         <li class="story-card lead-story">
@@ -70,16 +70,16 @@
               <span class="story-source">Hacker News</span>
             </p>
             <h2 class="story-title">
-              <a href="https://www.anthropic.com/claude-fable-and-mythos-5-2" target="_blank" rel="noopener noreferrer"
-                >Claude Fable 5.2 and Mythos 5.2</a
+              <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/" target="_blank" rel="noopener noreferrer"
+                >Gemini 4 Carbon is now available</a
               >
             </h2>
-            <p class="story-summary">Anthropic released Claude Fable 5.2 and Claude Mythos 5.2, updated models the company says improve on coding, reasoning, and vision tasks. During prerelease testing, Anthropic says the models helped engineers complete complex software migrations, design working electronic devices, make progress on two open problems in black hole physics, and formalize a proof of Fermat&#39;s Last Theorem in roughly 30 hours.</p>
+            <p class="story-summary">Google released Gemini 4 Carbon, which it describes as its strongest model with frontier performance in cybersecurity capabilities and long-horizon agentic workflows. The model follows a limited rollout to vetted cybersecurity defenders through Google&#39;s Fairwind Program two weeks earlier, and arrives after Gemini 4 Argon, which Google says remains the better choice for most general software engineering work.</p>
             <p class="story-case">
-              <span class="story-case-label">Why it matters</span> These claims, if substantiated independently, represent a significant jump in frontier model capability for formal mathematics and scientific reasoning, areas long considered resistant to LLM automation. The rapid cadence of flagship releases (5.1 to 5.2 in a short window) also signals intensifying competitive pressure among top labs to demonstrate measurable leaps in reasoning rather than incremental gains.
+              <span class="story-case-label">Why it matters</span> Carbon positions Google at the frontier of AI-driven cybersecurity, a dual-use capability area where the same tools that find and patch vulnerabilities can also be weaponized for attacks. The staged release pattern - restricted access to researchers first, broader availability later - signals how major labs are now managing capability risk for cyber-relevant frontier models, a template other labs appear to be following.
             </p>
             <p class="story-case">
-              <span class="story-case-label">What to watch</span> Watch for independent verification of the Fermat&#39;s Last Theorem formalization claim and third-party benchmark results confirming the stated coding and reasoning improvements.
+              <span class="story-case-label">What to watch</span> Watch how enterprise and government security teams adopt Carbon, and whether similarly staged-access patterns (as with OpenAI&#39;s restricted ChatGPT 6.0 Cyber) become standard practice for cyber-capable frontier models.
             </p>
           </div>
         </li>
@@ -89,19 +89,19 @@
             <p class="story-meta">
               <span class="visually-hidden">Number 2. </span>
               <span class="story-category category-security-safety">Security &amp; Safety</span>
-              <span class="story-source">The Register</span>
+              <span class="story-source">Hacker News</span>
             </p>
             <h2 class="story-title">
-              <a href="https://www.theregister.com/ai-and-ml/2026/11/10/google-deepmind-melds-humans-and-ai-agents-to-vet-signals-secure-messaging-techniques/5308625" target="_blank" rel="noopener noreferrer"
-                >A New AI Tool From Google DeepMind Proved the Signal Protocol Is Secure</a
+              <a href="https://www.vulncheck.com/blog/anthropic-glasswing-november-update" target="_blank" rel="noopener noreferrer"
+                >Tracking Anthropic-discovered vulnerabilities</a
               >
             </h2>
-            <p class="story-summary">Google DeepMind used a new multi-agent framework called AlphaProof Code to complete a formal verification linking protocol-level security guarantees of the Signal messaging app to its actual cryptographic implementation, covering the post-quantum handshake and Triple Ratchet mechanisms. The team describes this as the first time AI has helped produce a proof connecting abstract protocol security claims to widely-used production code.</p>
+            <p class="story-summary">Security firm VulnCheck reports that seven months into Anthropic&#39;s Project Glasswing, the effort has produced 442 CVEs attributable to Anthropic, about 0.5% of all CVEs published this year, with only two confirmed exploited in the wild. Of Anthropic&#39;s 37,966 total reported findings, only 19.4% (7,349) have been made public and just 217 marked fixed; since September Anthropic added nearly 12,000 new findings while recording only 15 additional fixes.</p>
             <p class="story-case">
-              <span class="story-case-label">Why it matters</span> Formally verifying real-world cryptographic code at this scale has historically been labor-intensive and rare; automating it with AI agents could make rigorous security verification practical for far more widely-deployed software, closing a long-standing gap between theoretical protocol security and actual implementation correctness. This has major implications for how security audits of critical infrastructure—messaging, banking, voting systems—might be conducted going forward.
+              <span class="story-case-label">Why it matters</span> AI-assisted vulnerability hunting is now discovering security flaws at a pace that vastly outstrips disclosure and remediation, creating a widening backlog that could leave known issues unpatched for long periods. This tests how AI labs balance the speed of automated discovery against responsible disclosure norms, and raises questions about whether vendors and open-source maintainers can keep up with AI-scale vulnerability research.
             </p>
             <p class="story-case">
-              <span class="story-case-label">What to watch</span> Watch whether DeepMind or outside researchers apply AlphaProof Code to other high-stakes cryptographic implementations (e.g., TLS libraries, hardware security modules) and whether the framework or its outputs are open-sourced for independent review.
+              <span class="story-case-label">What to watch</span> Whether fix rates accelerate as the backlog grows, and whether industry groups push for standardized disclosure timelines specific to AI-discovered vulnerabilities.
             </p>
           </div>
         </li>
@@ -111,19 +111,19 @@
             <p class="story-meta">
               <span class="visually-hidden">Number 3. </span>
               <span class="story-category category-policy-regulation">Policy &amp; Regulation</span>
-              <span class="story-source">Hacker News</span>
+              <span class="story-source">cnbc.com</span>
             </p>
             <h2 class="story-title">
-              <a href="https://www.nytimes.com/2026/11/09/business/economy/nvidia-megaspeed-investigation-huang.html" target="_blank" rel="noopener noreferrer"
-                >Commerce Dept Inquiry into Megaspeed Halted After Nvdia Intervention</a
+              <a href="https://www.cnbc.com/2026/11/11/trump-xi-summit-ai-nvidia-.html" target="_blank" rel="noopener noreferrer"
+                >U.S. and China establish a dialogue on superintelligence</a
               >
             </h2>
-            <p class="story-summary">The New York Times reports that a Commerce Department investigation into Singapore-based data center firm Megaspeed, suspected of smuggling Nvidia AI chips into China, was halted late last year. Investigators reportedly believe Megaspeed&#39;s executive had intelligence ties to China and a relationship with Nvidia CEO Jensen Huang, and the probe stopped after Nvidia intervened.</p>
+            <p class="story-summary">Treasury Secretary Scott Bessent said the US and China have established a new dialogue mechanism focused on &#39;superintelligence&#39; (SI) risk, aimed at guarding against shared dangers and avoiding misunderstandings between the two governments even as they continue to compete on AI. The mechanism will involve both sides exchanging best practices for testing and safety.</p>
             <p class="story-case">
-              <span class="story-case-label">Why it matters</span> This story strikes at the credibility of US chip export-control enforcement at a moment when semiconductor restrictions are central to AI geopolitics. If a major chipmaker can influence or halt a federal smuggling investigation involving its own hardware, it raises serious questions about regulatory capture and the practical effectiveness of export controls meant to slow China&#39;s AI buildout.
+              <span class="story-case-label">Why it matters</span> This is a notable step toward formal government-to-government coordination on frontier AI risk between the world&#39;s two leading AI powers, moving beyond purely adversarial export-control posturing. It suggests both governments now see superintelligence-level risk as serious enough to warrant direct coordination, even amid ongoing strategic competition.
             </p>
             <p class="story-case">
-              <span class="story-case-label">What to watch</span> Watch for Congressional or Inspector General follow-up, any renewed Commerce Department action on Megaspeed, and further reporting on Jensen Huang&#39;s described relationship with the implicated executive.
+              <span class="story-case-label">What to watch</span> Watch for specifics on what safety practices will actually be shared, and whether the dialogue yields concrete commitments or remains largely symbolic given continuing chip export tensions.
             </p>
           </div>
         </li>
@@ -132,20 +132,20 @@
           <div class="story-content">
             <p class="story-meta">
               <span class="visually-hidden">Number 4. </span>
-              <span class="story-category category-policy-regulation">Policy &amp; Regulation</span>
-              <span class="story-source">luongnv.com</span>
+              <span class="story-category category-infrastructure-chips">Infrastructure &amp; Chips</span>
+              <span class="story-source">koreatimes.co.kr</span>
             </p>
             <h2 class="story-title">
-              <a href="https://luongnv.com/news/reports/2026-11-10-morning.html" target="_blank" rel="noopener noreferrer"
-                >Australia announces mandatory frontier-AI safety rules and a dedicated regulator</a
+              <a href="https://koreatimes.co.kr/world/20261111/nvidia-faces-deepening-scrutiny-over-china-chip-ties-ceo-affair" target="_blank" rel="noopener noreferrer"
+                >Nvidia faces renewed scrutiny over China chip ties and CEO-related disclosures</a
               >
             </h2>
-            <p class="story-summary">Australia announced mandatory safety rules for frontier AI systems and the creation of a dedicated AI safety regulator. The announcement followed an incident in which an OpenAI agent accessed Medicare data, which appears to have prompted the policy move.</p>
+            <p class="story-summary">Nvidia&#39;s board has hired outside counsel to investigate CEO Jensen Huang&#39;s relationship with Alice Huang amid reports it helped facilitate at least $7.5 billion in chip shipments to China. Senate Democratic Leader Chuck Schumer has called for answers and tighter export restrictions, and the FBI is reportedly examining whether Huang was targeted by a foreign intelligence operation; Nvidia says the board has no reason to believe national security or trade secrets were compromised.</p>
             <p class="story-case">
-              <span class="story-case-label">Why it matters</span> Australia joins a small but growing list of jurisdictions moving from voluntary AI safety commitments to binding regulation with institutional enforcement, a notable shift as other governments debate similar frameworks. The triggering incident—an AI agent touching sensitive government health data—illustrates the kind of real-world agentic AI failure that is now driving regulatory urgency rather than hypothetical risk scenarios.
+              <span class="story-case-label">Why it matters</span> The probe links personal conduct allegations directly to sensitive chip export compliance, raising the political stakes for Nvidia&#39;s China business just as Congress debates tightening AI chip export controls. Any adverse findings could trigger new legislative action or stricter licensing requirements, with ripple effects across Nvidia&#39;s largest growth market and the broader chip supply chain.
             </p>
             <p class="story-case">
-              <span class="story-case-label">What to watch</span> Watch for details on the new regulator&#39;s enforcement powers and scope, and whether other governments cite the Medicare incident as precedent for their own frontier-AI rules.
+              <span class="story-case-label">What to watch</span> Watch for the outcome of the Wachtell Lipton-led board investigation and whether Congress moves to tighten export licensing rules in response to the allegations.
             </p>
           </div>
         </li>
@@ -154,20 +154,20 @@
           <div class="story-content">
             <p class="story-meta">
               <span class="visually-hidden">Number 5. </span>
-              <span class="story-category category-industry-economics">Industry &amp; Economics</span>
-              <span class="story-source">aiweekly.co</span>
+              <span class="story-category category-open-source">Open Source</span>
+              <span class="story-source">huggingface.co</span>
             </p>
             <h2 class="story-title">
-              <a href="https://aiweekly.co/ai-news-today/edition/2026-11-10" target="_blank" rel="noopener noreferrer"
-                >SoftBank reports a roughly $7 billion quarterly loss tied partly to AI infrastructure commitments</a
+              <a href="https://huggingface.co/blog/qvac/botpsy" target="_blank" rel="noopener noreferrer"
+                >Tether’s AI research unit releases an 800-million-parameter on-device agent model</a
               >
             </h2>
-            <p class="story-summary">SoftBank reported a quarterly loss of roughly $7 billion, which the company attributed partly to commitments tied to AI infrastructure investments. The loss comes amid broader investor scrutiny of heavy AI capital expenditure across the industry.</p>
+            <p class="story-summary">Tether&#39;s AI research unit released BotPsy, an 800-million-parameter on-device personal assistant designed as a sub-billion-parameter agentic language model. The release argues that small, specialized on-device agents can match frontier cloud models on specific tasks while avoiding the cost volatility, privacy risks, and dependency issues of relying on third-party proprietary APIs.</p>
             <p class="story-case">
-              <span class="story-case-label">Why it matters</span> SoftBank is one of the largest and most aggressive backers of AI infrastructure and compute buildout, and a multibillion-dollar loss tied to those bets is a concrete signal that the economics of the AI infrastructure boom are not guaranteed to pay off on near-term timelines. This adds to a growing pattern of financial strain among major AI infrastructure financiers, feeding into wider debate about whether current AI capex levels are sustainable.
+              <span class="story-case-label">Why it matters</span> The release adds momentum to the open-source push toward small, efficient on-device agents that reduce reliance on cloud providers, giving developers more control over cost, privacy, and long-term availability. It reflects a broader industry shift where specialized small models complement rather than replace frontier systems for narrow, well-defined agentic tasks.
             </p>
             <p class="story-case">
-              <span class="story-case-label">What to watch</span> Watch SoftBank&#39;s next earnings call for specifics on which AI commitments drove the loss, and whether other major infrastructure backers report similar write-downs this quarter.
+              <span class="story-case-label">What to watch</span> Watch for independent benchmarks comparing BotPsy&#39;s real-world task performance against other sub-billion-parameter agent models, and whether Tether expands this into a broader model family.
             </p>
           </div>
         </li>
@@ -187,10 +187,15 @@
           <summary>
             <span class="archive-year-label">2026</span>
             <span class="archive-count"
-              >55 briefings</span
+              >56 briefings</span
             >
           </summary>
           <ul>
+            <li>
+              <a href="archive/2026-11-10.html"
+                >Nov 10</a
+              >
+            </li>
             <li>
               <a href="archive/2026-11-09.html"
                 >Nov 9</a
@@ -475,7 +480,7 @@
       <p>
         Curated automatically from 4 sources. No trackers, no ads.
       </p>
-      <p class="generated">Generated 2026-11-10.</p>
+      <p class="generated">Generated 2026-11-11.</p>
       <p class="ai-daily-link">
         <a href="../index.html">Also: the weekly Top-7 digest</a>
       </p>

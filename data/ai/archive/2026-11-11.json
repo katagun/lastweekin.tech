@@ -1,0 +1,92 @@
+{
+  "date": "2026-11-11",
+  "generated_at": "2026-11-11T15:14:10.522996+00:00",
+  "intro": "Today's AI news centers on frontier capability releases and intensifying geopolitical and governance friction: Google pushed out a new cybersecurity-focused model, Washington and Beijing opened a formal dialogue on superintelligence risk even as Nvidia's China chip dealings draw fresh scrutiny, and AI-driven vulnerability discovery and small on-device agents continue reshaping the security and open-source landscape.",
+  "stories": [
+    {
+      "rank": 1,
+      "title": "Gemini 4 Carbon is now available",
+      "source": "Hacker News",
+      "sources": [
+        "Hacker News"
+      ],
+      "source_count": 1,
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/",
+      "theme": "Capabilities",
+      "hn_points": 288,
+      "score": 4.837,
+      "what_happened": "Google released Gemini 4 Carbon, which it describes as its strongest model with frontier performance in cybersecurity capabilities and long-horizon agentic workflows. The model follows a limited rollout to vetted cybersecurity defenders through Google's Fairwind Program two weeks earlier, and arrives after Gemini 4 Argon, which Google says remains the better choice for most general software engineering work.",
+      "why_it_matters": "Carbon positions Google at the frontier of AI-driven cybersecurity, a dual-use capability area where the same tools that find and patch vulnerabilities can also be weaponized for attacks. The staged release pattern - restricted access to researchers first, broader availability later - signals how major labs are now managing capability risk for cyber-relevant frontier models, a template other labs appear to be following.",
+      "watch_next": "Watch how enterprise and government security teams adopt Carbon, and whether similarly staged-access patterns (as with OpenAI's restricted ChatGPT 6.0 Cyber) become standard practice for cyber-capable frontier models.",
+      "summary": "Google released Gemini 4 Carbon, which it describes as its strongest model with frontier performance in cybersecurity capabilities and long-horizon agentic workflows. The model follows a limited rollout to vetted cybersecurity defenders through Google's Fairwind Program two weeks earlier, and arrives after Gemini 4 Argon, which Google says remains the better choice for most general software engineering work."
+    },
+    {
+      "rank": 2,
+      "title": "Tracking Anthropic-discovered vulnerabilities",
+      "source": "Hacker News",
+      "sources": [
+        "Hacker News"
+      ],
+      "source_count": 1,
+      "url": "https://www.vulncheck.com/blog/anthropic-glasswing-november-update",
+      "theme": "Security & Safety",
+      "hn_points": 434,
+      "score": 5.294,
+      "what_happened": "Security firm VulnCheck reports that seven months into Anthropic's Project Glasswing, the effort has produced 442 CVEs attributable to Anthropic, about 0.5% of all CVEs published this year, with only two confirmed exploited in the wild. Of Anthropic's 37,966 total reported findings, only 19.4% (7,349) have been made public and just 217 marked fixed; since September Anthropic added nearly 12,000 new findings while recording only 15 additional fixes.",
+      "why_it_matters": "AI-assisted vulnerability hunting is now discovering security flaws at a pace that vastly outstrips disclosure and remediation, creating a widening backlog that could leave known issues unpatched for long periods. This tests how AI labs balance the speed of automated discovery against responsible disclosure norms, and raises questions about whether vendors and open-source maintainers can keep up with AI-scale vulnerability research.",
+      "watch_next": "Whether fix rates accelerate as the backlog grows, and whether industry groups push for standardized disclosure timelines specific to AI-discovered vulnerabilities.",
+      "summary": "Security firm VulnCheck reports that seven months into Anthropic's Project Glasswing, the effort has produced 442 CVEs attributable to Anthropic, about 0.5% of all CVEs published this year, with only two confirmed exploited in the wild. Of Anthropic's 37,966 total reported findings, only 19.4% (7,349) have been made public and just 217 marked fixed; since September Anthropic added nearly 12,000 new findings while recording only 15 additional fixes."
+    },
+    {
+      "rank": 3,
+      "title": "U.S. and China establish a dialogue on superintelligence",
+      "source": "cnbc.com",
+      "sources": [
+        "cnbc.com"
+      ],
+      "source_count": 1,
+      "url": "https://www.cnbc.com/2026/11/11/trump-xi-summit-ai-nvidia-.html",
+      "theme": "Policy & Regulation",
+      "hn_points": null,
+      "score": 4,
+      "what_happened": "Treasury Secretary Scott Bessent said the US and China have established a new dialogue mechanism focused on 'superintelligence' (SI) risk, aimed at guarding against shared dangers and avoiding misunderstandings between the two governments even as they continue to compete on AI. The mechanism will involve both sides exchanging best practices for testing and safety.",
+      "why_it_matters": "This is a notable step toward formal government-to-government coordination on frontier AI risk between the world's two leading AI powers, moving beyond purely adversarial export-control posturing. It suggests both governments now see superintelligence-level risk as serious enough to warrant direct coordination, even amid ongoing strategic competition.",
+      "watch_next": "Watch for specifics on what safety practices will actually be shared, and whether the dialogue yields concrete commitments or remains largely symbolic given continuing chip export tensions.",
+      "summary": "Treasury Secretary Scott Bessent said the US and China have established a new dialogue mechanism focused on 'superintelligence' (SI) risk, aimed at guarding against shared dangers and avoiding misunderstandings between the two governments even as they continue to compete on AI. The mechanism will involve both sides exchanging best practices for testing and safety."
+    },
+    {
+      "rank": 4,
+      "title": "Nvidia faces renewed scrutiny over China chip ties and CEO-related disclosures",
+      "source": "koreatimes.co.kr",
+      "sources": [
+        "koreatimes.co.kr"
+      ],
+      "source_count": 1,
+      "url": "https://koreatimes.co.kr/world/20261111/nvidia-faces-deepening-scrutiny-over-china-chip-ties-ceo-affair",
+      "theme": "Infrastructure & Chips",
+      "hn_points": null,
+      "score": 4,
+      "what_happened": "Nvidia's board has hired outside counsel to investigate CEO Jensen Huang's relationship with Alice Huang amid reports it helped facilitate at least $7.5 billion in chip shipments to China. Senate Democratic Leader Chuck Schumer has called for answers and tighter export restrictions, and the FBI is reportedly examining whether Huang was targeted by a foreign intelligence operation; Nvidia says the board has no reason to believe national security or trade secrets were compromised.",
+      "why_it_matters": "The probe links personal conduct allegations directly to sensitive chip export compliance, raising the political stakes for Nvidia's China business just as Congress debates tightening AI chip export controls. Any adverse findings could trigger new legislative action or stricter licensing requirements, with ripple effects across Nvidia's largest growth market and the broader chip supply chain.",
+      "watch_next": "Watch for the outcome of the Wachtell Lipton-led board investigation and whether Congress moves to tighten export licensing rules in response to the allegations.",
+      "summary": "Nvidia's board has hired outside counsel to investigate CEO Jensen Huang's relationship with Alice Huang amid reports it helped facilitate at least $7.5 billion in chip shipments to China. Senate Democratic Leader Chuck Schumer has called for answers and tighter export restrictions, and the FBI is reportedly examining whether Huang was targeted by a foreign intelligence operation; Nvidia says the board has no reason to believe national security or trade secrets were compromised."
+    },
+    {
+      "rank": 5,
+      "title": "Tether’s AI research unit releases an 800-million-parameter on-device agent model",
+      "source": "huggingface.co",
+      "sources": [
+        "huggingface.co"
+      ],
+      "source_count": 1,
+      "url": "https://huggingface.co/blog/qvac/botpsy",
+      "theme": "Open Source",
+      "hn_points": null,
+      "score": 4,
+      "what_happened": "Tether's AI research unit released BotPsy, an 800-million-parameter on-device personal assistant designed as a sub-billion-parameter agentic language model. The release argues that small, specialized on-device agents can match frontier cloud models on specific tasks while avoiding the cost volatility, privacy risks, and dependency issues of relying on third-party proprietary APIs.",
+      "why_it_matters": "The release adds momentum to the open-source push toward small, efficient on-device agents that reduce reliance on cloud providers, giving developers more control over cost, privacy, and long-term availability. It reflects a broader industry shift where specialized small models complement rather than replace frontier systems for narrow, well-defined agentic tasks.",
+      "watch_next": "Watch for independent benchmarks comparing BotPsy's real-world task performance against other sub-billion-parameter agent models, and whether Tether expands this into a broader model family.",
+      "summary": "Tether's AI research unit released BotPsy, an 800-million-parameter on-device personal assistant designed as a sub-billion-parameter agentic language model. The release argues that small, specialized on-device agents can match frontier cloud models on specific tasks while avoiding the cost volatility, privacy risks, and dependency issues of relying on third-party proprietary APIs."
+    }
+  ]
+}
