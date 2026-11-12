@@ -1,92 +1,96 @@
 {
-  "date": "2026-11-11",
-  "generated_at": "2026-11-11T15:14:10.522996+00:00",
-  "intro": "Today's AI news centers on frontier capability releases and intensifying geopolitical and governance friction: Google pushed out a new cybersecurity-focused model, Washington and Beijing opened a formal dialogue on superintelligence risk even as Nvidia's China chip dealings draw fresh scrutiny, and AI-driven vulnerability discovery and small on-device agents continue reshaping the security and open-source landscape.",
+  "date": "2026-11-12",
+  "generated_at": "2026-11-12T15:14:30.638790+00:00",
+  "intro": "The day's biggest AI story is Nvidia's leadership crisis boiling over into Jensen Huang's resignation, while Anthropic cements its position as the first frontier AI lab to go public and Google pushes capabilities forward with a new decision-scoring API and a genomics model.",
   "stories": [
     {
       "rank": 1,
-      "title": "Gemini 4 Carbon is now available",
-      "source": "Hacker News",
+      "title": "Nvidia CEO Jensen Huang has resigned",
+      "source": "The Verge",
       "sources": [
-        "Hacker News"
+        "Ars Technica",
+        "Techmeme",
+        "The Verge"
       ],
-      "source_count": 1,
-      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/",
-      "theme": "Capabilities",
-      "hn_points": 288,
-      "score": 4.837,
-      "what_happened": "Google released Gemini 4 Carbon, which it describes as its strongest model with frontier performance in cybersecurity capabilities and long-horizon agentic workflows. The model follows a limited rollout to vetted cybersecurity defenders through Google's Fairwind Program two weeks earlier, and arrives after Gemini 4 Argon, which Google says remains the better choice for most general software engineering work.",
-      "why_it_matters": "Carbon positions Google at the frontier of AI-driven cybersecurity, a dual-use capability area where the same tools that find and patch vulnerabilities can also be weaponized for attacks. The staged release pattern - restricted access to researchers first, broader availability later - signals how major labs are now managing capability risk for cyber-relevant frontier models, a template other labs appear to be following.",
-      "watch_next": "Watch how enterprise and government security teams adopt Carbon, and whether similarly staged-access patterns (as with OpenAI's restricted ChatGPT 6.0 Cyber) become standard practice for cyber-capable frontier models.",
-      "summary": "Google released Gemini 4 Carbon, which it describes as its strongest model with frontier performance in cybersecurity capabilities and long-horizon agentic workflows. The model follows a limited rollout to vetted cybersecurity defenders through Google's Fairwind Program two weeks earlier, and arrives after Gemini 4 Argon, which Google says remains the better choice for most general software engineering work."
+      "source_count": 3,
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1030422/nvidia-jensen-huang-ai-china-alice-huang",
+      "theme": "Companies",
+      "hn_points": null,
+      "score": 6.991,
+      "what_happened": "Nvidia CEO Jensen Huang resigned effective immediately after The New York Times reported a second alleged extramarital affair, this time with VP of healthcare Kimberly Powell, who reports directly to him. This followed an earlier acknowledged affair with Megaspeed executive Alice Huang, who US intelligence reportedly identified as an asset linked to China's Ministry of State Security. CFO Colette Kress was named interim CEO, and former chip exec Harvey Jones was appointed Nvidia's first board chairman.",
+      "why_it_matters": "Nvidia sits at the center of the global AI compute buildout, and the abrupt departure of its founder-CEO during an active national-security-adjacent scandal creates real uncertainty for an industry whose capital flows, chip roadmaps, and export-control posture have all been shaped around Huang's leadership. Shares fell more than 11% on the news, and commentators are already flagging risk to the circular AI financing arrangements Huang helped orchestrate across hyperscalers and chipmakers.",
+      "watch_next": "Watch for Nvidia's board process on selecting a permanent CEO, any fallout in AI infrastructure financing deals tied to Huang's relationships, and further disclosures about the alleged China intelligence connection.",
+      "summary": "Nvidia CEO Jensen Huang resigned effective immediately after The New York Times reported a second alleged extramarital affair, this time with VP of healthcare Kimberly Powell, who reports directly to him. This followed an earlier acknowledged affair with Megaspeed executive Alice Huang, who US intelligence reportedly identified as an asset linked to China's Ministry of State Security. CFO Colette Kress was named interim CEO, and former chip exec Harvey Jones was appointed Nvidia's first board chairman."
     },
     {
       "rank": 2,
-      "title": "Tracking Anthropic-discovered vulnerabilities",
+      "title": "Anthropic IPO",
       "source": "Hacker News",
       "sources": [
         "Hacker News"
       ],
       "source_count": 1,
-      "url": "https://www.vulncheck.com/blog/anthropic-glasswing-november-update",
-      "theme": "Security & Safety",
-      "hn_points": 434,
-      "score": 5.294,
-      "what_happened": "Security firm VulnCheck reports that seven months into Anthropic's Project Glasswing, the effort has produced 442 CVEs attributable to Anthropic, about 0.5% of all CVEs published this year, with only two confirmed exploited in the wild. Of Anthropic's 37,966 total reported findings, only 19.4% (7,349) have been made public and just 217 marked fixed; since September Anthropic added nearly 12,000 new findings while recording only 15 additional fixes.",
-      "why_it_matters": "AI-assisted vulnerability hunting is now discovering security flaws at a pace that vastly outstrips disclosure and remediation, creating a widening backlog that could leave known issues unpatched for long periods. This tests how AI labs balance the speed of automated discovery against responsible disclosure norms, and raises questions about whether vendors and open-source maintainers can keep up with AI-scale vulnerability research.",
-      "watch_next": "Whether fix rates accelerate as the backlog grows, and whether industry groups push for standardized disclosure timelines specific to AI-discovered vulnerabilities.",
-      "summary": "Security firm VulnCheck reports that seven months into Anthropic's Project Glasswing, the effort has produced 442 CVEs attributable to Anthropic, about 0.5% of all CVEs published this year, with only two confirmed exploited in the wild. Of Anthropic's 37,966 total reported findings, only 19.4% (7,349) have been made public and just 217 marked fixed; since September Anthropic added nearly 12,000 new findings while recording only 15 additional fixes."
+      "url": "https://ipo.anthropic.com/us/",
+      "theme": "Industry & Economics",
+      "hn_points": 292,
+      "score": 5.722,
+      "what_happened": "Anthropic published its IPO prospectus, disclosing $17.0 billion in trailing revenue, more than 12x year-over-year growth, and over 11,900 customers with trailing-twelve-month revenue of at least $100,000. The filing frames Anthropic as a public benefit corporation aiming to secure AI's benefits while mitigating its risks, and includes a roadshow video ahead of listing.",
+      "why_it_matters": "This makes Anthropic the first frontier AI lab to pursue public markets, a milestone that will force unprecedented financial transparency on model costs, compute spend, and safety commitments for a company previously funded entirely through private rounds. The IPO will set a valuation benchmark for the entire frontier AI sector and test whether public investors buy into AI lab economics amid growing scrutiny of circular financing deals.",
+      "watch_next": "Watch for the IPO pricing and opening-day valuation, and how rivals like OpenAI respond to having a public comparable in the market.",
+      "summary": "Anthropic published its IPO prospectus, disclosing $17.0 billion in trailing revenue, more than 12x year-over-year growth, and over 11,900 customers with trailing-twelve-month revenue of at least $100,000. The filing frames Anthropic as a public benefit corporation aiming to secure AI's benefits while mitigating its risks, and includes a roadshow video ahead of listing."
     },
     {
       "rank": 3,
-      "title": "U.S. and China establish a dialogue on superintelligence",
-      "source": "cnbc.com",
+      "title": "Gemini Decisions API",
+      "source": "Hacker News",
       "sources": [
-        "cnbc.com"
+        "Hacker News"
       ],
       "source_count": 1,
-      "url": "https://www.cnbc.com/2026/11/11/trump-xi-summit-ai-nvidia-.html",
-      "theme": "Policy & Regulation",
-      "hn_points": null,
-      "score": 4,
-      "what_happened": "Treasury Secretary Scott Bessent said the US and China have established a new dialogue mechanism focused on 'superintelligence' (SI) risk, aimed at guarding against shared dangers and avoiding misunderstandings between the two governments even as they continue to compete on AI. The mechanism will involve both sides exchanging best practices for testing and safety.",
-      "why_it_matters": "This is a notable step toward formal government-to-government coordination on frontier AI risk between the world's two leading AI powers, moving beyond purely adversarial export-control posturing. It suggests both governments now see superintelligence-level risk as serious enough to warrant direct coordination, even amid ongoing strategic competition.",
-      "watch_next": "Watch for specifics on what safety practices will actually be shared, and whether the dialogue yields concrete commitments or remains largely symbolic given continuing chip export tensions.",
-      "summary": "Treasury Secretary Scott Bessent said the US and China have established a new dialogue mechanism focused on 'superintelligence' (SI) risk, aimed at guarding against shared dangers and avoiding misunderstandings between the two governments even as they continue to compete on AI. The mechanism will involve both sides exchanging best practices for testing and safety."
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
+      "theme": "Capabilities",
+      "hn_points": 508,
+      "score": 5.138,
+      "what_happened": "Google launched the Gemini Decisions API, powered by a new model called Gemini Decision 1, designed for fast closed-set choices like tool selection, policy checks, model routing, and context grading rather than open-ended text generation. It accepts multimodal input across text, images, audio, video, and PDFs up to 256K tokens, and can answer up to 1,000 independent questions in a single call.",
+      "why_it_matters": "This signals a shift toward purpose-built, cheaper inference primitives for the narrow decision-making tasks that increasingly sit inside agentic pipelines, rather than relying on full generative models for every step. Positioning it as a distinct API/model category suggests Google is trying to own the infrastructure layer for agent orchestration, not just the flagship chat model market.",
+      "watch_next": "Watch adoption by agent-framework builders and whether competitors like OpenAI or Anthropic respond with similar bounded-decision endpoints.",
+      "summary": "Google launched the Gemini Decisions API, powered by a new model called Gemini Decision 1, designed for fast closed-set choices like tool selection, policy checks, model routing, and context grading rather than open-ended text generation. It accepts multimodal input across text, images, audio, video, and PDFs up to 256K tokens, and can answer up to 1,000 independent questions in a single call."
     },
     {
       "rank": 4,
-      "title": "Nvidia faces renewed scrutiny over China chip ties and CEO-related disclosures",
-      "source": "koreatimes.co.kr",
+      "title": "Google DeepMind releases AlphaGenome 2",
+      "source": "thefile.news",
       "sources": [
-        "koreatimes.co.kr"
+        "thefile.news"
       ],
       "source_count": 1,
-      "url": "https://koreatimes.co.kr/world/20261111/nvidia-faces-deepening-scrutiny-over-china-chip-ties-ceo-affair",
-      "theme": "Infrastructure & Chips",
+      "url": "https://thefile.news/editions/2026-11-12",
+      "theme": "Capabilities",
       "hn_points": null,
       "score": 4,
-      "what_happened": "Nvidia's board has hired outside counsel to investigate CEO Jensen Huang's relationship with Alice Huang amid reports it helped facilitate at least $7.5 billion in chip shipments to China. Senate Democratic Leader Chuck Schumer has called for answers and tighter export restrictions, and the FBI is reportedly examining whether Huang was targeted by a foreign intelligence operation; Nvidia says the board has no reason to believe national security or trade secrets were compromised.",
-      "why_it_matters": "The probe links personal conduct allegations directly to sensitive chip export compliance, raising the political stakes for Nvidia's China business just as Congress debates tightening AI chip export controls. Any adverse findings could trigger new legislative action or stricter licensing requirements, with ripple effects across Nvidia's largest growth market and the broader chip supply chain.",
-      "watch_next": "Watch for the outcome of the Wachtell Lipton-led board investigation and whether Congress moves to tighten export licensing rules in response to the allegations.",
-      "summary": "Nvidia's board has hired outside counsel to investigate CEO Jensen Huang's relationship with Alice Huang amid reports it helped facilitate at least $7.5 billion in chip shipments to China. Senate Democratic Leader Chuck Schumer has called for answers and tighter export restrictions, and the FBI is reportedly examining whether Huang was targeted by a foreign intelligence operation; Nvidia says the board has no reason to believe national security or trade secrets were compromised."
+      "what_happened": "Google DeepMind released AlphaGenome 2, a model that predicts how a genetic variant changes gene activity within a specific human cell type. The system addresses the challenge that all cells share identical DNA but activate different genes depending on cell type, such as heart muscle versus immune cells.",
+      "why_it_matters": "Cell-type-specific variant-to-expression prediction is a core bottleneck in interpreting genomic data for disease research and drug discovery; improving this could accelerate identification of disease-causing mutations and target genes. It extends DeepMind's track record of applying frontier AI to biology beyond protein structure into functional genomics, reinforcing Google's strategy of using capability gains for scientific acceleration claims.",
+      "watch_next": "Watch for independent validation of AlphaGenome 2's predictions and whether pharmaceutical or research partners adopt it for variant interpretation pipelines.",
+      "summary": "Google DeepMind released AlphaGenome 2, a model that predicts how a genetic variant changes gene activity within a specific human cell type. The system addresses the challenge that all cells share identical DNA but activate different genes depending on cell type, such as heart muscle versus immune cells."
     },
     {
       "rank": 5,
-      "title": "Tether’s AI research unit releases an 800-million-parameter on-device agent model",
-      "source": "huggingface.co",
+      "title": "United Airlines bans AI agents from booking flights on behalf of travelers",
+      "source": "Hacker News",
       "sources": [
-        "huggingface.co"
+        "Engadget",
+        "Hacker News",
+        "Slashdot"
       ],
-      "source_count": 1,
-      "url": "https://huggingface.co/blog/qvac/botpsy",
-      "theme": "Open Source",
-      "hn_points": null,
-      "score": 4,
-      "what_happened": "Tether's AI research unit released BotPsy, an 800-million-parameter on-device personal assistant designed as a sub-billion-parameter agentic language model. The release argues that small, specialized on-device agents can match frontier cloud models on specific tasks while avoiding the cost volatility, privacy risks, and dependency issues of relying on third-party proprietary APIs.",
-      "why_it_matters": "The release adds momentum to the open-source push toward small, efficient on-device agents that reduce reliance on cloud providers, giving developers more control over cost, privacy, and long-term availability. It reflects a broader industry shift where specialized small models complement rather than replace frontier systems for narrow, well-defined agentic tasks.",
-      "watch_next": "Watch for independent benchmarks comparing BotPsy's real-world task performance against other sub-billion-parameter agent models, and whether Tether expands this into a broader model family.",
-      "summary": "Tether's AI research unit released BotPsy, an 800-million-parameter on-device personal assistant designed as a sub-billion-parameter agentic language model. The release argues that small, specialized on-device agents can match frontier cloud models on specific tasks while avoiding the cost volatility, privacy risks, and dependency issues of relying on third-party proprietary APIs."
+      "source_count": 3,
+      "url": "https://www.cbsnews.com/news/united-airlines-bans-ai-agents-booking-flights/",
+      "theme": "Policy & Regulation",
+      "hn_points": 624,
+      "score": 11.365,
+      "what_happened": "United Airlines announced it is banning unauthorized third-party AI agents from booking flights, checking passengers in, or making account changes on travelers' behalf. The airline cited the risk of sharing account credentials and payment information with personal AI assistants, warning that resulting actions could have unintended consequences.",
+      "why_it_matters": "This is one of the first explicit corporate policy responses to the rise of autonomous AI agents acting as consumer proxies, and it highlights a real friction point: agentic AI needs delegated credentials to be useful, but companies see that as a security and liability risk. Expect other regulated consumer-facing industries (banking, healthcare, travel) to follow with similar restrictions as agent-based commerce tools proliferate.",
+      "watch_next": "Watch whether other airlines or travel platforms adopt similar bans, and whether AI agent companies respond with standardized, auditable delegation protocols.",
+      "summary": "United Airlines announced it is banning unauthorized third-party AI agents from booking flights, checking passengers in, or making account changes on travelers' behalf. The airline cited the risk of sharing account credentials and payment information with personal AI assistants, warning that resulting actions could have unintended consequences."
     }
   ]
 }
