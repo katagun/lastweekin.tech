@@ -1,0 +1,92 @@
+{
+  "date": "2026-11-13",
+  "generated_at": "2026-11-13T15:59:08.151187+00:00",
+  "intro": "Today's AI news centers on escalating US-China chip tensions, a major open-source model release, growing legal pushback against frontier AI labs, and the relentless infrastructure buildout reshaping compute supply chains.",
+  "stories": [
+    {
+      "rank": 1,
+      "title": "Chinese frontier AI models carry the fingerprint of export-controlled GPUs",
+      "source": "Hacker News",
+      "sources": [
+        "Hacker News"
+      ],
+      "source_count": 1,
+      "url": "https://unemploymentlabs.com/checkpoint-forensics",
+      "theme": "Security & Safety",
+      "hn_points": 331,
+      "score": 5.248,
+      "what_happened": "A forensic analysis of publicly released AI models from DeepSeek, Moonshot AI, MiniMax and Ant Group found numerical patterns matching Nvidia's export-controlled Blackwell GPUs in six models released since April 2026. Earlier models from the same companies instead matched Nvidia's older, non-restricted Hopper generation chips.",
+      "why_it_matters": "This is hard technical evidence that Chinese AI labs have circumvented US export controls to access Nvidia's most advanced hardware, undermining the premise that chip restrictions can meaningfully slow China's frontier AI progress. It raises urgent questions about smuggling networks, reseller compliance, and whether current enforcement mechanisms are fundamentally inadequate given how quickly restricted hardware is finding its way into training runs.",
+      "watch_next": "Expect US Commerce Department and congressional scrutiny of the smuggling pathways these models imply, alongside pressure on Nvidia to explain how Blackwell chips reached these companies despite controls.",
+      "summary": "A forensic analysis of publicly released AI models from DeepSeek, Moonshot AI, MiniMax and Ant Group found numerical patterns matching Nvidia's export-controlled Blackwell GPUs in six models released since April 2026. Earlier models from the same companies instead matched Nvidia's older, non-restricted Hopper generation chips."
+    },
+    {
+      "rank": 2,
+      "title": "Edge0-145B: Frontier AI Capabilities on Your Own Computer",
+      "source": "Hacker News",
+      "sources": [
+        "Hacker News"
+      ],
+      "source_count": 1,
+      "url": "https://edge0.ai/blog/introducing-edge0-145b-frontier-ai-capabilities-on-your-own-computer",
+      "theme": "Open Source",
+      "hn_points": 307,
+      "score": 5.297,
+      "what_happened": "A new open-source release introduced Edge0-145B and Edge0-120B, described as the world's first open-source on-device AI models at 145 billion parameters, along with a unified inference framework and deployment tools. The models target coding, reasoning, and agentic tasks previously requiring cloud-hosted frontier models.",
+      "why_it_matters": "On-device models at this scale challenge the long-standing tradeoff between local hardware constraints and frontier-level capability, potentially shifting workloads away from cloud APIs and their associated fees and data-handling requirements. If performance claims hold up under independent benchmarking, this could meaningfully accelerate enterprise and consumer adoption of fully local AI agents that don't depend on provider infrastructure.",
+      "watch_next": "Watch for independent benchmarks comparing Edge0-145B against cloud frontier models like GPT and Claude on coding and agentic tasks, and for hardware vendors' responses around memory and bandwidth requirements needed to run it.",
+      "summary": "A new open-source release introduced Edge0-145B and Edge0-120B, described as the world's first open-source on-device AI models at 145 billion parameters, along with a unified inference framework and deployment tools. The models target coding, reasoning, and agentic tasks previously requiring cloud-hosted frontier models."
+    },
+    {
+      "rank": 3,
+      "title": "Advocacy groups sue five AI companies seeking a freeze on frontier-model development",
+      "source": "abcnews.com",
+      "sources": [
+        "abcnews.com"
+      ],
+      "source_count": 1,
+      "url": "https://abcnews.com/Technology/wireStory/advocacy-groups-sue-ai-giants-freeze-new-models-138081070",
+      "theme": "Policy & Regulation",
+      "hn_points": null,
+      "score": 4,
+      "what_happened": "A coalition of online safety and consumer advocacy groups filed a lawsuit in San Francisco Superior Court against five leading AI companies seeking to halt further frontier-model development. The suit alleges the companies cannot prevent their own systems from causing \"catastrophic\" harm.",
+      "why_it_matters": "This marks an escalation from advocacy and regulatory pressure to direct litigation attempting to legally freeze AI development, a strategy that—if it gains traction—could set precedent for courts intervening in technology deployment timelines. Even if unsuccessful, the suit adds to mounting legal and political pressure on major AI labs following a midterm election cycle that intensified scrutiny of the industry's pace.",
+      "watch_next": "Watch which five companies are named as defendants and how they respond, plus whether any court grants even a temporary injunction that could set a legal precedent for AI development moratoriums.",
+      "summary": "A coalition of online safety and consumer advocacy groups filed a lawsuit in San Francisco Superior Court against five leading AI companies seeking to halt further frontier-model development. The suit alleges the companies cannot prevent their own systems from causing \"catastrophic\" harm."
+    },
+    {
+      "rank": 4,
+      "title": "Anthropic agrees to lease Riot Platforms’ 910 MW Texas campus for 15 years",
+      "source": "aiweekly.co",
+      "sources": [
+        "aiweekly.co"
+      ],
+      "source_count": 1,
+      "url": "https://aiweekly.co/ai-news-today/edition/2026-11-13",
+      "theme": "Infrastructure & Chips",
+      "hn_points": null,
+      "score": 4,
+      "what_happened": "Anthropic has agreed to lease a 910-megawatt data center campus from Riot Platforms in Texas under a 15-year deal. The agreement secures long-term dedicated power and compute capacity for Anthropic's AI infrastructure needs.",
+      "why_it_matters": "Long-duration, large-scale power leases like this reflect how AI labs are increasingly locking in energy and compute capacity years in advance, treating power availability as a strategic bottleneck on par with chip supply. It signals Anthropic's confidence in sustained demand growth and underscores how AI infrastructure buildouts are reshaping real estate, power grid, and crypto-mining-adjacent industries as former bitcoin infrastructure gets repurposed for AI.",
+      "watch_next": "Track whether other AI labs pursue similar direct leases with crypto-mining or energy infrastructure firms, and how this affects regional power grid capacity and pricing in Texas.",
+      "summary": "Anthropic has agreed to lease a 910-megawatt data center campus from Riot Platforms in Texas under a 15-year deal. The agreement secures long-term dedicated power and compute capacity for Anthropic's AI infrastructure needs."
+    },
+    {
+      "rank": 5,
+      "title": "TSMC reportedly plans a $1 billion investment in Anthropic and OpenAI",
+      "source": "rss.com",
+      "sources": [
+        "rss.com"
+      ],
+      "source_count": 1,
+      "url": "https://rss.com/podcasts/aidea-daily/3314570/",
+      "theme": "Industry & Economics",
+      "hn_points": null,
+      "score": 4,
+      "what_happened": "TSMC is reportedly planning to invest roughly $1 billion in both Anthropic and OpenAI. The move would deepen financial ties between the world's dominant chip foundry and two of the leading frontier AI labs.",
+      "why_it_matters": "A chipmaker investing directly in AI labs represents a notable vertical integration move, aligning TSMC's manufacturing roadmap and capacity planning more closely with the demand signals from its biggest eventual customers. It also reflects how capital is flowing in multiple directions across the AI supply chain—from labs to cloud providers to chipmakers—blurring traditional customer-supplier boundaries and raising questions about concentration risk if TSMC's fortunes become increasingly tied to a handful of AI labs' success.",
+      "watch_next": "Watch for confirmation of deal terms and whether other foundries or chip designers follow with similar strategic investments in frontier AI labs.",
+      "summary": "TSMC is reportedly planning to invest roughly $1 billion in both Anthropic and OpenAI. The move would deepen financial ties between the world's dominant chip foundry and two of the leading frontier AI labs."
+    }
+  ]
+}
