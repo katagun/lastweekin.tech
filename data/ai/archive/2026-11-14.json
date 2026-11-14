@@ -1,0 +1,92 @@
+{
+  "date": "2026-11-14",
+  "generated_at": "2026-11-14T15:10:41.560822+00:00",
+  "intro": "A relatively quiet AI-specific news day was dominated by fallout from Nvidia's leadership upheaval and a wave of corporate/government reorganizations, alongside a notable AI-assisted mathematics breakthrough and a major open-source agent-tooling funding round.",
+  "stories": [
+    {
+      "rank": 1,
+      "title": "OpenAI disbands its robotics team as its general models start running robots",
+      "source": "Hacker News",
+      "sources": [
+        "Hacker News"
+      ],
+      "source_count": 1,
+      "url": "https://fortune.com/2026/11/13/openai-disbands-robotics-team-as-its-general-models-start-running-robots/",
+      "theme": "Companies",
+      "hn_points": 173,
+      "score": 6.998,
+      "what_happened": "OpenAI has disbanded its stand-alone robotics research team, reassigning researchers to the company's main research organization under Chief Research Officer Mark Chen, while applied robotics and hardware staff moved to a larger product group. OpenAI confirmed the reorg to Fortune and characterized it as a sign of deepening commitment to robotics rather than a retreat.",
+      "why_it_matters": "The move signals that OpenAI increasingly views robotics not as a separate research vertical but as an application layer for its general-purpose foundation models, mirroring how it has folded other specialized efforts into core model development. It suggests confidence that large multimodal models can now directly control physical systems, potentially accelerating embodied-AI products while reducing headcount dedicated purely to robotics-specific research.",
+      "watch_next": "Watch for whether OpenAI ships a concrete robotics product or partnership in the coming months that validates this 'general models run robots' thesis, and how rivals like Google DeepMind and Physical Intelligence respond.",
+      "summary": "OpenAI has disbanded its stand-alone robotics research team, reassigning researchers to the company's main research organization under Chief Research Officer Mark Chen, while applied robotics and hardware staff moved to a larger product group. OpenAI confirmed the reorg to Fortune and characterized it as a sign of deepening commitment to robotics rather than a retreat."
+    },
+    {
+      "rank": 2,
+      "title": "AI unlocks Gödel's notebooks, said to contain hundreds of proved theorems",
+      "source": "Hacker News",
+      "sources": [
+        "Hacker News"
+      ],
+      "source_count": 1,
+      "url": "https://www.theguardian.com/science/2026/nov/13/kurt-godel-notebooks-ai-helps-unlock-hidden-discoveries-man-who-transformed-maths",
+      "theme": "Capabilities",
+      "hn_points": 405,
+      "score": 5.097,
+      "what_happened": "Researchers at Helsinki University, in a project led by logician Jan von Plato, used AI tools including Claude to help decode Kurt Gödel's handwritten shorthand notebooks from the early 1940s. The effort has reportedly surfaced hundreds of previously unknown proved theorems hidden in Gödel's unpublished workbooks.",
+      "why_it_matters": "This is a concrete example of AI accelerating historical and mathematical scholarship by solving a decades-long transcription bottleneck — Gödel's notebooks were written in an obscure shorthand that few scholars could read. It demonstrates a practical, low-controversy use case for large language models: pattern recognition and translation work that would otherwise take human experts years, with potential to unlock new mathematical results from one of the 20th century's most important thinkers.",
+      "watch_next": "Watch for publication of the extracted theorems and whether any prove mathematically novel or previously unknown results, plus whether similar AI-assisted archival projects expand to other historical scientific manuscripts.",
+      "summary": "Researchers at Helsinki University, in a project led by logician Jan von Plato, used AI tools including Claude to help decode Kurt Gödel's handwritten shorthand notebooks from the early 1940s. The effort has reportedly surfaced hundreds of previously unknown proved theorems hidden in Gödel's unpublished workbooks."
+    },
+    {
+      "rank": 3,
+      "title": "DoD redesignates its Chief Digital and Artificial Intelligence Office as the Super Intelligence Office",
+      "source": "aiedgebriefing.com",
+      "sources": [
+        "aiedgebriefing.com"
+      ],
+      "source_count": 1,
+      "url": "https://aiedgebriefing.com/2026-11-14/",
+      "theme": "Policy & Regulation",
+      "hn_points": null,
+      "score": 4,
+      "what_happened": "The U.S. Department of Defense has redesignated its Chief Digital and Artificial Intelligence Office (CDAO) as the Super Intelligence Office. The renaming comes amid a broader government AI news cycle that also included scrutiny of an FAA ground-stop tied to a new AI air traffic tool.",
+      "why_it_matters": "The rebrand signals that the Pentagon is elevating AI — and specifically advanced/superintelligent systems — as a formal strategic priority rather than a digital-modernization function, aligning organizational structure with the rhetoric around AGI/superintelligence race dynamics. It reflects how terminology from the frontier AI industry is migrating into government bureaucracy, with implications for defense AI budgets, procurement, and doctrine.",
+      "watch_next": "Watch for the new office's mandate, leadership appointments, and whether it drives expanded defense contracts with frontier AI labs or new military AI safety requirements.",
+      "summary": "The U.S. Department of Defense has redesignated its Chief Digital and Artificial Intelligence Office (CDAO) as the Super Intelligence Office. The renaming comes amid a broader government AI news cycle that also included scrutiny of an FAA ground-stop tied to a new AI air traffic tool."
+    },
+    {
+      "rank": 4,
+      "title": "LangChain raises $300 million at a $3 billion valuation",
+      "source": "aiweekly.co",
+      "sources": [
+        "aiweekly.co"
+      ],
+      "source_count": 1,
+      "url": "https://aiweekly.co/ai-news-today/edition/2026-11-14",
+      "theme": "Industry & Economics",
+      "hn_points": null,
+      "score": 4,
+      "what_happened": "LangChain has raised $300 million in new funding at a $3 billion valuation. The company provides widely used open-source and commercial tooling for building LLM-powered agent applications.",
+      "why_it_matters": "The round underscores continued investor appetite for AI infrastructure and developer-tooling companies even as some question overall AI market froth, and it cements LangChain's position as one of the dominant frameworks for agentic application development. A $3B valuation for a tooling layer (rather than a model company) highlights how value is accruing across the AI stack, not just at foundation-model labs.",
+      "watch_next": "Watch for how LangChain deploys the capital — likely expanding enterprise offerings and competing more directly with rivals like LlamaIndex and cloud-native agent frameworks from Microsoft, Google, and AWS.",
+      "summary": "LangChain has raised $300 million in new funding at a $3 billion valuation. The company provides widely used open-source and commercial tooling for building LLM-powered agent applications."
+    },
+    {
+      "rank": 5,
+      "title": "Nvidia director sold nearly $1B in stock weeks before the Jensen Huang scandal",
+      "source": "Hacker News",
+      "sources": [
+        "Hacker News"
+      ],
+      "source_count": 1,
+      "url": "https://finance.yahoo.com/markets/stocks/articles/nvidia-director-sold-nearly-1b-160000846.html",
+      "theme": "Security & Safety",
+      "hn_points": 206,
+      "score": 3.899,
+      "what_happened": "Nvidia board director and the company's second-largest shareholder Mark Stevens sold approximately $946 million in Nvidia stock across three separate batches during Q3 2026, in the months before CEO Jensen Huang's resignation on Nov. 12. Reports indicate no trading plan was flagged for the sales.",
+      "why_it_matters": "The scale and timing of the sales, absent a disclosed 10b5-1 trading plan, raise governance and insider-trading scrutiny questions at a moment when Nvidia's leadership crisis is already under intense public and regulatory attention. For a company central to the global AI compute supply chain, any erosion of trust in board-level conduct could affect investor confidence and invite SEC inquiry, compounding uncertainty during a leadership transition.",
+      "watch_next": "Watch for SEC filings or statements addressing whether the sales followed a pre-arranged trading plan, and whether regulators or Nvidia's own board open a formal review tied to the surrounding resignation scandal.",
+      "summary": "Nvidia board director and the company's second-largest shareholder Mark Stevens sold approximately $946 million in Nvidia stock across three separate batches during Q3 2026, in the months before CEO Jensen Huang's resignation on Nov. 12. Reports indicate no trading plan was flagged for the sales."
+    }
+  ]
+}
