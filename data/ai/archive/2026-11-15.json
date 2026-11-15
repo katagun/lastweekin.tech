@@ -1,0 +1,92 @@
+{
+  "date": "2026-11-15",
+  "generated_at": "2026-11-15T15:10:24.080176+00:00",
+  "intro": "A quiet Saturday news cycle still produced substantive AI-adjacent stories spanning finance, chip supply chains, agentic commerce, and data security, even as most outlets recycled familiar threads from earlier in the week.",
+  "stories": [
+    {
+      "rank": 1,
+      "title": "Federal Reserve flags AI-related debt as the market’s leading risk",
+      "source": "topfive.ai",
+      "sources": [
+        "topfive.ai"
+      ],
+      "source_count": 1,
+      "url": "https://topfive.ai/2026/11/15/",
+      "theme": "Industry & Economics",
+      "hn_points": null,
+      "score": 4,
+      "what_happened": "The Federal Reserve's November report found that AI was the most frequently cited risk among 23 market contacts surveyed. The report also noted that debt tied to AI computing infrastructure surpassed $680 billion by October.",
+      "why_it_matters": "This is a notable escalation in how central bank watchers frame AI investment risk: the sector's buildout is increasingly financed through debt and long-term lease commitments rather than equity or cash flow, which the Fed flags as a systemic concern. If AI compute demand or pricing softens, the leverage behind data center and chip buildouts could transmit stress into broader credit markets, not just tech balance sheets. For AI-dependent businesses, it's a signal that model costs are tethered to financing conditions well outside their control.",
+      "watch_next": "Watch for the Fed's next Financial Stability Report and whether rating agencies begin flagging AI infrastructure debt or lease-backed financing structures (e.g., the kind used in recent hyperscaler and neocloud deals) as a distinct risk category.",
+      "summary": "The Federal Reserve's November report found that AI was the most frequently cited risk among 23 market contacts surveyed. The report also noted that debt tied to AI computing infrastructure surpassed $680 billion by October."
+    },
+    {
+      "rank": 2,
+      "title": "OpenAI launches ChatGPT Wallet for agent-mediated purchases",
+      "source": "thinkfacility.com",
+      "sources": [
+        "thinkfacility.com"
+      ],
+      "source_count": 1,
+      "url": "https://www.thinkfacility.com/ai-news/2026-11-14/",
+      "theme": "Companies",
+      "hn_points": null,
+      "score": 4,
+      "what_happened": "OpenAI began rolling out ChatGPT Wallet on November 13 for US Pro subscribers aged 18 and over with eligible US-issued cards. Built with American Express, Mastercard, and Visa, the feature lets OpenAI's 'dots' agents complete purchases using substitute payment credentials, with each purchase requiring Face ID or Touch ID approval. Subscriptions approved once will continue charging automatically, and OpenAI says fully delegated purchasing with pre-approved spending limits is planned for the future.",
+      "why_it_matters": "This moves OpenAI further into agentic commerce, where AI assistants don't just recommend purchases but execute them using tokenized payment credentials. The biometric-gated, per-purchase approval model is a deliberate guardrail against runaway agent spending, but the stated roadmap toward pre-approved spending limits signals OpenAI's ambition to eventually let agents transact with less human-in-the-loop friction. It also deepens OpenAI's ties with major card networks, positioning ChatGPT as a transaction layer competing with browsers and e-commerce platforms for checkout real estate.",
+      "watch_next": "Watch for expansion beyond US Pro users, how merchants and card networks handle disputes/fraud on agent-initiated purchases, and whether competitors (Google, Amazon, Anthropic) ship comparable agentic payment rails.",
+      "summary": "OpenAI began rolling out ChatGPT Wallet on November 13 for US Pro subscribers aged 18 and over with eligible US-issued cards. Built with American Express, Mastercard, and Visa, the feature lets OpenAI's 'dots' agents complete purchases using substitute payment credentials, with each purchase requiring Face ID or Touch ID approval. Subscriptions approved once will continue charging automatically, and OpenAI says fully delegated purchasing with pre-approved spending limits is planned for the future."
+    },
+    {
+      "rank": 3,
+      "title": "Lovable apps expose passport details and more than 200K private messages",
+      "source": "Hacker News",
+      "sources": [
+        "Hacker News"
+      ],
+      "source_count": 1,
+      "url": "https://www.crissyfield.de/research/lovable-en/",
+      "theme": "Security & Safety",
+      "hn_points": 917,
+      "score": 5.106,
+      "what_happened": "Researchers examined 159,041 projects built on Lovable, the Swedish AI app-builder platform, and found many apps exposing personal and confidential data without requiring login. The exposed data reportedly included passport details and more than 200,000 private messages.",
+      "why_it_matters": "Lovable and similar 'vibe coding' platforms let non-programmers spin up functional web apps from natural-language prompts, but this investigation shows that ease-of-use is outpacing security defaults — sensitive data like IDs and private messages ended up publicly accessible at scale. As AI-generated app platforms proliferate, this is an early, concrete case study in how democratized development can systematically reproduce the same security mistakes (missing auth, exposed endpoints) across tens of thousands of apps simultaneously, rather than isolated incidents.",
+      "watch_next": "Watch whether Lovable and peer platforms (Replit, Bolt, v0) ship default-secure templates or mandatory auth scaffolding, and whether regulators treat AI-app-builder platforms as liable intermediaries for the data their users' apps expose.",
+      "summary": "Researchers examined 159,041 projects built on Lovable, the Swedish AI app-builder platform, and found many apps exposing personal and confidential data without requiring login. The exposed data reportedly included passport details and more than 200,000 private messages."
+    },
+    {
+      "rank": 4,
+      "title": "Malaysia investigates alleged use of the country to bypass AI-chip export controls",
+      "source": "luongnv.com",
+      "sources": [
+        "luongnv.com"
+      ],
+      "source_count": 1,
+      "url": "https://luongnv.com/news/reports/2026-11-14-afternoon.html",
+      "theme": "Policy & Regulation",
+      "hn_points": null,
+      "score": 4,
+      "what_happened": "Malaysia's home minister said police have been investigating alleged diversion of Nvidia AI chips to bypass US export controls since April 2025. The investigation centers on whether advanced GPUs routed through Malaysian data centers are reaching restricted end users, including Chinese tech firms.",
+      "why_it_matters": "Malaysia has become a key node in the global AI chip supply chain, and allegations of chip diversion there strike at the core of US export-control enforcement strategy, which relies heavily on allied third countries to police transshipment. If confirmed, this would be one of the more concrete documented cases of controls being circumvented through a third-party jurisdiction rather than smuggling directly into China, raising questions about how rigorously intermediary countries are enforcing US rules as a condition of access to Nvidia hardware.",
+      "watch_next": "Watch for the investigation's findings, any US Commerce Department response or new licensing conditions tied to Malaysian data centers, and whether this intersects with broader reporting on US officials with ties to Southeast Asian data center deals.",
+      "summary": "Malaysia's home minister said police have been investigating alleged diversion of Nvidia AI chips to bypass US export controls since April 2025. The investigation centers on whether advanced GPUs routed through Malaysian data centers are reaching restricted end users, including Chinese tech firms."
+    },
+    {
+      "rank": 5,
+      "title": "Court denies motion to dismiss DRAM price fixing case",
+      "source": "Hacker News",
+      "sources": [
+        "Hacker News"
+      ],
+      "source_count": 1,
+      "url": "https://litnews.ai/articles/garciaguirre-samsung-sk-hynix-micron-dram-conspiracy-suit-survives-dismissal",
+      "theme": "Infrastructure & Chips",
+      "hn_points": 329,
+      "score": 5.422,
+      "what_happened": "A federal judge denied in full a motion by Samsung, SK Hynix, and Micron to dismiss a proposed class action alleging the three memory makers conspired to cut supply of conventional DRAM, including DDR5, while shifting capacity toward HBM. The court distinguished the case from the Ninth Circuit's 2022 dismissal of an earlier DRAM conspiracy suit, citing evidence of long-term HBM lock-ups, refusals of long-term conventional DRAM contracts, Micron's Crucial closure, fab expansion delays despite record prices, and near-identical customer vetting practices across the three firms.",
+      "why_it_matters": "HBM is the critical memory bottleneck underpinning AI accelerator production, and this lawsuit alleges the dominant memory makers deliberately starved conventional DRAM supply to chase higher-margin HBM demand from AI chipmakers — a dynamic that would have driven up DRAM prices across the entire tech industry, not just AI hardware. Allowing the case to proceed means discovery could expose internal communications about capacity allocation decisions that have real bearing on AI compute costs and memory shortages more broadly.",
+      "watch_next": "Watch for discovery disclosures on HBM allocation agreements and whether this emboldens similar antitrust scrutiny of AI-driven memory and chip supply constraints in other jurisdictions.",
+      "summary": "A federal judge denied in full a motion by Samsung, SK Hynix, and Micron to dismiss a proposed class action alleging the three memory makers conspired to cut supply of conventional DRAM, including DDR5, while shifting capacity toward HBM. The court distinguished the case from the Ninth Circuit's 2022 dismissal of an earlier DRAM conspiracy suit, citing evidence of long-term HBM lock-ups, refusals of long-term conventional DRAM contracts, Micron's Crucial closure, fab expansion delays despite record prices, and near-identical customer vetting practices across the three firms."
+    }
+  ]
+}
