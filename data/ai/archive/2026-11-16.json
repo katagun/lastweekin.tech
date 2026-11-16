@@ -1,0 +1,93 @@
+{
+  "date": "2026-11-16",
+  "generated_at": "2026-11-16T15:10:59.864427+00:00",
+  "intro": "A leadership crisis at Nvidia dominates the day alongside a cluster of chip-supply and AI-security stories, with notable moves on both US allies' GPU stockpiles and open-weight model security.",
+  "stories": [
+    {
+      "rank": 1,
+      "title": "Jensen Huang discusses comeback as Nvidia CEO with allies",
+      "source": "Hacker News",
+      "sources": [
+        "Ars Technica",
+        "Hacker News"
+      ],
+      "source_count": 2,
+      "url": "https://www.ft.com/content/45383d86-33c4-4d99-86e5-5e058d3567c1",
+      "theme": "Companies",
+      "hn_points": 127,
+      "score": 6.072,
+      "what_happened": "Jensen Huang is reportedly discussing a return to Nvidia's CEO seat with confidants, according to the Financial Times, days after he resigned amid reports of affairs with a suspected Chinese spy and a subordinate. A group of allies is assembling a 'war room' of Silicon Valley executives to lobby the board for his reinstatement and plans to seek support from the White House, even as an independent board-led probe into the conduct that triggered the crisis continues.",
+      "why_it_matters": "Nvidia sits at the center of the AI compute stack, and instability at the top of a $4 trillion company with outsized influence over GPU supply, pricing, and export-control compliance creates uncertainty for every AI lab and cloud provider dependent on its chips. A contested reinstatement effort — complete with political lobbying — also signals how entangled Nvidia's leadership has become with national AI policy.",
+      "watch_next": "Watch for the outcome of the board's independent investigation and whether major shareholders or the White House weigh in publicly on Huang's potential return.",
+      "summary": "Jensen Huang is reportedly discussing a return to Nvidia's CEO seat with confidants, according to the Financial Times, days after he resigned amid reports of affairs with a suspected Chinese spy and a subordinate. A group of allies is assembling a 'war room' of Silicon Valley executives to lobby the board for his reinstatement and plans to seek support from the White House, even as an independent board-led probe into the conduct that triggered the crisis continues."
+    },
+    {
+      "rank": 2,
+      "title": "Meituan releases a 1.6-trillion-parameter model trained without Nvidia GPUs",
+      "source": "iheart.com",
+      "sources": [
+        "iheart.com"
+      ],
+      "source_count": 1,
+      "url": "https://iheart.com/podcast/1333-5-minute-ai-news-daily-302322175/episode/sunday-november-15-2026-5-350054393/",
+      "theme": "Infrastructure & Chips",
+      "hn_points": null,
+      "score": 4,
+      "what_happened": "Meituan released a 1.6-trillion-parameter model that was trained without using Nvidia GPUs, according to reporting that grouped it with other same-day AI developments including OpenAI's robotics team dissolution and Tesla's Cybercab pre-orders.",
+      "why_it_matters": "A Chinese tech giant successfully training a model at this scale without Nvidia hardware is a concrete data point in the broader story of Chinese firms adapting to US export controls by building capability on domestic or alternative silicon. If verified and reproducible, it weakens the assumption that export restrictions alone can durably cap Chinese frontier-model progress.",
+      "watch_next": "Look for benchmark comparisons against Nvidia-trained frontier models and details on which chips Meituan actually used.",
+      "summary": "Meituan released a 1.6-trillion-parameter model that was trained without using Nvidia GPUs, according to reporting that grouped it with other same-day AI developments including OpenAI's robotics team dissolution and Tesla's Cybercab pre-orders."
+    },
+    {
+      "rank": 3,
+      "title": "Cohere reports an egress-security risk in Alibaba’s Qwen open-weight model",
+      "source": "iheart.com",
+      "sources": [
+        "iheart.com"
+      ],
+      "source_count": 1,
+      "url": "https://iheart.com/podcast/1333-5-minute-ai-news-daily-302322175/episode/sunday-november-15-2026-5-350054393/",
+      "theme": "Security & Safety",
+      "hn_points": null,
+      "score": 4,
+      "what_happened": "Cohere reported an egress-security risk in Alibaba's open-weight Qwen model, flagging it alongside other same-day AI news including new model benchmark results and OpenAI's robotics team shutdown.",
+      "why_it_matters": "Open-weight models from major labs are increasingly embedded in enterprise and government pipelines, so a credible egress-security flaw identified by a rival AI company raises concrete risk-management questions for anyone deploying Qwen in production. It also highlights growing scrutiny of open-weight models' security posture as they close the capability gap with closed frontier systems.",
+      "watch_next": "Watch for Alibaba's response and whether other researchers independently confirm or expand on the specific egress vulnerability Cohere identified.",
+      "summary": "Cohere reported an egress-security risk in Alibaba's open-weight Qwen model, flagging it alongside other same-day AI news including new model benchmark results and OpenAI's robotics team shutdown."
+    },
+    {
+      "rank": 4,
+      "title": "South Korea confirms delivery of 260,000 advanced GPUs",
+      "source": "aidaily.media",
+      "sources": [
+        "aidaily.media"
+      ],
+      "source_count": 1,
+      "url": "https://aidaily.media/en/daily/2026-11-16/",
+      "theme": "Infrastructure & Chips",
+      "hn_points": null,
+      "score": 4,
+      "what_happened": "South Korea confirmed delivery of 260,000 advanced GPUs, reported as part of a roundup of AI chip-supply and policy stories covering US export-control pressure on Commerce Secretary Howard Lutnick and congressional efforts to restrict China's access to advanced chips.",
+      "why_it_matters": "A delivery of this scale to South Korea underscores how allied nations are rapidly building out AI compute capacity even as Washington tightens controls on where advanced chips can go, reshaping the global map of who has access to frontier-scale training infrastructure. It also raises questions about diversion risk and whether allied stockpiles could indirectly ease pressure on restricted destinations.",
+      "watch_next": "Watch for details on the chip vendor, end-use commitments, and whether Commerce Department export licensing terms attached any conditions to the shipment.",
+      "summary": "South Korea confirmed delivery of 260,000 advanced GPUs, reported as part of a roundup of AI chip-supply and policy stories covering US export-control pressure on Commerce Secretary Howard Lutnick and congressional efforts to restrict China's access to advanced chips."
+    },
+    {
+      "rank": 5,
+      "title": "Around 1,000 servers are implicated as infrastructure for AI-driven cyberattacks",
+      "source": "luongnv.com",
+      "sources": [
+        "luongnv.com"
+      ],
+      "source_count": 1,
+      "url": "https://luongnv.com/news/reports/2026-11-15-morning.html",
+      "theme": "Security & Safety",
+      "hn_points": null,
+      "score": 4,
+      "what_happened": "A Japan-led investigation identified roughly 1,000 servers believed to be infrastructure supporting AI-driven cyberattacks, reported alongside Epoch AI's findings on test agents and other security developments from the prior 48 hours.",
+      "why_it_matters": "A thousand-server footprint tied to AI-driven attacks suggests offensive AI tooling has moved from proof-of-concept to operational scale, with multinational coordination now required to track and dismantle it. This matters for every organization assessing AI-enabled threat actors as a near-term risk rather than a theoretical one.",
+      "watch_next": "Watch for attribution details on who controls the server network and whether takedown or sanctions actions follow the Japan-led probe.",
+      "summary": "A Japan-led investigation identified roughly 1,000 servers believed to be infrastructure supporting AI-driven cyberattacks, reported alongside Epoch AI's findings on test agents and other security developments from the prior 48 hours."
+    }
+  ]
+}
