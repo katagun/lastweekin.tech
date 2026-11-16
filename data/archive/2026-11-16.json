@@ -1,0 +1,122 @@
+{
+  "week": "2026-11-16",
+  "generated_at": "2026-11-16T12:03:12.504250+00:00",
+  "intro": "A week dominated by infrastructure fragility and the fallout of AI's breakneck growth: a national ground stop grounded US air travel, Meta got hit with a nine-figure privacy fine, and a rocket failure wiped out dozens of satellites. Underneath it all, AI's security and geopolitical seams kept showing — from leaking startups to GPU export-control forensics — while even pure math got a strange AI-assisted archaeology story.",
+  "stories": [
+    {
+      "rank": 1,
+      "title": "FAA issues national ground stop – lifted 4.5 hours later",
+      "source": "Hacker News",
+      "sources": [
+        "Hacker News"
+      ],
+      "source_count": 1,
+      "url": "https://www.nbcnews.com/news/us-news/faa-orders-nationwide-ground-stop-departing-flights-reasons-safety-rcna609247",
+      "category": "Policy",
+      "hn_points": 1652,
+      "score": 5.651,
+      "summary": "A nationwide ground stop on Friday halted U.S. flight departures for more than four hours after air traffic control equipment became overloaded when a router sent too much data, according to the FAA and a senior government official. The disruption affected Delta Air Lines, United Airlines, and American Airlines, resulting in over 7,000 cancellations Friday and continuing into Saturday with more than 3,700 additional cancellations and 1,990 delays by 9:30 a.m. ET, with major hubs including Hartsfield-Jackson Atlanta International Airport, Chicago O'Hare International Airport, and New York's John F. Kennedy International Airport experiencing the most disruptions. Transportation Secretary Sean Duffy attributed the outage to decades-old analog equipment in the air traffic control system and called for Congress to approve $50 billion to overhaul it, though Congress previously approved $12.5 billion over five years for upgrades.",
+      "why": "A four-and-a-half-hour national ground stop cascaded into thousands of cancellations, exposing how brittle US aviation infrastructure still is.",
+      "consensus": false
+    },
+    {
+      "rank": 2,
+      "title": "Italy fines Meta $887M over Android users' data access",
+      "source": "Hacker News",
+      "sources": [
+        "Hacker News",
+        "Slashdot",
+        "The Hacker News"
+      ],
+      "source_count": 3,
+      "url": "https://www.reuters.com/world/italy-fines-meta-887-million-over-android-users-data-access-2026-11-14/",
+      "category": "Security",
+      "hn_points": 406,
+      "score": 8.884,
+      "summary": "Italy's data protection authority fined Meta €805 million for a Facebook Android feature that suggested photos and videos from users' phone galleries for posting without explicit consent, affecting approximately 20 million Italian Android users. The Garante found that the feature was enabled by default and accessed users' photos, videos, and metadata through a broad permission that did not clearly disclose this specific use, violating Italy's Privacy Code implementation of the EU's ePrivacy Directive. Meta has 60 days to disable the feature by default for all users, including those who previously granted gallery access, and to obtain separate, informed consent going forward, with the company planning to appeal the fine as \"disproportionate.\" The authority also ordered Meta to report on its compliance efforts within 30 and 90 days, with the feature remaining inaccessible to users who have not provided valid consent if the company misses the deadline.",
+      "why": "An ⬆887M fine against Meta over default-on photo scraping is one of the largest privacy enforcement actions yet and sets precedent for how 'consent' is judged under GDPR.",
+      "consensus": false
+    },
+    {
+      "rank": 3,
+      "title": "New SignDrop Zero-Day Exploit Turns Windows CLFS Security Feature Into SYSTEM Access",
+      "source": "The Hacker News",
+      "sources": [
+        "TechSpot",
+        "The Hacker News"
+      ],
+      "source_count": 2,
+      "url": "https://thehackernews.com/2026/11/new-signdrop-zero-day-exploit-turns.html",
+      "category": "Security",
+      "hn_points": null,
+      "score": 3.855,
+      "summary": "A researcher publishing as MSNightmare released public exploit code this week demonstrating how a local Windows user can escalate privileges to SYSTEM level through a flaw in the Common Log File System (CLFS) driver, which affects Windows 11 26H2, Windows 11 26H2 Experimental, and Windows Server 2025 Experimental systems. The exploit, called SignDrop, abuses an authentication feature that Microsoft added to CLFS in October 2025 by manipulating how the driver creates companion .cnpf files when a privileged process opens a prepared log, using symbolic links to redirect file creation to attacker-controlled locations. Microsoft has not yet confirmed the vulnerability, assigned it a CVE number, or released a patch, though independent testing by 78researchlab confirmed the exploit works but found it unreliable for operational use and highly noticeable due to UAC prompt changes. Administrators can check their exposure by reviewing the CLFS authentication mode registry setting at HKLM\\SYSTEM\\CurrentControlSet\\Services\\CLFS\\Authentication, where values of 0 or 1 indicate vulnerability.",
+      "why": "",
+      "consensus": false
+    },
+    {
+      "rank": 4,
+      "title": "Chinese frontier AI models carry the fingerprint of export-controlled GPUs",
+      "source": "Hacker News",
+      "sources": [
+        "Hacker News"
+      ],
+      "source_count": 1,
+      "url": "https://unemploymentlabs.com/checkpoint-forensics",
+      "category": "AI",
+      "hn_points": 443,
+      "score": 2.702,
+      "summary": "Forensic analysis of AI model weights from Chinese companies DeepSeek, Moonshot AI, MiniMax, and Ant Group reveals that six models released since April 2026 contain numerical patterns matching NVIDIA's export-controlled Blackwell GPUs, despite U.S. restrictions on shipping this hardware to China. The researchers identified these \"fingerprints\" by analyzing how the models' initial weight values were generated, finding that the thread counts used during initialization match Blackwell's processor architecture rather than the older Hopper chips used in these companies' earlier models. The analysis estimates that these five training runs collectively used approximately 12,000 Blackwell GPUs over two to three months each, costing over half a billion dollars combined, though the findings do not establish where the chips were located or how access was obtained. Other major Chinese AI labs including Alibaba, Zhipu, Tencent, and Xiaomi continue using Hopper-generation hardware in their latest released models.",
+      "why": "Forensic evidence that Chinese labs are running export-controlled Nvidia Blackwell chips undercuts the entire premise of US chip export controls.",
+      "consensus": false
+    },
+    {
+      "rank": 5,
+      "title": "Lovable apps expose passport details and more than 200K private messages",
+      "source": "Hacker News",
+      "sources": [
+        "Hacker News"
+      ],
+      "source_count": 1,
+      "url": "https://www.crissyfield.de/research/lovable-en/",
+      "category": "AI",
+      "hn_points": 989,
+      "score": 5.693,
+      "summary": "Researchers examining 159,041 Lovable projects discovered that many applications built on the Swedish AI platform expose sensitive data without requiring login authentication. Of 34,545 projects using the Supabase database service, 24,664 sent database records upon initial page load, and further analysis found email addresses in 10,560 tables across 7,403 of these sites, indicating potential exposure of personal information. Exposed data included over 80,000 profiles from a German lifestyle forum with names and dates of birth, tens of thousands of ticket and restaurant records with payment information, identity documents with passport numbers, and hundreds of thousands of emails and contracts. The research highlights a gap between Lovable's marketing promise of easy, no-code application building and its terms placing full security responsibility on customers, with the platform's standardized database integration patterns potentially making it easier for attackers to exploit similar misconfigurations across multiple applications.",
+      "why": "An audit finding passport scans and 200K private messages exposed across Lovable-built apps is a concrete warning about the security debt behind the AI-app-building boom.",
+      "consensus": false
+    },
+    {
+      "rank": 6,
+      "title": "AI unlocks Gödel's notebooks, said to contain hundreds of proved theorems",
+      "source": "Hacker News",
+      "sources": [
+        "Hacker News"
+      ],
+      "source_count": 1,
+      "url": "https://www.theguardian.com/science/2026/nov/13/kurt-godel-notebooks-ai-helps-unlock-hidden-discoveries-man-who-transformed-maths",
+      "category": "AI",
+      "hn_points": 441,
+      "score": 2.809,
+      "summary": "Finnish logician Jan von Plato, who has been studying Kurt Gödel's 1,009-page workbooks from the early 1940s since 2017, used the AI model Claude in September to rapidly analyze the densely written German shorthand notebooks, revealing that Gödel had proved hundreds of previously unknown theorems and anticipated mathematical results not discovered until decades later. Claude's analysis identified 663 theorems with proofs or proof sketches, of which about 400 were verified as correct, 200 required minor repairs, and 50 were false, and the AI also discovered 14 unexplored themes in logic that Gödel had developed. Von Plato verified one of Claude's key findings—that Gödel had nearly completed a proof of the independence of the axiom of choice in the 1940s, which would have earned him a Fields Medal—using the proof verification program Coq. The project demonstrates how AI can process and synthesize large volumes of complex historical scientific material far faster than human researchers, though scholars like Joel David Hamkins caution that distinguishing Gödel's original insights from Claude's reconstruction remains a task for historians.",
+      "why": "Using AI to decode Kurt Gödel's shorthand notebooks and surface new theorems is a rare example of AI producing genuinely novel scholarly discovery rather than just automating existing work.",
+      "consensus": false
+    },
+    {
+      "rank": 7,
+      "title": "All AI-generated code should be Open Source",
+      "source": "Hacker News",
+      "sources": [
+        "Hacker News"
+      ],
+      "source_count": 1,
+      "url": "https://jakub.jankiewicz.org/blog/ai-code-open-source/",
+      "category": "AI",
+      "hn_points": 1174,
+      "score": 5.873,
+      "summary": "This article argues that all AI-generated code should be released as open source software, citing two main reasons: AI models were trained on massive amounts of open source code scraped from the internet and licensed projects like Stack Overflow without proper attribution, which the author characterizes as \"license laundering\"; and AI-generated code should not be copyrightable since non-human creators cannot hold copyrights, a principle established by the U.S. Copyright Office and precedent from the Monkey Selfie case. The author contends that to honor the open ecosystem that enabled AI development and ensure fairness across different jurisdictions with varying copyright laws, developers and companies should explicitly release AI-generated code under open source licenses or dedicate it to the public domain using Creative Commons Zero licensing.",
+      "why": "",
+      "consensus": false
+    }
+  ]
+}
