@@ -1,0 +1,94 @@
+{
+  "date": "2026-11-21",
+  "generated_at": "2026-11-21T15:10:40.567974+00:00",
+  "intro": "A quiet-ish news cycle dominated by messaging privacy hardening against AI agents, a major open-weights model release, unsettling self-modifying LLM research, and escalating U.S. chip export policy tension layered with Trump's anti-regulation rhetoric.",
+  "stories": [
+    {
+      "rank": 1,
+      "title": "Signal now blocks screenshots by default to stymie AI agents",
+      "source": "The Hacker News",
+      "sources": [
+        "Engadget",
+        "Slashdot",
+        "The Hacker News"
+      ],
+      "source_count": 3,
+      "url": "https://thehackernews.com/2026/11/signal-blocks-ai-agents-from-reading.html",
+      "theme": "Security & Safety",
+      "hn_points": null,
+      "score": 6.735,
+      "what_happened": "Signal announced it will restrict screenshots by default on Android and iOS to prevent AI agents integrated into the OS from reading private chats, building on a similar protection it rolled out for Windows 11 after Microsoft's Recall feature launched. The company acknowledged the protection is 'incomplete' given the proliferation of agentic systems embedded at the OS level.",
+      "why_it_matters": "As OS-level AI agents gain the ability to observe and act on screen content, privacy-focused apps are being forced into an arms race against the very platforms they run on. Signal's move highlights a structural tension: agentic AI features baked into mobile operating systems create new surveillance vectors that third-party apps can only partially defend against, raising questions about whether true end-to-end privacy is compatible with ambient AI assistants.",
+      "watch_next": "Watch whether Apple and Google adjust agent permissions in response, and whether other encrypted apps (Signal competitors) adopt similar screenshot-blocking defaults.",
+      "summary": "Signal announced it will restrict screenshots by default on Android and iOS to prevent AI agents integrated into the OS from reading private chats, building on a similar protection it rolled out for Windows 11 after Microsoft's Recall feature launched. The company acknowledged the protection is 'incomplete' given the proliferation of agentic systems embedded at the OS level."
+    },
+    {
+      "rank": 2,
+      "title": "Inkling 2 Mini",
+      "source": "Hacker News",
+      "sources": [
+        "Hacker News"
+      ],
+      "source_count": 1,
+      "url": "https://thinkingmachines.ai/news/inkling-2-mini/",
+      "theme": "Open Source",
+      "hn_points": 1150,
+      "score": 5.209,
+      "what_happened": "A new open-weights model, Inkling 2 Mini, was released as a 'looped transformer' that reruns its middle layers three times per token to boost reasoning without using more tokens. It reportedly leads all open-weights models under 100B parameters on benchmarks like DeepSWE v1.1 (48.2%) and Vals Index v2.2 (46.5%), while running faster than comparably performing models.",
+      "why_it_matters": "The looped-transformer architecture represents a genuine architectural innovation rather than just scale-driven improvement, offering a path to stronger reasoning on small, laptop-runnable models. If the benchmark claims hold up under independent scrutiny, it could shift the open-weights landscape by making high-quality agentic coding and reasoning accessible without massive parameter counts or cloud inference costs.",
+      "watch_next": "Look for independent benchmark verification and whether other labs adopt the looped-layer-reuse technique in their own open or closed models.",
+      "summary": "A new open-weights model, Inkling 2 Mini, was released as a 'looped transformer' that reruns its middle layers three times per token to boost reasoning without using more tokens. It reportedly leads all open-weights models under 100B parameters on benchmarks like DeepSWE v1.1 (48.2%) and Vals Index v2.2 (46.5%), while running faster than comparably performing models."
+    },
+    {
+      "rank": 3,
+      "title": "Language Models Can Rewrite Their Own Weights",
+      "source": "Hacker News",
+      "sources": [
+        "Hacker News"
+      ],
+      "source_count": 1,
+      "url": "https://arxiv.org/abs/2611.21885",
+      "theme": "Capabilities",
+      "hn_points": 445,
+      "score": 5.054,
+      "what_happened": "A new research paper demonstrates language models rewriting their own weights through their own reasoning process, improving performance without gradient updates or additional training runs. The authors describe this as a 'third way' beyond retraining or inference-time scaffolding, calling it self-rewriting.",
+      "why_it_matters": "If models can genuinely modify their own weights via reasoning alone, it blurs the line between inference and training and raises both capability and safety questions: models that evolve post-deployment without a controlled training pipeline are harder to audit, version, and align. This could enable continual learning agents, but also complicates safety guarantees that rely on frozen, reviewed weights.",
+      "watch_next": "Watch for replication attempts, scrutiny of how durable and controllable these self-modifications are, and any safety-community response on oversight implications.",
+      "summary": "A new research paper demonstrates language models rewriting their own weights through their own reasoning process, improving performance without gradient updates or additional training runs. The authors describe this as a 'third way' beyond retraining or inference-time scaffolding, calling it self-rewriting."
+    },
+    {
+      "rank": 4,
+      "title": "US tightens export controls on advanced AI chips and related semiconductors",
+      "source": "theworldofai.org",
+      "sources": [
+        "theworldofai.org"
+      ],
+      "source_count": 1,
+      "url": "https://theworldofai.org/ai-news/db7dbd4e/",
+      "theme": "Infrastructure & Chips",
+      "hn_points": null,
+      "score": 4,
+      "what_happened": "The U.S. government introduced tighter export controls on semiconductor technology on November 20, 2026, extending restrictions beyond advanced AI chips to system-on-chips used in common consumer electronics. Taiwan Semiconductor Manufacturing Co. has already suspended some shipments to clients as a result, with industry insiders reporting wider supply-chain disruption than expected.",
+      "why_it_matters": "Expanding export controls from AI-specific chips to broader consumer SoCs signals a major escalation in U.S. tech-decoupling policy, with ripple effects across global electronics manufacturing, not just AI infrastructure. TSMC's shipment suspensions show real-time supply chain consequences, and the breadth of the restrictions suggests policymakers are treating semiconductor control as a general strategic lever rather than an AI-specific one.",
+      "watch_next": "Watch for retaliatory measures from China, further TSMC client disclosures, and whether the restrictions get narrowed or expanded in coming weeks.",
+      "summary": "The U.S. government introduced tighter export controls on semiconductor technology on November 20, 2026, extending restrictions beyond advanced AI chips to system-on-chips used in common consumer electronics. Taiwan Semiconductor Manufacturing Co. has already suspended some shipments to clients as a result, with industry insiders reporting wider supply-chain disruption than expected."
+    },
+    {
+      "rank": 5,
+      "title": "Trump says the US will not allow AI regulation to undermine American leadership",
+      "source": "theworldofai.org",
+      "sources": [
+        "theworldofai.org"
+      ],
+      "source_count": 1,
+      "url": "https://theworldofai.org/ai-news/de09c5d9/",
+      "theme": "Policy & Regulation",
+      "hn_points": null,
+      "score": 4,
+      "what_happened": "President Trump told leaders at the APEC summit in Shenzhen that the U.S. will not allow AI regulation to undermine American leadership, framing his argument around 'superintelligence' and opposing rules that would constrain it. The remarks came just days after the administration tightened chip export controls.",
+      "why_it_matters": "The juxtaposition of aggressive export controls with explicit rejection of domestic AI regulation reveals the administration's strategy: restrict adversaries' access to compute while deregulating at home to maximize U.S. AI development speed. This stance will shape upcoming federal AI policy debates and could clash with state-level regulatory efforts and international calls for AI safety guardrails.",
+      "watch_next": "Watch for Congressional response to the no-regulation stance and whether states move to fill the regulatory vacuum the administration is signaling it won't occupy.",
+      "summary": "President Trump told leaders at the APEC summit in Shenzhen that the U.S. will not allow AI regulation to undermine American leadership, framing his argument around 'superintelligence' and opposing rules that would constrain it. The remarks came just days after the administration tightened chip export controls."
+    }
+  ]
+}

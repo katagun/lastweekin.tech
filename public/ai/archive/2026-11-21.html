@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LastWeekIn.Tech — AI Daily, 2026-11-21</title>
+    <meta name="description" content="The 5 AI developments that mattered on 2026-11-21, with analysis and what to watch next." />
+    <meta name="color-scheme" content="light dark" />
+    <meta property="og:site_name" content="LastWeekIn.Tech — AI Daily" />
+    <meta property="og:title" content="LastWeekIn.Tech — AI Daily, 2026-11-21" />
+    <meta property="og:description" content="The 5 AI developments that mattered on 2026-11-21, with analysis and what to watch next." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://lastweekin.tech/ai/archive/2026-11-21.html" />
+    <meta property="og:url" content="https://lastweekin.tech/ai/archive/2026-11-21.html" />
+    <meta property="og:image" content="https://lastweekin.tech/ai/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="LastWeekIn.Tech AI Daily — the AI stories that mattered today"
+    />
+    <meta name="twitter:image" content="https://lastweekin.tech/ai/og.png" />
+    <link
+      rel="alternate"
+      type="application/atom+xml"
+      title="LastWeekIn.Tech AI Daily"
+      href="../feed.xml"
+    />
+    <link rel="stylesheet" href="../style.css" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22><text y=%2214%22 font-size=%2214%22>7</text></svg>"
+    />
+  </head>
+  <body>
+    <a class="skip-link" href="#stories">Skip to the stories</a>
+
+    <header class="site-header">
+      <p class="masthead-note">Published daily &middot; AI only &middot; No trackers, no ads</p>
+      <h1 class="site-title">
+        <a class="wordmark" href="../index.html"
+          >LastWeekIn<span class="dot">.</span>Tech</a
+        >
+      </h1>
+      <p class="section-suffix">
+        <a class="section-link" href="../../index.html"
+          ><span class="section-divider">/</span> Weekly Digest</a
+        >
+      </p>
+      <div class="dateline" role="presentation">
+        <span class="dateline-item">The 5 AI stories that mattered</span>
+        <span class="dateline-item"
+          >Briefing for
+          <time datetime="2026-11-21">Nov 21, 2026</time></span
+        >
+      </div>
+      <p class="archive-note">
+        An archived briefing. <a href="../index.html">See today&rsquo;s briefing.</a>
+      </p>
+    </header>
+
+    <main>
+      <p class="standfirst">A quiet-ish news cycle dominated by messaging privacy hardening against AI agents, a major open-weights model release, unsettling self-modifying LLM research, and escalating U.S. chip export policy tension layered with Trump&#39;s anti-regulation rhetoric.</p>
+
+      <ol class="story-list" id="stories">
+        <li class="story-card lead-story">
+          <p class="story-rank" aria-hidden="true">1</p>
+          <div class="story-content">
+            <p class="story-meta">
+              <span class="visually-hidden">Number 1. </span>
+              <span class="story-category category-security-safety">Security &amp; Safety</span>
+              <span class="story-source">The Hacker News</span>
+            </p>
+            <h2 class="story-title">
+              <a href="https://thehackernews.com/2026/11/signal-blocks-ai-agents-from-reading.html" target="_blank" rel="noopener noreferrer"
+                >Signal now blocks screenshots by default to stymie AI agents</a
+              >
+            </h2>
+            <p class="story-summary">Signal announced it will restrict screenshots by default on Android and iOS to prevent AI agents integrated into the OS from reading private chats, building on a similar protection it rolled out for Windows 11 after Microsoft&#39;s Recall feature launched. The company acknowledged the protection is &#39;incomplete&#39; given the proliferation of agentic systems embedded at the OS level.</p>
+            <p class="story-case">
+              <span class="story-case-label">Why it matters</span> As OS-level AI agents gain the ability to observe and act on screen content, privacy-focused apps are being forced into an arms race against the very platforms they run on. Signal&#39;s move highlights a structural tension: agentic AI features baked into mobile operating systems create new surveillance vectors that third-party apps can only partially defend against, raising questions about whether true end-to-end privacy is compatible with ambient AI assistants.
+            </p>
+            <p class="story-case">
+              <span class="story-case-label">What to watch</span> Watch whether Apple and Google adjust agent permissions in response, and whether other encrypted apps (Signal competitors) adopt similar screenshot-blocking defaults.
+            </p>
+          </div>
+        </li>
+        <li class="story-card">
+          <p class="story-rank" aria-hidden="true">2</p>
+          <div class="story-content">
+            <p class="story-meta">
+              <span class="visually-hidden">Number 2. </span>
+              <span class="story-category category-open-source">Open Source</span>
+              <span class="story-source">Hacker News</span>
+            </p>
+            <h2 class="story-title">
+              <a href="https://thinkingmachines.ai/news/inkling-2-mini/" target="_blank" rel="noopener noreferrer"
+                >Inkling 2 Mini</a
+              >
+            </h2>
+            <p class="story-summary">A new open-weights model, Inkling 2 Mini, was released as a &#39;looped transformer&#39; that reruns its middle layers three times per token to boost reasoning without using more tokens. It reportedly leads all open-weights models under 100B parameters on benchmarks like DeepSWE v1.1 (48.2%) and Vals Index v2.2 (46.5%), while running faster than comparably performing models.</p>
+            <p class="story-case">
+              <span class="story-case-label">Why it matters</span> The looped-transformer architecture represents a genuine architectural innovation rather than just scale-driven improvement, offering a path to stronger reasoning on small, laptop-runnable models. If the benchmark claims hold up under independent scrutiny, it could shift the open-weights landscape by making high-quality agentic coding and reasoning accessible without massive parameter counts or cloud inference costs.
+            </p>
+            <p class="story-case">
+              <span class="story-case-label">What to watch</span> Look for independent benchmark verification and whether other labs adopt the looped-layer-reuse technique in their own open or closed models.
+            </p>
+          </div>
+        </li>
+        <li class="story-card">
+          <p class="story-rank" aria-hidden="true">3</p>
+          <div class="story-content">
+            <p class="story-meta">
+              <span class="visually-hidden">Number 3. </span>
+              <span class="story-category category-capabilities">Capabilities</span>
+              <span class="story-source">Hacker News</span>
+            </p>
+            <h2 class="story-title">
+              <a href="https://arxiv.org/abs/2611.21885" target="_blank" rel="noopener noreferrer"
+                >Language Models Can Rewrite Their Own Weights</a
+              >
+            </h2>
+            <p class="story-summary">A new research paper demonstrates language models rewriting their own weights through their own reasoning process, improving performance without gradient updates or additional training runs. The authors describe this as a &#39;third way&#39; beyond retraining or inference-time scaffolding, calling it self-rewriting.</p>
+            <p class="story-case">
+              <span class="story-case-label">Why it matters</span> If models can genuinely modify their own weights via reasoning alone, it blurs the line between inference and training and raises both capability and safety questions: models that evolve post-deployment without a controlled training pipeline are harder to audit, version, and align. This could enable continual learning agents, but also complicates safety guarantees that rely on frozen, reviewed weights.
+            </p>
+            <p class="story-case">
+              <span class="story-case-label">What to watch</span> Watch for replication attempts, scrutiny of how durable and controllable these self-modifications are, and any safety-community response on oversight implications.
+            </p>
+          </div>
+        </li>
+        <li class="story-card">
+          <p class="story-rank" aria-hidden="true">4</p>
+          <div class="story-content">
+            <p class="story-meta">
+              <span class="visually-hidden">Number 4. </span>
+              <span class="story-category category-infrastructure-chips">Infrastructure &amp; Chips</span>
+              <span class="story-source">theworldofai.org</span>
+            </p>
+            <h2 class="story-title">
+              <a href="https://theworldofai.org/ai-news/db7dbd4e/" target="_blank" rel="noopener noreferrer"
+                >US tightens export controls on advanced AI chips and related semiconductors</a
+              >
+            </h2>
+            <p class="story-summary">The U.S. government introduced tighter export controls on semiconductor technology on November 20, 2026, extending restrictions beyond advanced AI chips to system-on-chips used in common consumer electronics. Taiwan Semiconductor Manufacturing Co. has already suspended some shipments to clients as a result, with industry insiders reporting wider supply-chain disruption than expected.</p>
+            <p class="story-case">
+              <span class="story-case-label">Why it matters</span> Expanding export controls from AI-specific chips to broader consumer SoCs signals a major escalation in U.S. tech-decoupling policy, with ripple effects across global electronics manufacturing, not just AI infrastructure. TSMC&#39;s shipment suspensions show real-time supply chain consequences, and the breadth of the restrictions suggests policymakers are treating semiconductor control as a general strategic lever rather than an AI-specific one.
+            </p>
+            <p class="story-case">
+              <span class="story-case-label">What to watch</span> Watch for retaliatory measures from China, further TSMC client disclosures, and whether the restrictions get narrowed or expanded in coming weeks.
+            </p>
+          </div>
+        </li>
+        <li class="story-card">
+          <p class="story-rank" aria-hidden="true">5</p>
+          <div class="story-content">
+            <p class="story-meta">
+              <span class="visually-hidden">Number 5. </span>
+              <span class="story-category category-policy-regulation">Policy &amp; Regulation</span>
+              <span class="story-source">theworldofai.org</span>
+            </p>
+            <h2 class="story-title">
+              <a href="https://theworldofai.org/ai-news/de09c5d9/" target="_blank" rel="noopener noreferrer"
+                >Trump says the US will not allow AI regulation to undermine American leadership</a
+              >
+            </h2>
+            <p class="story-summary">President Trump told leaders at the APEC summit in Shenzhen that the U.S. will not allow AI regulation to undermine American leadership, framing his argument around &#39;superintelligence&#39; and opposing rules that would constrain it. The remarks came just days after the administration tightened chip export controls.</p>
+            <p class="story-case">
+              <span class="story-case-label">Why it matters</span> The juxtaposition of aggressive export controls with explicit rejection of domestic AI regulation reveals the administration&#39;s strategy: restrict adversaries&#39; access to compute while deregulating at home to maximize U.S. AI development speed. This stance will shape upcoming federal AI policy debates and could clash with state-level regulatory efforts and international calls for AI safety guardrails.
+            </p>
+            <p class="story-case">
+              <span class="story-case-label">What to watch</span> Watch for Congressional response to the no-regulation stance and whether states move to fill the regulatory vacuum the administration is signaling it won&#39;t occupy.
+            </p>
+          </div>
+        </li>
+      </ol>
+
+      <section class="subscribe" aria-labelledby="subscribe-heading">
+        <h2 id="subscribe-heading">Get it every day</h2>
+        <p>
+          A short AI briefing, every day.
+          <a href="../feed.xml">Subscribe with RSS</a> — no email address, no tracking.
+        </p>
+      </section>
+
+      <nav class="archive" aria-labelledby="archive-heading">
+        <h2 id="archive-heading">Past briefings</h2>
+        <details class="archive-year" open>
+          <summary>
+            <span class="archive-year-label">2026</span>
+            <span class="archive-count"
+              >66 briefings</span
+            >
+          </summary>
+          <ul>
+            <li>
+              <a href="../archive/2026-11-20.html"
+                >Nov 20</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-11-19.html"
+                >Nov 19</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-11-18.html"
+                >Nov 18</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-11-17.html"
+                >Nov 17</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-11-16.html"
+                >Nov 16</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-11-15.html"
+                >Nov 15</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-11-14.html"
+                >Nov 14</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-11-13.html"
+                >Nov 13</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-11-12.html"
+                >Nov 12</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-11-11.html"
+                >Nov 11</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-11-10.html"
+                >Nov 10</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-11-09.html"
+                >Nov 9</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-11-08.html"
+                >Nov 8</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-11-07.html"
+                >Nov 7</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-11-06.html"
+                >Nov 6</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-11-05.html"
+                >Nov 5</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-11-04.html"
+                >Nov 4</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-11-03.html"
+                >Nov 3</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-11-02.html"
+                >Nov 2</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-11-01.html"
+                >Nov 1</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-31.html"
+                >Oct 31</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-30.html"
+                >Oct 30</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-29.html"
+                >Oct 29</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-28.html"
+                >Oct 28</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-27.html"
+                >Oct 27</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-26.html"
+                >Oct 26</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-25.html"
+                >Oct 25</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-24.html"
+                >Oct 24</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-23.html"
+                >Oct 23</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-22.html"
+                >Oct 22</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-21.html"
+                >Oct 21</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-20.html"
+                >Oct 20</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-19.html"
+                >Oct 19</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-18.html"
+                >Oct 18</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-17.html"
+                >Oct 17</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-16.html"
+                >Oct 16</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-15.html"
+                >Oct 15</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-14.html"
+                >Oct 14</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-13.html"
+                >Oct 13</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-12.html"
+                >Oct 12</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-11.html"
+                >Oct 11</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-10.html"
+                >Oct 10</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-09.html"
+                >Oct 9</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-08.html"
+                >Oct 8</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-07.html"
+                >Oct 7</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-06.html"
+                >Oct 6</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-05.html"
+                >Oct 5</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-04.html"
+                >Oct 4</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-03.html"
+                >Oct 3</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-02.html"
+                >Oct 2</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-01.html"
+                >Oct 1</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-30.html"
+                >Sep 30</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-29.html"
+                >Sep 29</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-28.html"
+                >Sep 28</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-27.html"
+                >Sep 27</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-26.html"
+                >Sep 26</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-25.html"
+                >Sep 25</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-24.html"
+                >Sep 24</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-23.html"
+                >Sep 23</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-22.html"
+                >Sep 22</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-21.html"
+                >Sep 21</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-20.html"
+                >Sep 20</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-19.html"
+                >Sep 19</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-18.html"
+                >Sep 18</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-17.html"
+                >Sep 17</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-16.html"
+                >Sep 16</a
+              >
+            </li>
+          </ul>
+        </details>
+      </nav>
+    </main>
+
+    <footer>
+      <p>
+        Curated automatically from 3 sources. No trackers, no ads.
+      </p>
+      <p class="generated">Generated 2026-11-21.</p>
+      <p class="ai-daily-link">
+        <a href="../../index.html">Also: the weekly Top-7 digest</a>
+      </p>
+    </footer>
+  </body>
+</html>
