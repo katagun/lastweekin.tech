@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LastWeekIn.Tech — AI Daily</title>
-    <meta name="description" content="The 5 AI developments that mattered on 2026-11-21, with analysis and what to watch next." />
+    <meta name="description" content="The 5 AI developments that mattered on 2026-11-22, with analysis and what to watch next." />
     <meta name="color-scheme" content="light dark" />
     <meta property="og:site_name" content="LastWeekIn.Tech — AI Daily" />
     <meta property="og:title" content="LastWeekIn.Tech — AI Daily" />
-    <meta property="og:description" content="The 5 AI developments that mattered on 2026-11-21, with analysis and what to watch next." />
+    <meta property="og:description" content="The 5 AI developments that mattered on 2026-11-22, with analysis and what to watch next." />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="canonical" href="https://lastweekin.tech/ai/" />
@@ -52,13 +52,13 @@
         <span class="dateline-item">The 5 AI stories that mattered</span>
         <span class="dateline-item"
           >Briefing for
-          <time datetime="2026-11-21">Nov 21, 2026</time></span
+          <time datetime="2026-11-22">Nov 22, 2026</time></span
         >
       </div>
     </header>
 
     <main>
-      <p class="standfirst">A quiet-ish news cycle dominated by messaging privacy hardening against AI agents, a major open-weights model release, unsettling self-modifying LLM research, and escalating U.S. chip export policy tension layered with Trump&#39;s anti-regulation rhetoric.</p>
+      <p class="standfirst">Today&#39;s AI news skews toward security incidents across the inference supply chain, a major international policy setback on autonomous weapons, and a notable AI-assisted mathematics verification effort, with three separate reports exposing data leakage risks at AI infrastructure providers.</p>
 
       <ol class="story-list" id="stories">
         <li class="story-card lead-story">
@@ -66,20 +66,20 @@
           <div class="story-content">
             <p class="story-meta">
               <span class="visually-hidden">Number 1. </span>
-              <span class="story-category category-security-safety">Security &amp; Safety</span>
-              <span class="story-source">The Hacker News</span>
+              <span class="story-category category-capabilities">Capabilities</span>
+              <span class="story-source">Hacker News</span>
             </p>
             <h2 class="story-title">
-              <a href="https://thehackernews.com/2026/11/signal-blocks-ai-agents-from-reading.html" target="_blank" rel="noopener noreferrer"
-                >Signal now blocks screenshots by default to stymie AI agents</a
+              <a href="https://math.mit.edu/~drew/grh/" target="_blank" rel="noopener noreferrer"
+                >Verification files for the Lean proof of the Riemann Hypothesis</a
               >
             </h2>
-            <p class="story-summary">Signal announced it will restrict screenshots by default on Android and iOS to prevent AI agents integrated into the OS from reading private chats, building on a similar protection it rolled out for Windows 11 after Microsoft&#39;s Recall feature launched. The company acknowledged the protection is &#39;incomplete&#39; given the proliferation of agentic systems embedded at the OS level.</p>
+            <p class="story-summary">MIT mathematician Andrew Sutherland announced verification checks on a Lean-formalized proof of the Riemann Hypothesis, with checks run using Claude Code. The published Lean source compiles without errors, the five headline theorems depend only on standard axioms, and the proof has been independently verified by two separate kernels (nanoda and con-leche) plus lean4lean.</p>
             <p class="story-case">
-              <span class="story-case-label">Why it matters</span> As OS-level AI agents gain the ability to observe and act on screen content, privacy-focused apps are being forced into an arms race against the very platforms they run on. Signal&#39;s move highlights a structural tension: agentic AI features baked into mobile operating systems create new surveillance vectors that third-party apps can only partially defend against, raising questions about whether true end-to-end privacy is compatible with ambient AI assistants.
+              <span class="story-case-label">Why it matters</span> This represents a significant test case for AI-assisted formal verification of major mathematical claims, showing how coding agents like Claude Code can be used to systematically check complex, multi-module proof systems at scale. If the underlying mathematical claim holds up to full scrutiny, the role AI tools played in verification (not discovery) of such a landmark result would be a notable milestone for AI-human collaboration in formal mathematics.
             </p>
             <p class="story-case">
-              <span class="story-case-label">What to watch</span> Watch whether Apple and Google adjust agent permissions in response, and whether other encrypted apps (Signal competitors) adopt similar screenshot-blocking defaults.
+              <span class="story-case-label">What to watch</span> Watch for whether the remaining checks complete without issues and how the broader mathematics community receives and further scrutinizes the written mathematical claims, separate from the Lean verification itself.
             </p>
           </div>
         </li>
@@ -88,20 +88,20 @@
           <div class="story-content">
             <p class="story-meta">
               <span class="visually-hidden">Number 2. </span>
-              <span class="story-category category-open-source">Open Source</span>
+              <span class="story-category category-security-safety">Security &amp; Safety</span>
               <span class="story-source">Hacker News</span>
             </p>
             <h2 class="story-title">
-              <a href="https://thinkingmachines.ai/news/inkling-2-mini/" target="_blank" rel="noopener noreferrer"
-                >Inkling 2 Mini</a
+              <a href="https://openrouter.ai/blog/announcements/data-processing-incidents-on-inference-providers/" target="_blank" rel="noopener noreferrer"
+                >Data Processing Incidents on Inference Providers</a
               >
             </h2>
-            <p class="story-summary">A new open-weights model, Inkling 2 Mini, was released as a &#39;looped transformer&#39; that reruns its middle layers three times per token to boost reasoning without using more tokens. It reportedly leads all open-weights models under 100B parameters on benchmarks like DeepSWE v1.1 (48.2%) and Vals Index v2.2 (46.5%), while running faster than comparably performing models.</p>
+            <p class="story-summary">OpenRouter disclosed that security researchers found certain AI inference providers had data compromised or were not upholding their stated data policies. OpenRouter stated its own systems were not breached, but confirmed new findings specific to individual third-party inference providers and is maintaining a live list of security announcements.</p>
             <p class="story-case">
-              <span class="story-case-label">Why it matters</span> The looped-transformer architecture represents a genuine architectural innovation rather than just scale-driven improvement, offering a path to stronger reasoning on small, laptop-runnable models. If the benchmark claims hold up under independent scrutiny, it could shift the open-weights landscape by making high-quality agentic coding and reasoning accessible without massive parameter counts or cloud inference costs.
+              <span class="story-case-label">Why it matters</span> As AI inference increasingly runs through multi-provider marketplaces and routing services, this incident highlights systemic risk in the AI supply chain: customers often don&#39;t know which backend providers are actually processing their prompts or whether those providers honor privacy commitments. This erodes trust in API-based AI services at a moment when enterprises are rapidly scaling sensitive LLM usage.
             </p>
             <p class="story-case">
-              <span class="story-case-label">What to watch</span> Look for independent benchmark verification and whether other labs adopt the looped-layer-reuse technique in their own open or closed models.
+              <span class="story-case-label">What to watch</span> Watch for which specific providers are named in OpenRouter&#39;s disclosure list and whether enterprise customers demand stronger contractual data-handling guarantees from inference marketplaces.
             </p>
           </div>
         </li>
@@ -110,20 +110,20 @@
           <div class="story-content">
             <p class="story-meta">
               <span class="visually-hidden">Number 3. </span>
-              <span class="story-category category-capabilities">Capabilities</span>
+              <span class="story-category category-security-safety">Security &amp; Safety</span>
               <span class="story-source">Hacker News</span>
             </p>
             <h2 class="story-title">
-              <a href="https://arxiv.org/abs/2611.21885" target="_blank" rel="noopener noreferrer"
-                >Language Models Can Rewrite Their Own Weights</a
+              <a href="https://www.dragos.com/blog/ai-supply-chain-security-canary-tokens" target="_blank" rel="noopener noreferrer"
+                >AI Supply Chain Security: What Canary Tokens Found</a
               >
             </h2>
-            <p class="story-summary">A new research paper demonstrates language models rewriting their own weights through their own reasoning process, improving performance without gradient updates or additional training runs. The authors describe this as a &#39;third way&#39; beyond retraining or inference-time scaffolding, calling it self-rewriting.</p>
+            <p class="story-summary">Dragos researcher HD Moore reported sending nearly two million AI prompts containing unique, trackable canary-token secrets to AI providers over a five-month period (July-November 2026) to test data handling. The research found security breaches, prompt theft, and widespread failures by AI providers to protect customer data.</p>
             <p class="story-case">
-              <span class="story-case-label">Why it matters</span> If models can genuinely modify their own weights via reasoning alone, it blurs the line between inference and training and raises both capability and safety questions: models that evolve post-deployment without a controlled training pipeline are harder to audit, version, and align. This could enable continual learning agents, but also complicates safety guarantees that rely on frozen, reviewed weights.
+              <span class="story-case-label">Why it matters</span> This large-scale canary-token study provides empirical evidence that AI providers broadly mishandle sensitive data submitted through prompts, a critical concern as enterprises feed proprietary and regulated information into third-party AI systems. It adds to mounting evidence that the AI inference supply chain lacks consistent security hygiene, with direct implications for compliance, liability, and customer trust.
             </p>
             <p class="story-case">
-              <span class="story-case-label">What to watch</span> Watch for replication attempts, scrutiny of how durable and controllable these self-modifications are, and any safety-community response on oversight implications.
+              <span class="story-case-label">What to watch</span> Watch for which specific AI providers are named as failing data protection standards and whether this prompts regulatory scrutiny or new contractual data-security requirements in enterprise AI procurement.
             </p>
           </div>
         </li>
@@ -132,20 +132,20 @@
           <div class="story-content">
             <p class="story-meta">
               <span class="visually-hidden">Number 4. </span>
-              <span class="story-category category-infrastructure-chips">Infrastructure &amp; Chips</span>
-              <span class="story-source">theworldofai.org</span>
+              <span class="story-category category-security-safety">Security &amp; Safety</span>
+              <span class="story-source">Hacker News</span>
             </p>
             <h2 class="story-title">
-              <a href="https://theworldofai.org/ai-news/db7dbd4e/" target="_blank" rel="noopener noreferrer"
-                >US tightens export controls on advanced AI chips and related semiconductors</a
+              <a href="https://www.together.ai/blog/security-event-prompt-leakage-for-requests-in-june-and-july-of-2026" target="_blank" rel="noopener noreferrer"
+                >Together.ai: Prompt Leakage for Requests</a
               >
             </h2>
-            <p class="story-summary">The U.S. government introduced tighter export controls on semiconductor technology on November 20, 2026, extending restrictions beyond advanced AI chips to system-on-chips used in common consumer electronics. Taiwan Semiconductor Manufacturing Co. has already suspended some shipments to clients as a result, with industry insiders reporting wider supply-chain disruption than expected.</p>
+            <p class="story-summary">Together AI notified customers of a security incident where an unauthorized party downloaded stored prompt samples submitted to its serverless inference service during June and July 2026. The breach occurred after a credential for a private repository was exposed in a public code repository, and Together AI is still reviewing which customers require direct notification.</p>
             <p class="story-case">
-              <span class="story-case-label">Why it matters</span> Expanding export controls from AI-specific chips to broader consumer SoCs signals a major escalation in U.S. tech-decoupling policy, with ripple effects across global electronics manufacturing, not just AI infrastructure. TSMC&#39;s shipment suspensions show real-time supply chain consequences, and the breadth of the restrictions suggests policymakers are treating semiconductor control as a general strategic lever rather than an AI-specific one.
+              <span class="story-case-label">Why it matters</span> This is a concrete, named breach confirming the broader pattern of AI infrastructure providers mishandling customer prompt data, following disclosures about data compromise across inference providers industry-wide. It underscores that even routine engineering practices, like testing credential hygiene, can expose sensitive customer prompts at scale, raising stakes for enterprises relying on third-party inference services for proprietary workloads.
             </p>
             <p class="story-case">
-              <span class="story-case-label">What to watch</span> Watch for retaliatory measures from China, further TSMC client disclosures, and whether the restrictions get narrowed or expanded in coming weeks.
+              <span class="story-case-label">What to watch</span> Watch for Together AI&#39;s full customer notification list and whether affected enterprise customers pursue contractual remedies or shift workloads to providers with stronger data isolation guarantees.
             </p>
           </div>
         </li>
@@ -155,19 +155,19 @@
             <p class="story-meta">
               <span class="visually-hidden">Number 5. </span>
               <span class="story-category category-policy-regulation">Policy &amp; Regulation</span>
-              <span class="story-source">theworldofai.org</span>
+              <span class="story-source">Hacker News</span>
             </p>
             <h2 class="story-title">
-              <a href="https://theworldofai.org/ai-news/de09c5d9/" target="_blank" rel="noopener noreferrer"
-                >Trump says the US will not allow AI regulation to undermine American leadership</a
+              <a href="https://www.theguardian.com/technology/2026/nov/21/international-talks-control-ai-autonomous-weapons-collapse" target="_blank" rel="noopener noreferrer"
+                >International UN talks on controlling use of autonomous weapons collapse</a
               >
             </h2>
-            <p class="story-summary">President Trump told leaders at the APEC summit in Shenzhen that the U.S. will not allow AI regulation to undermine American leadership, framing his argument around &#39;superintelligence&#39; and opposing rules that would constrain it. The remarks came just days after the administration tightened chip export controls.</p>
+            <p class="story-summary">Week-long UN talks in Geneva aimed at establishing a negotiating mandate for a legally binding treaty on autonomous weapons collapsed after all-night negotiations failed to overcome Russian objections. Despite an overwhelming majority of states wanting a binding treaty process, the conference adopted a much weaker non-binding option asking countries to &#39;elaborate by consensus.&#39;</p>
             <p class="story-case">
-              <span class="story-case-label">Why it matters</span> The juxtaposition of aggressive export controls with explicit rejection of domestic AI regulation reveals the administration&#39;s strategy: restrict adversaries&#39; access to compute while deregulating at home to maximize U.S. AI development speed. This stance will shape upcoming federal AI policy debates and could clash with state-level regulatory efforts and international calls for AI safety guardrails.
+              <span class="story-case-label">Why it matters</span> The breakdown signals that international governance of AI-enabled autonomous weapons systems remains stalled despite years of effort, leaving a widening gap between rapid military AI deployment and any binding global rules. This failure effectively cedes the pace-setting role to individual states and militaries developing autonomous weapons systems unilaterally, with no enforceable international check.
             </p>
             <p class="story-case">
-              <span class="story-case-label">What to watch</span> Watch for Congressional response to the no-regulation stance and whether states move to fill the regulatory vacuum the administration is signaling it won&#39;t occupy.
+              <span class="story-case-label">What to watch</span> Watch for whether individual nations or blocs (EU, NATO members) pursue separate binding commitments outside the UN consensus process, and how this affects ongoing military AI procurement debates.
             </p>
           </div>
         </li>
@@ -187,10 +187,15 @@
           <summary>
             <span class="archive-year-label">2026</span>
             <span class="archive-count"
-              >66 briefings</span
+              >67 briefings</span
             >
           </summary>
           <ul>
+            <li>
+              <a href="archive/2026-11-21.html"
+                >Nov 21</a
+              >
+            </li>
             <li>
               <a href="archive/2026-11-20.html"
                 >Nov 20</a
@@ -528,9 +533,9 @@
 
     <footer>
       <p>
-        Curated automatically from 3 sources. No trackers, no ads.
+        Curated automatically from 1 sources. No trackers, no ads.
       </p>
-      <p class="generated">Generated 2026-11-21.</p>
+      <p class="generated">Generated 2026-11-22.</p>
       <p class="ai-daily-link">
         <a href="../index.html">Also: the weekly Top-7 digest</a>
       </p>

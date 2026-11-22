@@ -1,0 +1,93 @@
+{
+  "date": "2026-11-22",
+  "generated_at": "2026-11-22T15:10:55.103352+00:00",
+  "intro": "Today's AI news skews toward security incidents across the inference supply chain, a major international policy setback on autonomous weapons, and a notable AI-assisted mathematics verification effort, with three separate reports exposing data leakage risks at AI infrastructure providers.",
+  "stories": [
+    {
+      "rank": 1,
+      "title": "Verification files for the Lean proof of the Riemann Hypothesis",
+      "source": "Hacker News",
+      "sources": [
+        "Hacker News",
+        "Techmeme"
+      ],
+      "source_count": 2,
+      "url": "https://math.mit.edu/~drew/grh/",
+      "theme": "Capabilities",
+      "hn_points": 119,
+      "score": 5.601,
+      "what_happened": "MIT mathematician Andrew Sutherland announced verification checks on a Lean-formalized proof of the Riemann Hypothesis, with checks run using Claude Code. The published Lean source compiles without errors, the five headline theorems depend only on standard axioms, and the proof has been independently verified by two separate kernels (nanoda and con-leche) plus lean4lean.",
+      "why_it_matters": "This represents a significant test case for AI-assisted formal verification of major mathematical claims, showing how coding agents like Claude Code can be used to systematically check complex, multi-module proof systems at scale. If the underlying mathematical claim holds up to full scrutiny, the role AI tools played in verification (not discovery) of such a landmark result would be a notable milestone for AI-human collaboration in formal mathematics.",
+      "watch_next": "Watch for whether the remaining checks complete without issues and how the broader mathematics community receives and further scrutinizes the written mathematical claims, separate from the Lean verification itself.",
+      "summary": "MIT mathematician Andrew Sutherland announced verification checks on a Lean-formalized proof of the Riemann Hypothesis, with checks run using Claude Code. The published Lean source compiles without errors, the five headline theorems depend only on standard axioms, and the proof has been independently verified by two separate kernels (nanoda and con-leche) plus lean4lean."
+    },
+    {
+      "rank": 2,
+      "title": "Data Processing Incidents on Inference Providers",
+      "source": "Hacker News",
+      "sources": [
+        "Hacker News"
+      ],
+      "source_count": 1,
+      "url": "https://openrouter.ai/blog/announcements/data-processing-incidents-on-inference-providers/",
+      "theme": "Security & Safety",
+      "hn_points": 225,
+      "score": 4.211,
+      "what_happened": "OpenRouter disclosed that security researchers found certain AI inference providers had data compromised or were not upholding their stated data policies. OpenRouter stated its own systems were not breached, but confirmed new findings specific to individual third-party inference providers and is maintaining a live list of security announcements.",
+      "why_it_matters": "As AI inference increasingly runs through multi-provider marketplaces and routing services, this incident highlights systemic risk in the AI supply chain: customers often don't know which backend providers are actually processing their prompts or whether those providers honor privacy commitments. This erodes trust in API-based AI services at a moment when enterprises are rapidly scaling sensitive LLM usage.",
+      "watch_next": "Watch for which specific providers are named in OpenRouter's disclosure list and whether enterprise customers demand stronger contractual data-handling guarantees from inference marketplaces.",
+      "summary": "OpenRouter disclosed that security researchers found certain AI inference providers had data compromised or were not upholding their stated data policies. OpenRouter stated its own systems were not breached, but confirmed new findings specific to individual third-party inference providers and is maintaining a live list of security announcements."
+    },
+    {
+      "rank": 3,
+      "title": "AI Supply Chain Security: What Canary Tokens Found",
+      "source": "Hacker News",
+      "sources": [
+        "Hacker News"
+      ],
+      "source_count": 1,
+      "url": "https://www.dragos.com/blog/ai-supply-chain-security-canary-tokens",
+      "theme": "Security & Safety",
+      "hn_points": 89,
+      "score": 2.067,
+      "what_happened": "Dragos researcher HD Moore reported sending nearly two million AI prompts containing unique, trackable canary-token secrets to AI providers over a five-month period (July-November 2026) to test data handling. The research found security breaches, prompt theft, and widespread failures by AI providers to protect customer data.",
+      "why_it_matters": "This large-scale canary-token study provides empirical evidence that AI providers broadly mishandle sensitive data submitted through prompts, a critical concern as enterprises feed proprietary and regulated information into third-party AI systems. It adds to mounting evidence that the AI inference supply chain lacks consistent security hygiene, with direct implications for compliance, liability, and customer trust.",
+      "watch_next": "Watch for which specific AI providers are named as failing data protection standards and whether this prompts regulatory scrutiny or new contractual data-security requirements in enterprise AI procurement.",
+      "summary": "Dragos researcher HD Moore reported sending nearly two million AI prompts containing unique, trackable canary-token secrets to AI providers over a five-month period (July-November 2026) to test data handling. The research found security breaches, prompt theft, and widespread failures by AI providers to protect customer data."
+    },
+    {
+      "rank": 4,
+      "title": "Together.ai: Prompt Leakage for Requests",
+      "source": "Hacker News",
+      "sources": [
+        "Hacker News"
+      ],
+      "source_count": 1,
+      "url": "https://www.together.ai/blog/security-event-prompt-leakage-for-requests-in-june-and-july-of-2026",
+      "theme": "Security & Safety",
+      "hn_points": 37,
+      "score": 1.114,
+      "what_happened": "Together AI notified customers of a security incident where an unauthorized party downloaded stored prompt samples submitted to its serverless inference service during June and July 2026. The breach occurred after a credential for a private repository was exposed in a public code repository, and Together AI is still reviewing which customers require direct notification.",
+      "why_it_matters": "This is a concrete, named breach confirming the broader pattern of AI infrastructure providers mishandling customer prompt data, following disclosures about data compromise across inference providers industry-wide. It underscores that even routine engineering practices, like testing credential hygiene, can expose sensitive customer prompts at scale, raising stakes for enterprises relying on third-party inference services for proprietary workloads.",
+      "watch_next": "Watch for Together AI's full customer notification list and whether affected enterprise customers pursue contractual remedies or shift workloads to providers with stronger data isolation guarantees.",
+      "summary": "Together AI notified customers of a security incident where an unauthorized party downloaded stored prompt samples submitted to its serverless inference service during June and July 2026. The breach occurred after a credential for a private repository was exposed in a public code repository, and Together AI is still reviewing which customers require direct notification."
+    },
+    {
+      "rank": 5,
+      "title": "International UN talks on controlling use of autonomous weapons collapse",
+      "source": "Hacker News",
+      "sources": [
+        "Hacker News"
+      ],
+      "source_count": 1,
+      "url": "https://www.theguardian.com/technology/2026/nov/21/international-talks-control-ai-autonomous-weapons-collapse",
+      "theme": "Policy & Regulation",
+      "hn_points": 46,
+      "score": 1.1,
+      "what_happened": "Week-long UN talks in Geneva aimed at establishing a negotiating mandate for a legally binding treaty on autonomous weapons collapsed after all-night negotiations failed to overcome Russian objections. Despite an overwhelming majority of states wanting a binding treaty process, the conference adopted a much weaker non-binding option asking countries to 'elaborate by consensus.'",
+      "why_it_matters": "The breakdown signals that international governance of AI-enabled autonomous weapons systems remains stalled despite years of effort, leaving a widening gap between rapid military AI deployment and any binding global rules. This failure effectively cedes the pace-setting role to individual states and militaries developing autonomous weapons systems unilaterally, with no enforceable international check.",
+      "watch_next": "Watch for whether individual nations or blocs (EU, NATO members) pursue separate binding commitments outside the UN consensus process, and how this affects ongoing military AI procurement debates.",
+      "summary": "Week-long UN talks in Geneva aimed at establishing a negotiating mandate for a legally binding treaty on autonomous weapons collapsed after all-night negotiations failed to overcome Russian objections. Despite an overwhelming majority of states wanting a binding treaty process, the conference adopted a much weaker non-binding option asking countries to 'elaborate by consensus.'"
+    }
+  ]
+}

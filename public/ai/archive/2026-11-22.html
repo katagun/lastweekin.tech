@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LastWeekIn.Tech — AI Daily, 2026-11-22</title>
+    <meta name="description" content="The 5 AI developments that mattered on 2026-11-22, with analysis and what to watch next." />
+    <meta name="color-scheme" content="light dark" />
+    <meta property="og:site_name" content="LastWeekIn.Tech — AI Daily" />
+    <meta property="og:title" content="LastWeekIn.Tech — AI Daily, 2026-11-22" />
+    <meta property="og:description" content="The 5 AI developments that mattered on 2026-11-22, with analysis and what to watch next." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://lastweekin.tech/ai/archive/2026-11-22.html" />
+    <meta property="og:url" content="https://lastweekin.tech/ai/archive/2026-11-22.html" />
+    <meta property="og:image" content="https://lastweekin.tech/ai/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="LastWeekIn.Tech AI Daily — the AI stories that mattered today"
+    />
+    <meta name="twitter:image" content="https://lastweekin.tech/ai/og.png" />
+    <link
+      rel="alternate"
+      type="application/atom+xml"
+      title="LastWeekIn.Tech AI Daily"
+      href="../feed.xml"
+    />
+    <link rel="stylesheet" href="../style.css" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22><text y=%2214%22 font-size=%2214%22>7</text></svg>"
+    />
+  </head>
+  <body>
+    <a class="skip-link" href="#stories">Skip to the stories</a>
+
+    <header class="site-header">
+      <p class="masthead-note">Published daily &middot; AI only &middot; No trackers, no ads</p>
+      <h1 class="site-title">
+        <a class="wordmark" href="../index.html"
+          >LastWeekIn<span class="dot">.</span>Tech</a
+        >
+      </h1>
+      <p class="section-suffix">
+        <a class="section-link" href="../../index.html"
+          ><span class="section-divider">/</span> Weekly Digest</a
+        >
+      </p>
+      <div class="dateline" role="presentation">
+        <span class="dateline-item">The 5 AI stories that mattered</span>
+        <span class="dateline-item"
+          >Briefing for
+          <time datetime="2026-11-22">Nov 22, 2026</time></span
+        >
+      </div>
+      <p class="archive-note">
+        An archived briefing. <a href="../index.html">See today&rsquo;s briefing.</a>
+      </p>
+    </header>
+
+    <main>
+      <p class="standfirst">Today&#39;s AI news skews toward security incidents across the inference supply chain, a major international policy setback on autonomous weapons, and a notable AI-assisted mathematics verification effort, with three separate reports exposing data leakage risks at AI infrastructure providers.</p>
+
+      <ol class="story-list" id="stories">
+        <li class="story-card lead-story">
+          <p class="story-rank" aria-hidden="true">1</p>
+          <div class="story-content">
+            <p class="story-meta">
+              <span class="visually-hidden">Number 1. </span>
+              <span class="story-category category-capabilities">Capabilities</span>
+              <span class="story-source">Hacker News</span>
+            </p>
+            <h2 class="story-title">
+              <a href="https://math.mit.edu/~drew/grh/" target="_blank" rel="noopener noreferrer"
+                >Verification files for the Lean proof of the Riemann Hypothesis</a
+              >
+            </h2>
+            <p class="story-summary">MIT mathematician Andrew Sutherland announced verification checks on a Lean-formalized proof of the Riemann Hypothesis, with checks run using Claude Code. The published Lean source compiles without errors, the five headline theorems depend only on standard axioms, and the proof has been independently verified by two separate kernels (nanoda and con-leche) plus lean4lean.</p>
+            <p class="story-case">
+              <span class="story-case-label">Why it matters</span> This represents a significant test case for AI-assisted formal verification of major mathematical claims, showing how coding agents like Claude Code can be used to systematically check complex, multi-module proof systems at scale. If the underlying mathematical claim holds up to full scrutiny, the role AI tools played in verification (not discovery) of such a landmark result would be a notable milestone for AI-human collaboration in formal mathematics.
+            </p>
+            <p class="story-case">
+              <span class="story-case-label">What to watch</span> Watch for whether the remaining checks complete without issues and how the broader mathematics community receives and further scrutinizes the written mathematical claims, separate from the Lean verification itself.
+            </p>
+          </div>
+        </li>
+        <li class="story-card">
+          <p class="story-rank" aria-hidden="true">2</p>
+          <div class="story-content">
+            <p class="story-meta">
+              <span class="visually-hidden">Number 2. </span>
+              <span class="story-category category-security-safety">Security &amp; Safety</span>
+              <span class="story-source">Hacker News</span>
+            </p>
+            <h2 class="story-title">
+              <a href="https://openrouter.ai/blog/announcements/data-processing-incidents-on-inference-providers/" target="_blank" rel="noopener noreferrer"
+                >Data Processing Incidents on Inference Providers</a
+              >
+            </h2>
+            <p class="story-summary">OpenRouter disclosed that security researchers found certain AI inference providers had data compromised or were not upholding their stated data policies. OpenRouter stated its own systems were not breached, but confirmed new findings specific to individual third-party inference providers and is maintaining a live list of security announcements.</p>
+            <p class="story-case">
+              <span class="story-case-label">Why it matters</span> As AI inference increasingly runs through multi-provider marketplaces and routing services, this incident highlights systemic risk in the AI supply chain: customers often don&#39;t know which backend providers are actually processing their prompts or whether those providers honor privacy commitments. This erodes trust in API-based AI services at a moment when enterprises are rapidly scaling sensitive LLM usage.
+            </p>
+            <p class="story-case">
+              <span class="story-case-label">What to watch</span> Watch for which specific providers are named in OpenRouter&#39;s disclosure list and whether enterprise customers demand stronger contractual data-handling guarantees from inference marketplaces.
+            </p>
+          </div>
+        </li>
+        <li class="story-card">
+          <p class="story-rank" aria-hidden="true">3</p>
+          <div class="story-content">
+            <p class="story-meta">
+              <span class="visually-hidden">Number 3. </span>
+              <span class="story-category category-security-safety">Security &amp; Safety</span>
+              <span class="story-source">Hacker News</span>
+            </p>
+            <h2 class="story-title">
+              <a href="https://www.dragos.com/blog/ai-supply-chain-security-canary-tokens" target="_blank" rel="noopener noreferrer"
+                >AI Supply Chain Security: What Canary Tokens Found</a
+              >
+            </h2>
+            <p class="story-summary">Dragos researcher HD Moore reported sending nearly two million AI prompts containing unique, trackable canary-token secrets to AI providers over a five-month period (July-November 2026) to test data handling. The research found security breaches, prompt theft, and widespread failures by AI providers to protect customer data.</p>
+            <p class="story-case">
+              <span class="story-case-label">Why it matters</span> This large-scale canary-token study provides empirical evidence that AI providers broadly mishandle sensitive data submitted through prompts, a critical concern as enterprises feed proprietary and regulated information into third-party AI systems. It adds to mounting evidence that the AI inference supply chain lacks consistent security hygiene, with direct implications for compliance, liability, and customer trust.
+            </p>
+            <p class="story-case">
+              <span class="story-case-label">What to watch</span> Watch for which specific AI providers are named as failing data protection standards and whether this prompts regulatory scrutiny or new contractual data-security requirements in enterprise AI procurement.
+            </p>
+          </div>
+        </li>
+        <li class="story-card">
+          <p class="story-rank" aria-hidden="true">4</p>
+          <div class="story-content">
+            <p class="story-meta">
+              <span class="visually-hidden">Number 4. </span>
+              <span class="story-category category-security-safety">Security &amp; Safety</span>
+              <span class="story-source">Hacker News</span>
+            </p>
+            <h2 class="story-title">
+              <a href="https://www.together.ai/blog/security-event-prompt-leakage-for-requests-in-june-and-july-of-2026" target="_blank" rel="noopener noreferrer"
+                >Together.ai: Prompt Leakage for Requests</a
+              >
+            </h2>
+            <p class="story-summary">Together AI notified customers of a security incident where an unauthorized party downloaded stored prompt samples submitted to its serverless inference service during June and July 2026. The breach occurred after a credential for a private repository was exposed in a public code repository, and Together AI is still reviewing which customers require direct notification.</p>
+            <p class="story-case">
+              <span class="story-case-label">Why it matters</span> This is a concrete, named breach confirming the broader pattern of AI infrastructure providers mishandling customer prompt data, following disclosures about data compromise across inference providers industry-wide. It underscores that even routine engineering practices, like testing credential hygiene, can expose sensitive customer prompts at scale, raising stakes for enterprises relying on third-party inference services for proprietary workloads.
+            </p>
+            <p class="story-case">
+              <span class="story-case-label">What to watch</span> Watch for Together AI&#39;s full customer notification list and whether affected enterprise customers pursue contractual remedies or shift workloads to providers with stronger data isolation guarantees.
+            </p>
+          </div>
+        </li>
+        <li class="story-card">
+          <p class="story-rank" aria-hidden="true">5</p>
+          <div class="story-content">
+            <p class="story-meta">
+              <span class="visually-hidden">Number 5. </span>
+              <span class="story-category category-policy-regulation">Policy &amp; Regulation</span>
+              <span class="story-source">Hacker News</span>
+            </p>
+            <h2 class="story-title">
+              <a href="https://www.theguardian.com/technology/2026/nov/21/international-talks-control-ai-autonomous-weapons-collapse" target="_blank" rel="noopener noreferrer"
+                >International UN talks on controlling use of autonomous weapons collapse</a
+              >
+            </h2>
+            <p class="story-summary">Week-long UN talks in Geneva aimed at establishing a negotiating mandate for a legally binding treaty on autonomous weapons collapsed after all-night negotiations failed to overcome Russian objections. Despite an overwhelming majority of states wanting a binding treaty process, the conference adopted a much weaker non-binding option asking countries to &#39;elaborate by consensus.&#39;</p>
+            <p class="story-case">
+              <span class="story-case-label">Why it matters</span> The breakdown signals that international governance of AI-enabled autonomous weapons systems remains stalled despite years of effort, leaving a widening gap between rapid military AI deployment and any binding global rules. This failure effectively cedes the pace-setting role to individual states and militaries developing autonomous weapons systems unilaterally, with no enforceable international check.
+            </p>
+            <p class="story-case">
+              <span class="story-case-label">What to watch</span> Watch for whether individual nations or blocs (EU, NATO members) pursue separate binding commitments outside the UN consensus process, and how this affects ongoing military AI procurement debates.
+            </p>
+          </div>
+        </li>
+      </ol>
+
+      <section class="subscribe" aria-labelledby="subscribe-heading">
+        <h2 id="subscribe-heading">Get it every day</h2>
+        <p>
+          A short AI briefing, every day.
+          <a href="../feed.xml">Subscribe with RSS</a> — no email address, no tracking.
+        </p>
+      </section>
+
+      <nav class="archive" aria-labelledby="archive-heading">
+        <h2 id="archive-heading">Past briefings</h2>
+        <details class="archive-year" open>
+          <summary>
+            <span class="archive-year-label">2026</span>
+            <span class="archive-count"
+              >67 briefings</span
+            >
+          </summary>
+          <ul>
+            <li>
+              <a href="../archive/2026-11-21.html"
+                >Nov 21</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-11-20.html"
+                >Nov 20</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-11-19.html"
+                >Nov 19</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-11-18.html"
+                >Nov 18</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-11-17.html"
+                >Nov 17</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-11-16.html"
+                >Nov 16</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-11-15.html"
+                >Nov 15</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-11-14.html"
+                >Nov 14</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-11-13.html"
+                >Nov 13</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-11-12.html"
+                >Nov 12</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-11-11.html"
+                >Nov 11</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-11-10.html"
+                >Nov 10</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-11-09.html"
+                >Nov 9</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-11-08.html"
+                >Nov 8</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-11-07.html"
+                >Nov 7</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-11-06.html"
+                >Nov 6</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-11-05.html"
+                >Nov 5</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-11-04.html"
+                >Nov 4</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-11-03.html"
+                >Nov 3</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-11-02.html"
+                >Nov 2</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-11-01.html"
+                >Nov 1</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-31.html"
+                >Oct 31</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-30.html"
+                >Oct 30</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-29.html"
+                >Oct 29</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-28.html"
+                >Oct 28</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-27.html"
+                >Oct 27</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-26.html"
+                >Oct 26</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-25.html"
+                >Oct 25</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-24.html"
+                >Oct 24</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-23.html"
+                >Oct 23</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-22.html"
+                >Oct 22</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-21.html"
+                >Oct 21</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-20.html"
+                >Oct 20</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-19.html"
+                >Oct 19</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-18.html"
+                >Oct 18</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-17.html"
+                >Oct 17</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-16.html"
+                >Oct 16</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-15.html"
+                >Oct 15</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-14.html"
+                >Oct 14</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-13.html"
+                >Oct 13</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-12.html"
+                >Oct 12</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-11.html"
+                >Oct 11</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-10.html"
+                >Oct 10</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-09.html"
+                >Oct 9</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-08.html"
+                >Oct 8</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-07.html"
+                >Oct 7</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-06.html"
+                >Oct 6</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-05.html"
+                >Oct 5</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-04.html"
+                >Oct 4</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-03.html"
+                >Oct 3</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-02.html"
+                >Oct 2</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-10-01.html"
+                >Oct 1</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-30.html"
+                >Sep 30</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-29.html"
+                >Sep 29</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-28.html"
+                >Sep 28</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-27.html"
+                >Sep 27</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-26.html"
+                >Sep 26</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-25.html"
+                >Sep 25</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-24.html"
+                >Sep 24</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-23.html"
+                >Sep 23</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-22.html"
+                >Sep 22</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-21.html"
+                >Sep 21</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-20.html"
+                >Sep 20</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-19.html"
+                >Sep 19</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-18.html"
+                >Sep 18</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-17.html"
+                >Sep 17</a
+              >
+            </li>
+            <li>
+              <a href="../archive/2026-09-16.html"
+                >Sep 16</a
+              >
+            </li>
+          </ul>
+        </details>
+      </nav>
+    </main>
+
+    <footer>
+      <p>
+        Curated automatically from 1 sources. No trackers, no ads.
+      </p>
+      <p class="generated">Generated 2026-11-22.</p>
+      <p class="ai-daily-link">
+        <a href="../../index.html">Also: the weekly Top-7 digest</a>
+      </p>
+    </footer>
+  </body>
+</html>
