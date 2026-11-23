@@ -1,0 +1,77 @@
+{
+  "date": "2026-11-23",
+  "generated_at": "2026-11-23T15:10:58.077695+00:00",
+  "intro": "A dramatic Nvidia leadership reversal dominates today's AI news cycle, alongside deeper reflections on where machine intelligence is headed and experimental agent-swarm attacks on hard math problems — a quieter day for new model releases but notable for industry and theory.",
+  "stories": [
+    {
+      "rank": 1,
+      "title": "Jensen Huang is back as Nvidia’s CEO",
+      "source": "WIRED",
+      "sources": [
+        "The Register",
+        "The Verge",
+        "WIRED"
+      ],
+      "source_count": 3,
+      "url": "https://www.wired.com/story/jensen-huang-is-back-as-nvidia-ceo/",
+      "theme": "Companies",
+      "hn_points": null,
+      "score": 6.976,
+      "what_happened": "Nvidia's board unanimously reinstated Jensen Huang as CEO and president effective immediately, just 11 days after he resigned amid reports of personal conduct issues. The reversal came after the board held discussions with Huang and reportedly received input from senior levels of the US government, concluding his return posed no national security risk.",
+      "why_it_matters": "Nvidia sits at the center of the global AI compute buildout, and any leadership instability at the company ripples through chip supply chains, data center investment plans, and investor confidence in the broader AI infrastructure boom. The board's explicit reference to US government input underscores how entangled Nvidia's governance has become with national security and export-control policy, given its dominant role in AI accelerator supply.",
+      "watch_next": "Watch for shareholder and governance fallout, including whether board members who initially opposed reinstatement face pressure to resign, and any public comment from the US government on its role in the decision.",
+      "summary": "Nvidia's board unanimously reinstated Jensen Huang as CEO and president effective immediately, just 11 days after he resigned amid reports of personal conduct issues. The reversal came after the board held discussions with Huang and reportedly received input from senior levels of the US government, concluding his return posed no national security risk."
+    },
+    {
+      "rank": 2,
+      "title": "Perplexity and Intelligence",
+      "source": "Hacker News",
+      "sources": [
+        "Hacker News"
+      ],
+      "source_count": 1,
+      "url": "https://openai.com/index/perplexity-and-intelligence/",
+      "theme": "Capabilities",
+      "hn_points": 642,
+      "score": 5.08,
+      "what_happened": "An essay argues that modern AI systems are fundamentally built around training increasingly powerful compressors/predictors on massive datasets, rather than assembling diverse hand-designed techniques as in prior software eras. The author contends that tracking progress in compression quality is the key lens for understanding the trajectory of AI capability gains.",
+      "why_it_matters": "This framing matters because it reorients debates about AI progress away from feature lists and benchmark scores toward a more fundamental metric—compression efficiency—that correlates with general intelligence in these systems. If this thesis holds, it suggests capability gains will keep scaling predictably with better predictive modeling of data, reinforcing why labs continue pouring resources into larger pretraining runs rather than purely architectural tricks.",
+      "watch_next": "Look for how major labs discuss compression or predictive loss metrics in upcoming model announcements, and whether this framing influences how benchmarks are designed going forward.",
+      "summary": "An essay argues that modern AI systems are fundamentally built around training increasingly powerful compressors/predictors on massive datasets, rather than assembling diverse hand-designed techniques as in prior software eras. The author contends that tracking progress in compression quality is the key lens for understanding the trajectory of AI capability gains."
+    },
+    {
+      "rank": 3,
+      "title": "Agent swarm trying to solve P vs. NP",
+      "source": "Hacker News",
+      "sources": [
+        "Hacker News"
+      ],
+      "source_count": 1,
+      "url": "https://pequalnp.com/",
+      "theme": "Capabilities",
+      "hn_points": 159,
+      "score": 2.93,
+      "what_happened": "A live, coordinated fleet of AI agents—usable via Claude Code, Cursor, Codex, or Gemini CLI—is attempting to prove open steps toward resolving P vs. NP, with every proof step verified through a shared Lean checker. A public leaderboard and live fleet viewer track the agents' progress in real time, with the current status marked as open and ongoing.",
+      "why_it_matters": "This represents a notable experiment in using swarms of AI coding/reasoning agents, combined with formal verification tooling, to attack one of mathematics' most famous unsolved problems. It builds on a growing pattern of AI-assisted formal proof efforts and signals how agentic AI systems are being organized at scale for collaborative, verifiable research rather than single-model attempts.",
+      "watch_next": "Watch whether the agent swarm produces any verified partial results or new conjectures, and whether similar swarm-based approaches get applied to other long-standing open problems.",
+      "summary": "A live, coordinated fleet of AI agents—usable via Claude Code, Cursor, Codex, or Gemini CLI—is attempting to prove open steps toward resolving P vs. NP, with every proof step verified through a shared Lean checker. A public leaderboard and live fleet viewer track the agents' progress in real time, with the current status marked as open and ongoing."
+    },
+    {
+      "rank": 4,
+      "title": "What Happened to Silicon Valley?",
+      "source": "Hacker News",
+      "sources": [
+        "Hacker News"
+      ],
+      "source_count": 1,
+      "url": "https://www.oreilly.com/radar/what-happened-to-silicon-valley/",
+      "theme": "Industry & Economics",
+      "hn_points": 760,
+      "score": 5.173,
+      "what_happened": "In a lecture delivered at an AI and History conference at Johns Hopkins, the author reflects on how the political economy of Silicon Valley has shifted over recent decades, incorporating material from years of prior writing. The piece is framed around understanding changes driven by the tech industry's evolution, including its relationship with political power.",
+      "why_it_matters": "As AI concentrates enormous economic and political influence in a small number of companies and individuals, retrospective analyses like this help contextualize current debates over AI regulation, labor impacts, and corporate power. Understanding the historical arc of Silicon Valley's political economy is increasingly relevant as AI firms gain outsized influence over policy, infrastructure, and even national security decisions.",
+      "watch_next": "Watch for how this historical framing feeds into ongoing policy debates about AI industry concentration, antitrust scrutiny, and the political influence of major AI labs and chipmakers.",
+      "summary": "In a lecture delivered at an AI and History conference at Johns Hopkins, the author reflects on how the political economy of Silicon Valley has shifted over recent decades, incorporating material from years of prior writing. The piece is framed around understanding changes driven by the tech industry's evolution, including its relationship with political power."
+    }
+  ]
+}

@@ -1,93 +1,77 @@
 {
-  "date": "2026-11-22",
-  "generated_at": "2026-11-22T15:10:55.103352+00:00",
-  "intro": "Today's AI news skews toward security incidents across the inference supply chain, a major international policy setback on autonomous weapons, and a notable AI-assisted mathematics verification effort, with three separate reports exposing data leakage risks at AI infrastructure providers.",
+  "date": "2026-11-23",
+  "generated_at": "2026-11-23T15:10:58.077695+00:00",
+  "intro": "A dramatic Nvidia leadership reversal dominates today's AI news cycle, alongside deeper reflections on where machine intelligence is headed and experimental agent-swarm attacks on hard math problems — a quieter day for new model releases but notable for industry and theory.",
   "stories": [
     {
       "rank": 1,
-      "title": "Verification files for the Lean proof of the Riemann Hypothesis",
-      "source": "Hacker News",
+      "title": "Jensen Huang is back as Nvidia’s CEO",
+      "source": "WIRED",
       "sources": [
-        "Hacker News",
-        "Techmeme"
+        "The Register",
+        "The Verge",
+        "WIRED"
       ],
-      "source_count": 2,
-      "url": "https://math.mit.edu/~drew/grh/",
-      "theme": "Capabilities",
-      "hn_points": 119,
-      "score": 5.601,
-      "what_happened": "MIT mathematician Andrew Sutherland announced verification checks on a Lean-formalized proof of the Riemann Hypothesis, with checks run using Claude Code. The published Lean source compiles without errors, the five headline theorems depend only on standard axioms, and the proof has been independently verified by two separate kernels (nanoda and con-leche) plus lean4lean.",
-      "why_it_matters": "This represents a significant test case for AI-assisted formal verification of major mathematical claims, showing how coding agents like Claude Code can be used to systematically check complex, multi-module proof systems at scale. If the underlying mathematical claim holds up to full scrutiny, the role AI tools played in verification (not discovery) of such a landmark result would be a notable milestone for AI-human collaboration in formal mathematics.",
-      "watch_next": "Watch for whether the remaining checks complete without issues and how the broader mathematics community receives and further scrutinizes the written mathematical claims, separate from the Lean verification itself.",
-      "summary": "MIT mathematician Andrew Sutherland announced verification checks on a Lean-formalized proof of the Riemann Hypothesis, with checks run using Claude Code. The published Lean source compiles without errors, the five headline theorems depend only on standard axioms, and the proof has been independently verified by two separate kernels (nanoda and con-leche) plus lean4lean."
+      "source_count": 3,
+      "url": "https://www.wired.com/story/jensen-huang-is-back-as-nvidia-ceo/",
+      "theme": "Companies",
+      "hn_points": null,
+      "score": 6.976,
+      "what_happened": "Nvidia's board unanimously reinstated Jensen Huang as CEO and president effective immediately, just 11 days after he resigned amid reports of personal conduct issues. The reversal came after the board held discussions with Huang and reportedly received input from senior levels of the US government, concluding his return posed no national security risk.",
+      "why_it_matters": "Nvidia sits at the center of the global AI compute buildout, and any leadership instability at the company ripples through chip supply chains, data center investment plans, and investor confidence in the broader AI infrastructure boom. The board's explicit reference to US government input underscores how entangled Nvidia's governance has become with national security and export-control policy, given its dominant role in AI accelerator supply.",
+      "watch_next": "Watch for shareholder and governance fallout, including whether board members who initially opposed reinstatement face pressure to resign, and any public comment from the US government on its role in the decision.",
+      "summary": "Nvidia's board unanimously reinstated Jensen Huang as CEO and president effective immediately, just 11 days after he resigned amid reports of personal conduct issues. The reversal came after the board held discussions with Huang and reportedly received input from senior levels of the US government, concluding his return posed no national security risk."
     },
     {
       "rank": 2,
-      "title": "Data Processing Incidents on Inference Providers",
+      "title": "Perplexity and Intelligence",
       "source": "Hacker News",
       "sources": [
         "Hacker News"
       ],
       "source_count": 1,
-      "url": "https://openrouter.ai/blog/announcements/data-processing-incidents-on-inference-providers/",
-      "theme": "Security & Safety",
-      "hn_points": 225,
-      "score": 4.211,
-      "what_happened": "OpenRouter disclosed that security researchers found certain AI inference providers had data compromised or were not upholding their stated data policies. OpenRouter stated its own systems were not breached, but confirmed new findings specific to individual third-party inference providers and is maintaining a live list of security announcements.",
-      "why_it_matters": "As AI inference increasingly runs through multi-provider marketplaces and routing services, this incident highlights systemic risk in the AI supply chain: customers often don't know which backend providers are actually processing their prompts or whether those providers honor privacy commitments. This erodes trust in API-based AI services at a moment when enterprises are rapidly scaling sensitive LLM usage.",
-      "watch_next": "Watch for which specific providers are named in OpenRouter's disclosure list and whether enterprise customers demand stronger contractual data-handling guarantees from inference marketplaces.",
-      "summary": "OpenRouter disclosed that security researchers found certain AI inference providers had data compromised or were not upholding their stated data policies. OpenRouter stated its own systems were not breached, but confirmed new findings specific to individual third-party inference providers and is maintaining a live list of security announcements."
+      "url": "https://openai.com/index/perplexity-and-intelligence/",
+      "theme": "Capabilities",
+      "hn_points": 642,
+      "score": 5.08,
+      "what_happened": "An essay argues that modern AI systems are fundamentally built around training increasingly powerful compressors/predictors on massive datasets, rather than assembling diverse hand-designed techniques as in prior software eras. The author contends that tracking progress in compression quality is the key lens for understanding the trajectory of AI capability gains.",
+      "why_it_matters": "This framing matters because it reorients debates about AI progress away from feature lists and benchmark scores toward a more fundamental metric—compression efficiency—that correlates with general intelligence in these systems. If this thesis holds, it suggests capability gains will keep scaling predictably with better predictive modeling of data, reinforcing why labs continue pouring resources into larger pretraining runs rather than purely architectural tricks.",
+      "watch_next": "Look for how major labs discuss compression or predictive loss metrics in upcoming model announcements, and whether this framing influences how benchmarks are designed going forward.",
+      "summary": "An essay argues that modern AI systems are fundamentally built around training increasingly powerful compressors/predictors on massive datasets, rather than assembling diverse hand-designed techniques as in prior software eras. The author contends that tracking progress in compression quality is the key lens for understanding the trajectory of AI capability gains."
     },
     {
       "rank": 3,
-      "title": "AI Supply Chain Security: What Canary Tokens Found",
+      "title": "Agent swarm trying to solve P vs. NP",
       "source": "Hacker News",
       "sources": [
         "Hacker News"
       ],
       "source_count": 1,
-      "url": "https://www.dragos.com/blog/ai-supply-chain-security-canary-tokens",
-      "theme": "Security & Safety",
-      "hn_points": 89,
-      "score": 2.067,
-      "what_happened": "Dragos researcher HD Moore reported sending nearly two million AI prompts containing unique, trackable canary-token secrets to AI providers over a five-month period (July-November 2026) to test data handling. The research found security breaches, prompt theft, and widespread failures by AI providers to protect customer data.",
-      "why_it_matters": "This large-scale canary-token study provides empirical evidence that AI providers broadly mishandle sensitive data submitted through prompts, a critical concern as enterprises feed proprietary and regulated information into third-party AI systems. It adds to mounting evidence that the AI inference supply chain lacks consistent security hygiene, with direct implications for compliance, liability, and customer trust.",
-      "watch_next": "Watch for which specific AI providers are named as failing data protection standards and whether this prompts regulatory scrutiny or new contractual data-security requirements in enterprise AI procurement.",
-      "summary": "Dragos researcher HD Moore reported sending nearly two million AI prompts containing unique, trackable canary-token secrets to AI providers over a five-month period (July-November 2026) to test data handling. The research found security breaches, prompt theft, and widespread failures by AI providers to protect customer data."
+      "url": "https://pequalnp.com/",
+      "theme": "Capabilities",
+      "hn_points": 159,
+      "score": 2.93,
+      "what_happened": "A live, coordinated fleet of AI agents—usable via Claude Code, Cursor, Codex, or Gemini CLI—is attempting to prove open steps toward resolving P vs. NP, with every proof step verified through a shared Lean checker. A public leaderboard and live fleet viewer track the agents' progress in real time, with the current status marked as open and ongoing.",
+      "why_it_matters": "This represents a notable experiment in using swarms of AI coding/reasoning agents, combined with formal verification tooling, to attack one of mathematics' most famous unsolved problems. It builds on a growing pattern of AI-assisted formal proof efforts and signals how agentic AI systems are being organized at scale for collaborative, verifiable research rather than single-model attempts.",
+      "watch_next": "Watch whether the agent swarm produces any verified partial results or new conjectures, and whether similar swarm-based approaches get applied to other long-standing open problems.",
+      "summary": "A live, coordinated fleet of AI agents—usable via Claude Code, Cursor, Codex, or Gemini CLI—is attempting to prove open steps toward resolving P vs. NP, with every proof step verified through a shared Lean checker. A public leaderboard and live fleet viewer track the agents' progress in real time, with the current status marked as open and ongoing."
     },
     {
       "rank": 4,
-      "title": "Together.ai: Prompt Leakage for Requests",
+      "title": "What Happened to Silicon Valley?",
       "source": "Hacker News",
       "sources": [
         "Hacker News"
       ],
       "source_count": 1,
-      "url": "https://www.together.ai/blog/security-event-prompt-leakage-for-requests-in-june-and-july-of-2026",
-      "theme": "Security & Safety",
-      "hn_points": 37,
-      "score": 1.114,
-      "what_happened": "Together AI notified customers of a security incident where an unauthorized party downloaded stored prompt samples submitted to its serverless inference service during June and July 2026. The breach occurred after a credential for a private repository was exposed in a public code repository, and Together AI is still reviewing which customers require direct notification.",
-      "why_it_matters": "This is a concrete, named breach confirming the broader pattern of AI infrastructure providers mishandling customer prompt data, following disclosures about data compromise across inference providers industry-wide. It underscores that even routine engineering practices, like testing credential hygiene, can expose sensitive customer prompts at scale, raising stakes for enterprises relying on third-party inference services for proprietary workloads.",
-      "watch_next": "Watch for Together AI's full customer notification list and whether affected enterprise customers pursue contractual remedies or shift workloads to providers with stronger data isolation guarantees.",
-      "summary": "Together AI notified customers of a security incident where an unauthorized party downloaded stored prompt samples submitted to its serverless inference service during June and July 2026. The breach occurred after a credential for a private repository was exposed in a public code repository, and Together AI is still reviewing which customers require direct notification."
-    },
-    {
-      "rank": 5,
-      "title": "International UN talks on controlling use of autonomous weapons collapse",
-      "source": "Hacker News",
-      "sources": [
-        "Hacker News"
-      ],
-      "source_count": 1,
-      "url": "https://www.theguardian.com/technology/2026/nov/21/international-talks-control-ai-autonomous-weapons-collapse",
-      "theme": "Policy & Regulation",
-      "hn_points": 46,
-      "score": 1.1,
-      "what_happened": "Week-long UN talks in Geneva aimed at establishing a negotiating mandate for a legally binding treaty on autonomous weapons collapsed after all-night negotiations failed to overcome Russian objections. Despite an overwhelming majority of states wanting a binding treaty process, the conference adopted a much weaker non-binding option asking countries to 'elaborate by consensus.'",
-      "why_it_matters": "The breakdown signals that international governance of AI-enabled autonomous weapons systems remains stalled despite years of effort, leaving a widening gap between rapid military AI deployment and any binding global rules. This failure effectively cedes the pace-setting role to individual states and militaries developing autonomous weapons systems unilaterally, with no enforceable international check.",
-      "watch_next": "Watch for whether individual nations or blocs (EU, NATO members) pursue separate binding commitments outside the UN consensus process, and how this affects ongoing military AI procurement debates.",
-      "summary": "Week-long UN talks in Geneva aimed at establishing a negotiating mandate for a legally binding treaty on autonomous weapons collapsed after all-night negotiations failed to overcome Russian objections. Despite an overwhelming majority of states wanting a binding treaty process, the conference adopted a much weaker non-binding option asking countries to 'elaborate by consensus.'"
+      "url": "https://www.oreilly.com/radar/what-happened-to-silicon-valley/",
+      "theme": "Industry & Economics",
+      "hn_points": 760,
+      "score": 5.173,
+      "what_happened": "In a lecture delivered at an AI and History conference at Johns Hopkins, the author reflects on how the political economy of Silicon Valley has shifted over recent decades, incorporating material from years of prior writing. The piece is framed around understanding changes driven by the tech industry's evolution, including its relationship with political power.",
+      "why_it_matters": "As AI concentrates enormous economic and political influence in a small number of companies and individuals, retrospective analyses like this help contextualize current debates over AI regulation, labor impacts, and corporate power. Understanding the historical arc of Silicon Valley's political economy is increasingly relevant as AI firms gain outsized influence over policy, infrastructure, and even national security decisions.",
+      "watch_next": "Watch for how this historical framing feeds into ongoing policy debates about AI industry concentration, antitrust scrutiny, and the political influence of major AI labs and chipmakers.",
+      "summary": "In a lecture delivered at an AI and History conference at Johns Hopkins, the author reflects on how the political economy of Silicon Valley has shifted over recent decades, incorporating material from years of prior writing. The piece is framed around understanding changes driven by the tech industry's evolution, including its relationship with political power."
     }
   ]
 }

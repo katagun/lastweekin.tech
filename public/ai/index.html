@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LastWeekIn.Tech — AI Daily</title>
-    <meta name="description" content="The 5 AI developments that mattered on 2026-11-22, with analysis and what to watch next." />
+    <meta name="description" content="The 4 AI developments that mattered on 2026-11-23, with analysis and what to watch next." />
     <meta name="color-scheme" content="light dark" />
     <meta property="og:site_name" content="LastWeekIn.Tech — AI Daily" />
     <meta property="og:title" content="LastWeekIn.Tech — AI Daily" />
-    <meta property="og:description" content="The 5 AI developments that mattered on 2026-11-22, with analysis and what to watch next." />
+    <meta property="og:description" content="The 4 AI developments that mattered on 2026-11-23, with analysis and what to watch next." />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="canonical" href="https://lastweekin.tech/ai/" />
@@ -49,16 +49,16 @@
         >
       </p>
       <div class="dateline" role="presentation">
-        <span class="dateline-item">The 5 AI stories that mattered</span>
+        <span class="dateline-item">The 4 AI stories that mattered</span>
         <span class="dateline-item"
           >Briefing for
-          <time datetime="2026-11-22">Nov 22, 2026</time></span
+          <time datetime="2026-11-23">Nov 23, 2026</time></span
         >
       </div>
     </header>
 
     <main>
-      <p class="standfirst">Today&#39;s AI news skews toward security incidents across the inference supply chain, a major international policy setback on autonomous weapons, and a notable AI-assisted mathematics verification effort, with three separate reports exposing data leakage risks at AI infrastructure providers.</p>
+      <p class="standfirst">A dramatic Nvidia leadership reversal dominates today&#39;s AI news cycle, alongside deeper reflections on where machine intelligence is headed and experimental agent-swarm attacks on hard math problems — a quieter day for new model releases but notable for industry and theory.</p>
 
       <ol class="story-list" id="stories">
         <li class="story-card lead-story">
@@ -66,20 +66,20 @@
           <div class="story-content">
             <p class="story-meta">
               <span class="visually-hidden">Number 1. </span>
-              <span class="story-category category-capabilities">Capabilities</span>
-              <span class="story-source">Hacker News</span>
+              <span class="story-category category-companies">Companies</span>
+              <span class="story-source">WIRED</span>
             </p>
             <h2 class="story-title">
-              <a href="https://math.mit.edu/~drew/grh/" target="_blank" rel="noopener noreferrer"
-                >Verification files for the Lean proof of the Riemann Hypothesis</a
+              <a href="https://www.wired.com/story/jensen-huang-is-back-as-nvidia-ceo/" target="_blank" rel="noopener noreferrer"
+                >Jensen Huang is back as Nvidia’s CEO</a
               >
             </h2>
-            <p class="story-summary">MIT mathematician Andrew Sutherland announced verification checks on a Lean-formalized proof of the Riemann Hypothesis, with checks run using Claude Code. The published Lean source compiles without errors, the five headline theorems depend only on standard axioms, and the proof has been independently verified by two separate kernels (nanoda and con-leche) plus lean4lean.</p>
+            <p class="story-summary">Nvidia&#39;s board unanimously reinstated Jensen Huang as CEO and president effective immediately, just 11 days after he resigned amid reports of personal conduct issues. The reversal came after the board held discussions with Huang and reportedly received input from senior levels of the US government, concluding his return posed no national security risk.</p>
             <p class="story-case">
-              <span class="story-case-label">Why it matters</span> This represents a significant test case for AI-assisted formal verification of major mathematical claims, showing how coding agents like Claude Code can be used to systematically check complex, multi-module proof systems at scale. If the underlying mathematical claim holds up to full scrutiny, the role AI tools played in verification (not discovery) of such a landmark result would be a notable milestone for AI-human collaboration in formal mathematics.
+              <span class="story-case-label">Why it matters</span> Nvidia sits at the center of the global AI compute buildout, and any leadership instability at the company ripples through chip supply chains, data center investment plans, and investor confidence in the broader AI infrastructure boom. The board&#39;s explicit reference to US government input underscores how entangled Nvidia&#39;s governance has become with national security and export-control policy, given its dominant role in AI accelerator supply.
             </p>
             <p class="story-case">
-              <span class="story-case-label">What to watch</span> Watch for whether the remaining checks complete without issues and how the broader mathematics community receives and further scrutinizes the written mathematical claims, separate from the Lean verification itself.
+              <span class="story-case-label">What to watch</span> Watch for shareholder and governance fallout, including whether board members who initially opposed reinstatement face pressure to resign, and any public comment from the US government on its role in the decision.
             </p>
           </div>
         </li>
@@ -88,20 +88,20 @@
           <div class="story-content">
             <p class="story-meta">
               <span class="visually-hidden">Number 2. </span>
-              <span class="story-category category-security-safety">Security &amp; Safety</span>
+              <span class="story-category category-capabilities">Capabilities</span>
               <span class="story-source">Hacker News</span>
             </p>
             <h2 class="story-title">
-              <a href="https://openrouter.ai/blog/announcements/data-processing-incidents-on-inference-providers/" target="_blank" rel="noopener noreferrer"
-                >Data Processing Incidents on Inference Providers</a
+              <a href="https://openai.com/index/perplexity-and-intelligence/" target="_blank" rel="noopener noreferrer"
+                >Perplexity and Intelligence</a
               >
             </h2>
-            <p class="story-summary">OpenRouter disclosed that security researchers found certain AI inference providers had data compromised or were not upholding their stated data policies. OpenRouter stated its own systems were not breached, but confirmed new findings specific to individual third-party inference providers and is maintaining a live list of security announcements.</p>
+            <p class="story-summary">An essay argues that modern AI systems are fundamentally built around training increasingly powerful compressors/predictors on massive datasets, rather than assembling diverse hand-designed techniques as in prior software eras. The author contends that tracking progress in compression quality is the key lens for understanding the trajectory of AI capability gains.</p>
             <p class="story-case">
-              <span class="story-case-label">Why it matters</span> As AI inference increasingly runs through multi-provider marketplaces and routing services, this incident highlights systemic risk in the AI supply chain: customers often don&#39;t know which backend providers are actually processing their prompts or whether those providers honor privacy commitments. This erodes trust in API-based AI services at a moment when enterprises are rapidly scaling sensitive LLM usage.
+              <span class="story-case-label">Why it matters</span> This framing matters because it reorients debates about AI progress away from feature lists and benchmark scores toward a more fundamental metric—compression efficiency—that correlates with general intelligence in these systems. If this thesis holds, it suggests capability gains will keep scaling predictably with better predictive modeling of data, reinforcing why labs continue pouring resources into larger pretraining runs rather than purely architectural tricks.
             </p>
             <p class="story-case">
-              <span class="story-case-label">What to watch</span> Watch for which specific providers are named in OpenRouter&#39;s disclosure list and whether enterprise customers demand stronger contractual data-handling guarantees from inference marketplaces.
+              <span class="story-case-label">What to watch</span> Look for how major labs discuss compression or predictive loss metrics in upcoming model announcements, and whether this framing influences how benchmarks are designed going forward.
             </p>
           </div>
         </li>
@@ -110,20 +110,20 @@
           <div class="story-content">
             <p class="story-meta">
               <span class="visually-hidden">Number 3. </span>
-              <span class="story-category category-security-safety">Security &amp; Safety</span>
+              <span class="story-category category-capabilities">Capabilities</span>
               <span class="story-source">Hacker News</span>
             </p>
             <h2 class="story-title">
-              <a href="https://www.dragos.com/blog/ai-supply-chain-security-canary-tokens" target="_blank" rel="noopener noreferrer"
-                >AI Supply Chain Security: What Canary Tokens Found</a
+              <a href="https://pequalnp.com/" target="_blank" rel="noopener noreferrer"
+                >Agent swarm trying to solve P vs. NP</a
               >
             </h2>
-            <p class="story-summary">Dragos researcher HD Moore reported sending nearly two million AI prompts containing unique, trackable canary-token secrets to AI providers over a five-month period (July-November 2026) to test data handling. The research found security breaches, prompt theft, and widespread failures by AI providers to protect customer data.</p>
+            <p class="story-summary">A live, coordinated fleet of AI agents—usable via Claude Code, Cursor, Codex, or Gemini CLI—is attempting to prove open steps toward resolving P vs. NP, with every proof step verified through a shared Lean checker. A public leaderboard and live fleet viewer track the agents&#39; progress in real time, with the current status marked as open and ongoing.</p>
             <p class="story-case">
-              <span class="story-case-label">Why it matters</span> This large-scale canary-token study provides empirical evidence that AI providers broadly mishandle sensitive data submitted through prompts, a critical concern as enterprises feed proprietary and regulated information into third-party AI systems. It adds to mounting evidence that the AI inference supply chain lacks consistent security hygiene, with direct implications for compliance, liability, and customer trust.
+              <span class="story-case-label">Why it matters</span> This represents a notable experiment in using swarms of AI coding/reasoning agents, combined with formal verification tooling, to attack one of mathematics&#39; most famous unsolved problems. It builds on a growing pattern of AI-assisted formal proof efforts and signals how agentic AI systems are being organized at scale for collaborative, verifiable research rather than single-model attempts.
             </p>
             <p class="story-case">
-              <span class="story-case-label">What to watch</span> Watch for which specific AI providers are named as failing data protection standards and whether this prompts regulatory scrutiny or new contractual data-security requirements in enterprise AI procurement.
+              <span class="story-case-label">What to watch</span> Watch whether the agent swarm produces any verified partial results or new conjectures, and whether similar swarm-based approaches get applied to other long-standing open problems.
             </p>
           </div>
         </li>
@@ -132,42 +132,20 @@
           <div class="story-content">
             <p class="story-meta">
               <span class="visually-hidden">Number 4. </span>
-              <span class="story-category category-security-safety">Security &amp; Safety</span>
+              <span class="story-category category-industry-economics">Industry &amp; Economics</span>
               <span class="story-source">Hacker News</span>
             </p>
             <h2 class="story-title">
-              <a href="https://www.together.ai/blog/security-event-prompt-leakage-for-requests-in-june-and-july-of-2026" target="_blank" rel="noopener noreferrer"
-                >Together.ai: Prompt Leakage for Requests</a
+              <a href="https://www.oreilly.com/radar/what-happened-to-silicon-valley/" target="_blank" rel="noopener noreferrer"
+                >What Happened to Silicon Valley?</a
               >
             </h2>
-            <p class="story-summary">Together AI notified customers of a security incident where an unauthorized party downloaded stored prompt samples submitted to its serverless inference service during June and July 2026. The breach occurred after a credential for a private repository was exposed in a public code repository, and Together AI is still reviewing which customers require direct notification.</p>
+            <p class="story-summary">In a lecture delivered at an AI and History conference at Johns Hopkins, the author reflects on how the political economy of Silicon Valley has shifted over recent decades, incorporating material from years of prior writing. The piece is framed around understanding changes driven by the tech industry&#39;s evolution, including its relationship with political power.</p>
             <p class="story-case">
-              <span class="story-case-label">Why it matters</span> This is a concrete, named breach confirming the broader pattern of AI infrastructure providers mishandling customer prompt data, following disclosures about data compromise across inference providers industry-wide. It underscores that even routine engineering practices, like testing credential hygiene, can expose sensitive customer prompts at scale, raising stakes for enterprises relying on third-party inference services for proprietary workloads.
+              <span class="story-case-label">Why it matters</span> As AI concentrates enormous economic and political influence in a small number of companies and individuals, retrospective analyses like this help contextualize current debates over AI regulation, labor impacts, and corporate power. Understanding the historical arc of Silicon Valley&#39;s political economy is increasingly relevant as AI firms gain outsized influence over policy, infrastructure, and even national security decisions.
             </p>
             <p class="story-case">
-              <span class="story-case-label">What to watch</span> Watch for Together AI&#39;s full customer notification list and whether affected enterprise customers pursue contractual remedies or shift workloads to providers with stronger data isolation guarantees.
-            </p>
-          </div>
-        </li>
-        <li class="story-card">
-          <p class="story-rank" aria-hidden="true">5</p>
-          <div class="story-content">
-            <p class="story-meta">
-              <span class="visually-hidden">Number 5. </span>
-              <span class="story-category category-policy-regulation">Policy &amp; Regulation</span>
-              <span class="story-source">Hacker News</span>
-            </p>
-            <h2 class="story-title">
-              <a href="https://www.theguardian.com/technology/2026/nov/21/international-talks-control-ai-autonomous-weapons-collapse" target="_blank" rel="noopener noreferrer"
-                >International UN talks on controlling use of autonomous weapons collapse</a
-              >
-            </h2>
-            <p class="story-summary">Week-long UN talks in Geneva aimed at establishing a negotiating mandate for a legally binding treaty on autonomous weapons collapsed after all-night negotiations failed to overcome Russian objections. Despite an overwhelming majority of states wanting a binding treaty process, the conference adopted a much weaker non-binding option asking countries to &#39;elaborate by consensus.&#39;</p>
-            <p class="story-case">
-              <span class="story-case-label">Why it matters</span> The breakdown signals that international governance of AI-enabled autonomous weapons systems remains stalled despite years of effort, leaving a widening gap between rapid military AI deployment and any binding global rules. This failure effectively cedes the pace-setting role to individual states and militaries developing autonomous weapons systems unilaterally, with no enforceable international check.
-            </p>
-            <p class="story-case">
-              <span class="story-case-label">What to watch</span> Watch for whether individual nations or blocs (EU, NATO members) pursue separate binding commitments outside the UN consensus process, and how this affects ongoing military AI procurement debates.
+              <span class="story-case-label">What to watch</span> Watch for how this historical framing feeds into ongoing policy debates about AI industry concentration, antitrust scrutiny, and the political influence of major AI labs and chipmakers.
             </p>
           </div>
         </li>
@@ -187,10 +165,15 @@
           <summary>
             <span class="archive-year-label">2026</span>
             <span class="archive-count"
-              >67 briefings</span
+              >68 briefings</span
             >
           </summary>
           <ul>
+            <li>
+              <a href="archive/2026-11-22.html"
+                >Nov 22</a
+              >
+            </li>
             <li>
               <a href="archive/2026-11-21.html"
                 >Nov 21</a
@@ -533,9 +516,9 @@
 
     <footer>
       <p>
-        Curated automatically from 1 sources. No trackers, no ads.
+        Curated automatically from 2 sources. No trackers, no ads.
       </p>
-      <p class="generated">Generated 2026-11-22.</p>
+      <p class="generated">Generated 2026-11-23.</p>
       <p class="ai-daily-link">
         <a href="../index.html">Also: the weekly Top-7 digest</a>
       </p>
