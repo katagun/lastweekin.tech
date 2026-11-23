@@ -1,0 +1,124 @@
+{
+  "week": "2026-11-23",
+  "generated_at": "2026-11-23T12:03:45.514642+00:00",
+  "intro": "This week was dominated by a landmark mathematical proof confirmed via AI-assisted verification, major cybersecurity breaches hitting the financial sector, and fast-moving developments in AI safety and design. A pancreatic cancer breakthrough and a quiet but consequential browser-engine policy fight rounded out a week that spanned health, security, and platform power.",
+  "stories": [
+    {
+      "rank": 1,
+      "title": "Pill to treat pancreatic cancer hailed as 'biggest breakthrough in decades'",
+      "source": "Hacker News",
+      "sources": [
+        "Hacker News"
+      ],
+      "source_count": 1,
+      "url": "https://www.theguardian.com/society/2026/nov/20/pill-pancreatic-cancer-breakthrough-daraxonrasib",
+      "category": "General Tech",
+      "hn_points": 1364,
+      "score": 5.625,
+      "summary": "A pill called daraxonrasib, a KRAS inhibitor that targets mutations driving tumor growth, showed significant promise in a trial of 61 patients with advanced pancreatic cancer that had spread to other organs. In the trial, tumors stopped growing in 90% of patients, tumors shrank or disappeared in over 60%, and became undetectable in about 8%, with 76.6% of patients alive one year after starting treatment compared to the typical 40-45% survival rate with chemotherapy alone. Dr. Wungki Park of Memorial Sloan Kettering Cancer Center, who presented the findings at a Barcelona symposium, called it \"the closest to cure\" he had seen, noting that patients' cancers often disappeared on CT scans within an average 18-month follow-up period. While doctors emphasized the treatment is not yet a cure and longer studies are needed, Cancer Research UK's chief executive Michelle Mitchell called it \"the biggest leap forward we've seen in decades for pancreatic cancer patients,\" with potential applications for other cancers carrying similar KRAS mutations.",
+      "why": "A pill that renders pancreatic tumors undetectable in trial patients is a genuine medical breakthrough with life-and-death stakes for millions.",
+      "consensus": false
+    },
+    {
+      "rank": 2,
+      "title": "Treemap of the Riemann Hypothesis Lean Proof",
+      "source": "Hacker News",
+      "sources": [
+        "Hacker News",
+        "Slashdot"
+      ],
+      "source_count": 2,
+      "url": "https://pengowray.github.io/riemann-zeta-proof-visualizer/",
+      "category": "AI",
+      "hn_points": 100,
+      "score": 4.439,
+      "summary": "A mathematician named Alpöge has proven the Riemann Hypothesis, one of mathematics' most famous unsolved problems, with significant assistance from Claude, an AI system made by Anthropic. The Lean and Mathlib communities have verified the proof's correctness using multiple independent proof checkers implemented in different programming languages, and formally certified that both the statement and proof are correct. MIT mathematician Andrew Sutherland independently compiled the result and called it \"an historic moment\" and \"a human triumph,\" though he noted the mathematical community will need time to fully understand the proof's details. The achievement highlights both the potential of AI for solving complex mathematical problems and raises concerns among mathematicians about the role of well-funded private companies in advancing the field.",
+      "why": "Independent Mathlib/Lean verification confirming a proof of the Riemann Hypothesis is a once-in-a-generation math milestone, cross-validated by multiple outlets.",
+      "consensus": false
+    },
+    {
+      "rank": 3,
+      "title": "Chase, Visa, Mastercard confirm third-party cyberattacks that may have exposed customers' info",
+      "source": "BleepingComputer",
+      "sources": [
+        "BleepingComputer",
+        "The Register"
+      ],
+      "source_count": 2,
+      "url": "https://www.bleepingcomputer.com/news/security/vendor-data-breach-exposes-chase-visa-mastercard-customer-info/",
+      "category": "Security",
+      "hn_points": null,
+      "score": 3.595,
+      "summary": "J.P. Morgan Chase, Visa, and Mastercard disclosed data breaches affecting their customers after cyberattacks targeted third-party service providers, with the n0n ransomware group claiming responsibility for compromising Qubole, a cloud data analytics company owned by Idera. J.P. Morgan Chase reported that attackers accessed marketing data including some customer names and email addresses, while Visa confirmed no payment card data was affected and Mastercard stated only a limited number of email addresses from a small subset of cardholders in a specific benefit program were exposed. Between October 14 and 26, 2026, the attackers used compromised Qubole credentials to access customer AWS environments and allegedly stole 53.9 GB of data directly from Qubole plus nearly one petabyte from Qubole's customer networks. All three financial services companies confirmed their core payment systems and services were not disrupted by the incidents.",
+      "why": "A third-party breach exposing Chase, Visa, and Mastercard customer data threatens the personal information of a huge swath of consumers across the financial system.",
+      "consensus": false
+    },
+    {
+      "rank": 4,
+      "title": "Signal Blocks AI Agents From Reading Private Chats via Screenshots on Android and iOS",
+      "source": "The Hacker News",
+      "sources": [
+        "BleepingComputer",
+        "The Hacker News"
+      ],
+      "source_count": 2,
+      "url": "https://thehackernews.com/2026/11/signal-blocks-ai-agents-from-reading.html",
+      "category": "AI",
+      "hn_points": null,
+      "score": 3.876,
+      "summary": "Signal announced it will block screenshots by default on Android and iOS to prevent AI agents built into operating systems from reading private messages, though the company acknowledged the protection is incomplete. The feature responds to what Signal Foundation president Meredith Whittaker called an \"existential threat,\" as AI assistants can capture and store Signal data accessed from the screen either locally or on remote servers outside Signal's control. Signal called on Apple, Google, and other tech companies to provide documented ways for apps to opt out of AI data access entirely and to create better technical specifications explaining how AI agents function and access data. The move builds on Signal's similar screenshot restriction introduced for Windows 11 last May, and comes after Reuters reported that Meta's Muse AI agent bypassed its own official tools to access Signal messages on both Apple and Android devices by exploiting broad operating system permissions.",
+      "why": "Signal blocking AI agents from reading chats via screenshots sets an early precedent for how messaging privacy survives the agentic AI era.",
+      "consensus": false
+    },
+    {
+      "rank": 5,
+      "title": "Proton Lumo is a free, privacy-focused alternative to ChatGPT",
+      "source": "Android Police",
+      "sources": [
+        "Android Police",
+        "TechSpot"
+      ],
+      "source_count": 2,
+      "url": "https://www.androidpolice.com/chatgpt-gemini-claude-proton-lumo-ai-features-comparison/",
+      "category": "AI",
+      "hn_points": null,
+      "score": 3.994,
+      "summary": "Proton Mail and Proton VPN's team has launched Lumo, a new free AI chatbot that competes with Gemini, ChatGPT, and Claude by offering a minimalist interface and transparent usage limits without daily lockouts. Unlike competitors, Lumo provides free users access to all its AI models (Apertus, Lumo Lite, and Lumo Max) and displays a clear usage percentage meter, while routing queries through open-weight models including Alibaba's Qwen and hosting them on European servers with a default no-logging policy. In head-to-head testing across five tasks—including creating a Tokyo itinerary, copy editing, research, PDF summarization, and image manipulation—Lumo performed competitively, matching or exceeding Claude and often outperforming Gemini and ChatGPT on specific tasks. Lumo Plus costs $13 monthly (often discounted to $10) and unlocks additional features like more bot usage, image generation, and unlimited projects, making Lumo's free tier notably more generous than Claude's while remaining competitive with the other major AI services.",
+      "why": "A free, privacy-first ChatGPT alternative from Proton signals growing consumer appetite for AI tools that don't harvest data.",
+      "consensus": false
+    },
+    {
+      "rank": 6,
+      "title": "Hackers exploit GL.iNet cloud flaw to infect routers, KVM devices",
+      "source": "BleepingComputer",
+      "sources": [
+        "BleepingComputer",
+        "The Hacker News"
+      ],
+      "source_count": 2,
+      "url": "https://www.bleepingcomputer.com/news/security/hackers-exploit-glinet-cloud-flaw-to-infect-routers-kvm-devices/",
+      "category": "Security",
+      "hn_points": null,
+      "score": 3.982,
+      "summary": "GL.iNet confirmed that attackers exploited a vulnerability in its GoodCloud remote management platform to install custom malware on customers' routers and KVM devices, with some users discovering backdoors and reverse shells providing remote access. The company has patched the cloud vulnerability and blocked the attack path, but malware already installed on devices remains, and GL.iNet has not disclosed how many customers were affected or whether data was stolen. Security researchers found evidence of custom malware designed specifically for GL.iNet devices, reverse shells connecting to external IP addresses, and suspicious activity including connections to approximately 1,800 residential IP addresses daily and repeated contact with the TRON blockchain API. GL.iNet is releasing firmware updates on November 22, 2026, and recommends customers check for infections, install the latest security firmware, and use a community-developed detection tool, while also warning that some compromised devices may require complete firmware reinstallation to remove all malicious files.",
+      "why": "",
+      "consensus": false
+    },
+    {
+      "rank": 7,
+      "title": "Frostbite: A new CPU architecture discovered, designed and verified by AI",
+      "source": "Hacker News",
+      "sources": [
+        "Hacker News"
+      ],
+      "source_count": 1,
+      "url": "https://architectlabs.com/blog/frostbite",
+      "category": "AI",
+      "hn_points": 682,
+      "score": 3.969,
+      "summary": "Anthropic's research team has introduced Frostbite, a general-purpose CPU architecture designed entirely by AI systems using interaction nets, a programming model where computation happens through local graph rewrites with explicit dependencies and single-value ownership. The AI-designed Frostbite achieved 4.59x better performance-per-watt compared to a modern superscalar CPU core on a set of 25 workloads, including 15 held-out test cases, representing a significant step-function improvement in CPU performance. The development process involved AI systems autonomously iterating across the compiler, instruction set architecture, microarchitecture, register-transfer level design, verification, and final chip layout, using a formally-backed specification language called ASL to maintain consistency across all design layers. Anthropic believes this AI-driven co-design approach will lead to fundamental architectural shifts across all chip classes, from datacenter CPUs to AI accelerators and networking hardware.",
+      "why": "An AI system designing, verifying, and deploying a novel CPU architecture end-to-end marks a real leap from AI-as-tool to AI-as-engineer.",
+      "consensus": false
+    }
+  ]
+}
